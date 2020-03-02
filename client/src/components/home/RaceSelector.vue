@@ -17,20 +17,16 @@ import ApiService from '@/services/apiService';
 
 export default {
     name: 'RaceSelector',
-        data() {
-            return {
-                selection: null
-            }
+    data() {
+        return {
+            selection: null
+        }
     },
     methods: {
         selectRace(race) {
             console.log('RaceSelector: ', race);
             this.selection = race;
             this.$emit('raceSelected', race)
-            ApiService.get("talent/get")
-                .then(({data}) => {
-                console.log('here is data!', data)
-            })
         }
     }
 };

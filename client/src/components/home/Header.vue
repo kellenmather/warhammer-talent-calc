@@ -1,7 +1,7 @@
 <template>
     <article class="col">
         <div class="jumbotron header" style="backgroundRepeat: no-repeat;" :style="[getImage(), getPosition()]">
-            <img alt="Warhammer II logo" src="../assets/whlogo.png">
+            <img alt="Warhammer II logo" src="@/assets/whlogo.png">
         </div>
     </article>
 </template>
@@ -40,7 +40,7 @@ export default {
                 default:
                     img = 'default'
             }
-            img = require('../assets/' + img + '.png')
+            img = require('@/assets/' + img + '.png')
             img = { 'backgroundImage': 'url(' + img + ')' }
             return img
         },
@@ -74,7 +74,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .jumbotron {
-
+    background-color: #262626;
+    min-height: 289.1px;
 }
 article.col {
     padding: 0px;

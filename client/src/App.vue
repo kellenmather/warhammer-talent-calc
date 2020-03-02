@@ -14,23 +14,25 @@
     text-align: center;
     color: white;
 }
-
 #nav {
     padding: 30px;
 }
-
 #nav a {
     font-weight: bold;
     color: #2c3e50;
 }
-
 #nav a.router-link-exact-active {
     color: #42b983;
 }
-
-
 html, body {
-    min-height: 100%;
     background-color: #262626;
+    min-height: 100%;
+}
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
 </style>

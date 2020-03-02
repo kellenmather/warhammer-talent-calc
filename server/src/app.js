@@ -26,9 +26,9 @@ const talentRouter = require('./routes/talent');
 app.use(morgan('combined'));
 app.use(cors());
 app.use(cors({
-    origin:['http://' + ip + ':' + '8080'],
+    origin:['http://' + ip + ':' + '8080' ],
     //methods:['GET','POST'],
-    credentials: false
+    withCredentials: false
 }));
   
 app.use(bodyParser.json());

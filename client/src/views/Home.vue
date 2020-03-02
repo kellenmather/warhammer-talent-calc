@@ -1,5 +1,5 @@
 <template>
-    <section class="main-container">
+    <section>
         <Header :selection="selection"/>
         <div class='container-fluid'>
             <div class="row justify-content-center">
@@ -12,9 +12,9 @@
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/Header.vue';
-import RaceSelector from '@/components/RaceSelector.vue';
-import LordSelector from '@/components/LordSelector.vue';
+import Header from '@/components/home/Header.vue';
+import RaceSelector from '@/components/home/RaceSelector.vue';
+import LordSelector from '@/components/home/LordSelector.vue';
 
 export default {
     name: 'home',
@@ -45,7 +45,5 @@ img {
 .parent {
     display: block;
 }
-.main-container {
-    padding-top: 20px;
-}
+
 </style>

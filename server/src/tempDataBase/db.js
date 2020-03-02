@@ -65,17 +65,17 @@ exports.rows = [
         content: [
             {
                 restrictionLevel: 10,
-                restrictionLimited: true,
+                restrictionLimited: ['Revered Name of Power', 'Aristocratic Name of Power'],
                 blockContent: ['Martial Name of Power']
             },
             {
                 restrictionLevel: 10,
-                restrictionLimited: true,
+                restrictionLimited: ['Martial Name of Power', 'Aristocratic Name of Power'],
                 blockContent: ['Revered Name of Power']
             },
             {
                 restrictionLevel: 10,
-                restrictionLimited: true,
+                restrictionLimited: ['Martial Name of Power', 'Revered Name of Power'],
                 blockContent: ['Aristocratic Name of Power']
             }
         ]
@@ -86,11 +86,12 @@ exports.rows = [
         type: 'crossbow',
         content: [
             {
-                blockContent: ['Sea Dragon Cloak']
+                blockContent: ['Sea Dragon Cloak'],
+                seadragoncloak: 0
             },
             {
                 restrictionChoice: 'Sea Dragon Cloak',
-                blockContent: ['Devestating Charge', 'Deadeye', 'Blade Master', 'Indomitable']
+                blockContent: ['Devastating Charge', 'Deadeye', 'Blade Master', 'Indomitable'],
             },
             {
                 restrictionCriteria: 4,
@@ -163,7 +164,7 @@ exports.rows = [
 exports.skills = [
     {
         name: 'Dark Steed',
-        description: "true horses no longer, Dark Magic corrupts the finest Elven steeds and turns them into black-flanked killers.",
+        description: "True horses no longer, Dark Magic corrupts the finest Elven steeds and turns them into black-flanked killers.",
         icon: "darkSteed",
         ranks: [
             { effects: [{ icon: 'mount', description: "Mount: Dark Steed" }] }
@@ -178,7 +179,7 @@ exports.skills = [
         ]
     },
     {
-        name: 'darkPegasus',
+        name: 'Dark Pegasus',
         description: "The corrupted Dark Pegasi fly south from the Chaos Wastes to Naggaroth's Iron Mountains to make their nests.",
         icon: "darkPegasus",
         ranks: [
@@ -191,7 +192,7 @@ exports.skills = [
         icon: "blackDragon",
         ranks: [
             { effects: [
-                { icon: 'piercingDmg', description: "Armour-piercing damage: +12" }
+                { icon: 'piercingDmg', description: "Mount: Black Dragon" }
             ] }
         ]
     },
@@ -560,7 +561,7 @@ exports.skills = [
     },
     {
         name: 'Iron Disciplinarian',
-        descirption: "This Lord expects utter obedience from the smallfolk, and has little time for insurrections or petty revolts.",
+        description: "This Lord expects utter obedience from the smallfolk, and has little time for insurrections or petty revolts.",
         icon: 'face',
         ranks: [
             { effects: [{ icon: 'face', description: "Public order: +1", postScript: "local province" }] },
@@ -571,7 +572,7 @@ exports.skills = [
     },
     {
         name: 'Dreaded Slaver',
-        descirption: "This one ensures that those captured in battle wished they'd died on the field, so great is the cruelty that awaits them.",
+        description: "This one ensures that those captured in battle wished they'd died on the field, so great is the cruelty that awaits them.",
         icon: 'coin',
         ranks: [
             { effects: [{ icon: 'coin', description: "Casualties captured post-battle: +5%" }] },
@@ -581,7 +582,7 @@ exports.skills = [
     },
     {
         name: 'Serve Or Die',
-        descirption: "You will serve me, wretch, or you will die, there is no other option.",
+        description: "You will serve me, wretch, or you will die, there is no other option.",
         icon: 'coin',
         ranks: [
             { effects: [{ icon: 'coin', description: "Recruitment cost: -3%", psIcon: 'redFlag', postScript: "Lord's army" }] },
@@ -591,7 +592,7 @@ exports.skills = [
     },
     {
         name: 'Infamous Raider',
-        descirption: "If there were annals detailing the dastardly deeds of the sackers and looters of the world, this inveterate brigand would feature heavily.",
+        description: "If there were annals detailing the dastardly deeds of the sackers and looters of the world, this inveterate brigand would feature heavily.",
         icon: 'coin',
         ranks: [
             { effects: [
@@ -613,7 +614,7 @@ exports.skills = [
     },
     {
         name: 'Draftmaster',
-        descirption: "Someone has to ensure the numbers and quality of recruits remain high.",
+        description: "Someone has to ensure the numbers and quality of recruits remain high.",
         icon: 'doubleChevron',
         ranks: [
             { effects: [
@@ -624,7 +625,7 @@ exports.skills = [
     },
     {
         name: 'Lightning Strike',
-        descirption: "The time to strike is now!",
+        description: "The time to strike is now!",
         icon: 'dagger',
         ranks: [
             { effects: [{ icon: 'dagger', description: "Enables lightning strike battles when reinforcements are present" }] }
@@ -632,7 +633,7 @@ exports.skills = [
     },
     {
         name: 'Quartermaster',
-        descirption: "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
+        description: "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
         icon: 'coin',
         ranks: [
             { effects: [{ icon: 'coin', description: "Upkeep: -3% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
@@ -642,7 +643,7 @@ exports.skills = [
     },
     {
         name: 'Fleeting Shadow',
-        descirption: "Knowing precisely where and when to launch an ambush, and against who, takes an unusual level of guile.",
+        description: "Knowing precisely where and when to launch an ambush, and against who, takes an unusual level of guile.",
         icon: 'arrowSkull',
         ranks: [
             { effects: [
@@ -662,7 +663,7 @@ exports.skills = [
     },
     {
         name: 'Elven Healing',
-        descirption: "The ancient Asur arts teach one to heal as well as how to harm.",
+        description: "The ancient Asur arts teach one to heal as well as how to harm.",
         icon: 'plus',
         ranks: [
             { effects: [
@@ -681,7 +682,7 @@ exports.skills = [
     },
     {
         name: 'Renowned & Feared',
-        descirption: "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        description: "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
         icon: 'daggerEye',
         ranks: [
             { effects: [
