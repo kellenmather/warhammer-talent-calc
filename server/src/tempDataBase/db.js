@@ -13,12 +13,19 @@
  * type: beastmaster
  */
 
+ /**
+  * For example a supremese sorceros (fire) lord would first check to see if X row had a type for:
+  * fire (then)
+  * magic
+  * lord
+  */
 
 exports.rows = [
     {
         row: 1,
         race: 'DE',
-        type: 'dreadlord',
+        name: ['dreadlord'],
+        type: null,
         content: [
             {
                 restrictionLevel: 4,
@@ -61,7 +68,8 @@ exports.rows = [
     {
         row: 2,
         race: 'DE',
-        type: 'lord',
+        name: ['dreadlord', 'sorceress', 'beastmaster'],
+        type: null,
         content: [
             {
                 restrictionLevel: 10,
@@ -80,10 +88,38 @@ exports.rows = [
             }
         ]
     },
+    // {
+    //     row: 2,
+    //     race: 'DE',
+    //     name: ['ark'],
+    //     type: null,
+    //     content: [
+    //         {
+    //             restrictionLevel: 10,
+    //             restrictionLimited: ['Revered Name of Power'],
+    //             blockContent: ['Martial Name of Power']
+    //         },
+    //         {
+    //             restrictionLevel: 10,
+    //             restrictionLimited: ['Martial Name of Power'],
+    //             blockContent: ['Revered Name of Power']
+    //         },
+    //         {
+    //             blockContent: ['Unassailable']
+    //         },
+    //         {
+    //             blockContent: ['Unstoppable']
+    //         },
+    //         {
+    //             blockContent: ['Unknowable']
+    //         }
+    //     ]
+    // },
     {
         row: 3,
         race: 'DE',
-        type: 'crossbow',
+        name: ['dreadlord'],
+        type: 'range',
         content: [
             {
                 blockContent: ['Sea Dragon Cloak'],
@@ -94,7 +130,7 @@ exports.rows = [
                 blockContent: ['Devastating Charge', 'Deadeye', 'Blade Master', 'Indomitable'],
             },
             {
-                restrictionCriteria: 4,
+                restrictionCount: 4,
                 blockContent: ['Foe-Seeker']
             },
             {
@@ -102,7 +138,7 @@ exports.rows = [
                 blockContent: ['Wound-Maker', 'Full Plate Armour', 'Piercing Shots', 'Expeditious Endeavour']
             },
             {
-                restrictionCriteria: 4,
+                restrictionCount: 4,
                 blockContent: ['Volley of Dark Arrows']
             }
         ]
@@ -110,7 +146,7 @@ exports.rows = [
     {
         row: 6,
         race: 'DE',
-        type: 'crossbow',
+        type: 'range',
         content: [
             {
                 blockContent: ['Inspiring Presence']
@@ -120,7 +156,7 @@ exports.rows = [
                 blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
             },
             {
-                restrictionCriteria: 6,
+                restrictionCount: 6,
                 blockContent: ['Loose!']
             },
             {
@@ -128,7 +164,7 @@ exports.rows = [
                 blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
             },
             {
-                restrictionCriteria: 1,
+                restrictionCount: 1,
                 blockContent: ['Darken the Skies']
             }
         ]
@@ -146,7 +182,7 @@ exports.rows = [
                 blockContent: ['Iron Disciplinarian', 'Dreaded Slaver', 'Serve Or Die', 'Infamous Raider']
             },
             {
-                restrictionCriteria: 4,
+                restrictionCount: 4,
                 blockContent: ['Draftmaster']
             },
             {
@@ -154,7 +190,7 @@ exports.rows = [
                 blockContent: ['Lightning Strike', 'Quartermaster', 'Fleeting Shadow', 'Elven Healing']
             },
             {
-                restrictionCriteria: 4,
+                restrictionCount: 4,
                 blockContent: ['Renowned & Feared']
             }
         ]
@@ -305,10 +341,10 @@ exports.skills = [
     {
         name: 'Indomitable',
         description: "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
-        icon: "horn",
+        icon: "leadership",
         ranks: [
-            { effects: [{ icon: 'horn', description: "Leadership: +6" }] },
-            { effects: [{ icon: 'horn', description: "Leadership: +12" }] }
+            { effects: [{ icon: "leadership", description: "Leadership: +6" }] },
+            { effects: [{ icon: "leadership", description: "Leadership: +12" }] }
         ]
     },
     {
@@ -366,9 +402,9 @@ exports.skills = [
     {
         name: 'Inspiring Presence',
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
-        icon: "horn",
+        icon: "leadership",
         ranks: [
-            { effects: [{ icon: 'horn', description: "Character's aura leadership effect: +5" }] }
+            { effects: [{ icon: "leadership", description: "Character's aura leadership effect: +5" }] }
         ]
     },
     {
@@ -573,42 +609,42 @@ exports.skills = [
     {
         name: 'Dreaded Slaver',
         description: "This one ensures that those captured in battle wished they'd died on the field, so great is the cruelty that awaits them.",
-        icon: 'coin',
+        icon: "coin",
         ranks: [
-            { effects: [{ icon: 'coin', description: "Casualties captured post-battle: +5%" }] },
-            { effects: [{ icon: 'coin', description: "Casualties captured post-battle: +12%" }] },
-            { effects: [{ icon: 'coin', description: "Casualties captured post-battle: +25%" }] }            
+            { effects: [{ icon: "coin", description: "Casualties captured post-battle: +5%" }] },
+            { effects: [{ icon: "coin", description: "Casualties captured post-battle: +12%" }] },
+            { effects: [{ icon: "coin", description: "Casualties captured post-battle: +25%" }] }            
         ]
     },
     {
         name: 'Serve Or Die',
         description: "You will serve me, wretch, or you will die, there is no other option.",
-        icon: 'coin',
+        icon: "coin",
         ranks: [
-            { effects: [{ icon: 'coin', description: "Recruitment cost: -3%", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: 'coin', description: "Recruitment cost: -8%", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: 'coin', description: "Recruitment cost: -15%", psIcon: 'redFlag', postScript: "Lord's army" }] }            
+            { effects: [{ icon: "coin", description: "Recruitment cost: -3%", psIcon: 'redFlag', postScript: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Recruitment cost: -8%", psIcon: 'redFlag', postScript: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Recruitment cost: -15%", psIcon: 'redFlag', postScript: "Lord's army" }] }            
         ]
     },
     {
         name: 'Infamous Raider',
         description: "If there were annals detailing the dastardly deeds of the sackers and looters of the world, this inveterate brigand would feature heavily.",
-        icon: 'coin',
+        icon: "coin",
         ranks: [
             { effects: [
-                { icon: 'coin', description: "Income from raiding: +5%", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'coin', description: "Income from looting settlements: +4%" },
-                { icon: 'coin', description: "Income from sacking settlements: +4%" }
+                { icon: "coin", description: "Income from raiding: +5%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin", description: "Income from looting settlements: +4%" },
+                { icon: "coin", description: "Income from sacking settlements: +4%" }
             ] },
             { effects: [
-                { icon: 'coin', description: "Income from raiding: +12%", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'coin', description: "Income from looting settlements: +9%" },
-                { icon: 'coin', description: "Income from sacking settlements: +9%" }
+                { icon: "coin", description: "Income from raiding: +12%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin", description: "Income from looting settlements: +9%" },
+                { icon: "coin", description: "Income from sacking settlements: +9%" }
             ] },
             { effects: [
-                { icon: 'coin', description: "Income from raiding: +20%", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'coin', description: "Income from looting settlements: +15%" },
-                { icon: 'coin', description: "Income from sacking settlements: +15%" }
+                { icon: "coin", description: "Income from raiding: +20%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin", description: "Income from looting settlements: +15%" },
+                { icon: "coin", description: "Income from sacking settlements: +15%" }
             ] }            
         ]
     },
@@ -634,11 +670,11 @@ exports.skills = [
     {
         name: 'Quartermaster',
         description: "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
-        icon: 'coin',
+        icon: "coin",
         ranks: [
-            { effects: [{ icon: 'coin', description: "Upkeep: -3% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: 'coin', description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: 'coin', description: "Upkeep: -15% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] }
+            { effects: [{ icon: "coin", description: "Upkeep: -3% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -15% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] }
         ]
     },
     {
@@ -686,7 +722,7 @@ exports.skills = [
         icon: 'daggerEye',
         ranks: [
             { effects: [
-                { icon: 'coin', description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin", description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" },
                 { icon: 'compass', description: "Campaign movement range: +5%" },
                 { icon: 'daggerEye', description: "Enemy Hero action success chance: -10%" },
                 { icon: 'daggerEye', description: "Hero self-defense: +25% chance of wounding aggressors" },

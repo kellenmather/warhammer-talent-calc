@@ -1,7 +1,7 @@
 <template>
     <article class="col">
-        <div class="jumbotron header" style="backgroundRepeat: no-repeat;" :style="[getImage(), getPosition()]">
-            <img alt="Warhammer II logo" src="@/assets/whlogo.png">
+        <div class="jumbotron header fader" style="backgroundRepeat: no-repeat;" :style="[getImage(), getPosition()]">
+            <img class="unselectable" alt="Warhammer II logo" src="@/assets/whlogo.png">
         </div>
     </article>
 </template>
@@ -19,9 +19,10 @@ export default {
     },
     methods: {
         getImage() {
-            console.log('hit', this.selection)
             let img;
-            switch(this.selection) {
+            // not MVP functionality
+            // switch(this.selection) {
+            switch('default') {
                 case 'High Elves':
                     img = 'highelves'
                     break;
@@ -40,32 +41,34 @@ export default {
                 default:
                     img = 'default'
             }
-            img = require('@/assets/' + img + '.png')
-            img = { 'backgroundImage': 'url(' + img + ')' }
-            return img
+            img = require('@/assets/' + img + '.png');
+            img = { 'backgroundImage': 'url(' + img + ')' };
+            return img;
         },
         getPosition() {
             let pos;
-            switch(this.selection) {
+            // not MVP functionality
+            // switch(this.selection) {
+            switch('default') {
                 case 'High Elves':
-                    pos = { 'backgroundPosition': '70% 11%', 'background-size': '110%' }
+                    pos = { 'backgroundPosition': '70% 11%', 'background-size': '110%' };
                     break;
                 case 'Dark Elves':
-                    pos = { 'backgroundPosition': '100% 0', 'background-size': '110%' }
+                    pos = { 'backgroundPosition': '100% 0', 'background-size': '110%' };
                     break;
                 case 'Lizardmen':
-                    pos = { 'backgroundPosition': '0 47%', 'background-size': '110%' }
+                    pos = { 'backgroundPosition': '0 47%', 'background-size': '110%' };
                     break;
                 case 'Tomb Kings':
-                    pos = { 'backgroundPosition': '0 16%', 'background-size': '100%' }
+                    pos = { 'backgroundPosition': '0 16%', 'background-size': '100%' };
                     break;
                 case 'Vampire Coast':
-                    pos = { 'backgroundPosition': '0 30%', 'background-size': '100%' }
+                    pos = { 'backgroundPosition': '0 30%', 'background-size': '100%' };
                     break;
                 default:
-                    pos = { 'backgroundPosition': '20% 62%' }
+                    pos = { 'backgroundPosition': '20% 62%' };
             }
-            return pos
+            return pos;
         }
     }
 };
@@ -83,5 +86,41 @@ article.col {
 .header {
     border-radius: 0px;
     padding: 2rem 1rem;
+}
+.fader img {
+    -webkit-animation: fadein 2; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s; 
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 </style>

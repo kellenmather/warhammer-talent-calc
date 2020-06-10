@@ -2,7 +2,16 @@
     <div v-if="row">
         <div v-for="(blocks, index) in row.content" :key="index" class="inline">
             <div :class="(blocks.blockContent.length > 1) ? 'grouping' : null">
-                <Skill v-for="(block, idx) in blocks.blockContent" :key="idx" :color="color" :skill="skills[block]" :block="block" class="inline skill-button"/>
+                <Skill 
+                    v-for="(block, idx) in blocks.blockContent" 
+                    :key="idx" :color="color" 
+                    @skillClick="skillClick"
+                    @skillRightClick="skillRightClick"
+                    :skill="skills[block]" 
+                    :block="block" 
+                    :skillState="rowState"
+                    :lordLevel="lordLevel"
+                    class="inline skill-button"/>
             </div>
         </div>
     </div>
@@ -19,7 +28,9 @@ export default {
     props: {
         row: Object,
         skills: Object,
-        color: String
+        color: String,
+        rowState: Object,
+        lordLevel: Number
     },
     data() {
         return {
@@ -27,7 +38,12 @@ export default {
         }
     },
     methods: {
-
+        skillClick(name) {
+            this.$emit('skillClick', name, this.row.row)
+        },
+        skillRightClick(name) {
+            this.$emit('skillRightClick', name, this.row.row)
+        }
     }
 };
 </script>

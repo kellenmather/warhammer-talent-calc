@@ -1,5 +1,5 @@
 <template>
-    <div class="popup-container">
+    <div class="popup-container unselectable" :style="{ top: top + 'px', left: left + 'px'}">
         <div class="title">
             {{info.name}}
         </div>
@@ -9,9 +9,12 @@
         <div class="description inline">
             {{info.description}}
         </div>
+        <div v-if="disabled" class="disabled">
+            {{disabledReason}}
+        </div>
         <div class="stats">
             <p v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
-                {{effect.description}}
+                <span :style="getIcon(effect.icon)" class="small-icon"></span>{{effect.description}}
             </p>
         </div>
         <div v-if="hasNext()" class="title">
@@ -19,7 +22,7 @@
         </div>
         <div v-if="hasNext()" class="stats">
             <p v-for="(effect, idx) in info.ranks[displayNextLevel()].effects" :key="idx">
-                {{effect.description}}
+                <span :style="getIcon(effect.icon)" class="small-icon"></span>{{effect.description}}
             </p>
         </div>
     </div>
@@ -32,7 +35,11 @@ export default {
         info: Object,
         currentRank: Number, // current rank obtained 0-3
         ranks: Number, // total amount of ranks in skill 1-3
-        specificRank: Number // specific rank being hovered 0-ranks
+        specificRank: Number, // specific rank being hovered 0-ranks
+        disabled: Boolean,
+        disabledReason: String,
+        top: Number,
+        left: Number
     },
     methods: {
         displayLevel() {
@@ -44,6 +51,15 @@ export default {
         },
         hasNext() {
             if (this.currentRank > 0 && this.currentRank < this.ranks) return true
+        },
+        getIcon(icon) {
+            let myIcon;
+            try {                
+                myIcon = require('@/assets/smallIcons/' + icon + '.png')              
+                return { 'backgroundImage': 'url(' + myIcon + ')' };
+            } catch {
+                return ''
+            }
         }
     }
 };
@@ -59,8 +75,6 @@ export default {
     background-color: black;
     border: 2px solid black;
     border-radius: 2px;
-    top: 56px;
-    left: 20px;
     opacity: .80;
     color: white;
     word-wrap: normal;
@@ -88,5 +102,18 @@ export default {
     margin: 0;
     padding-bottom: 5px;
     white-space: initial;
+}
+.disabled {
+    color: red;
+    font-style: italic;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.small-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding-right: 18px;
 }
 </style>

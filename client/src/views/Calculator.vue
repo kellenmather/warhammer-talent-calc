@@ -1,8 +1,27 @@
 <template>
     <div v-if="skills.length > 0" class="container-fluid calc-border calc">
-        <div class="top-bar"></div>
+        <div class="header-padding">
+            <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar">
+                <div class="col left-nav">
+                    <button @click="resetPoints()" type="button" class="btn btn-info">Reset</button>
+                </div>
+                <div class="col lord-name">
+                    {{lord.charAt(0).toUpperCase() + lord.slice(1)}}
+                </div>
+                <div class="col right-nav">
+                    <p>Current Level: {{lordLevel}}</p>
+                </div>
+            </div>
+        </div>
         <div v-for="(row, index) in rows" :key="index" class="row calc-row">
-            <CalcRow :row="row" :color="index" :skills="skillAllocation(row)" />
+            <CalcRow
+                @skillClick="skillClick"
+                @skillRightClick="skillRightClick"
+                :row="row" 
+                :color="index" 
+                :rowState="calcState[index]"
+                :lordLevel="lordLevel" 
+                :skills="skillAllocation(row)" />
         </div>
         <div class="bottom-bar"></div>
     </div>
@@ -32,7 +51,10 @@ export default {
                 row9: undefined
             },
             skills: [],
-            skillPointAllocation: {}
+            calcState: {},
+            saveState: {},
+            skillPointAllocation: {},
+            lordLevel: 1
         }
     },
     methods: {
@@ -62,33 +84,54 @@ export default {
             return skillsObject
         },
         setCalcState(data) {
-            console.log('this is what im playing with: ', data);
+            // temp value to build out calc state
             let calcState = {};
+            // current 
             for (let i = 0; i < data.length; i++) {
-                let rowName = 'row'+ data[i].row
+                let rowName = 'row'+ data[i].row;
                 calcState[rowName] = {};
-                console.log(data[i]);
-                let content = data[i].content
+                let content = data[i].content;
                 for (let j = 0; j < content.length; j++) {
-                    // here we have restricitons
-                    // console.log(...calcState[rowName]);
-                    let skill = content[j].blockContent
+                    // skill is an array of a blocks skills
+                    let skill = content[j].blockContent;
+                    // block containts restrictions and all skills pertaining to those restrictions
+                    let block = content[j];
                     for (let k = 0; k < skill.length; k++) {
-                        // here we have skill names
-                        console.log('skill: ', skill[k]);
-                        let skillName = skill[k]
-                        // calcState[rowName] = { [skillName]: {} }
-                        calcState[rowName][skillName] = { name: skillName, value: 0, restrictionLevel: content[j].restrictionLevel || null, restrictionLimited: content[j].restrictionLimited || null, restrictionChoice: content[j].restrictionChoice || null, restrictionCriteria: content[j].restrictionCriteria || null }
+                        let skillName = skill[k];
+                        calcState[rowName][skillName] = { 
+                            name: skillName, 
+                            value: 0, 
+                            blockMember: (skill.length > 1) ? j : null,
+                            // If NOT on the first iteration find out if skill is the blockLeader
+                            blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
+                            restrictionLevel: block.restrictionLevel || null, 
+                            restrictionLimited: block.restrictionLimited || null, 
+                            restrictionChoice: block.restrictionChoice || null, 
+                            restrictionCount: block.restrictionCount || null 
+                        }
                     }
-                    // let skill = content[j]
-                    // calcState[rowName] = { content[j]: 'test' }
-                    // content[j]
-                    // we also have blockContent array of strings which are skill names
-
                 }
             }
-            console.log(calcState);
-            // this is calcState!
+            // Make a copy of calcState to revert to upon reset
+            this.saveState = JSON.parse(JSON.stringify(calcState));
+            this.calcState = calcState;
+        },
+        getRowState(row, index) {
+            return 'test'
+        },
+        skillClick(name, row) {
+            this.lordLevel++;
+            let rowName = 'row' + row;
+            this.calcState[rowName][name].value++;
+        },
+        skillRightClick(name, row) {
+            this.lordLevel--;
+            let rowName = 'row' + row;
+            this.calcState[rowName][name].value--;
+        },
+        resetPoints() {
+            this.lordLevel = 1;
+            this.calcState = JSON.parse(JSON.stringify(this.saveState));
         }
     },
     created() {
@@ -122,11 +165,33 @@ export default {
 .calc-row {
     height: 80px;
     margin: 20px;
+    padding: 0 40px;
 }
 .calc-border {
-    padding: 120px 40px 80px 40px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+}
+.top-bar {
+    padding: 40px 60px;
+    background-color: darkgrey;
+    color: black;
+    font-weight: 800;
+}
+.left-nav {
+    text-align: left;
+}
+.lord-name {
+    font-weight: 600;
+    font-size: 1.4em;
+}
+.right-nav {
+    text-align: right;
+}
+.right-nav p {
+    margin-bottom: 0px;
+}
+.header-padding {
+    padding-bottom: 160px;
 }
 </style>
