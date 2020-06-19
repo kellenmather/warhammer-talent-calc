@@ -9,7 +9,15 @@ You'll need:
 - [Git Bash](https://gitforwindows.org/) I recommend this if using a Windows system
 
 1. Clone the repository to your desired location
-2. Start the client and the server (you must be in the corrosponding folder):
+2. Use npm to download the dependencies in both the client and server folders
+```
+cd project/location/client
+npm i
+cd project/location/server
+npm i
+```
+
+3. Start the client and the server (you must be in the corrosponding folder):
 
 ```
 #client
