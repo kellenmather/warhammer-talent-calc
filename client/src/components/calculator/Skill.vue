@@ -12,15 +12,15 @@
             </div>
         </div>
             <Popup 
-        :info="skill" 
-        :currentRank="skillState[block].value" 
-        :ranks="skill.ranks.length" 
-        :specificRank="specificRank"
-        :disabled="disabled"
-        :disabledReason="disabledReason"
-        :top="top"
-        :left="left"
-        v-if="displayPopup && skill" />
+                :info="skill" 
+                :currentRank="skillState[block].value" 
+                :ranks="skill.ranks.length" 
+                :specificRank="specificRank"
+                :disabled="disabled"
+                :disabledReason="disabledReason"
+                :top="top"
+                :left="left"
+                v-if="displayPopup && skill" />
     </div>
 
 </template>
@@ -232,8 +232,8 @@ export default {
 
 <style>
 .skill-name {
-    height: 57px;
-    width: 178px;
+    height: 58px;
+    width: 179px;
     vertical-align: top;
     cursor: context-menu;
     /* color: #EBE6CD; */
@@ -241,7 +241,7 @@ export default {
 .skill-ranks {
     width: auto;
     /* height: 100%; */
-    height: 57px;
+    height: 58px;
     overflow: hidden;
 }
 .skill-ranks div {

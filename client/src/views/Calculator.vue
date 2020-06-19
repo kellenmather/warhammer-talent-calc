@@ -86,7 +86,7 @@ export default {
         setCalcState(data) {
             // temp value to build out calc state
             let calcState = {};
-            // current 
+            // triple for loop undesirable but will stay until VueX is implemented
             for (let i = 0; i < data.length; i++) {
                 let rowName = 'row'+ data[i].row;
                 calcState[rowName] = {};
@@ -115,9 +115,6 @@ export default {
             // Make a copy of calcState to revert to upon reset
             this.saveState = JSON.parse(JSON.stringify(calcState));
             this.calcState = calcState;
-        },
-        getRowState(row, index) {
-            return 'test'
         },
         skillClick(name, row) {
             this.lordLevel++;
@@ -173,7 +170,7 @@ export default {
     white-space: nowrap;
 }
 .top-bar {
-    padding: 40px 60px;
+    padding: 30px 75px;
     background-color: darkgrey;
     color: black;
     font-weight: 800;

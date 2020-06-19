@@ -13,9 +13,9 @@ const os = require('os');
 const networkInterfaces = os.networkInterfaces();
 const interfaceKeys = Object.keys(networkInterfaces);
 // // currently the 'ens' key is always the 2nd key revisit later
-// const ip = networkInterfaces[interfaceKeys[1]][0]['address'];
-const ip = 'localhost'
-// process.env.SERVER_IP = ip;
+const ip = networkInterfaces[interfaceKeys[1]][0]['address'];
+// const ip = 'localhost'
+process.env.SERVER_IP = ip;
 console.log('Server ip is: ' + ip);
 
 
@@ -24,11 +24,9 @@ const talentRouter = require('./routes/talent');
 
 // dependency set up
 app.use(morgan('combined'));
-app.use(cors());
 app.use(cors({
-    origin:['http://' + ip + ':' + '8080' ],
-    //methods:['GET','POST'],
-    withCredentials: false
+    origin: ['http://' + ip + ':' + '8080', 'http://localhost:8080']
+    //methods:['GET'],
 }));
   
 app.use(bodyParser.json());

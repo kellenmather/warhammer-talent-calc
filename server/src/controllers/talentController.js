@@ -1,5 +1,6 @@
 const db = require('../tempDataBase/db.js');
 
+// TODO: shift from tempDB to MongoDB
 exports.getRows = (req, res) => {
     res.setHeader('Access-Control-Allow-Credentials', true);
 
