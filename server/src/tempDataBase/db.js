@@ -201,7 +201,7 @@ exports.skills = [
     {
         name: 'Dark Steed',
         description: "True horses no longer, Dark Magic corrupts the finest Elven steeds and turns them into black-flanked killers.",
-        icon: "darkSteed",
+        icon: "dark-steed",
         ranks: [
             { effects: [{ icon: 'mount', description: "Mount: Dark Steed" }] }
         ]
@@ -209,7 +209,7 @@ exports.skills = [
     {
         name: 'Cold One',
         description: "Dark, feral beasts indigenous to Naggaroth, tempted from their damp, warm caves to bear the Druchii to battle.",
-        icon: "coldOne",
+        icon: "cold-one",
         ranks: [
             { effects: [{ icon: 'mount', description: "Mount: Cold One" }] }
         ]
@@ -217,7 +217,7 @@ exports.skills = [
     {
         name: 'Dark Pegasus',
         description: "The corrupted Dark Pegasi fly south from the Chaos Wastes to Naggaroth's Iron Mountains to make their nests.",
-        icon: "darkPegasus",
+        icon: "dark-pegasus",
         ranks: [
             { effects: [{ icon: 'mount', description: "Mount: Dark Pegasus" }] }
         ]
@@ -225,7 +225,7 @@ exports.skills = [
     {
         name: 'Black Dragon',
         description: "Secretly nurtured by Malekith, Black Dragons are enchanted with Dark Magic that corrupts and enhances.",
-        icon: "blackDragon",
+        icon: "black-dragon",
         ranks: [
             { effects: [
                 { icon: 'piercingDmg', description: "Mount: Black Dragon" }
@@ -235,7 +235,7 @@ exports.skills = [
     {
         name: 'Sadistic',
         description: "There is great pleasure to be derived from the humiliation and suffering of others; this one has felt and revelled in it.",
-        icon: "sword",
+        icon: "character-attack",
         ranks: [
             { effects: [
                 { icon: 'piercingDmg', description: "Armour-piercing damage: +12" },
@@ -247,7 +247,7 @@ exports.skills = [
     {
         name: 'Eternal Hatred',
         description: "The strength of this warrior's attack never wavers for an instance, such is the opprobrium felt for their hated High Elf cousins.",
-        icon: "damage",
+        icon: "character-damage",
         ranks: [
             { effects: [
                 { icon: 'damage', description: "Weapon strength: +10% when fighting against High Elves" },
@@ -258,25 +258,25 @@ exports.skills = [
     {
         name: 'Ward of Khaine', // TODO implement explanation
         description: "The Bloody-handed God watches over his disciples.",
-        icon: "ward",
+        icon: "character-ward-save",
         ranks: [{ effects: [{ icon: 'missileRes', description: "Missile resistance: 10%" }] }]
     },
     {
         name: 'Ward of Hekarti', // TODO implement explanation
         description: "Magic's dark mistress has a care for her dutiful acolytes.",
-        icon: "ward",
+        icon: "character-ward-save",
         ranks: [{ effects: [{ icon: 'magicRes', description: "Magic resistance: 10%" }] }]
     },
     {
         name: 'Immortality',
         description: "Who wants to live forever? As it turns out, most beings wouldn't say no...",
-        icon: "crackSkull",
+        icon: "character-wound-time",
         ranks: [{ effects: [{ icon: 'crackSkull', description: "When normally killed in battle, this Lord will be wounded instead" }] }]
     },
     {
         name: 'Martial Name of Power',
         description: "This one has adopted a warrior name to strike fear into enemy hearts, a moniker backed up by their deeds in battle.",
-        icon: "trait",
+        icon: "martial-name-of-power",
         ranks: [
             { effects: [{ icon: 'trait', description: "Choose a Name of Power that improves the Character's own combat skills" }] }
         ]
@@ -284,7 +284,7 @@ exports.skills = [
     {
         name: 'Revered Name of Power',
         description: "This one's chosen name is muttered in hushed tones, reflecting as it does their vile proclivities.",
-        icon: "trait",
+        icon: "revered-name-of-power",
         ranks: [
             { effects: [{ icon: 'trait', description: "Choose a Name of Power that improves the Lord's army" }] }
         ]
@@ -292,7 +292,7 @@ exports.skills = [
     {
         name: 'Aristocratic Name of Power',
         description: "Some family names are best forgotten; others are worthy of resurrection, as they engender fear and respect among the masses.",
-        icon: "trait",
+        icon: "aristocratic-name-of-power",
         ranks: [
             { effects: [{ icon: 'trait', description: "Choose a Name of Power that influences the province in which Lord is standing or the faction as a whole" }] }
         ]
@@ -300,7 +300,7 @@ exports.skills = [
     {
         name: 'Sea Dragon Cloak',
         description: "The tough, scaly hide of the sea dragon provides excellent protection against all manner of blows.",
-        icon: "armor",
+        icon: "character-armor",
         ranks: [
             { effects: [{ icon: 'armor', description: "Armour: +5" }] }
         ]
@@ -308,7 +308,7 @@ exports.skills = [
     {
         name: 'Devastating Charge',
         description: "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
-        icon: "charge",
+        icon: "character-charge",
         ranks: [
             { effects: [{ icon: 'charge', description: "Charge bonus: +15" }] },
             { effects: [{ icon: 'charge', description: "Charge bonus: +30" }] }
@@ -317,7 +317,7 @@ exports.skills = [
     {
         name: 'Deadeye',
         description: "Although precision in missile combat is something that can be learned, this one was born with a high degree of natural talent.",
-        icon: "ammunition",
+        icon: "character-ammo",
         ranks: [
             { effects: [
                 { icon: 'ammunition', description: "Ammunition: +15%" },
@@ -332,7 +332,7 @@ exports.skills = [
     {
         name: 'Blade Master',
         description: "This warrior is one with their blade; it is an extension of their will, making them a worthy foe in combat.",
-        icon: "sword",
+        icon: "character-attack",
         ranks: [
             { effects: [{ icon: 'sword', description: "Melee attack: +6" }] },
             { effects: [{ icon: 'sword', description: "Melee attack: +12" }] }
@@ -341,7 +341,7 @@ exports.skills = [
     {
         name: 'Indomitable',
         description: "The iron will and indomitable presence of this leader ensures their followers remain steadfast when facing peril.",
-        icon: "leadership",
+        icon: "character-morale",
         ranks: [
             { effects: [{ icon: "leadership", description: "Leadership: +6" }] },
             { effects: [{ icon: "leadership", description: "Leadership: +12" }] }
@@ -350,7 +350,7 @@ exports.skills = [
     {
         name: 'Foe-Seeker', // TODO add the spell to spell DB
         description: "From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
-        icon: "foeSeeker",
+        icon: "abilities-foe-seeker",
         ranks: [
             { effects: [{ icon: 'foeSeeker', description: "Ability: 'Foe-Seeker'" }] }
         ]
@@ -358,7 +358,7 @@ exports.skills = [
     {
         name: 'Wound-Maker',
         description: "Such is their power and ferocity, a wound-maker will ravage the foe, cutting and pulverising until there is only one exit - death.",
-        icon: "damage",
+        icon: "character-damage",
         ranks: [
             { effects: [{ icon: 'damage', description: "Weapon strength: +10%" }] },
             { effects: [{ icon: 'damage', description: "Weapon strength: +20%" }] }
@@ -367,7 +367,7 @@ exports.skills = [
     {
         name: 'Full Plate Armour',
         description: "Full-Plate armour protects the wearer from head-to-foot. Many shuch suits are blessed or imbued with arcane abilities.",
-        icon: "armor",
+        icon: "character-armor",
         ranks: [
             { effects: [{ icon: 'armor', description: "Armor: +7" }] },
             { effects: [{ icon: 'armor', description: "Armor: +15" }] }
@@ -376,7 +376,7 @@ exports.skills = [
     {
         name: 'Piercing Shots',
         description: "The forest teaches a warrior not only when to fire but where, which makes a bigger difference.",
-        icon: "missile",
+        icon: "character-ranged-damage",
         ranks: [
             { effects: [{ icon: 'missile', description: "Missile damage: +7%" }] },
             { effects: [{ icon: 'missile', description: "Missile damage: +15%" }] }
@@ -385,7 +385,7 @@ exports.skills = [
     {
         name: 'Expeditious Endeavour',
         description: "What the enemy cannot see, it cannot hit. What the enemy cannot see, it cannot survive.",
-        icon: "speed",
+        icon: "character-speed",
         ranks: [
             { effects: [{ icon: 'speed', description: "Speed: +7%" }] },
             { effects: [{ icon: 'speed', description: "Speed: +15%" }] }
@@ -394,7 +394,7 @@ exports.skills = [
     {
         name: 'Volley of Dark Arrows', // TODO add the spell to spell DB
         description: "By which an unexpected shower of pointy death rains down upon the unfortunate targets. Ouch!",
-        icon: "arrowVolley",
+        icon: "volley-of-dark-arrows",
         ranks: [
             { effects: [{ icon: 'arrowVolley', description: "Ability: 'Volley of Dark Arrows'" }] }
         ]
@@ -402,7 +402,7 @@ exports.skills = [
     {
         name: 'Inspiring Presence',
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
-        icon: "leadership",
+        icon: "battle-morale",
         ranks: [
             { effects: [{ icon: "leadership", description: "Character's aura leadership effect: +5" }] }
         ]
@@ -410,7 +410,7 @@ exports.skills = [
     {
         name: 'Line Breaker',
         description: "Magic is a most useful tool on the field of battle, but generally secondary in the face of good, old-fashioned brute force.",
-        icon: "shield",
+        icon: "battle-defense",
         ranks: [
             { effects: [
                 { icon: 'shield', description: "Melee defence: +4 for Dreadspears, Bleakswords and Black Ark Corsairs units", psIcon: 'redFlag', postScript: "Lord's army" }
@@ -428,7 +428,7 @@ exports.skills = [
     {
         name: 'Sheafmaster',
         description: "Marshalling missile troops effectively - even elites - is all about timing.",
-        icon: "ammunition",
+        icon: "battle-ammo",
         ranks: [
             { effects: [
                 { icon: 'ammunition', description: "Ammunition: +8% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", psIcon: 'redFlag', postScript: "Lord's army" }
@@ -446,7 +446,7 @@ exports.skills = [
     {
         name: 'Raid Leader',
         description: "The most effective raiders have a plan that is certain to succeed and stick to it; this one ensures that they do.",
-        icon: "charge",
+        icon: "battle-charge",
         ranks: [
             { effects: [
                 { icon: 'charge', description: "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
@@ -466,7 +466,7 @@ exports.skills = [
     {
         name: 'Lash Master',
         description: "Judicious, or even not-so-judicious, use of the lash tends to get the desired results, so why hold back?",
-        icon: "damage",
+        icon: "battle-damage",
         ranks: [
             { effects: [
                 { icon: 'damage', description: "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" }
@@ -486,7 +486,7 @@ exports.skills = [
     {
         name: 'Knight Lord',
         description: "The ability to command the savage, untamed Cold Ones should not be underestimated - not everyone has the knack!",
-        icon: "sword",
+        icon: "battle-attack",
         ranks: [
             { effects: [
                 { icon: 'sword', description: "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
@@ -504,7 +504,7 @@ exports.skills = [
     {
         name: 'Slaughterlord',
         description: "An elite even amongst elites, this accomplished warrior directs the cut-and-thrust of melee - a choreographer of death, you might say.",
-        icon: "sword",
+        icon: "battle-attack",
         ranks: [
             { effects: [{ icon: 'sword', description: "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", psIcon: 'redFlag', postScript: "Lord's army" }] },
             { effects: [
@@ -520,7 +520,7 @@ exports.skills = [
     {
         name: 'Loose!',
         description: "The authorisation to loose arrows without adherence to drill makes for an irregular - and  therefore far deadlier -hail of pointed death.",
-        icon: 'blackArrow',
+        icon: 'darken-the-skies',
         ranks: [
             { effects: [
                 { icon: 'blackArrow', description: "Passive ability: 'Loose!'" }
@@ -530,7 +530,7 @@ exports.skills = [
     {
         name: 'Cull the Unworthy',
         description: "Those who fail to make the grade don't just die, they're tortured and used for target practice!",
-        icon: "armor",
+        icon: "battle-armor",
         ranks: [
             { effects: [
                 { icon: 'damage', description: "Weapon strength: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
@@ -543,7 +543,7 @@ exports.skills = [
     {
         name: 'Ravager Rewards',
         description: "You'd think that pillaging the land would bring payment enough. You'd be wrong.",
-        icon: "speed",
+        icon: "battle-speed",
         ranks: [
             { effects: [
                 { icon: 'speed', description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
@@ -555,7 +555,7 @@ exports.skills = [
     {
         name: 'Favour the Fortunate',
         description: "The gods help those who help themselves - raising them above the rank and file to elite status.",
-        icon: "sword",
+        icon: "battle-attack",
         ranks: [
             { effects: [
                 { icon: 'charge', description: "Charge bonus: +12 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
@@ -567,7 +567,7 @@ exports.skills = [
     {
         name: 'Confer Bloodlust',
         description: "The murderous, unforgiving rage of Khaine can be transferred from a Lord to his legions.",
-        icon: "damage",
+        icon: "battle-damage",
         ranks: [
             { effects: [
                 { icon: 'damage', description: "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
@@ -579,7 +579,7 @@ exports.skills = [
     {
         name: 'Darken the Skies',
         description: "Above the battlefield, the air is filled with arrows; a shroud of pure death blotting out the sun.",
-        icon: 'hailOfArrows',
+        icon: 'darken-the-skies',
         ranks: [
             { effects: [
                 { icon: 'blackArrow', description: "Replaces: 'Loose!'" },
@@ -590,7 +590,7 @@ exports.skills = [
     {
         name: 'Route Marcher',
         description: "Those who know the land and its secrets will travel faster and further than the foes who don't",
-        icon: 'compass',
+        icon: 'campaign-movement',
         ranks: [
             { effects: [{ icon: 'compass', description: "Campaign movement range: +10%" }] }
         ]
@@ -598,7 +598,7 @@ exports.skills = [
     {
         name: 'Iron Disciplinarian',
         description: "This Lord expects utter obedience from the smallfolk, and has little time for insurrections or petty revolts.",
-        icon: 'face',
+        icon: 'campaign-public-order',
         ranks: [
             { effects: [{ icon: 'face', description: "Public order: +1", postScript: "local province" }] },
             { effects: [{ icon: 'face', description: "Public order: +2", postScript: "local province" }] },
@@ -609,7 +609,7 @@ exports.skills = [
     {
         name: 'Dreaded Slaver',
         description: "This one ensures that those captured in battle wished they'd died on the field, so great is the cruelty that awaits them.",
-        icon: "coin",
+        icon: "campaign-slaves",
         ranks: [
             { effects: [{ icon: "coin", description: "Casualties captured post-battle: +5%" }] },
             { effects: [{ icon: "coin", description: "Casualties captured post-battle: +12%" }] },
@@ -619,7 +619,7 @@ exports.skills = [
     {
         name: 'Serve Or Die',
         description: "You will serve me, wretch, or you will die, there is no other option.",
-        icon: "coin",
+        icon: "campaign-military-spending",
         ranks: [
             { effects: [{ icon: "coin", description: "Recruitment cost: -3%", psIcon: 'redFlag', postScript: "Lord's army" }] },
             { effects: [{ icon: "coin", description: "Recruitment cost: -8%", psIcon: 'redFlag', postScript: "Lord's army" }] },
@@ -629,7 +629,7 @@ exports.skills = [
     {
         name: 'Infamous Raider',
         description: "If there were annals detailing the dastardly deeds of the sackers and looters of the world, this inveterate brigand would feature heavily.",
-        icon: "coin",
+        icon: "campaign-military-spending",
         ranks: [
             { effects: [
                 { icon: "coin", description: "Income from raiding: +5%", psIcon: 'redFlag', postScript: "Lord's army" },
@@ -651,7 +651,7 @@ exports.skills = [
     {
         name: 'Draftmaster',
         description: "Someone has to ensure the numbers and quality of recruits remain high.",
-        icon: 'doubleChevron',
+        icon: 'campaign-experience',
         ranks: [
             { effects: [
                 { icon: 'doubleChevron', description: "Recruit rank: +1 for all units" },
@@ -662,7 +662,7 @@ exports.skills = [
     {
         name: 'Lightning Strike',
         description: "The time to strike is now!",
-        icon: 'dagger',
+        icon: 'campaign-subterfuge',
         ranks: [
             { effects: [{ icon: 'dagger', description: "Enables lightning strike battles when reinforcements are present" }] }
         ]
@@ -670,7 +670,7 @@ exports.skills = [
     {
         name: 'Quartermaster',
         description: "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
-        icon: "coin",
+        icon: "campaign-military-spending",
         ranks: [
             { effects: [{ icon: "coin", description: "Upkeep: -3% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
             { effects: [{ icon: "coin", description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
@@ -680,7 +680,7 @@ exports.skills = [
     {
         name: 'Fleeting Shadow',
         description: "Knowing precisely where and when to launch an ambush, and against who, takes an unusual level of guile.",
-        icon: 'arrowSkull',
+        icon: 'campaign-ambush',
         ranks: [
             { effects: [
                 { icon: 'arrowSkull', description: "Ambush success chance: +6%", psIcon: 'redFlag', postScript: "Lord's army" },
@@ -700,7 +700,7 @@ exports.skills = [
     {
         name: 'Elven Healing',
         description: "The ancient Asur arts teach one to heal as well as how to harm.",
-        icon: 'plus',
+        icon: 'campaign-replenishment',
         ranks: [
             { effects: [
                 { icon: 'skullCrossBones', description: "Attrition: -3% casualties suffered from all attrition", psIcon: 'redFlag', postScript: "Lord's army" },
@@ -719,7 +719,7 @@ exports.skills = [
     {
         name: 'Renowned & Feared',
         description: "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
-        icon: 'daggerEye',
+        icon: 'campaign-agent',
         ranks: [
             { effects: [
                 { icon: "coin", description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" },

@@ -27,7 +27,7 @@ export default {
         return {
             lords: [{ name: 'Choose a race...' }],
             legendaryLords: [{ name: 'Choose a race...' }],
-            // TODO: move race lords and legendary to mongodb
+            // TODO: move race lords and legendary to js file
             raceLords: {
                 'Dark Elves': [
                     { name: 'Dreadlord (Sword & Shield)', type: 'dreadlord', subType: 'shield' }, 

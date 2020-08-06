@@ -11,7 +11,7 @@
                     :block="block" 
                     :skillState="rowState"
                     :lordLevel="lordLevel"
-                    class="inline skill-button"/>
+                    class="inline"/>
             </div>
         </div>
     </div>
@@ -32,11 +32,6 @@ export default {
         rowState: Object,
         lordLevel: Number
     },
-    data() {
-        return {
-            displayTooltip: '' // remove later
-        }
-    },
     methods: {
         skillClick(name) {
             this.$emit('skillClick', name, this.row.row)
@@ -50,16 +45,15 @@ export default {
 
 <style>
 .grouping {
-    padding: 10px;
+    padding: 10px 10px 10px 0;
     border: 1px solid darkgray;
     margin-right: 30px;
     height: 82px;
 }
 .skill-button {
-    height: 60px;
-    width: 200px;
-    border: 1px solid grey;
-    margin-right: 30px;
+    height: 67px;
+    width: 222px;
+    margin-right: 25px;
     line-height: 60px;
     position: relative;
     color: black;

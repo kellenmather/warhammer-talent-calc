@@ -1,7 +1,7 @@
 <template>
     <article class="col">
         <div class="jumbotron header fader" style="backgroundRepeat: no-repeat;" :style="[getImage(), getPosition()]">
-            <img class="unselectable" alt="Warhammer II logo" src="@/assets/whlogo.png">
+            <img class="unselectable logo-size-control" alt="Warhammer II logo" src="@/assets/whlogo.png">
         </div>
     </article>
 </template>
@@ -86,6 +86,10 @@ article.col {
 .header {
     border-radius: 0px;
     padding: 2rem 1rem;
+}
+.logo-size-control {
+    max-width: 400px;
+    min-width: 250px;
 }
 .fader img {
     -webkit-animation: fadein 2; /* Safari, Chrome and Opera > 12.1 */

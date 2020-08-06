@@ -4,6 +4,7 @@
             <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar">
                 <div class="col left-nav">
                     <button @click="resetPoints()" type="button" class="btn btn-info">Reset</button>
+                    <button @click="$router.push('/')" type="button" style="marginLeft:20px;" class="btn btn-info">Back</button>
                 </div>
                 <div class="col lord-name">
                     {{lord.charAt(0).toUpperCase() + lord.slice(1)}}
@@ -191,4 +192,5 @@ export default {
 .header-padding {
     padding-bottom: 160px;
 }
+
 </style>

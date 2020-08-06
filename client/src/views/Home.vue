@@ -3,7 +3,7 @@
         <Header :selection="selection"/>
         <div class='container-fluid'>
             <div class="row justify-content-center">
-                <RaceSelector @raceSelected="selectedRace" :selection="selection"/>
+                <RaceSelector @raceSelected="selectedRace"/>
                 <LordSelector :selection="selection"/>
             </div>
         </div>

@@ -1,14 +1,15 @@
 <template>
-    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-bg" >
-        <div @click="onClick" @contextmenu.prevent="onRightClick" class="inline-block skill-name unselectable" :style="isSelected()">{{ block }}</div>
-        <div class="inline-block skill-ranks">
+    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" :style="getBorder()" class="skill-button" >
+        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block unselectable" :style="getIcon(skill.icon)"></div>
+        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block unselectable" :style="isObtained()"><span class="position-block"><p>{{ block }}</p></span></div>
+        <div class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
             <div 
                 v-for="(rank, index) in skill.ranks" 
                 :key="index" 
                 @mouseover="showRank(index + 1)" 
                 @mouseleave="hideRank()" 
-                class="rank-class" 
-                :style="[rankHeight(skill.ranks.length), isSelected(index)]">
+                class="skill-rank" 
+                :style="[obtainedRank(skillState[block].value, index)]">
             </div>
         </div>
             <Popup 
@@ -22,17 +23,14 @@
                 :left="left"
                 v-if="displayPopup && skill" />
     </div>
-
 </template>
 
 <script>
-import Skill from '@/components/calculator/Skill.vue';
 import Popup from '@/components/calculator/Popup.vue';
 
 export default {
     name: 'CalcRow',
     components: {
-        Skill,
         Popup
     },
     props: {
@@ -102,10 +100,6 @@ export default {
         hideRank: function() {
             this.specificRank = 0;
         },
-        rankHeight(ranks) {
-            let percentage = 100 / ranks;
-            return {height: percentage + '%'};
-        },
         onClick() {
             if (!this.disabled && this.skillState[this.block].value !== this.skill.ranks.length) {
                 this.$emit('skillClick', this.block);
@@ -116,7 +110,7 @@ export default {
                 this.$emit('skillRightClick', this.block);
             }
         },
-        isSelected(index) {
+        isObtained(index) {
             if (this.skillState[this.block].value === 0) {
                 return '';
             } else {
@@ -124,10 +118,39 @@ export default {
                 if (this.color === 'row6') buttonColor = '#e13d39';
                 else if (this.color === 'row9') buttonColor = '#3BC4D3';
                 else buttonColor = '#f3ad2d';
-                if (index && (index +1) > this.skillState[this.block].value) return '';
                 return {backgroundColor: buttonColor};
             }
         },
+        obtainedRank(rank, index) {
+            console.log('hit');
+            let talentSkill;
+            // if rank === index +1 return lit version else not
+            if (rank > index) {
+                let skillColor = (this.color === 'row6') ? 'red' : (this.color === 'row9') ? 'blue' : 'yellow';
+                try {                
+                    talentSkill = require('@/assets/skillStyles/skill-rank-' + skillColor + '.png');
+                    return { 'content': 'url(' + talentSkill + ')' };
+                } catch {
+                    return ''
+                }
+            } else {
+                try {                
+                    talentSkill = require('@/assets/skillStyles/skill-rank.png');
+                    return { 'content': 'url(' + talentSkill + ')' };
+                } catch {
+                    return ''
+                }
+            }
+        },
+        // getSkillRank() {
+        //     let talentSkill;
+        //     try {                
+        //         talentSkill = require('@/assets/skillStyles/skill-rank.png');
+        //         return { 'content': 'url(' + talentSkill + ')' };
+        //     } catch {
+        //         return ''
+        //     }
+        // },
         isDisabled() {
             let skillData = this.skillState[this.block];
             let levelRestriction = skillData.restrictionLevel;
@@ -211,6 +234,25 @@ export default {
         },
         handleScroll() {
             console.log('width here:');
+        },
+        getBorder() {
+            let border;
+            try {                
+                border = require('@/assets/skillStyles/skill-frame.png');
+                return { 'backgroundImage': 'url(' + border + ')' };
+            } catch {
+                return ''
+            }
+        },
+        getIcon(icon) {
+            console.log(icon)
+            let asset;
+            try {                
+                asset = require('@/assets/largeIcons/' + icon + '.png');
+                return { 'content': 'url(' + asset + ')' };
+            } catch {
+                return ''
+            }
         }
     },
     created() {
@@ -231,37 +273,63 @@ export default {
 </script>
 
 <style>
-.skill-name {
-    height: 58px;
-    width: 179px;
-    vertical-align: top;
-    cursor: context-menu;
-    /* color: #EBE6CD; */
+
+.skill-icon {
+    width: 72px;
+    height: 72px;
+    margin-top: -5px;
+    position: absolute;
+    left: 30px;
 }
 .skill-ranks {
-    width: auto;
-    /* height: 100%; */
-    height: 58px;
-    overflow: hidden;
+    position: absolute;
+    height: 60px;
+    top: 2px;
+    left: 203px;
 }
-.skill-ranks div {
-    border-left: 1px solid grey;
-    border-bottom: 1px solid grey;
+.skill-rank {
+    display: block;
+    width: 16px;
+    max-height: 20px;
 }
-.skill-ranks div:last-child {
-    border-bottom: none;
+.skill-name {
+    margin-top: 11px;
+    margin-left: 65px;
+    padding-left: 30px;
+    height: 43px;
+    width: 136px;
+    cursor: context-menu;
+    font-size: .8em;
+    /* color: #EBE6CD; */
+}
+.position-block {
+    display:table;
+    position: absolute;
+    word-wrap: normal;
+    line-height:normal;
+    width: 100px;
+    height: 43px;
+    left: 102px;
+}
+.position-block p {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    font-style: italic;
+    word-wrap: break-word;
+    text-align: left;
+    white-space: initial;
+    font-weight: bold;
+    height: 43px;
+    vertical-align: middle;
 }
 .inline-block {
     display: inline-block;
 }
 .rank-class {
-    display: block;
+    display: absolute;
     /* height is set programatically through inline style */
-    width: 19px;
+    width: 10px;
 }
-.skill-bg {
-    background-color: #a5a5a5;
-    height: 57px;
-    width: 100%;
-}
+
 </style>
