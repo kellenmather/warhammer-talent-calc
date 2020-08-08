@@ -1,5 +1,5 @@
 <template>
-    <div v-if="skills.length > 0" class="container-fluid calc-border calc">
+    <div v-if="skills.length > 0" class="container-fluid calc-border calc" :style="getBackground()">
         <div class="header-padding">
             <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar">
                 <div class="col left-nav">
@@ -130,6 +130,17 @@ export default {
         resetPoints() {
             this.lordLevel = 1;
             this.calcState = JSON.parse(JSON.stringify(this.saveState));
+        },
+        getBackground() {
+            let background, top, bottom;
+            try {
+                background = require('@/assets/parchment-wh2.png');
+                top = require('@/assets/parchment-top-stain-wh2.png');
+                bottom = require('@/assets/parchment-bottom-stain-wh2.png');
+                return { 'backgroundImage': 'url(' + background + '), url(' + top + '), url(' + bottom + ')' }
+            } catch {
+                return ''
+            }
         }
     },
     created() {
@@ -159,6 +170,8 @@ export default {
 .calc {
     background-color: #c9c5bc;
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center, left top 90px, right bottom;
 }
 .calc-row {
     height: 80px;

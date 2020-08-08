@@ -13,24 +13,38 @@
             {{disabledReason}}
         </div>
         <div class="stats">
-            <p v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
-                <span :style="getIcon(effect.icon)" class="small-icon"></span>{{effect.description}}
-            </p>
+            <div v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
+                <span><a :style="getIcon(effect.icon)" class="small-icon" ></a></span>
+                <span class="effect inline-block" >{{effect.description}}</span>
+            </div>
         </div>
-        <div v-if="hasNext()" class="title">
+        <div v-if="hasNext() && !specificRank" class="title" style="paddingTop: 10px;">
             Next Level
         </div>
-        <div v-if="hasNext()" class="stats">
-            <p v-for="(effect, idx) in info.ranks[displayNextLevel()].effects" :key="idx">
-                <span :style="getIcon(effect.icon)" class="small-icon"></span>{{effect.description}}
-            </p>
+        <div v-if="hasNext() && !specificRank" class="stats">
+            <div v-for="(effect, idx) in info.ranks[displayNextLevel()].effects" :key="idx">
+                <span><a :style="getIcon(effect.icon)" class="small-icon"></a></span>
+                <span class="effect inline-block">{{effect.description}}</span>
+            </div>
         </div>
+        <Spell
+            v-if="info.spell"
+            :currentRank="currentRank"
+            :specificRank="specificRank"
+            :spell="info.spell"
+            :name="info.name"
+        />
     </div>
 </template>
 
 <script>
+import Spell from '@/components/calculator/Spell.vue';
+
 export default {
     name: 'Popup',
+    components: {
+        Spell
+    },
     props: {
         info: Object,
         currentRank: Number, // current rank obtained 0-3
@@ -69,8 +83,7 @@ export default {
 .popup-container {
     position: absolute;
     padding: 5px;
-    max-width: 600px;
-    min-width: 500px;
+    width: 600px;
     z-index: 1;
     background-color: black;
     border: 2px solid black;
@@ -92,13 +105,14 @@ export default {
     word-wrap: break-word;
     text-align: left;
     white-space: initial;
+    padding-bottom: 10px;
 }
 .stats {
     color: #49FA51;
     padding-top: 7px;
     text-align: left;
 }
-.stats p{
+.stats div{
     margin: 0;
     padding-bottom: 5px;
     white-space: initial;
@@ -112,8 +126,13 @@ export default {
 .small-icon {
     background-repeat: no-repeat;
     display: inline-block;
-    width: 14px;
-    height: 14px;
-    padding-right: 18px;
+    width: 24px;
+    height: 24px;
+    padding-right: 36px;
+}
+.effect {
+    max-width: 540px;
+    padding-bottom: 10px;
+    vertical-align: middle;
 }
 </style>

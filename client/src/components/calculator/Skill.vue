@@ -1,14 +1,19 @@
 <template>
-    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" :style="getBorder()" class="skill-button" >
+    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button" >
+        <div :style="getBorder()" class="skill-border"></div>
         <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block unselectable" :style="getIcon(skill.icon)"></div>
-        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block unselectable" :style="isObtained()"><span class="position-block"><p>{{ block }}</p></span></div>
+        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block unselectable" :style="isObtained()">
+            <span class="position-block">
+                <p>{{ block }}</p>
+            </span>
+        </div>
         <div class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
             <div 
                 v-for="(rank, index) in skill.ranks" 
                 :key="index" 
                 @mouseover="showRank(index + 1)" 
                 @mouseleave="hideRank()" 
-                class="skill-rank" 
+                class="skill-rank unselectable" 
                 :style="[obtainedRank(skillState[block].value, index)]">
             </div>
         </div>
@@ -115,14 +120,13 @@ export default {
                 return '';
             } else {
                 let buttonColor;
-                if (this.color === 'row6') buttonColor = '#e13d39';
-                else if (this.color === 'row9') buttonColor = '#3BC4D3';
-                else buttonColor = '#f3ad2d';
-                return {backgroundColor: buttonColor};
+                if (this.color === 'row6') buttonColor = '#9C2A27, #78201E, #78201E, #5A1917, #681C1A, #882523, #E23D39';
+                else if (this.color === 'row9') buttonColor = '#31A1B4, #267C8C, #257B8A, #206B79, #247785, #2E98AA, #40D1EB';
+                else buttonColor = '#B48426, #87601A, #78581A, #614513, #7D5A17, #B07E20, #FCB42F';
+                return {'backgroundImage': "linear-gradient(" + buttonColor + ")"};
             }
         },
         obtainedRank(rank, index) {
-            console.log('hit');
             let talentSkill;
             // if rank === index +1 return lit version else not
             if (rank > index) {
@@ -245,7 +249,6 @@ export default {
             }
         },
         getIcon(icon) {
-            console.log(icon)
             let asset;
             try {                
                 asset = require('@/assets/largeIcons/' + icon + '.png');
@@ -273,7 +276,13 @@ export default {
 </script>
 
 <style>
-
+.skill-border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 220px;
+    height: 67px;
+}
 .skill-icon {
     width: 72px;
     height: 72px;
@@ -300,6 +309,9 @@ export default {
     width: 136px;
     cursor: context-menu;
     font-size: .8em;
+    background-image: linear-gradient(#878787, #808080, #808080, #7C7C7C, #878787, #929292, #B1B1B1);
+    background-color: #808080;
+    color: #ECE9CB;
     /* color: #EBE6CD; */
 }
 .position-block {
@@ -331,5 +343,4 @@ export default {
     /* height is set programatically through inline style */
     width: 10px;
 }
-
 </style>
