@@ -43,7 +43,8 @@ export default {
         block: String,
         color: String,
         skillState: Object,
-        lordLevel: Number
+        lordLevel: Number,
+        styleGuide: String
     },
     data() {
         return {
@@ -132,14 +133,14 @@ export default {
             if (rank > index) {
                 let skillColor = (this.color === 'row6') ? 'red' : (this.color === 'row9') ? 'blue' : 'yellow';
                 try {                
-                    talentSkill = require('@/assets/skillStyles/skill-rank-' + skillColor + '.png');
+                    talentSkill = require('@/assets/' + this.styleGuide + '/skill-rank-' + skillColor + '.png');
                     return { 'content': 'url(' + talentSkill + ')' };
                 } catch {
                     return ''
                 }
             } else {
                 try {                
-                    talentSkill = require('@/assets/skillStyles/skill-rank.png');
+                    talentSkill = require('@/assets/' + this.styleGuide + '/skill-rank.png');
                     return { 'content': 'url(' + talentSkill + ')' };
                 } catch {
                     return ''
@@ -242,7 +243,7 @@ export default {
         getBorder() {
             let border;
             try {                
-                border = require('@/assets/skillStyles/skill-frame.png');
+                border = require('@/assets/' + this.styleGuide + '/skill-frame.png');
                 return { 'backgroundImage': 'url(' + border + ')' };
             } catch {
                 return ''

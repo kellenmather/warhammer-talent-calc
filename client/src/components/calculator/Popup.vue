@@ -58,21 +58,21 @@ export default {
     methods: {
         displayLevel() {
             // prioritize level over rank when level value is greater than 0
-            return (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 0) ? this.currentRank : this.currentRank -1
+            return (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 0) ? this.currentRank : this.currentRank -1;
         },
         displayNextLevel() {
-            return this.currentRank
+            return this.currentRank;
         },
         hasNext() {
             if (this.currentRank > 0 && this.currentRank < this.ranks) return true
         },
         getIcon(icon) {
-            let myIcon;
-            try {                
-                myIcon = require('@/assets/smallIcons/' + icon + '.png')              
-                return { 'backgroundImage': 'url(' + myIcon + ')' };
+            try {            
+                icon = require('@/assets/smallIcons/' + icon + '.png')              
+                return { 'backgroundImage': 'url(' + icon + ')' };
             } catch {
-                return ''
+                icon = require('@/assets/largeIcons/' + icon + '.png')              
+                return [{ 'backgroundImage': 'url(' + icon + ')', 'backgroundSize': '36px auto', 'height': '28px' }];
             }
         }
     }

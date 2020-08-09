@@ -1,7 +1,7 @@
 <template>
     <section>
         <Header :selection="selection"/>
-        <div class='container-fluid'>
+        <div class='container-fluid home' :style="getAssets()">
             <div class="row justify-content-center">
                 <RaceSelector @raceSelected="selectedRace"/>
                 <LordSelector :selection="selection"/>
@@ -32,18 +32,23 @@ export default {
         selectedRace(race) {
             console.log('Home setting race to: ', race);
             this.selection = race;
+        },
+        getAssets() {
+            let img = require('@/assets/bottom-divide.png');
+            img = { 'backgroundImage': 'url(' + img + ')' };
+            return img;
         }
     }
 };
 </script>
 
 <style>
-img {
-    width: 20%;
-    height: auto;
-}
 .parent {
     display: block;
+}
+.home {
+    padding-top: 5px;
+    background-repeat: repeat-x;
 }
 
 </style>

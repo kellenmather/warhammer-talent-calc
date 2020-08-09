@@ -1,202 +1,3 @@
-/**
- * Listed below are all valid values for the 'type' field
- * type: lord = all lords of X race
- *       Generic lord types:
- * type: magic = all magic lords of X race
- * type: range = range lords
- * type: melee = melee lords
- *       Lores types of Magic:
- * type: light, fire, death, metal, heavens, bigWaagh, littleWaagh, vampires, beasts, wild, shadows, life, plague, ruin, stealth high, dark, nehekhara, deep
- *       
- *       Dark Elf specific:
- * type: dreadlord (melee & range)
- * type: beastmaster
- */
-
- /**
-  * For example a supremese sorceros (fire) lord would first check to see if X row had a type for:
-  * fire (then)
-  * magic
-  * lord
-  */
-
-exports.rows = [
-    {
-        row: 1,
-        race: 'DE',
-        name: ['dreadlord'],
-        type: null,
-        content: [
-            {
-                restrictionLevel: 4,
-                blockContent: ['Dark Steed']
-            },
-            {
-                restrictionLevel: 7,
-                blockContent: ['Cold One']
-            },
-            {
-                restrictionLevel: 14,
-                blockContent: ['Dark Pegasus']
-            },
-            {
-                restrictionLevel: 18,
-                blockContent: ['Black Dragon']
-            },
-            {
-                restrictionLevel: 4,
-                blockContent: ['Sadistic']
-            },
-            {
-                restrictionLevel: 6,
-                blockContent: ['Eternal Hatred']
-            },
-            {
-                restrictionLevel: 10,
-                blockContent: ['Ward of Khaine']
-            },
-            {
-                restrictionLevel: 10,
-                blockContent: ['Ward of Hekarti']
-            },
-            {
-                restrictionLevel: 20,
-                blockContent: ['Immortality']
-            }
-        ]
-    },
-    {
-        row: 2,
-        race: 'DE',
-        name: ['dreadlord', 'sorceress', 'beastmaster'],
-        type: null,
-        content: [
-            {
-                restrictionLevel: 10,
-                restrictionLimited: ['Revered Name of Power', 'Aristocratic Name of Power'],
-                blockContent: ['Martial Name of Power']
-            },
-            {
-                restrictionLevel: 10,
-                restrictionLimited: ['Martial Name of Power', 'Aristocratic Name of Power'],
-                blockContent: ['Revered Name of Power']
-            },
-            {
-                restrictionLevel: 10,
-                restrictionLimited: ['Martial Name of Power', 'Revered Name of Power'],
-                blockContent: ['Aristocratic Name of Power']
-            }
-        ]
-    },
-    // {
-    //     row: 2,
-    //     race: 'DE',
-    //     name: ['ark'],
-    //     type: null,
-    //     content: [
-    //         {
-    //             restrictionLevel: 10,
-    //             restrictionLimited: ['Revered Name of Power'],
-    //             blockContent: ['Martial Name of Power']
-    //         },
-    //         {
-    //             restrictionLevel: 10,
-    //             restrictionLimited: ['Martial Name of Power'],
-    //             blockContent: ['Revered Name of Power']
-    //         },
-    //         {
-    //             blockContent: ['Unassailable']
-    //         },
-    //         {
-    //             blockContent: ['Unstoppable']
-    //         },
-    //         {
-    //             blockContent: ['Unknowable']
-    //         }
-    //     ]
-    // },
-    {
-        row: 3,
-        race: 'DE',
-        name: ['dreadlord'],
-        type: 'range',
-        content: [
-            {
-                blockContent: ['Sea Dragon Cloak'],
-                seadragoncloak: 0
-            },
-            {
-                restrictionChoice: 'Sea Dragon Cloak',
-                blockContent: ['Devastating Charge', 'Deadeye', 'Blade Master', 'Indomitable'],
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ['Foe-Seeker']
-            },
-            {
-                restrictionChoice: 'Foe-Seeker',
-                blockContent: ['Wound-Maker', 'Full Plate Armour', 'Piercing Shots', 'Expeditious Endeavour']
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ['Volley of Dark Arrows']
-            }
-        ]
-    },
-    {
-        row: 6,
-        race: 'DE',
-        type: 'range',
-        content: [
-            {
-                blockContent: ['Inspiring Presence']
-            },
-            {
-                restrictionChoice: 'Inspiring Presence',
-                blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
-            },
-            {
-                restrictionCount: 6,
-                blockContent: ['Loose!']
-            },
-            {
-                restrictionChoice: 'Loose!',
-                blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
-            },
-            {
-                restrictionCount: 1,
-                blockContent: ['Darken the Skies']
-            }
-        ]
-    },
-    {
-        row: 9,
-        race: 'DE',
-        type: null,
-        content: [
-            {
-                blockContent: ['Route Marcher']
-            },
-            {
-                restrictionChoice: 'Route Marcher',
-                blockContent: ['Iron Disciplinarian', 'Dreaded Slaver', 'Serve Or Die', 'Infamous Raider']
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ['Draftmaster']
-            },
-            {
-                restrictionChoice: 'Draftmaster',
-                blockContent: ['Lightning Strike', 'Quartermaster', 'Fleeting Shadow', 'Elven Healing']
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ['Renowned & Feared']
-            }
-        ]
-    }
-];
-
 exports.skills = [
     {
         name: 'Dark Steed',
@@ -315,6 +116,23 @@ exports.skills = [
         ]
     },
     {
+        name: 'Hard to Hit',
+        description: "Hand-to-hand combat is a lethal match of cut and thrust. However, it's not all about offensive strikes; parries and other defensive moves can also win the day.",
+        icon: "character-defense",
+        ranks: [
+            {
+                effects: [
+                    { icon: 'defense-character', description: "Melee defense: +6"}
+                ]
+            },
+            {
+                effects: [
+                    { icon: 'defense-character', description: "Melee defense: +12"}
+                ]
+            }
+        ]
+    },
+    {
         name: 'Deadeye',
         description: "Although precision in missile combat is something that can be learned, this one was born with a high degree of natural talent.",
         icon: "character-ammo",
@@ -352,7 +170,7 @@ exports.skills = [
         description: "From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
         icon: "abilities-foe-seeker",
         ranks: [
-            { effects: [{ icon: 'foeSeeker', description: "Ability: 'Foe-Seeker'" }] }
+            { effects: [{ icon: 'abilities-foe-seeker', description: "Ability: 'Foe-Seeker'" }] }
         ],
         spell: {
             description: 'Character ability',
@@ -388,6 +206,23 @@ exports.skills = [
         ]
     },
     {
+        name: 'Blade Shield',
+        description: "A blade that sings in defence will not let its wielder be penetrated.",
+        icon: "character-defense",
+        ranks: [
+            {
+                effects: [
+                    { icon: "defense-character", description: "Melee defense: +6"}
+                ]
+            },
+            {
+                effects: [
+                    { icon: "defense-character", description: "Melee defense: +12"}
+                ]
+            }
+        ]
+    },
+    {
         name: 'Piercing Shots',
         description: "The forest teaches a warrior not only when to fire but where, which makes a bigger difference.",
         icon: "character-ranged-damage",
@@ -406,11 +241,34 @@ exports.skills = [
         ]
     },
     {
+        name: 'Deadly Onslaught',
+        description: "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
+        icon: "deadly-onslaught",
+        ranks: [
+            { effects: [{ icon: 'deadly-onslaught', description: "Ability: 'Deadly Onslaught'" }] }
+        ],
+        spell: {
+            description: 'Character ability',
+            cooldown: '90',
+            rarity: 'uncommon',
+            attributes: {
+                type: 'Augment',
+                duration: "31 seconds",
+                target: "Self",
+                effects: [
+                    { text: '+25%', icon: 'icon-armor-piercing', postText: 'Armor-Piercing Weapon Damage', color: 'green' },
+                    { text: '+25%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'green' },
+                    { text: '+36%', icon: 'charge-character', postText: 'Charge Bonus', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Volley of Dark Arrows',
         description: "By which an unexpected shower of pointy death rains down upon the unfortunate targets. Ouch!",
         icon: "volley-of-dark-arrows",
         ranks: [
-            { effects: [{ icon: 'arrowVolley', description: "Ability: 'Volley of Dark Arrows'" }] }
+            { effects: [{ icon: 'volley-of-dark-arrows', description: "Ability: 'Volley of Dark Arrows'" }] }
         ],
         spell: {
             description: 'Character ability',
@@ -419,11 +277,14 @@ exports.skills = [
             uses: '3',
             attributes: {
                 type: 'Magic Missiles',
-                target: 'Enemy',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '200m', uptick: 'range' }
+                ],
                 effects: [
-                    { text: 'Causes', icon: 'armor-piercing-character', postText: 'armour-piercing damage', color: 'green', uptick: 'green' },
-                    { text: 'Good penetration', color: 'green', uptick: 'green' },
-                    { text: 'Effective at long range', color: 'green', uptick: 'green' }
+                    { text: 'Causes', icon: 'icon-armor-piercing', postText: 'Armor-piercing damage', color: 'green', uptick: 'up-green' },
+                    { text: 'Good penetration', color: 'green', uptick: 'up-green' },
+                    { text: 'Effective at long range', color: 'green', uptick: 'up-green' }
                 ]
             }
         }
@@ -547,14 +408,62 @@ exports.skills = [
         ]
     },
     {
+        name: 'Strength Through Spite',
+        description: "Hatred is an energy source just like any other, to be harnessed and directed at will.",
+        icon: 'strength-through-spite',
+        ranks: [
+            { effects: [
+                { icon: 'strength-through-spite', description: "Passive ability: 'Strength Through Spite'" }
+            ] }
+        ],
+        spell: {
+            description: 'Character ability',
+            rarity: 'common',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '30m',
+                effects: [
+                    { text: '+5', icon: 'melee-character', postText: 'Melee Attack', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Loose!',
         description: "The authorisation to loose arrows without adherence to drill makes for an irregular - and  therefore far deadlier -hail of pointed death.",
         icon: 'darken-the-skies',
         ranks: [
             { effects: [
-                { icon: 'blackArrow', description: "Passive ability: 'Loose!'" }
+                { icon: 'darken-the-skies', description: "Passive ability: 'Loose!'" }
             ] }
-        ]
+        ],
+        spell: {
+            description: 'Character ability',
+            rarity: 'common',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '+10', icon: 'reload-time-stat', postText: 'Reload Skill', color: 'green' },
+                ]
+            }
+         }
     },
     {
         name: 'Cull the Unworthy',
@@ -606,15 +515,65 @@ exports.skills = [
         ]
     },
     {
+        name: 'Kindle the Fury',
+        description: "Hatred is an energy source just like any other, to be harnessed and directed at will.",
+        icon: 'kindle-the-fury',
+        ranks: [
+            { effects: [
+                { icon: 'strength-through-spite', description: "Replaces: 'Strength Through Spite'" },
+                { icon: 'kindle-the-fury', description: "Passive ability: 'Kindle the Fury'" }
+            ] }
+        ],
+        spell: {
+            description: 'Lord ability',
+            rarity: 'rare',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '+9', icon: 'melee-character', postText: 'Melee Attack', color: 'green' },
+                    { text: '+8%', icon: 'icon-melee-base', postText: 'Base Weapon Damage', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Darken the Skies',
         description: "Above the battlefield, the air is filled with arrows; a shroud of pure death blotting out the sun.",
         icon: 'darken-the-skies',
         ranks: [
             { effects: [
-                { icon: 'blackArrow', description: "Replaces: 'Loose!'" },
-                { icon: 'hailOfArrows', description: "Passive ability: 'Darken the Skies'" }
+                { icon: 'darken-the-skies', description: "Replaces: 'Loose!'" },
+                { icon: 'darken-the-skies', description: "Passive ability: 'Darken the Skies'" }
             ] }
-        ]
+        ],
+        spell: {
+            description: 'Character ability',
+            rarity: 'uncommon',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '+20', icon: 'reload-time-stat', postText: 'Reload Skill', color: 'green' },
+                ]
+            }
+         }
     },
     {
         name: 'Route Marcher',

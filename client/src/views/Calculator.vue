@@ -1,16 +1,18 @@
 <template>
-    <div v-if="skills.length > 0" class="container-fluid calc-border calc" :style="getBackground()">
+    <div v-if="skills.length > 0" class="container-fluid calc-border calc" :style="getBackground(this.styleGuide)">
         <div class="header-padding">
-            <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar">
-                <div class="col left-nav">
-                    <button @click="resetPoints()" type="button" class="btn btn-info">Reset</button>
-                    <button @click="$router.push('/')" type="button" style="marginLeft:20px;" class="btn btn-info">Back</button>
+            <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar unselectable" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
+                <div class="col left-nav action-items">
+                    <a @click="$router.push('/')" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
+                    <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
+                    <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
-                <div class="col lord-name">
-                    {{lord.charAt(0).toUpperCase() + lord.slice(1)}}
+                <div class="col lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
+                    <p>{{lord.charAt(0).toUpperCase() + lord.slice(1)}}</p>
                 </div>
-                <div class="col right-nav">
-                    <p>Current Level: {{lordLevel}}</p>
+                <div class="col right-nav level" :style="getHeaderBackground(this.styleGuide, 'level-frame')">
+                    <p>Level:</p>
+                    <span class="inline-block">{{lordLevel}}</span>
                 </div>
             </div>
         </div>
@@ -22,7 +24,8 @@
                 :color="index" 
                 :rowState="calcState[index]"
                 :lordLevel="lordLevel" 
-                :skills="skillAllocation(row)" />
+                :skills="skillAllocation(row)"
+                :styleGuide="styleGuide" />
         </div>
         <div class="bottom-bar"></div>
     </div>
@@ -37,7 +40,7 @@ export default {
     components: {
         CalcRow
     },
-    props: ['race', 'lord'],
+    props: ['race', 'lord', 'type'],
     data: function () {
         return {
             rows: {
@@ -55,7 +58,8 @@ export default {
             calcState: {},
             saveState: {},
             skillPointAllocation: {},
-            lordLevel: 1
+            lordLevel: 1,
+            styleGuide: 'wh2'
         }
     },
     methods: {
@@ -131,20 +135,39 @@ export default {
             this.lordLevel = 1;
             this.calcState = JSON.parse(JSON.stringify(this.saveState));
         },
-        getBackground() {
+        getBackground(style) {
             let background, top, bottom;
             try {
-                background = require('@/assets/parchment-wh2.png');
-                top = require('@/assets/parchment-top-stain-wh2.png');
-                bottom = require('@/assets/parchment-bottom-stain-wh2.png');
+                background = require('@/assets/' + style + '/parchment.png');
+                top = require('@/assets/' + style + '/parchment-top-stain.png');
+                bottom = require('@/assets/' + style + '/parchment-bottom-stain.png');
                 return { 'backgroundImage': 'url(' + background + '), url(' + top + '), url(' + bottom + ')' }
             } catch {
                 return ''
             }
+        },
+        getHeaderBackground(location, item) {
+            try {
+                item = require('@/assets/' + location + '/' + item + '.png');
+                return { 'backgroundImage': 'url(' + item + ')' };
+            } catch {
+                return '';
+            }
+        },
+        getAsset(location, item) {
+            try {
+                item = require('@/assets/'+ location +'/' + item + '.png');
+                return { 'content': 'url(' + item + ')' };
+            } catch {
+                return '';
+            } 
+        },
+        changeStyle() {
+            this.styleGuide = (this.styleGuide === 'wh2') ? 'wh1' : 'wh2';
         }
     },
     created() {
-        ApiService.get("talent/getRows") // TODO: change to get by props race and lord current response is static
+        ApiService.get("talent/getRows", this.race + '/' + this.lord + '/' + this.type ) // TODO: change to get by props race and lord current response is static
             .then(({data}) => {
                 let row = data.response;
                 let rowName;
@@ -184,7 +207,8 @@ export default {
     white-space: nowrap;
 }
 .top-bar {
-    padding: 30px 75px;
+    padding: 10px 75px;
+    height: 94px;
     background-color: darkgrey;
     color: black;
     font-weight: 800;
@@ -193,8 +217,16 @@ export default {
     text-align: left;
 }
 .lord-name {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 68px;
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    color: #EBE6CD;
+    padding: 0 160px;
+}
+.lord-name p {
+    padding-top: 20px;
 }
 .right-nav {
     text-align: right;
@@ -205,5 +237,30 @@ export default {
 .header-padding {
     padding-bottom: 160px;
 }
+.navbar {
+    background-position: bottom;
+}
+.action-items {
+    height: 56px;
+}
+.level {
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 65px;
+    margin-bottom: 1px;
+}
+.level p {
+    display: inline-block;
+    color: #EBE6CD;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+.level span {
+    color: #EBE6CD;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 45px;
 
+}
 </style>

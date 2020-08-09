@@ -26,10 +26,11 @@
         <div class="segment">
             <table>
                 <tr v-for="(attribute, index) in spell.attributes" :key="index">
-                    <td>{{index.charAt(0).toUpperCase() + index.slice(1)}}:</td>
+                    <!-- split on camal case and first letter to uppcase -->
+                    <td>{{index.charAt(0).toUpperCase() + index.slice(1).split(/(?=[A-Z])/).join(' ')}}:</td>
                     <td v-if="typeof(attribute) === 'object'">
                         <span :style="fontColor(effect.color)" class="effects" v-for="(effect, j) in attribute" :key="j">
-                            <a v-if="effect.uptick" :style="getIcon('spellStyles', 'up-green')"></a>
+                            <a v-if="effect.uptick" :style="getIcon('spellStyles', effect.uptick)"></a>
                             {{effect.text}}
                             <a v-if="effect.icon" class="effect-icon" :style="getIcon('smallIcons', effect.icon)"></a>
                             {{effect.postText}}
@@ -76,7 +77,6 @@ export default {
     },
     methods: {
         getIcon(folder, icon) {
-            console.log(icon);
             try {                
                 icon = require('@/assets/' + folder + '/' + icon + '.png')              
                 return { 'content': 'url(' + icon + ')' };

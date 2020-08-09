@@ -1,7 +1,7 @@
 <template>
     <article class="col">
-        <div class="jumbotron header fader" style="backgroundRepeat: no-repeat;" :style="[getImage(), getPosition()]">
-            <img class="unselectable logo-size-control" alt="Warhammer II logo" src="@/assets/whlogo.png">
+        <div class="jumbotron header fader" :style="getImage()">
+            <img class="unselectable logo-size-control" alt="Warhammer II logo" src="@/assets/wh-tc-logo.png">
         </div>
     </article>
 </template>
@@ -19,56 +19,9 @@ export default {
     },
     methods: {
         getImage() {
-            let img;
-            // not MVP functionality
-            // switch(this.selection) {
-            switch('default') {
-                case 'High Elves':
-                    img = 'highelves'
-                    break;
-                case 'Dark Elves':
-                    img = 'darkelves';
-                    break;
-                case 'Lizardmen':
-                    img = 'lizardmen';
-                    break;
-                case 'Tomb Kings':
-                    img = 'tombkings';
-                    break;
-                case 'Vampire Coast':
-                    img = 'vampirecoast';
-                    break;
-                default:
-                    img = 'default'
-            }
-            img = require('@/assets/' + img + '.png');
+            let img = require('@/assets/default.png');
             img = { 'backgroundImage': 'url(' + img + ')' };
             return img;
-        },
-        getPosition() {
-            let pos;
-            // not MVP functionality
-            // switch(this.selection) {
-            switch('default') {
-                case 'High Elves':
-                    pos = { 'backgroundPosition': '70% 11%', 'background-size': '110%' };
-                    break;
-                case 'Dark Elves':
-                    pos = { 'backgroundPosition': '100% 0', 'background-size': '110%' };
-                    break;
-                case 'Lizardmen':
-                    pos = { 'backgroundPosition': '0 47%', 'background-size': '110%' };
-                    break;
-                case 'Tomb Kings':
-                    pos = { 'backgroundPosition': '0 16%', 'background-size': '100%' };
-                    break;
-                case 'Vampire Coast':
-                    pos = { 'backgroundPosition': '0 30%', 'background-size': '100%' };
-                    break;
-                default:
-                    pos = { 'backgroundPosition': '20% 62%' };
-            }
-            return pos;
         }
     }
 };
@@ -79,16 +32,19 @@ export default {
 .jumbotron {
     background-color: #262626;
     min-height: 289.1px;
+    margin-bottom: 0px;
 }
 article.col {
     padding: 0px;
 }
 .header {
+    background-repeat: no-repeat;
+    background-position: 20% 62%;
     border-radius: 0px;
     padding: 2rem 1rem;
 }
 .logo-size-control {
-    max-width: 400px;
+    max-width: 500px;
     min-width: 250px;
 }
 .fader img {

@@ -11,6 +11,7 @@
                     :block="block" 
                     :skillState="rowState"
                     :lordLevel="lordLevel"
+                    :styleGuide="styleGuide"
                     class="inline"/>
             </div>
         </div>
@@ -30,7 +31,8 @@ export default {
         skills: Object,
         color: String,
         rowState: Object,
-        lordLevel: Number
+        lordLevel: Number,
+        styleGuide: String
     },
     methods: {
         skillClick(name) {
