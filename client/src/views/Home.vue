@@ -34,7 +34,7 @@ export default {
             this.selection = race;
         },
         getAssets() {
-            let img = require('@/assets/bottom-divide.png');
+            let img = require('@/assets/home/bottom-divide.png');
             img = { 'backgroundImage': 'url(' + img + ')' };
             return img;
         }

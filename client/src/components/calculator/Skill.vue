@@ -157,6 +157,8 @@ export default {
         //     }
         // },
         isDisabled() {
+            // if check below resolves a TypeError. Patchy solution look into it later
+            if (!this.skillState[this.skillState[this.block].restrictionChoice]) return;
             let skillData = this.skillState[this.block];
             let levelRestriction = skillData.restrictionLevel;
             let skillRestriction = skillData.restrictionChoice;

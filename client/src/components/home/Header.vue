@@ -1,7 +1,7 @@
 <template>
     <article class="col">
         <div class="jumbotron header fader" :style="getImage()">
-            <img class="unselectable logo-size-control" alt="Warhammer II logo" src="@/assets/wh-tc-logo.png">
+            <img class="unselectable logo-size-control" alt="Warhammer II logo" src="@/assets/home/wh-tc-logo.png">
         </div>
     </article>
 </template>
@@ -19,7 +19,7 @@ export default {
     },
     methods: {
         getImage() {
-            let img = require('@/assets/default.png');
+            let img = require('@/assets/home/default.png');
             img = { 'backgroundImage': 'url(' + img + ')' };
             return img;
         }

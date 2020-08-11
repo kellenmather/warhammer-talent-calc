@@ -135,6 +135,9 @@ export default {
             this.lordLevel = 1;
             this.calcState = JSON.parse(JSON.stringify(this.saveState));
         },
+        changeStyle() {
+            this.styleGuide = (this.styleGuide === 'wh2') ? 'wh1' : 'wh2';
+        },
         getBackground(style) {
             let background, top, bottom;
             try {
@@ -161,9 +164,6 @@ export default {
             } catch {
                 return '';
             } 
-        },
-        changeStyle() {
-            this.styleGuide = (this.styleGuide === 'wh2') ? 'wh1' : 'wh2';
         }
     },
     created() {
