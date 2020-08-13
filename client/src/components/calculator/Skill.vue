@@ -141,8 +141,10 @@ export default {
             }
         },
         isDisabled() {
+            // console.log(this.skillState[this.block]);
+            // console.log(this.skillState[this.block].restrictionChoice)
             // TODO if check below resolves a TypeError. Patchy solution look into it later
-            if (!this.skillState[this.skillState[this.block].restrictionChoice]) return;
+            // if (!this.skillState[this.block]) return;
             let skillData = this.skillState[this.block];
             let levelRestriction = skillData.restrictionLevel;
             let skillRestriction = skillData.restrictionChoice;
@@ -161,7 +163,7 @@ export default {
             }
 
             // 2: Lord level is less than the required level
-            if (this.lordLevel < levelRestriction - 1 ) {
+            if (levelRestriction && this.lordLevel < levelRestriction - 1 ) {
                 this.disabled = true;
                 this.disabledReason = 'Lord level required: ' + levelRestriction;
                 return;
@@ -182,11 +184,9 @@ export default {
             }
 
             // 4: Skill has a prerequisite of another skill
-            if (skillRestriction) {
-                if (this.skillState[skillRestriction].value === 0) {
-                    this.disabled = true;
-                    this.disabledReason = "Available after unlocking: " + skillRestriction;
-                }
+            if (this.skillState[skillRestriction] && this.skillState[skillRestriction].value === 0 ) {
+                this.disabled = true;
+                this.disabledReason = "Available after unlocking: " + skillRestriction;
             }
 
             // 5: Skill has multiple prerequisites of the previous block
