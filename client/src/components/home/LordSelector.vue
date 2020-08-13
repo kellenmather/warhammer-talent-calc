@@ -7,14 +7,14 @@
         </ul>
         <ul v-if="showLords">
             <li v-for="(lord, index) in lords" :key="index" >
-                <a @click="selectLord(lord)" :style="getAssets('button-home')" type="button" class="lord-button" :disabled="!selection">
+                <a @click="selectLord(lord)" :style="getAssets('button-home')" type="button" class="home-button" :disabled="!selection">
                     {{lord.name}}
                 </a>
             </li>
         </ul>
         <ul v-else> 
             <li v-for="(lord, index) in legendaryLords" :key="index">
-                <a @click="selectLord(lord)" :style="getAssets('button-ll')" type="button" class="lord-button" :disabled="!selection">
+                <a @click="selectLord(lord)" :style="getAssets('button-ll')" type="button" class="home-button" :disabled="!selection">
                     {{lord.name}}
                 </a>
             </li>
@@ -171,14 +171,6 @@ export default {
 .lord-selector ul li {
     padding: 10px 0;
     width: 100%;
-}
-.lord-button {
-    display: inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-width: 350px;
-    height: 41px;
-    padding-top: 6px;
 }
 .lord-header {
     padding: 0px;

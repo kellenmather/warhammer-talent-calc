@@ -49,5 +49,13 @@ export default {
     padding-top: 5px;
     background-repeat: repeat-x;
 }
+.home-button {
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 350px;
+    height: 41px;
+    padding-top: 9px;
+}
 
 </style>
