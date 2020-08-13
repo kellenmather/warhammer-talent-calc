@@ -120,7 +120,6 @@ export default {
     },
     methods: {
         setRace() {
-            console.log('hit');
             if (this.selection) {
                 this.lords = this.raceLords[this.selection];
                 this.legendaryLords = this.raceLegends[this.selection];

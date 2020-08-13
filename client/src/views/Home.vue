@@ -30,7 +30,6 @@ export default {
     },
     methods: {
         selectedRace(race) {
-            console.log('Home setting race to: ', race);
             this.selection = race;
         },
         getAssets() {

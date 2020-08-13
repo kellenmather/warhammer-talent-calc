@@ -1,5 +1,5 @@
 <template>
-    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button" >
+    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button">
         <div :style="getBorder()" class="skill-border"></div>
         <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block unselectable" :style="getIcon(skill.icon)"></div>
         <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block unselectable" :style="isObtained()">
@@ -17,6 +17,7 @@
                 :style="[obtainedRank(skillState[block].value, index)]">
             </div>
         </div>
+        <div style="position:absolute;">
             <Popup 
                 :info="skill" 
                 :currentRank="skillState[block].value" 
@@ -25,8 +26,10 @@
                 :disabled="disabled"
                 :disabledReason="disabledReason"
                 :top="top"
+                :bottom="bottom"
                 :left="left"
                 v-if="displayPopup && skill" />
+        </div>
     </div>
 </template>
 
@@ -54,6 +57,7 @@ export default {
             rcDisabled: false,
             disabledReason: '',
             top: 56,
+            bottom: 0,
             left: 30,
             window: {
                 width: 0,
@@ -72,33 +76,22 @@ export default {
         },
         mouseMove(event) {
 
-            let obj = this
-            let mouseX, 
-                mouseY, 
-                elementX = 0, 
-                elementY = 0
+            let horizontalScroll = document.querySelector("#calculator").scrollLeft;
+            let verticalScroll = document.querySelector("#html").scrollTop;
+            let obj = this.$el
 
-            // if (!event) {event = window.event}
-            if (event.pageX || event.pageY) {
-                mouseX = event.pageX;
+            this.left = (event.x - obj.offsetLeft + horizontalScroll + 20)
+            this.top = (event.y - obj.offsetTop + verticalScroll - 45);
+
+            let mouseX = event.pageX, 
                 mouseY = event.pageY;
-            }
-            if (obj.$el.offsetParent) {
-                do {
-                    elementX += obj.$el.offsetLeft;
-                    elementY += obj.$el.offsetTop;
-                } while (obj = obj.offsetParent);
-            }
 
-            // check to see if popup would extend off page and set left accordingly
-            // TODO: gradually change how far left it goes based on calculated values
             if (this.window.width < mouseX + 620) {
-                this.left = (mouseX - elementX - 620);
-            } else {
-                this.left = (mouseX - elementX + 20);
+                this.left = (event.x - obj.offsetLeft + horizontalScroll - 620);
             }
-            // TODO: add check so popup doesn't extend off bottom of screen
-            this.top = (mouseY - elementY + 20);
+            // } else if ((this.window.height + verticalScroll) < mouseY + 300) {
+            //     this.bottom = (obj.offsetTop - event.y + verticalScroll + 20)
+            // }
         },
         showRank: function(rank) {
             this.specificRank = rank;
@@ -147,17 +140,8 @@ export default {
                 }
             }
         },
-        // getSkillRank() {
-        //     let talentSkill;
-        //     try {                
-        //         talentSkill = require('@/assets/skillStyles/skill-rank.png');
-        //         return { 'content': 'url(' + talentSkill + ')' };
-        //     } catch {
-        //         return ''
-        //     }
-        // },
         isDisabled() {
-            // if check below resolves a TypeError. Patchy solution look into it later
+            // TODO if check below resolves a TypeError. Patchy solution look into it later
             if (!this.skillState[this.skillState[this.block].restrictionChoice]) return;
             let skillData = this.skillState[this.block];
             let levelRestriction = skillData.restrictionLevel;
@@ -176,14 +160,14 @@ export default {
                 return;
             }
 
-            // 2: Lord level
+            // 2: Lord level is less than the required level
             if (this.lordLevel < levelRestriction - 1 ) {
                 this.disabled = true;
                 this.disabledReason = 'Lord level required: ' + levelRestriction;
                 return;
             }
 
-            // 3: Skills that lock other skills
+            // 3: Skills that are choose only one of 2 or 3
             if (chooseOneRestriction && chooseOneRestriction.length > 0) {
                 // check skillState for the value of the restricted skills
 
@@ -240,7 +224,6 @@ export default {
             this.window.height = window.innerHeight;
         },
         handleScroll() {
-            console.log('width here:');
         },
         getBorder() {
             let border;

@@ -26,7 +26,7 @@
 }
 html, body {
     background-color: #262626;
-    min-height: 100%;
+    // min-height: 100%;
 }
 .unselectable {
    -moz-user-select: -moz-none;

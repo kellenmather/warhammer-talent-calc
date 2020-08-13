@@ -1,5 +1,5 @@
 <template>
-    <div v-if="skills.length > 0" class="container-fluid calc-border calc" :style="getBackground(this.styleGuide)">
+    <div id="calculator" v-if="skills.length > 0" class="container-fluid calc-border calc" :style="getBackground(this.styleGuide)">
         <div class="header-padding">
             <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar unselectable" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
                 <div class="col left-nav action-items">
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div v-for="(row, index) in rows" :key="index" class="row calc-row">
+        <div v-for="(row, index) in rows" :key="index" class="row calc-row" id="calc">
             <CalcRow
                 @skillClick="skillClick"
                 @skillRightClick="skillRightClick"

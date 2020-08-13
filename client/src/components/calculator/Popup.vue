@@ -1,5 +1,6 @@
 <template>
-    <div class="popup-container unselectable" :style="{ top: top + 'px', left: left + 'px'}">
+    <!-- <div class="popup-container unselectable" :style="{ top: top + 'px', left: left + 'px'}"> -->
+    <div class="popup-container unselectable" :style="getPosition()">
         <div class="title">
             {{info.name}}
         </div>
@@ -53,7 +54,8 @@ export default {
         disabled: Boolean,
         disabledReason: String,
         top: Number,
-        left: Number
+        left: Number,
+        bottom: Number
     },
     methods: {
         displayLevel() {
@@ -73,6 +75,13 @@ export default {
             } catch {
                 icon = require('@/assets/largeIcons/' + icon + '.png')              
                 return [{ 'backgroundImage': 'url(' + icon + ')', 'backgroundSize': '36px auto', 'height': '28px' }];
+            }
+        },
+        getPosition() {
+            if (this.bottom > 0) {
+                return { bottom: this.bottom + 'px', left: this.left + 'px'}
+            } else {
+                return { top: this.top + 'px', left: this.left + 'px'}
             }
         }
     }
