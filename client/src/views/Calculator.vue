@@ -8,7 +8,7 @@
                     <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
                 <div class="col lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
-                    <p>{{lord.charAt(0).toUpperCase() + lord.slice(1)}}</p>
+                    <p>{{getProperName()}}</p>
                 </div>
                 <div class="col right-nav level" :style="getHeaderBackground(this.styleGuide, 'level-frame')">
                     <p>Level:</p>
@@ -34,6 +34,7 @@
 <script>
 import CalcRow from '@/components/calculator/CalcRow.vue';
 import ApiService from '@/services/apiService';
+import LordKey from '@/services/lordKey';
 
 export default {
     name: 'Calculator',
@@ -164,6 +165,13 @@ export default {
             } catch {
                 return '';
             } 
+        },
+        getProperName() {
+            let classification = this.type === 'legendary' ? 'legendary' : 'lords';
+            let races = LordKey[classification][this.race];
+            for (let i = 0; i < races.length; i++) {
+                if (this.lord === races[i].type && this.type === races[i].subType) return races[i].name
+            }
         }
     },
     created() {

@@ -24,7 +24,7 @@
 
 <script>
 import ApiService from '@/services/apiService';
-import lordKey from '@/services/lordKey'
+import LordKey from '@/services/lordKey'
 
 export default {
     name: 'LordSelector',
@@ -41,8 +41,8 @@ export default {
     methods: {
         setRace() {
             if (this.selection) {
-                this.lords = lordKey.lords[this.selection];
-                this.legendaryLords = lordKey.legendary[this.selection];
+                this.lords = LordKey.lords[this.selection];
+                this.legendaryLords = LordKey.legendary[this.selection];
             }
         },
         selectLord(lord) {

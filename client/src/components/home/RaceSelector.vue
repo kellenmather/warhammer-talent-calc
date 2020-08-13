@@ -24,7 +24,7 @@ export default {
     methods: {
         selectRace(race) {
             this.selection = race;
-            this.$emit('raceSelected', race)
+            this.$emit('raceSelected', race.toLowerCase().split(' ').join(''))
         },
         getAssets(item, race) {
             if (race === this.selection) item = item + '-selected';
