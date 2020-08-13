@@ -141,10 +141,6 @@ export default {
             }
         },
         isDisabled() {
-            // console.log(this.skillState[this.block]);
-            // console.log(this.skillState[this.block].restrictionChoice)
-            // TODO if check below resolves a TypeError. Patchy solution look into it later
-            // if (!this.skillState[this.block]) return;
             let skillData = this.skillState[this.block];
             let levelRestriction = skillData.restrictionLevel;
             let skillRestriction = skillData.restrictionChoice;
