@@ -16,11 +16,27 @@ exports.skills = [
         ]
     },
     {
+        name: 'Scourgerunner Chariot',
+        description: "Dark Elf Beastmasters roam the wilds atop their dreaded chariots, armed with barbed nets and harpoons to slay the foe and ensnare their prey.",
+        icon: "scourgerunner-chariot",
+        ranks: [
+            { effects: [{ icon: 'mount', description: "Mount: Scourgerunner Chariot" }] }
+        ]
+    },
+    {
         name: 'Dark Pegasus',
         description: "The corrupted Dark Pegasi fly south from the Chaos Wastes to Naggaroth's Iron Mountains to make their nests.",
         icon: "dark-pegasus",
         ranks: [
             { effects: [{ icon: 'mount', description: "Mount: Dark Pegasus" }] }
+        ]
+    },
+    {
+        name: 'Manticore',
+        description: "The roar of a Manticore is guaranteed to send mortals fleeing, for they know a creature of terror is abroad.",
+        icon: "manticore",
+        ranks: [
+            { effects: [{ icon: 'mount', description: "Mount: Manticore" }] }
         ]
     },
     {
@@ -53,6 +69,17 @@ exports.skills = [
             { effects: [
                 { icon: 'weapon-damage-character', description: "Weapon strength: +10% when fighting against High Elves" },
                 { icon: 'weapon-damage-character', description: "Weapon strength: +6%" }
+            ] }
+        ]
+    },
+    {
+        name: 'Beast Tamer',
+        description: "The honing of a Druchii's affinity with animals assures that the bestial ranks heed his imperious command with obedience.",
+        icon: "beast-tamer",
+        ranks: [
+            { effects: [
+                { icon: 'charge', description: "Charge bonus: +10 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units" },
+                { icon: 'charge', description: "Charge Bonus: +20 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units" }
             ] }
         ]
     },
@@ -96,6 +123,61 @@ exports.skills = [
         icon: "aristocratic-name-of-power",
         ranks: [
             { effects: [{ icon: 'trait-dark-elves', description: "Choose a Name of Power that influences the province in which Lord is standing or the faction as a whole" }] }
+        ]
+    },
+    {
+        name: 'Rapacious Predators',
+        description: "The strength and willpower required to break in the extremely stubborn Cold One reptiles as war steeds is innately abundant in most High Beastmasters.",
+        icon: "rapacious-predators",
+        ranks: [
+            { effects: [
+                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units" },
+                { icon: 'turns', description: "Recruitment duration: -1 turn for Cold One Knights, Cold One Dread Knights and Cold One Chariot units" }
+            ] }
+        ]
+    },
+    {
+        name: 'Sorceresses of Ghrond',
+        description: "The wrangling of the wrathful Bloodwrack Medusae directly from their squalid subterranean lairs is not a job for the faint-hearted.",
+        icon: "sorceresses-of-ghrond",
+        ranks: [
+            { effects: [
+                { icon: 'turns', description: "Recruitment duration: -1 turn for Bloodwrack Medusae units" },
+                { icon: 'reload-time', description: "Reload time reduction: +12% for Bloodwrack Medusae units" }
+            ] }
+        ]
+    },
+    {
+        name: 'Titanic Beasts',
+        description: "The most colossal monsters of land and sea are prizes beyond treasures to the Beastmaster, requiring colossal empathy to control.",
+        icon: "titanic-beasts",
+        ranks: [
+            { effects: [
+                { icon: 'melee', description: "Melee attack: +8 for War Hydra and Kharibdyss units" },
+                { icon: 'turns', description: "Recruitment duration: -1 turn for for War Hydra and Kharibdyss units" }
+            ] }
+        ]
+    },
+    {
+        name: 'Children of Sulekh',
+        description: "Since Sulekh's death, her children continue to fight in the Beastmasters' ranks in the name of vengeance for their fallen ancestor.",
+        icon: "children-of-sulekh",
+        ranks: [
+            { effects: [
+                { icon: 'melee', description: "Melee attack: +8 for Black Dragon units" },
+                { icon: 'turns', description: "Recruitment duration: -1 turn for Black Dragon units" }
+            ] }
+        ]
+    },
+    {
+        name: 'Master Tormentor',
+        description: "It matters not the nature of the beast; eventually, all submit to the Beastmaster's will or perish under his lash.",
+        icon: "campaign-experience",
+        ranks: [
+            { effects: [
+                { icon: 'defense', description: "Melee defense: +8 for Monster units" },
+                { icon: 'experience', description: "Recruit Rank: +2 for Monster units" }
+            ] }
         ]
     },
     {
@@ -181,7 +263,7 @@ exports.skills = [
                 duration: '25 seconds',
                 target: 'Self',
                 effects: [
-                    { text: '+24%', icon: 'battle-movement-character', postText: 'Speed', color: 'green' },
+                    { text: '+24%', icon: 'movement-character', postText: 'Speed', color: 'green' },
                     { text: '+18%', icon: 'fatigue', postText: 'Vigour', color: 'blue' }
                 ]
             }
@@ -236,8 +318,8 @@ exports.skills = [
         description: "What the enemy cannot see, it cannot hit. What the enemy cannot see, it cannot survive.",
         icon: "character-speed",
         ranks: [
-            { effects: [{ icon: 'battle-movement-character', description: "Speed: +7%" }] },
-            { effects: [{ icon: 'battle-movement-character', description: "Speed: +15%" }] }
+            { effects: [{ icon: 'movement-character', description: "Speed: +7%" }] },
+            { effects: [{ icon: 'movement-character', description: "Speed: +15%" }] }
         ]
     },
     {
@@ -285,6 +367,29 @@ exports.skills = [
                     { text: 'Causes', icon: 'icon-armor-piercing', postText: 'Armor-piercing damage', color: 'green', uptick: 'up-green' },
                     { text: 'Good penetration', color: 'green', uptick: 'up-green' },
                     { text: 'Effective at long range', color: 'green', uptick: 'up-green' }
+                ]
+            }
+        }
+    },
+    {
+        name: 'Beastslaver',
+        description: "Beastmasters share their minions' belligerence, cutting down foemen with lash, spear, and harpoon before claiming their twitching bodies as fodder.",
+        icon: "beastslaver",
+        ranks: [
+            { effects: [{ icon: 'deadly-onslaught', description: "Ability: 'Beastslaver'" }] }
+        ],
+        spell: {
+            description: 'Lord ability',
+            cooldown: '60',
+            rarity: 'common',
+            attributes: {
+                type: 'Augment',
+                duration: "17 seconds",
+                target: "Self",
+                effects: [
+                    { text: '+25%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'green' },
+                    { text: '+16', icon: 'icon-bonus-vs-large', postText: 'Bonus vs. Large', color: 'green' },
+                    { text: '+25%', icon: 'icon-armor-piercing', postText: 'Armor-Piercing Weapon Damage', color: 'green' }
                 ]
             }
         }
@@ -484,7 +589,7 @@ exports.skills = [
         icon: "battle-speed",
         ranks: [
             { effects: [
-                { icon: 'battle-movement', description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
+                { icon: 'movement', description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
                 { icon: 'accuracy', description: "Range: +15% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
                 { icon: 'armor', description: "Armour: +10  for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" }
             ] }
@@ -509,7 +614,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: 'weapon-damage', description: "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'battle-movement', description: "Speed +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
+                { icon: 'movement', description: "Speed +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
                 { icon: 'resistance-physical', description: "Physical resistance: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" }
             ] }
         ]
@@ -574,6 +679,35 @@ exports.skills = [
                 ]
             }
          }
+    },
+    {
+        name: 'Whiplash!',
+        description: "The startling crack of the Beastmaster's hefty and ever-so-slightly serrated whip of Dragon-sinew suitably infuriates the beasts for battle.",
+        icon: 'whiplash',
+        ranks: [
+            { effects: [
+                { icon: 'whiplash', description: "Passive ability: 'Whiplash'" }
+            ] }
+        ],
+        spell: {
+            description: 'Lord ability',
+            rarity: 'uncommon',
+            attributes: {
+                type: 'Augment',
+                duration: '21 seconds',
+                target: [
+                    { text: 'Ally' },
+                    { text: '100m', uptick: 'range' }
+                ],
+                cannotTargetIf: 'Unit is Lord or Hero',
+                effects: [
+                    { text: '+24%', icon: 'movement-character', postText: 'Charge Speed', color: 'green' },
+                    { text: '+50%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'green' },
+                    { text: '+50%', icon: 'icon-armor-piercing', postText: 'Armor-Piercing Weapon Damage', color: 'green' },
+                    { text: '+18%', icon: 'charge-character', postText: 'Charge Bonus', color: 'green' }
+                ]
+            }
+        }
     },
     {
         name: 'Route Marcher',

@@ -81,6 +81,43 @@ exports.rows = {
                     blockContent: ['Immortality']
                 }
             ]
+        },
+        beastmaster: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 9,
+                    blockContent: ['Scourgerunner Chariot']
+                },
+                {
+                    restrictionLevel: 14,
+                    blockContent: ['Manticore']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['Sadistic']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['Eternal Hatred']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['Beast Tamer']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Khaine']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Hekarti']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['Immortality']
+                }
+            ]
         }
     },
     row2: {
@@ -155,6 +192,50 @@ exports.rows = {
                     blockContent: ['Deadly Onslaught']
                 }
             ]
+        },
+        beastmaster: {
+            row: 3,
+            content: [
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Rapacious Predators']
+                },
+                {
+                    restrictionChoice: 'Rapacious Predators',
+                    blockContent: ['Sorceresses of Ghrond', 'Titanic Beasts', 'Children of Sulekh']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['Master Tormentor']
+                }
+            ]
+        }
+    },
+    row4: {
+        beastmaster: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['Sea Dragon Cloak'],
+                    seadragoncloak: 0
+                },
+                {
+                    restrictionChoice: 'Sea Dragon Cloak',
+                    blockContent: ['Devastating Charge', 'Hard to Hit', 'Blade Master', 'Indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Foe-Seeker']
+                },
+                {
+                    restrictionChoice: 'Foe-Seeker',
+                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Beastslaver']
+                }
+            ]
         }
     },
     row6: {
@@ -197,12 +278,36 @@ exports.rows = {
                     blockContent: ['Strength Through Spite']
                 },
                 {
-                    restrictionChoice: 'Loose!',
+                    restrictionChoice: 'Strength Through Spite',
                     blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
                 },
                 {
                     restrictionCount: 1,
                     blockContent: ['Kindle the Fury']
+                }
+            ]
+        },
+        beastmaster: {
+            row: 6,
+            content: [
+                {
+                    blockContent: ['Inspiring Presence']
+                },
+                {
+                    restrictionChoice: 'Inspiring Presence',
+                    blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
+                },
+                {
+                    restrictionCount: 6,
+                    blockContent: ['Strength Through Spite']
+                },
+                {
+                    restrictionChoice: 'Strength Through Spite',
+                    blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
+                },
+                {
+                    restrictionCount: 1,
+                    blockContent: ['Whiplash!']
                 }
             ]
         }

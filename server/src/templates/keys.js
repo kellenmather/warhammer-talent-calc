@@ -16,7 +16,15 @@ exports.darkelves = {
             { ...darkelves.rows.row6.shield },
             { ...darkelves.rows.row9.darkElves }
         ]
-    }
+    },
+    beastmaster: [
+        { ...darkelves.rows.row1.beastmaster },
+        { ...darkelves.rows.row2.lords },
+        { ...darkelves.rows.row3.beastmaster },
+        { ...darkelves.rows.row4.beastmaster },
+        { ...darkelves.rows.row6.beastmaster },
+        { ...darkelves.rows.row9.darkElves }
+    ]
     // sorceress: {
     //     darkMagic: {
     //         row1 = rows2.row1.sorceress,

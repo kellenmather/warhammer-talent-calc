@@ -183,7 +183,9 @@ export default {
         }
     },
     created() {
-        ApiService.get("talent/getRows", this.race + '/' + this.lord + '/' + this.type ) // TODO: change to get by props race and lord current response is static
+        let query = this.race + '/' + this.lord
+        if (this.type) query = query + '/' + this.type
+        ApiService.get("talent/getRows", query) // TODO: change to get by props race and lord current response is static
             .then(({data}) => {
                 let row = data.response;
                 let rowName;
