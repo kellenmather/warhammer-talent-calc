@@ -2,41 +2,33 @@ exports.lords = {
     'darkelves': [
         { name: 'Dreadlord (Sword & Shield)', type: 'dreadlord', subType: 'shield' }, 
         { name: 'Dreadlord (Sword & Crossbow)', type: 'dreadlord', subType: 'crossbow' }, 
-        { name: 'High Beastmaster', type: 'beastmaster' }, 
-        { name: 'Supreme Sorceress (Beasts)', type: 'sorceress', subType: 'beasts' },
-        { name: 'Supreme Sorceress (Darkness)', type: 'sorceress', subType: 'darkness' },
-        { name: 'Supreme Sorceress (Death)', type: 'sorceress', subType: 'death' },
-        { name: 'Supreme Sorceress (Fire)', type: 'sorceress', subType: 'fire' },
-        { name: 'Supreme Sorceress (Shadow)', type: 'sorceress', subType: 'shadow' },
-        { name: 'Black Ark', type: 'blackark', subType: 'crossbow' }
+        { name: 'High Beastmaster', type: 'beastmaster' },
+        { name: 'Black Ark', type: 'blackark', subType: 'crossbow' },
+        { name: 'Supreme Sorceress', type: 'sorceress', school: ['beasts', 'fire', 'shadow', 'death', 'dark-magic'] }
     ],
     'highelves': [
         { name: 'Prince', type: 'prince' }, 
-        { name: 'Princess', type: 'princess' }
+        { name: 'Princess', type: 'princess' },
+        { name: 'Archmage', type: 'archmage', school: ['beasts', 'fire', 'shadow', 'life', 'metal', 'death', 'light', 'high-magic', 'heavens' ] }
     ],
     'lizardmen': [
-        { name: 'Saurus Old-Blood', type: 'saurus' }, 
-        { name: 'Slann Mage-Priest (Heavens)', type: 'slann', subType: 'heavens' },
-        { name: 'Slann Mage-Priest (High)', type: 'slann', subType: 'high' }, 
-        { name: 'Slann Mage-Priest (Light)', type: 'slann', subType: 'light' },
-        { name: 'Red Crested Skink Chief', type: 'skink' }
+        { name: 'Red Crested Skink Chief', type: 'skink' },
+        { name: 'Saurus Old-Blood', type: 'saurus' },
+        { name: 'Kroxigor Ancient', type: 'kroxigor' },
+        { name: 'Slann Mage-Priest', type: 'slann', school: ['fire', 'life', 'light', 'high-magic', 'heavens'] }
     ],
     'skaven': [
+        { name: 'Master Assassin', type: 'assassin' },
+        { name: 'Warlock Master', type: 'warlock' },
         { name: 'Warlord', type: 'warlord' }, 
-        { name: 'Grey Seer (Plague)', type: 'seer', subType: 'plague' },
-        { name: 'Grey Seer (Ruin)', type: 'seer', subType: 'ruin' },
-        { name: 'Warlock Master', type: 'warlock' }
+        { name: 'Grey Seer', type: 'seer', school: ['plague', 'ruin'] }
     ],
     'tombkings': [
         { name: 'Tomb King', type: 'tomb' }
     ],
     'vampirecoast': [
-        { name: 'Vampire Fleet Admiral (Pistol-Death)', type: 'pistol', subType: 'death' }, 
-        { name: 'Vampire Fleet Admiral (Pistol-Deep)', type: 'pistol', subType: 'deep' },
-        { name: 'Vampire Fleet Admiral (Pistol-Vampires)', type: 'pistol', subType: 'vampires' },
-        { name: 'Vampire Fleet Admiral (Polearm-Death)', type: 'polearm', subType: 'death' },
-        { name: 'Vampire Fleet Admiral (Polearm-Deep)', type: 'polearm', subType: 'deep' },
-        { name: 'Vampire Fleet Admiral (Polearm-Vampires)', type: 'polearm', subType: 'vampires' }
+        { name: 'Vampire Fleet Admiral (Pistol)', type: 'pistol', school: ['death', 'deeps', 'vampire-deep'] },
+        { name: 'Vampire Fleet Admiral (Polearm)', type: 'polearm', school: ['death', 'deeps', 'vampire-deep'] }
     ]
 },
 exports.legendary = {
@@ -51,19 +43,25 @@ exports.legendary = {
         { name: 'Tyrion', type: 'tyrion', subType: 'legendary' }, 
         { name: 'Teclis', type: 'teclis', subType: 'legendary' },
         { name: 'Alarielle the Radiant', type: 'alarielle', subType: 'legendary' },
-        { name: 'Alith Anar', type: 'alith', subType: 'legendary' }
+        { name: 'Alith Anar', type: 'alith', subType: 'legendary' },
+        { name: 'Eltharion', type: 'eltharion', subType: 'legendary' },
+        { name: 'Imrik', type: 'imrik', subType: 'legendary' },
+        { name: 'Alastar the White Lion', type: 'alastar', subType: 'legendary' }
     ],
     'lizardmen': [
         { name: 'Lord Mazdamundi', type: 'mazdamundi', subType: 'legendary' },
         { name: 'Kroq-Gar', type: 'kroqgar', subType: 'legendary' },
         { name: "Tehenhauin", type: 'tehenhauin', subType: 'legendary' },
-        { name: "Tiktaq'to", type: "tiktaqto", subType: 'legendary' }
+        { name: "Tiktaq'to", type: "tiktaqto", subType: 'legendary' },
+        { name: "Nakai the Wanderer", type: "nakai", subType: 'legendary' },
+        { name: "Gor-Rok", type: "gorrok", subType: 'legendary' }
     ],
     'skaven': [
         { name: 'Queek Headtaker', type: 'queek', subType: 'legendary' },
         { name: 'Lord Skrolk', type: 'skrolk', subType: 'legendary' },
         { name: 'Tretch Craventail', type: 'tretch', subType: 'legendary' },
-        { name: 'Ikit Claw', type: 'ikit', subType: 'legendary' }
+        { name: 'Ikit Claw', type: 'ikit', subType: 'legendary' },
+        { name: "Deathmaster Snikch", type: "snikch", subType: 'legendary' }
     ],
     'tombkings': [
         { name: 'Settra the Imperishable', type: 'settra', subType: 'legendary' },

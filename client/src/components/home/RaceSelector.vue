@@ -1,5 +1,5 @@
 <template>
-    <div class="race-selector col-12 col-md-5" :style="getAssets('plaque')">
+    <div class="race-selector unselectable col-12 col-md-5" :style="getAssets('plaque')">
         <ul>
             <li><a type="button" class="home-button" v-on:click="selectRace('Dark Elves')" :style="getAssets('button-home', 'Dark Elves')">Dark Elves</a></li>
             <li><a type="button" class="home-button" v-on:click="selectRace('High Elves')" :style="getAssets('button-home', 'High Elves')">High Elves</a></li>
@@ -48,7 +48,7 @@ export default {
     padding-top: 55px;
 }
 .race-selector ul li {
-    padding: 10px 0;
+    padding: 13px 0 10px 0;
     width: 100%;
 }
 </style>

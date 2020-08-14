@@ -55,7 +55,7 @@ export default {
     background-repeat: no-repeat;
     min-width: 350px;
     height: 41px;
-    padding-top: 9px;
+    padding-top: 6px;
 }
 
 </style>
