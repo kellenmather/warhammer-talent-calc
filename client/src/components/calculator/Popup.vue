@@ -155,10 +155,11 @@ export default {
 }
 .small-icon {
     background-repeat: no-repeat;
+    background-position: center;
     display: inline-block;
     width: 24px;
     height: 24px;
-    padding-right: 36px;
+    padding-right: 34px;
 }
 .tiny-icon {
     background-repeat: no-repeat;
