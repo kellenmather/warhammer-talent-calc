@@ -1,7 +1,13 @@
 <template>
     <!-- <div class="popup-container unselectable" :style="{ top: top + 'px', left: left + 'px'}"> -->
     <div class="popup-container unselectable" :style="getPosition()">
-        <div class="title">
+        <div v-if="quest" class="title">
+            <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', 'legendary')"></a></span>
+            <div class="spell-name inline-block" :style="getGradient('rarity', 'legendary')">
+                <p class="inline-block title">Quest for: {{info.name}} (Unique)</p>
+            </div>
+        </div>
+        <div v-else class="title">
             {{info.name}}
         </div>
         <div v-if="specificRank > 0" class="title">
@@ -15,8 +21,8 @@
         </div>
         <div class="stats">
             <div v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
-                <span><a :style="getIcon(effect.icon)" class="small-icon" ></a></span>
-                <span class="effect inline-block" >{{effect.description}}</span>
+                <span><a :style="getBackground(effect.icon)" class="small-icon" ></a></span>
+                <span class="effect inline-block" >{{effect.description}}<span style="display: block" v-if="effect.ps"> (<a v-if="effect.ps==='lords army'" :style="getBackground('icon-army')" class="tiny-icon"></a>{{effect.ps}})</span></span>
             </div>
         </div>
         <div v-if="hasNext() && !specificRank" class="title" style="paddingTop: 10px;">
@@ -24,7 +30,7 @@
         </div>
         <div v-if="hasNext() && !specificRank" class="stats">
             <div v-for="(effect, idx) in info.ranks[displayNextLevel()].effects" :key="idx">
-                <span><a :style="getIcon(effect.icon)" class="small-icon"></a></span>
+                <span><a :style="getBackground(effect.icon)" class="small-icon"></a></span>
                 <span class="effect inline-block">{{effect.description}}</span>
             </div>
         </div>
@@ -40,6 +46,7 @@
 
 <script>
 import Spell from '@/components/calculator/Spell.vue';
+import Gradients from '@/services/gradients'
 
 export default {
     name: 'Popup',
@@ -53,6 +60,7 @@ export default {
         specificRank: Number, // specific rank being hovered 0-ranks
         disabled: Boolean,
         disabledReason: String,
+        quest: Number,
         top: Number,
         left: Number,
         bottom: Number
@@ -60,6 +68,7 @@ export default {
     methods: {
         displayLevel() {
             // prioritize level over rank when level value is greater than 0
+            if (this.currentRank === -1) return 0
             return (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 0) ? this.currentRank : this.currentRank -1;
         },
         displayNextLevel() {
@@ -68,7 +77,7 @@ export default {
         hasNext() {
             if (this.currentRank > 0 && this.currentRank < this.ranks) return true
         },
-        getIcon(icon) {
+        getBackground(icon) {
             try {            
                 icon = require('@/assets/smallIcons/' + icon + '.png')              
                 return { 'backgroundImage': 'url(' + icon + ')' };
@@ -76,6 +85,17 @@ export default {
                 icon = require('@/assets/largeIcons/' + icon + '.png')              
                 return [{ 'backgroundImage': 'url(' + icon + ')', 'backgroundSize': '36px auto', 'height': '28px' }];
             }
+        },
+        getIcon(folder, icon) {
+            try {                
+                icon = require('@/assets/' + folder + '/' + icon + '.png')              
+                return { 'content': 'url(' + icon + ')' };
+            } catch {
+                return '';
+            }
+        },
+        getGradient(type, rarity) {
+            return {'backgroundImage': "linear-gradient(90deg," + Gradients[type][rarity] + ")"};
         },
         getPosition() {
             if (this.bottom > 0) {
@@ -97,10 +117,12 @@ export default {
     background-color: black;
     border: 2px solid black;
     border-radius: 2px;
-    opacity: .80;
+    opacity: .85;
     color: white;
     word-wrap: normal;
     line-height:normal;
+    font-size:.95em;
+
 }
 .title {
     position: relative;
@@ -114,7 +136,7 @@ export default {
     word-wrap: break-word;
     text-align: left;
     white-space: initial;
-    padding-bottom: 10px;
+    padding: 0 5px 10px 5px;
 }
 .stats {
     color: #49FA51;
@@ -123,7 +145,6 @@ export default {
 }
 .stats div{
     margin: 0;
-    padding-bottom: 5px;
     white-space: initial;
 }
 .disabled {
@@ -138,6 +159,14 @@ export default {
     width: 24px;
     height: 24px;
     padding-right: 36px;
+}
+.tiny-icon {
+    background-repeat: no-repeat;
+    background-position: top 2px center;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding-right: 20px;
 }
 .effect {
     max-width: 540px;

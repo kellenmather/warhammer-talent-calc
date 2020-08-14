@@ -7,11 +7,14 @@ exports.getRows = (req, res) => {
     let params = req.params;
     let response;
 
+
     if (params.type) {
         response = keys[params.race][params.lord][params.type]
     } else {
         response = keys[params.race][params.lord]
     }
+
+    console.log(response)
 
     res.send({ response });
 };

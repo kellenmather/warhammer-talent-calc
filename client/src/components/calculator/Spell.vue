@@ -2,7 +2,7 @@
     <div class="spell">
         <div class="segment">
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', spell.rarity)"></a></span>
-            <div class="spell-name inline-block" :style="getBackground('rarity', spell.rarity)">
+            <div class="spell-name inline-block" :style="getGradient('rarity', spell.rarity)">
                 <p class="inline-block title">{{name}}</p>
                 <div class="mana-cost inline-block">
                     <span v-if="spell.cost || spell.uses">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="segment">
-            <div class="spell-description inline-block" :style="getBackground('description', spell.rarity)">
+            <div class="spell-description inline-block" :style="getGradient('description', spell.rarity)">
                 {{spell.description}}
             </div>
         </div>
@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import Gradients from '@/services/gradients'
+
 export default {
     name: 'Spell',
     props: {
@@ -54,20 +56,6 @@ export default {
     },
     data () {
         return {
-            gradients: {
-                rarity: {
-                    common: '#505663, #4F5560, #4E535E, #46515A, #46515A, #333739, #2C2D2D',
-                    uncommon: '#306E3A, #306338, #306238, #2A652E, #276127, #275126, #283425',
-                    rare: '#3E52A1, #384EA1, #3A4E99, #324D9A, #2A539C, #264373, #222A38',
-                    legendary: '#693E82, #613C79, #5F3E74, #5E3D76, #4D316F, #3C2D4D, #242933'
-                },
-                description: {
-                    common: '#393C41, #3A3D42, #373A3E, #323639, #282B2C',
-                    uncommon: '#2C482F, #2B432E, #2A442D, #274226, #282C25',
-                    rare: '#333D5F, #303A5C, #313B5C, #293957, #272623',
-                    legendary: '#473352, #44324D, #42324B, #362B42, #2C282C'
-                }
-            },
             colors: {
                 green: '#49FA51',
                 red: 'red',
@@ -84,8 +72,8 @@ export default {
                 return '';
             }
         },
-        getBackground(type, rarity) {
-            return {'backgroundImage': "linear-gradient(90deg," + this.gradients[type][rarity] + ")"};
+        getGradient(type, rarity) {
+            return {'backgroundImage': "linear-gradient(90deg," + Gradients[type][rarity] + ")"};
         },
         fontColor(item) {
             return {'color': this.colors[item]}
@@ -104,7 +92,7 @@ export default {
     width: 100%;
     min-height: 100px;
     color: #ECE9CB;
-    font-size:.85em;
+    font-size:.95em;
 }
 .icon {
     position: absolute;

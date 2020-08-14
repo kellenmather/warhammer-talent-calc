@@ -118,6 +118,59 @@ exports.rows = {
                     blockContent: ['Immortality']
                 }
             ]
+        },
+        malekith: {
+            row: 1,
+            content: [
+                {
+                    quest: 2,
+                    blockContent: ['Armor of Midnight']
+                },
+                {
+                    quest: 6,
+                    blockContent: ['Circlet of Iron']
+                },
+                {
+                    quest: 10,
+                    blockContent: ['Destroyer']
+                },
+                {
+                    quest: 14,
+                    blockContent: ['Supreme Spellshield']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['Cold One']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['Cold One Chariot']
+                },
+                {
+                    restrictionLevel: 18,
+                    blockContent: ['Seraphon']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['Sadistic']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['Eternal Hatred']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['Absolute Power']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Khaine']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Hekarti']
+                }
+            ]
         }
     },
     row2: {
@@ -140,6 +193,29 @@ exports.rows = {
                     blockContent: ['Aristocratic Name of Power']
                 }
             ]
+        },
+        malekith: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    restrictionLimited: ['Warleader'],
+                    blockContent: ['Tyrant']
+                },
+                {
+                    restrictionChoice: 'Tyrant',
+                    blockContent: ['Motivation Through Fear', 'Seditious or Sanguine', 'Efforts Redoubled']
+                },
+                {
+                    restrictionLevel: 12,
+                    restrictionLimited: ['Tyrant'],
+                    blockContent: ['Warleader']
+                },
+                {
+                    restrictionChoice: 'Warleader',
+                    blockContent: ['Scoured & Stripped', 'Triumph of Evil', 'Reach Equal Grasp']
+                }
+            ]
         }
     },
     row3: {
@@ -148,7 +224,6 @@ exports.rows = {
             content: [
                 {
                     blockContent: ['Sea Dragon Cloak'],
-                    seadragoncloak: 0
                 },
                 {
                     restrictionChoice: 'Sea Dragon Cloak',
@@ -173,7 +248,6 @@ exports.rows = {
             content: [
                 {
                     blockContent: ['Sea Dragon Cloak'],
-                    seadragoncloak: 0
                 },
                 {
                     restrictionChoice: 'Sea Dragon Cloak',
@@ -209,6 +283,30 @@ exports.rows = {
                     blockContent: ['Master Tormentor']
                 }
             ]
+        },
+        malekith: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ['Sea Dragon Cloak'],
+                },
+                {
+                    restrictionChoice: 'Sea Dragon Cloak',
+                    blockContent: ['Devastating Charge', 'Hard to Hit', 'Blade Master', 'Indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Deadly Onslaught']
+                },
+                {
+                    restrictionChoice: 'Foe-Seeker',
+                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Gaze of Malice']
+                }
+            ]
         }
     },
     row4: {
@@ -235,6 +333,30 @@ exports.rows = {
                     restrictionCount: 4,
                     blockContent: ['Beastslaver']
                 }
+            ]
+        },
+        malekith: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['Chillwind']
+                },
+                {
+                    restrictionChoice: 'Chillwind',
+                    blockContent: ['Spiteful Conjuration', 'Power of Darkness', 'Word of Pain', 'Bladewind']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Evasion']
+                },
+                {
+                    restrictionChoice: 'Evasion',
+                    blockContent: ['Doombolt', 'Soul Stealer', 'Earthing', 'Magical Reserves']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Arcane Conduit']
+                },
             ]
         }
     },
@@ -308,6 +430,30 @@ exports.rows = {
                 {
                     restrictionCount: 1,
                     blockContent: ['Whiplash!']
+                }
+            ]
+        },
+        malekith: {
+            row: 6,
+            content: [
+                {
+                    blockContent: ['Inspiring Presence']
+                },
+                {
+                    restrictionChoice: 'Inspiring Presence',
+                    blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
+                },
+                {
+                    restrictionCount: 6,
+                    blockContent: ['Rally!']
+                },
+                {
+                    restrictionChoice: 'Strength Through Spite',
+                    blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
+                },
+                {
+                    restrictionCount: 1,
+                    blockContent: ['Stand or Die!']
                 }
             ]
         }

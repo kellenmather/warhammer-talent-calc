@@ -1,13 +1,13 @@
 <template>
     <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button">
-        <div :style="getBorder()" class="skill-border"></div>
+        <div :style="getBorder(skill.quest)" class="skill-border"></div>
         <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block unselectable" :style="getIcon(skill.icon)"></div>
         <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block unselectable" :style="isObtained()">
             <span class="position-block">
                 <p>{{ block }}</p>
             </span>
         </div>
-        <div class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
+        <div v-if="!skill.quest" class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
             <div 
                 v-for="(rank, index) in skill.ranks" 
                 :key="index" 
@@ -25,6 +25,7 @@
                 :specificRank="specificRank"
                 :disabled="disabled"
                 :disabledReason="disabledReason"
+                :quest="skillState[block].quest"
                 :top="top"
                 :bottom="bottom"
                 :left="left"
@@ -35,6 +36,7 @@
 
 <script>
 import Popup from '@/components/calculator/Popup.vue';
+import Gradients from '@/services/gradients';
 
 export default {
     name: 'CalcRow',
@@ -100,7 +102,7 @@ export default {
             this.specificRank = 0;
         },
         onClick() {
-            if (!this.disabled && this.skillState[this.block].value !== this.skill.ranks.length) {
+            if (!this.disabled && this.skillState[this.block].value !== this.skill.ranks.length && this.skillState[this.block].value >= 0 ) {
                 this.$emit('skillClick', this.block);
             };
         },
@@ -114,9 +116,9 @@ export default {
                 return '';
             } else {
                 let buttonColor;
-                if (this.color === 'row6') buttonColor = '#9C2A27, #78201E, #78201E, #5A1917, #681C1A, #882523, #E23D39';
-                else if (this.color === 'row9') buttonColor = '#31A1B4, #267C8C, #257B8A, #206B79, #247785, #2E98AA, #40D1EB';
-                else buttonColor = '#B48426, #87601A, #78581A, #614513, #7D5A17, #B07E20, #FCB42F';
+                if (this.color === 'row6') buttonColor = Gradients.buttons.red;
+                else if (this.color === 'row9') buttonColor = Gradients.buttons.blue;
+                else buttonColor = Gradients.buttons.yellow;
                 return {'backgroundImage': "linear-gradient(" + buttonColor + ")"};
             }
         },
@@ -146,7 +148,7 @@ export default {
             let skillRestriction = skillData.restrictionChoice;
             let pointRestriction = skillData.restrictionCount;
             let chooseOneRestriction = skillData.restrictionLimited;
-            
+
             this.disabled = false;
             this.disabledReason = '';
 
@@ -158,11 +160,14 @@ export default {
                 return;
             }
 
-            // 2: Lord level is less than the required level
+            // 2: Lord level is less than the required level or quest level
             if (levelRestriction && this.lordLevel < levelRestriction - 1 ) {
                 this.disabled = true;
                 this.disabledReason = 'Lord level required: ' + levelRestriction;
                 return;
+            } else if (skillData.quest && this.lordLevel < skillData.quest ) {
+                this.disabled = true;
+                this.disabledReason = 'This quest will automatically begin at rank ' + skillData.quest + '.';
             }
 
             // 3: Skills that are choose only one of 2 or 3
@@ -219,12 +224,11 @@ export default {
             this.window.width = window.innerWidth;
             this.window.height = window.innerHeight;
         },
-        handleScroll() {
-        },
-        getBorder() {
-            let border;
-            try {                
-                border = require('@/assets/' + this.styleGuide + '/skill-frame.png');
+        getBorder(quest) {
+            let border, type
+            (quest) ? type = "/quest-frame.png" : type = "/skill-frame.png"
+            try {
+                border = require('@/assets/' + this.styleGuide + type);
                 return { 'backgroundImage': 'url(' + border + ')' };
             } catch {
                 return ''
@@ -244,7 +248,6 @@ export default {
         window.addEventListener('resize', this.handleResize);
         window.addEventListener('scroll', this.handleScroll);
         this.handleResize();
-        this.handleScroll();
     },
     destroyed() {
         window.removeEventListener('resize', this.handleResize);

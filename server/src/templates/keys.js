@@ -24,6 +24,14 @@ exports.darkelves = {
         { ...darkelves.rows.row4.beastmaster },
         { ...darkelves.rows.row6.beastmaster },
         { ...darkelves.rows.row9.darkElves }
+    ],
+    malekith: [
+        { ...darkelves.rows.row1.malekith },
+        { ...darkelves.rows.row2.malekith },
+        { ...darkelves.rows.row3.malekith },
+        // { ...darkelves.rows.row4.malekith },
+        { ...darkelves.rows.row6.malekith },
+        { ...darkelves.rows.row9.darkElves }
     ]
     // sorceress: {
     //     darkMagic: {
@@ -34,12 +42,5 @@ exports.darkelves = {
     //         row9 = rows2.row9.darkElves
     //     }
     // },
-    // malekith: {
-    //     row1 = rows.row1.malekith,
-    //     row2 = rows.row2.malekith,
-    //     row3 = rows.row3.malekith,
-    //     row4 = rows.row4.sorceress,
-    //     row6 = rows.row6.shield,
-    //     row9 = rows.row9.darkElves
-    // }
+
 }

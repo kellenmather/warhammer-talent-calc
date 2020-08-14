@@ -1,5 +1,122 @@
 exports.skills = [
     {
+        name: "Armor of Midnight",
+        description: "Malekith's rune-armor is forged from the hardest meteoric iron and protects against any mortal weapon.",
+        icon: "item-armour",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "armor-character", description: "Armor: +12" },
+                { icon: "defense-character", description: "Melee defense: +6" },
+                { icon: "resistance-physical", description: "Physical resistance: 20%" },
+                { icon: "wound-time", description: "Wound recovery time: -2" }
+            ] }
+        ]
+    },
+    {
+        name: "Circlet of Iron",
+        description: "The Circlet of Iron, said to be older than the Elven race, is a potent source of arcane power.",
+        icon: "item-arcane",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "item-ability", description: "Magic item drop chance: +5%" },
+                { icon: "magic", description: "Winds of Magic power reserve: +10" },
+                { icon: "armor-character", description: "Armor: +5" },
+                { icon: "religion", description: "Untainted: +5", ps: "local province" },
+                { icon: "spell-power-of-darkness", description: "Winds of Magic cost -2 for 'Power of Darkenss'" },
+                { icon: "spell-power-of-darkness", description: "Spell number of uses: +2 for 'Power of Darkenss'" },
+                { icon: "ability-circlet-of-iron", description: "Passive ability: 'Circlet of Iron'" } 
+            ] }
+        ],
+        spell: {
+            description: 'Item',
+            rarity: 'legendary',
+            attributes: {
+                type: 'Hex (Area)',
+                target: [
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                targetIf: 'Unit is a Lord or Hero',
+                effectRange: 'Map-wide',
+                effects: [
+                    { text: '+50% Miscast Chance', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Destroyer",
+        description: "Forged by the Witch King, the blade's merest touch can unmake enchantments and wither minds.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +50%" },
+                { icon: "melee-character", description: "Melee attack: +12" },
+                { icon: "weapon-damage-character", description: "Weapon strength: +12%" },
+                { icon: "leadership-malus", description: "Attacks cause 'discouraged' effect, reducing leadership" },
+                { icon: "ability-destroyer", description: "Passive ability: 'Destroyer'" }
+            ] }
+        ],
+        spell: {
+            description: 'Weapon',
+            rarity: 'legendary',
+            attributes: {
+                type: [
+                    { text: 'Hex (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: 'Destroyer (15 seconds)', color: 'red' },
+                    { text: '+15 Ability Recharge (seconds)', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Supreme Spellshield",
+        description: "This shield has a reflection so dark that it absorbs hostile magic and reflects it back at the foe.",
+        icon: "item-enchanted",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +8" },
+                { icon: "resistance-magic", description: "Magic resistance: 20%" },
+                { icon: "spell-doombolt", description: "Winds of Magic coast: -2 for 'Doombolt'" },
+                { icon: "spell-doombolt", description: "Winds of Magic coast: -2 for 'Doombolt Upgraded'" },
+                { icon: "ability-supreme-spellshield", description: "Passive ability: 'Supreme Spellshield'" }
+            ] }
+        ],
+        spell: {
+            description: 'Item',
+            rarity: 'legendary',
+            attributes: {
+                type: [
+                    { text: 'Hex of the Winds' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: 'Effect increases proportional to the number of enemy units in range', uptick: 'down-red', color: 'red' },
+                    { text: 'Decrease to power reserves', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Dark Steed',
         description: "True horses no longer, Dark Magic corrupts the finest Elven steeds and turns them into black-flanked killers.",
         icon: "dark-steed",
@@ -13,6 +130,14 @@ exports.skills = [
         icon: "cold-one",
         ranks: [
             { effects: [{ icon: 'mount', description: "Mount: Cold One" }] }
+        ]
+    },
+    {
+        name: 'Cold One Chariot',
+        description: "Magnificent chariots, gifted to those who have impressed with their devotion, bravery and prowess in battle.",
+        icon: "cold-one-chariot",
+        ranks: [
+            { effects: [{ icon: 'mount', description: "Mount: Cold One Chariot" }] }
         ]
     },
     {
@@ -50,6 +175,16 @@ exports.skills = [
         ]
     },
     {
+        name: 'Seraphon',
+        description: "This terrifying Black Dragon is the Witch King's favoured mount upon which to ride into battle.",
+        icon: "black-dragon",
+        ranks: [
+            { effects: [
+                { icon: 'mount', description: "Mount: Seraphon" }
+            ] }
+        ]
+    },
+    {
         name: 'Sadistic',
         description: "There is great pleasure to be derived from the humiliation and suffering of others; this one has felt and revelled in it.",
         icon: "character-attack",
@@ -71,6 +206,38 @@ exports.skills = [
                 { icon: 'weapon-damage-character', description: "Weapon strength: +6%" }
             ] }
         ]
+    },
+    {
+        name: 'Absolute Power',
+        description: "Those in command of the ranks will issue their orders with a ferocious bark, expecting instant obeisance.",
+        icon: "ability-hold-the-line",
+        ranks: [
+            { effects: [
+                { icon: 'character', description: "Leadership aura size: +100%" },
+                { icon: 'morale-character', description: "Character's Aura leadership effect: +5" },
+                { icon: 'ability-hold-the-line', description: "Passive ability: 'Hold the Line!'" }
+            ] }
+        ],
+        spell: {
+            description: 'Lord ability',
+            rarity: 'common',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '+4', icon: 'morale-character', postText: 'Leadership', color: 'green' },
+                    { text: '+5', icon: 'defense-character', postText: 'Melee Defense', color: 'green' }
+                ]
+            }
+         }
     },
     {
         name: 'Beast Tamer',
@@ -126,13 +293,108 @@ exports.skills = [
         ]
     },
     {
+        name: 'Tyrant',
+        description: "Oppression. Cruelty. Incontrovertible power.",
+        icon: "character-public-order",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +1", ps: "all provinces"},
+                { icon: "income", description: "Tax rate: +5%", ps: "factionwide" }
+            ] }
+        ]
+    },
+    {
+        name: 'Motivation Through Fear',
+        description: "Unsurprisingly, dread, either of the lash or summary execution, is something of an incentive for many.",
+        icon: "character-slaves",
+        ranks: [
+            { effects: [
+                { icon: "income", description: "Income from slaves: +20%", ps: "all provinces" },
+                { icon: "slaves", description: "Slave decline rate: -10%", ps: "all provinces" },
+                { icon: "public-order", description: "Slave public order penalty: -15%", ps: "all provinces"}
+            ] }
+        ]
+    },
+    {
+        name: 'Seditious or Sanguine',
+        description: "In society, one must learn to conform... or suffer the direst of consequences.",
+        icon: "seditious-or-sanguine",
+        ranks: [
+            { effects: [
+                { icon: "diplomacy", description: "Income from slaves: +20%" },
+                { icon: "public-order", description: "Public order: +10", ps: "local province" },
+                { icon: "religion", description: "Slave public order penalty: -15%", ps: "when in own region"}
+            ] }
+        ]
+    },
+    {
+        name: 'Efforts Redoubled',
+        description: "By carrot or stick, those whose lot it is to serve can always be made to work harder; usually by stick...",
+        icon: "efforts-redoubled",
+        ranks: [
+            { effects: [
+                { icon: "growth", description: "Growth: +25", ps: "local province" },
+                { icon: "income", description: "Tax rate: +30%", ps: "local province" },
+                { icon: "treasury", description: "Construction cost: -20% for all buildings", ps: "local province"},
+                { icon: "construction", description: "Construction time: -50% for all buildings", ps: "local province" }
+            ] }
+        ]
+    },
+    {
+        name: 'Warleader',
+        description: "The war is endless, it will never cease. Stay ready.",
+        icon: "warleader",
+        ranks: [
+            { effects: [
+                { icon: "coin", description: "Upkeep: -10% for all units", ps: "all armies"},
+                { icon: "morale", description: "Leadership: +5", ps: "lords army"},
+                { icon: "income", description: "Income from post-battle loot: +5%", ps: "all characters" }
+            ] }
+        ]
+    },
+    {
+        name: 'Scoured & Stripped',
+        description: "Every last ounce of wealth is there for the taking, should you know where to look. In that regard, this one knows exactly what he is doing.",
+        icon: "scoured-stripped",
+        ranks: [
+            { effects: [
+                { icon: "military", description: "Casualties captured post-battle: +50%" },
+                { icon: "income", description: "Income from looting settlements: +100%" },
+                { icon: "income", description: "Income from sacking settlements: +100%" }
+            ] }
+        ]
+    },
+    {
+        name: 'Triumph of Evil',
+        description: "They say for evil to triumph, all that's required is that the good do nothing... or, preferably, are stone dead from the outset.",
+        icon: "triumph-of-evil",
+        ranks: [
+            { effects: [
+                { icon: "army", description: "Lord recruit rank: +2", ps: "factionwide"},
+                { icon: "disaster", description: "Attrition: -50% casualties suffered from all attrition", ps: "lords army"},
+                { icon: "replenishment", description: "Casualty replenishment rate: +15%", ps: "lords army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Reach Equal Grasp',
+        description: "When literally nothing is beyond your reach, there can be no sanctuary and no escape.",
+        icon: "reach-equal-grasp",
+        ranks: [
+            { effects: [
+                { icon: "item-ability", description: "Magic item drop chance: +25%" },
+                { icon: "income", description: "Income from poast-battle loot: +50%" }
+            ] }
+        ]
+    },
+    {
         name: 'Rapacious Predators',
         description: "The strength and willpower required to break in the extremely stubborn Cold One reptiles as war steeds is innately abundant in most High Beastmasters.",
         icon: "rapacious-predators",
         ranks: [
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units" },
-                { icon: 'turns', description: "Recruitment duration: -1 turn for Cold One Knights, Cold One Dread Knights and Cold One Chariot units" }
+                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army"},
+                { icon: 'turns', description: "Recruitment duration: -1 turn for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
             ] }
         ]
     },
@@ -250,9 +512,9 @@ exports.skills = [
     {
         name: 'Foe-Seeker',
         description: "From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
-        icon: "abilities-foe-seeker",
+        icon: "ability-foe-seeker",
         ranks: [
-            { effects: [{ icon: 'abilities-foe-seeker', description: "Ability: 'Foe-Seeker'" }] }
+            { effects: [{ icon: 'ability-foe-seeker', description: "Ability: 'Foe-Seeker'" }] }
         ],
         spell: {
             description: 'Character ability',
@@ -280,7 +542,7 @@ exports.skills = [
     },
     {
         name: 'Full Plate Armour',
-        description: "Full-Plate armour protects the wearer from head-to-foot. Many shuch suits are blessed or imbued with arcane abilities.",
+        description: "Full-Plate armour protects the wearer from head-to-foot. Many shuch suits are blessed or imbued with arcane ability.",
         icon: "character-armor",
         ranks: [
             { effects: [{ icon: 'armor-character', description: "Armor: +7" }] },
@@ -325,9 +587,9 @@ exports.skills = [
     {
         name: 'Deadly Onslaught',
         description: "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
-        icon: "deadly-onslaught",
+        icon: "ability-deadly-onslaught",
         ranks: [
-            { effects: [{ icon: 'deadly-onslaught', description: "Ability: 'Deadly Onslaught'" }] }
+            { effects: [{ icon: 'ability-deadly-onslaught', description: "Ability: 'Deadly Onslaught'" }] }
         ],
         spell: {
             description: 'Character ability',
@@ -395,6 +657,37 @@ exports.skills = [
         }
     },
     {
+        name: 'Gaze of Malice',
+        description: "If looks could kill... Oh wait, it turns out that they can...",
+        icon: "ability-gaze-of-malice",
+        ranks: [
+            { effects: [{ icon: 'ability-gaze-of-malice', description: "Ability: 'Gaze of Malice'" }] }
+        ],
+        spell: {
+            description: 'Character ability',
+            cooldown: '90',
+            uses: '3',
+            rarity: 'uncommon',
+            attributes: {
+                type: 'Breath',
+                duration: "8 seconds",
+                target: [
+                    { text: 'Ground' },
+                    { text: '100m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                cannotTargetIf: 'On a wall',
+                effects: [
+                    { text: 'Causes moderate magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Short, wide, expanding, tear-shaped attack', uptick: 'up-green', color: 'green' },
+                    { text: 'Can disrupt unit formation', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Weak against armor', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Inspiring Presence',
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
         icon: "battle-morale",
@@ -408,15 +701,15 @@ exports.skills = [
         icon: "battle-defense",
         ranks: [
             { effects: [
-                { icon: 'defense', description: "Melee defense: +4 for Dreadspears, Bleakswords and Black Ark Corsairs units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'defense', description: "Melee defense: +4 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'melee', description: "Melee attack: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'melee', description: "Melee attack: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" }
             ] }
         ]
     },
@@ -426,15 +719,15 @@ exports.skills = [
         icon: "battle-ammo",
         ranks: [
             { effects: [
-                { icon: 'ammo', description: "Ammunition: +8% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'ammo', description: "Ammunition: +8% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'ammo', description: "Ammunition: +12% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'reload-time', description: "Reload time reduction: +7% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'ammo', description: "Ammunition: +12% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" },
+                { icon: 'reload-time', description: "Reload time reduction: +7% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'ammo', description: "Ammunition: +20% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'reload-time', description: "Reload time reduction: +10% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'ammo', description: "Ammunition: +20% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" },
+                { icon: 'reload-time', description: "Reload time reduction: +10% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" }
             ] }
         ]
     },
@@ -444,17 +737,17 @@ exports.skills = [
         icon: "battle-charge",
         ranks: [
             { effects: [
-                { icon: 'charge', description: "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'charge', description: "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'ranged-damage', description: "Missile damage: +9% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'charge', description: "Charge bonus: +9 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'ranged-damage', description: "Missile damage: +9% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
+                { icon: 'charge', description: "Charge bonus: +9 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'ranged-damage', description: "Missile damage: +12% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +8 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'charge', description: "Charge bonus: +12 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'ranged-damage', description: "Missile damage: +12% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +8 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
+                { icon: 'charge', description: "Charge bonus: +12 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" }
             ] }
         ]
     },
@@ -464,17 +757,17 @@ exports.skills = [
         icon: "battle-damage",
         ranks: [
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'charge', description: "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'reload-time', description: "Reload time reduction: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
+                { icon: 'charge', description: "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
+                { icon: 'reload-time', description: "Reload time reduction: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'charge', description: "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'reload-time', description: "Reload time reduction: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
+                { icon: 'charge', description: "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
+                { icon: 'reload-time', description: "Reload time reduction: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" }
             ] }
         ]
     },
@@ -484,15 +777,15 @@ exports.skills = [
         icon: "battle-attack",
         ranks: [
             { effects: [
-                { icon: 'melee', description: "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'melee', description: "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'melee', description: "Melee attack: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
             ] }
         ]
     },
@@ -501,14 +794,14 @@ exports.skills = [
         description: "An elite even amongst elites, this accomplished warrior directs the cut-and-thrust of melee - a choreographer of death, you might say.",
         icon: "battle-attack",
         ranks: [
-            { effects: [{ icon: 'melee', description: "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", psIcon: 'redFlag', postScript: "Lord's army" }] },
+            { effects: [{ icon: 'melee', description: "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" }] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'melee', description: "Melee attack: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'defense', description: "Melee defense: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'melee', description: "Melee attack: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" },
+                { icon: 'defense', description: "Melee defense: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" }
             ] }
         ]
     },
@@ -571,15 +864,45 @@ exports.skills = [
          }
     },
     {
+        name: 'Rally!',
+        description: "To rally the troops and bring them back to the fore takes strong leadership skills and an iron will.",
+        icon: 'ability-rally',
+        ranks: [
+            { effects: [
+                { icon: 'ability-rally', description: "Passive ability: 'Rally!'" }
+            ] }
+        ],
+        spell: {
+            description: 'Character ability',
+            rarity: 'common',
+            cooldown: '60',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: '14 seconds',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '+16', icon: 'morale-character', postText: 'Leadership', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Cull the Unworthy',
         description: "Those who fail to make the grade don't just die, they're tortured and used for target practice!",
         icon: "battle-armor",
         ranks: [
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'ranged-damage', description: "Missile damage: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'armor', description: "Armour: +10 for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'resistance-missile', description: "Missile resistance: 15% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'ranged-damage', description: "Missile damage: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'armor', description: "Armour: +10 for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'resistance-missile', description: "Missile resistance: 15% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
             ] }
         ]
     },
@@ -589,9 +912,9 @@ exports.skills = [
         icon: "battle-speed",
         ranks: [
             { effects: [
-                { icon: 'movement', description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'accuracy', description: "Range: +15% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'armor', description: "Armour: +10  for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" }
+                { icon: 'movement', description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'accuracy', description: "Range: +15% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'armor', description: "Armour: +10  for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
             ] }
         ]
     },
@@ -601,9 +924,9 @@ exports.skills = [
         icon: "battle-attack",
         ranks: [
             { effects: [
-                { icon: 'charge', description: "Charge bonus: +12 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'armor', description: "Armour: +5 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" }
+                { icon: 'charge', description: "Charge bonus: +12 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'armor', description: "Armour: +5 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
             ] }
         ]
     },
@@ -613,9 +936,9 @@ exports.skills = [
         icon: "battle-damage",
         ranks: [
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'movement', description: "Speed +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" },
-                { icon: 'resistance-physical', description: "Physical resistance: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppsIcon: 'redFlag', postPostScript: "Lord's army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'movement', description: "Speed +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
+                { icon: 'resistance-physical', description: "Physical resistance: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
             ] }
         ]
     },
@@ -710,6 +1033,37 @@ exports.skills = [
         }
     },
     {
+        name: 'Stand or Die!',
+        description: "Hatred is an energy source just like any other, to be harnessed and directed at will.",
+        icon: 'ability-stand-or-die',
+        ranks: [
+            { effects: [
+                { icon: 'ability-rally', description: "Replaces: 'Rally!'" },
+                { icon: 'ability-stand-or-die', description: "Ability: 'Stand or Die!'" }
+            ] }
+        ],
+        spell: {
+            description: 'Character ability',
+            rarity: 'uncommon',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)' },
+                    { text: 'Instantly affects targets in area' }
+                ],
+                duration: '18 seconds',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '+24', icon: 'defense-character', postText: 'Melee Defense', color: 'green' },
+                    { text: '+16', icon: 'morale-character', postText: 'Leadership', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Route Marcher',
         description: "Those who know the land and its secrets will travel faster and further than the foes who don't",
         icon: 'campaign-movement',
@@ -743,9 +1097,9 @@ exports.skills = [
         description: "You will serve me, wretch, or you will die, there is no other option.",
         icon: "campaign-military-spending",
         ranks: [
-            { effects: [{ icon: "treasury", description: "Recruitment cost: -3%", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: "treasury", description: "Recruitment cost: -8%", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: "treasury", description: "Recruitment cost: -15%", psIcon: 'redFlag', postScript: "Lord's army" }] }            
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -3%", ps: "lords army" }] },
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -8%", ps: "lords army" }] },
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -15%", ps: "lords army" }] }            
         ]
     },
     {
@@ -754,17 +1108,17 @@ exports.skills = [
         icon: "campaign-military-spending",
         ranks: [
             { effects: [
-                { icon: "coin-plus", description: "Income from raiding: +5%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin-plus", description: "Income from raiding: +5%", ps: "lords army" },
                 { icon: "coin-plus", description: "Income from looting settlements: +4%" },
                 { icon: "coin-plus", description: "Income from sacking settlements: +4%" }
             ] },
             { effects: [
-                { icon: "coin-plus", description: "Income from raiding: +12%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin-plus", description: "Income from raiding: +12%", ps: "lords army" },
                 { icon: "coin-plus", description: "Income from looting settlements: +9%" },
                 { icon: "coin-plus", description: "Income from sacking settlements: +9%" }
             ] },
             { effects: [
-                { icon: "coin-plus", description: "Income from raiding: +20%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin-plus", description: "Income from raiding: +20%", ps: "lords army" },
                 { icon: "coin-plus", description: "Income from looting settlements: +15%" },
                 { icon: "coin-plus", description: "Income from sacking settlements: +15%" }
             ] }            
@@ -794,9 +1148,9 @@ exports.skills = [
         description: "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
         icon: "campaign-military-spending",
         ranks: [
-            { effects: [{ icon: "coin", description: "Upkeep: -3% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: "coin", description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] },
-            { effects: [{ icon: "coin", description: "Upkeep: -15% for all units", psIcon: 'redFlag', postScript: "Lord's army" }] }
+            { effects: [{ icon: "coin", description: "Upkeep: -3% for all units", ps: "lords army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -8% for all units", ps: "lords army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -15% for all units", ps: "lords army" }] }
         ]
     },
     {
@@ -805,15 +1159,15 @@ exports.skills = [
         icon: 'campaign-ambush',
         ranks: [
             { effects: [
-                { icon: 'ambush', description: "Ambush success chance: +6%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: 'ambush', description: "Ambush success chance: +6%", ps: "lords army" },
                 { icon: 'ambush', description: "Ambush defense chance: +5%" }
             ] },
             { effects: [
-                { icon: 'ambush', description: "Ambush success chance: +16%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: 'ambush', description: "Ambush success chance: +16%", ps: "lords army" },
                 { icon: 'ambush', description: "Ambush defense chance: +10%" }
             ] },
             { effects: [
-                { icon: 'ambush', description: "Ambush success chance: +30%", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: 'ambush', description: "Ambush success chance: +30%", ps: "lords army" },
                 { icon: 'ambush', description: "Ambush defense chance: +20%" },
                 { icon: 'vanguard', description: "Attribute: Vanguard Deployment" } // TODO this skill has gameplay explanation
             ] }            
@@ -825,16 +1179,16 @@ exports.skills = [
         icon: 'campaign-replenishment',
         ranks: [
             { effects: [
-                { icon: 'disaster', description: "Attrition: -3% casualties suffered from all attrition", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'replenishment', description: "Casualty replenishment rate: +3%", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'disaster', description: "Attrition: -3% casualties suffered from all attrition", ps: "lords army" },
+                { icon: 'replenishment', description: "Casualty replenishment rate: +3%", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'disaster', description: "Attrition: -8% casualties suffered from all attrition", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'replenishment', description: "Casualty replenishment rate: +8%", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'disaster', description: "Attrition: -8% casualties suffered from all attrition", ps: "lords army" },
+                { icon: 'replenishment', description: "Casualty replenishment rate: +8%", ps: "lords army" }
             ] },
             { effects: [
-                { icon: 'disaster', description: "Attrition: -15% casualties suffered from all attrition", psIcon: 'redFlag', postScript: "Lord's army" },
-                { icon: 'replenishment', description: "Casualty replenishment rate: +15%", psIcon: 'redFlag', postScript: "Lord's army" }
+                { icon: 'disaster', description: "Attrition: -15% casualties suffered from all attrition", ps: "lords army" },
+                { icon: 'replenishment', description: "Casualty replenishment rate: +15%", ps: "lords army" }
             ] }
         ]
     },
@@ -844,7 +1198,7 @@ exports.skills = [
         icon: 'campaign-agent',
         ranks: [
             { effects: [
-                { icon: "coin", description: "Upkeep: -8% for all units", psIcon: 'redFlag', postScript: "Lord's army" },
+                { icon: "coin", description: "Upkeep: -8% for all units", ps: "lords army" },
                 { icon: 'campaign-movement', description: "Campaign movement range: +5%" },
                 { icon: 'agent', description: "Enemy Hero action success chance: -10%" },
                 { icon: 'agent', description: "Hero self-defense: +25% chance of wounding aggressors" },

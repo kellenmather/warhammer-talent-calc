@@ -98,6 +98,8 @@ export default {
                 calcState[rowName] = {};
                 let content = data[i].content;
                 for (let j = 0; j < content.length; j++) {
+                    // if quest value will be set to -1
+                    let quest = content[j].quest;
                     // skill is an array of a blocks skills
                     let skill = content[j].blockContent;
                     // block containts restrictions and all skills pertaining to those restrictions
@@ -106,14 +108,15 @@ export default {
                         let skillName = skill[k];
                         calcState[rowName][skillName] = { 
                             name: skillName, 
-                            value: 0, 
+                            value: quest ? -1 : 0, 
                             blockMember: (skill.length > 1) ? j : null,
                             // If NOT on the first iteration find out if skill is the blockLeader
                             blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
                             restrictionLevel: block.restrictionLevel || null, 
                             restrictionLimited: block.restrictionLimited || null, 
                             restrictionChoice: block.restrictionChoice || null, 
-                            restrictionCount: block.restrictionCount || null 
+                            restrictionCount: block.restrictionCount || null,
+                            quest: block.quest || null
                         }
                     }
                 }
@@ -184,7 +187,8 @@ export default {
     },
     created() {
         let query = this.race + '/' + this.lord
-        if (this.type) query = query + '/' + this.type
+        console.log(this.type);
+        if (this.type && this.type !== 'legendary') query = query + '/' + this.type
         ApiService.get("talent/getRows", query) // TODO: change to get by props race and lord current response is static
             .then(({data}) => {
                 let row = data.response;
