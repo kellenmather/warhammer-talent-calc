@@ -293,6 +293,40 @@ exports.skills = [
         ]
     },
     {
+        name: 'Unassailable',
+        description: "Each Black Ark is a fortress-city without peer. Throwing aoneself unto its Black-Stone defenses is folly without equal.",
+        icon: "battle-defense",
+        ranks: [
+            { effects: [
+                { icon: "armor-piercing", description: "Armor-piercing weapon damage: +5 for all units when defending", ps: "lords army" },
+                { icon: "defense", description: "Armor: +15 for all units when defending", ps: "lords army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Unstoppable',
+        description: "The Black Ark Provides near-limitless access to pristine arms and armor, each raiding party clad in the finest forgework.",
+        icon: "battle-damage",
+        ranks: [
+            { effects: [
+                { icon: "weapon-damage", description: "Weapon strength: +10%", ps: "lords army" },
+                { icon: "melee", description: "Melee attack: +5 for all units", ps: "lords army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Unknowable',
+        description: "The presence of a powerful Sorceress upon the Black Ark provides opportunities to weave the darkest magecraft.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: "resistance-magic", description: "Magic resistance: +15% for all units", ps: "lords army" },
+                { icon: "magical-attacks", description: "Enables magical attacks", ps: "lords army" },
+                { icon: "technology", description: "Research rate: +10%", ps: "lords army" }
+            ] }
+        ]
+    },
+    {
         name: 'Tyrant',
         description: "Oppression. Cruelty. Incontrovertible power.",
         icon: "character-public-order",

@@ -41,6 +41,31 @@ exports.rows = {
                 }
             ]
         },
+        blackArk: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['Sadistic']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['Eternal Hatred']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Khaine']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Hekarti']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['Immortality']
+                }
+            ]
+        },
         sorceress: {
             row: 1,
             content: [
@@ -194,6 +219,33 @@ exports.rows = {
                 }
             ]
         },
+        blackArk: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    restrictionLimited: ['Revered Name of Power'],
+                    blockContent: ['Martial Name of Power']
+                },
+                {
+                    restrictionLevel: 10,
+                    restrictionLimited: ['Martial Name of Power'],
+                    blockContent: ['Revered Name of Power']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['Unassailable']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['Unstoppable']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['Unknowable']
+                }
+            ]
+        },
         malekith: {
             row: 2,
             content: [
@@ -335,7 +387,7 @@ exports.rows = {
                 }
             ]
         },
-        malekith: {
+        darkMagic: {
             row: 4,
             content: [
                 {

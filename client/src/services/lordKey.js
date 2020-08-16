@@ -3,7 +3,7 @@ exports.lords = {
         { name: 'Dreadlord (Sword & Shield)', type: 'dreadlord', subType: 'shield' }, 
         { name: 'Dreadlord (Sword & Crossbow)', type: 'dreadlord', subType: 'crossbow' }, 
         { name: 'High Beastmaster', type: 'beastmaster' },
-        { name: 'Black Ark', type: 'blackark', subType: 'crossbow' },
+        { name: 'Black Ark', type: 'blackArk' },
         { name: 'Supreme Sorceress', type: 'sorceress', school: ['beasts', 'fire', 'shadow', 'death', 'dark-magic'] }
     ],
     'highelves': [
