@@ -735,6 +735,273 @@ exports.skills = [
         }
     },
     {
+        name: "Spiteful Conjuration",
+        description: "As the spellcaster summons Dark Magic, black darts of malice will flit through the air to pierce the victims of the Dark Elf's spite.",
+        icon: "spell-spiteful-conjuration",
+        ranks: [
+            { effects: [{ icon: 'spell-spiteful-conjuration', description: "Passive ability: 'Spiteful Conjuration'" }] }
+        ],
+        spell: {
+            description: 'Lore attribute',
+            rarity: 'common',
+            attributes: {
+                type: 'Hex (Area)',
+                duration: 'Constant',
+                target: [
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                activeIf: 'Casting',
+                effectRange: 'Map-wide',
+                effects: [
+                    { text: 'Spiteful Conjuration (18 seconds)', color: 'red' },
+                    { text: '-15', icon: 'armor-character', postText: 'Armor', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Power of Darkness",
+        description: "The caster draws on unstable power from the Realm of Chaos to charge their spells.",
+        icon: "spell-power-of-darkness",
+        ranks: [
+            { effects: [
+                { icon: 'spell-power-of-darkness', description: "Cooldown: -50% to 'Power of Darkness'" },
+                { icon: 'spell-power-of-darkness', description: "Winds of Magic cost: -1 for 'Power of Darkness'" }
+            ] }
+        ]
+    },
+    {
+        name: "Word of Pain",
+        description: "As the caster utters a forbidden name, their enemies are wracked with waves of agnoy.",
+        icon: "spell-word-of-pain",
+        ranks: [
+            { effects: [
+                { icon: 'spell-word-of-pain', description: "Spell: 'Word of Pain'" },
+                { icon: 'spell-word-of-pain', description: "Overcast spell: 'Word of Pain''" },
+                { icon: 'spell-word-of-pain', description: "Cooldown: -30% to 'Word of Pain''" }
+            ] },
+            { effects: [
+                { icon: 'spell-word-of-pain', description: "Overcast spell: 'Word of Pain Upgraded'" },
+                { icon: 'spell-word-of-pain', description: "Cooldown: -30% to 'Word of Pain'" },
+                { icon: 'spell-word-of-pain', description: "Winds of Magic cost: -2 for 'Word of Pain'" },
+                { icon: 'spell-word-of-pain', description: "Winds of Magic cost: -3 for 'Word of Pain Upgraded'" },
+                { icon: 'spell-word-of-pain', description: "Miscast base chance: -15% for 'Word of Pain Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [12, 9],
+            cooldown: '44',
+            attributes: {
+                type: 'Hex',
+                duration: '40 seconds',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Additional effect on', icon: 'defense-character', postText: 'melee defense', uptick: 'up-blue', color: 'blue' },
+                    { text: '-24', icon: 'defense-character', postText: 'Melee Defense', color: 'red' },
+                    { text: '-40', icon: 'melee-character', postText: 'Melee Attack', color: 'red' },
+                    { text: '-30', icon: 'accuracy-character', postText: 'Accuracy', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Bladewind",
+        description: "A swirling maelstrom of swords spin and slach their way across the battlefield in search of blood.",
+        icon: "spell-bladewind",
+        ranks: [
+            { effects: [
+                { icon: 'spell-bladewind', description: "Spell: 'Bladewind'" },
+                { icon: 'spell-bladewind', description: "Overcast spell: 'Bladewind''" },
+                { icon: 'spell-bladewind', description: "Cooldown: -30% to 'Bladewind''" }
+            ] },
+            { effects: [
+                { icon: 'spell-bladewind', description: "Overcast spell: 'Bladewind Upgraded'" },
+                { icon: 'spell-bladewind', description: "Cooldown: -50% to 'Bladewind'" },
+                { icon: 'spell-bladewind', description: "Winds of Magic cost: -2 for 'Bladewind'" },
+                { icon: 'spell-bladewind', description: "Winds of Magic cost: -2 for 'Bladewind Upgraded'" },
+                { icon: 'spell-bladewind', description: "Miscast base chance: -15% for 'Bladewind Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [15, 13],
+            cooldown: '38',
+            attributes: {
+                type: 'Vortex',
+                duration: '14 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '150m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                cannotTargetIf: 'On a wall, Climbing',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes major', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Large, randomly-moving area of effect', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Weak against armor', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Evasion",
+        description: "Those with such skills can evade enemy attacks with ease and break from combat, should they feel that it is tactically important to do so.",
+        icon: "spell-evasion",
+        ranks: [
+            { effects: [{ icon: 'spell-evasion', description: "Passive ability: 'Evasion'" }] }
+        ],
+        spell: {
+            description: 'Character ability',
+            rarity: 'common',
+            attributes: {
+                type: 'Augment',
+                duration: 'Constant',
+                target: 'Self',
+                effects: [
+                    { text: '+5', icon: 'defense-character', postText: 'Melee Defense', color: 'green' },
+                    { text: '+6%', icon: 'movement-character', postText: 'Speed', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Doombolt",
+        description: "The sky opens and a bolt of burning, pure Chaos black lightning hurtles towards the foe.",
+        icon: "spell-doombolt",
+        ranks: [
+            { effects: [
+                { icon: 'spell-doombolt', description: "Spell: 'Doombolt'" },
+                { icon: 'spell-doombolt', description: "Overcast spell: 'Doombolt''" },
+                { icon: 'spell-doombolt', description: "Cooldown: -30% to 'Doombolt''" }
+            ] },
+            { effects: [
+                { icon: 'spell-doombolt', description: "Overcast spell: 'Doombolt Upgraded'" },
+                { icon: 'spell-doombolt', description: "Cooldown: -50% to 'Doombolt'" },
+                { icon: 'spell-doombolt', description: "Winds of Magic cost: -2 for 'Doombolt'" },
+                { icon: 'spell-doombolt', description: "Winds of Magic cost: -3 for 'Doombolt Upgraded'" },
+                { icon: 'spell-doombolt', description: "Miscast base chance: -15% for 'Doombolt Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            cost: [16, 13],
+            cooldown: '38',
+            attributes: {
+                type: 'Vortex',
+                duration: '14 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '150m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                cannotTargetIf: 'On a wall, Climbing',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased', icon: 'icon-armor-piercing-ranged', postText: 'armor-piercing damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes major', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Medium strike area', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single combatant', uptick: 'up-green', color: 'green' },
+                    { text: 'Good against armor', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single unit', uptick: 'up-green', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Soul Stealer",
+        description: "Tendrils of solidified darkness writhe outwards, draining the lifeforce from foes and renewing the caster's own vigour.",
+        icon: "spell-soul-stealer",
+        ranks: [
+            { effects: [
+                { icon: 'spell-soul-stealer', description: "Spell: 'Soul Stealer'" },
+                { icon: 'spell-soul-stealer', description: "Cooldown: -50% to 'Soul Stealer'" },
+                { icon: 'spell-soul-stealer', description: "Winds of Magic cost: -4 for 'Soul Stealer'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            cost: ['14'],
+            cooldown: '27',
+            attributes: {
+                type: [
+                    { text: 'Direct Damage (Area)'},
+                    { text: 'Instantly affects targets in area'}
+                ],
+                duration: '12 seconds',
+                target: [
+                    { text: 'Ground, Enemy' },
+                    { text: 'Affects enemies in range' },
+                    { text: '100m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                effectRange: '30m',
+                miscastChance: [{text: '100%', color: 'blue'}],
+                effects: [
+                    { text: 'Causes damage to combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Absorbs hitpoints from enemies', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single combatant', uptick: 'up-green', color: 'green' },
+                    { text: 'Weak vs. multiple combatants', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: 'Earthing',
+        description: "By stabbing a staff or some arcane conduit into the ground, an accomplished magic-user can earth or tether the Winds and hopefully reduce a chance of miscasting.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: 'magic-character', description: "Miscast base chance: -15%" }
+            ] }
+        ]
+    },
+    {
+        name: 'Magical Reserves',
+        description: "A few magic-users have the ability to store the Winds of Magic for later use, increasing their spellcasting power when it really counts.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: 'magic', description: "Winds of Magic power reserve: +15" }
+            ] }
+        ]
+    },
+    {
+        name: "Arcane Conduit",
+        description: "A strong mind is needed to channel the Winds of Magic. Those that have such a gift become arcane conduits - funnelling the magical tempest to their cause.",
+        icon: "spell-arcane-conduit",
+        ranks: [
+            { effects: [{ icon: 'spell-arcane-conduit', description: "Ability: 'Arcane Conduit'" }] }
+        ],
+        spell: {
+            description: 'Character ability',
+            rarity: 'uncommon',
+            cooldown: '90',
+            attributes: {
+                type: 'Augment of the Winds',
+                duration: '40 seconds',
+                target: 'Self',
+                effects: [
+                    { text: 'Improved', icon: 'magic-pool', postText: 'power recharge rate', uptick: 'up-green', color: 'green' },
+                    { text: 'Increase to', icon: 'magic-replenish', postText: 'power reserves', uptick: 'up-green', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Inspiring Presence',
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
         icon: "battle-morale",
