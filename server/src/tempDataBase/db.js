@@ -251,13 +251,19 @@ exports.skills = [
         ]
     },
     {
-        name: 'Ward of Khaine', // TODO implement explanation
+        name: "Hekarti's Blessing",
+        description: "It is easy to favor Hekarti - who pays close attention to Elven desires - over Atharti, but only the foolish allow that to happen.",
+        icon: "character-magic",
+        ranks: [{ effects: [{ icon: 'magic', description: "Winds of Magic power reserve: +8" }] }]
+    },
+    {
+        name: 'Ward of Khaine',
         description: "The Bloody-handed God watches over his disciples.",
         icon: "character-ward-save",
         ranks: [{ effects: [{ icon: 'resistance-missile', description: "Missile resistance: 10%" }] }]
     },
     {
-        name: 'Ward of Hekarti', // TODO implement explanation
+        name: 'Ward of Hekarti',
         description: "Magic's dark mistress has a care for her dutiful acolytes.",
         icon: "character-ward-save",
         ranks: [{ effects: [{ icon: 'resistance-magic', description: "Magic resistance: 10%" }] }]

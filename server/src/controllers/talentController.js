@@ -1,5 +1,5 @@
 const db = require('../tempDataBase/db.js');
-const keys = require('../templates/keys.js');
+const Keys = require('../templates/keys.js');
 
 exports.getRows = (req, res) => {
     res.setHeader('Access-Control-Allow-Credentials', true);
@@ -7,14 +7,15 @@ exports.getRows = (req, res) => {
     let params = req.params;
     let response;
 
+    // if (params.type) {
+    //     response = keys[params.race][params.lord][params.type]
+    // } else {
+    //     response = keys[params.race][params.lord]
+    // }
+    console.log(params.lord, params.type)
+    response = Keys.getLord(params.lord, params.type)
 
-    if (params.type) {
-        response = keys[params.race][params.lord][params.type]
-    } else {
-        response = keys[params.race][params.lord]
-    }
-
-    console.log(response)
+    console.log('what the controller got: ', response)
 
     res.send({ response });
 };

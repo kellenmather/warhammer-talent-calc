@@ -4,18 +4,18 @@ exports.lords = {
         { name: 'Dreadlord (Sword & Crossbow)', type: 'dreadlord', subType: 'crossbow' }, 
         { name: 'High Beastmaster', type: 'beastmaster' },
         { name: 'Black Ark', type: 'blackArk' },
-        { name: 'Supreme Sorceress', type: 'sorceress', school: ['beasts', 'fire', 'shadow', 'death', 'dark-magic'] }
+        { name: 'Supreme Sorceress', type: 'sorceress', school: ['beasts', 'fire', 'shadow', 'death', 'darkMagic'] }
     ],
     'highelves': [
         { name: 'Prince', type: 'prince' }, 
         { name: 'Princess', type: 'princess' },
-        { name: 'Archmage', type: 'archmage', school: ['beasts', 'fire', 'shadow', 'life', 'metal', 'death', 'light', 'high-magic', 'heavens' ] }
+        { name: 'Archmage', type: 'archmage', school: ['beasts', 'fire', 'shadow', 'life', 'metal', 'death', 'light', 'highMagic', 'heavens' ] }
     ],
     'lizardmen': [
         { name: 'Red Crested Skink Chief', type: 'skink' },
         { name: 'Saurus Old-Blood', type: 'saurus' },
         { name: 'Kroxigor Ancient', type: 'kroxigor' },
-        { name: 'Slann Mage-Priest', type: 'slann', school: ['fire', 'life', 'light', 'high-magic', 'heavens'] }
+        { name: 'Slann Mage-Priest', type: 'slann', school: ['fire', 'life', 'light', 'highMagic', 'heavens'] }
     ],
     'skaven': [
         { name: 'Master Assassin', type: 'assassin' },
@@ -27,8 +27,8 @@ exports.lords = {
         { name: 'Tomb King', type: 'tomb' }
     ],
     'vampirecoast': [
-        { name: 'Vampire Fleet Admiral (Pistol)', type: 'pistol', school: ['death', 'deeps', 'vampire-deep'] },
-        { name: 'Vampire Fleet Admiral (Polearm)', type: 'polearm', school: ['death', 'deeps', 'vampire-deep'] }
+        { name: 'Vampire Fleet Admiral (Pistol)', type: 'pistol', school: ['death', 'deeps', 'vampireDeep'] },
+        { name: 'Vampire Fleet Admiral (Polearm)', type: 'polearm', school: ['death', 'deeps', 'vampireDeep'] }
     ]
 },
 exports.legendary = {

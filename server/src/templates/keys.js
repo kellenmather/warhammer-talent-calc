@@ -2,7 +2,8 @@ const Darkelves = require('../templates/darkElves.js');
 const Schools = require('../templates/schools.js');
 
 // This is where each lord has his row reference data saved
-exports.darkelves = {
+
+let darkelves = {
     dreadlord: {
         crossbow: [
             { ...Darkelves.rows.row1.dreadlord },
@@ -41,15 +42,19 @@ exports.darkelves = {
         { ...Schools.magicSchools.darkMagic },
         { ...Darkelves.rows.row6.malekith },
         { ...Darkelves.rows.row9.darkElves }
+    ],
+    sorceress: [
+        { ...Darkelves.rows.row1.sorceress },
+        { ...Darkelves.rows.row2.lords },
+        { ...Darkelves.rows.row6.shield },
+        { ...Darkelves.rows.row9.darkElves }
     ]
-    // sorceress: {
-    //     darkMagic: {
-    //         row1 = rows2.row1.sorceress,
-    //         row2 = rows2.row2.lords,
-    //         row4 = rows2.row4.darkMagic,
-    //         row6 = rows2.row6.shield,
-    //         row9 = rows2.row9.darkElves
-    //     }
-    // },
+}
 
+exports.getLord = (lord, type) => {
+    let response = darkelves[lord][type] ? darkelves[lord][type] : darkelves[lord];
+    if (Schools.magicSchools[type]) {
+        response.push(Schools.magicSchools[type])
+    }
+    return response
 }
