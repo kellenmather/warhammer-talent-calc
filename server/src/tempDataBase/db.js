@@ -688,6 +688,53 @@ exports.skills = [
         }
     },
     {
+        name: "Chillwind",
+        description: "A freezing gale is conjured and sent to assail the target with ice and hail.",
+        icon: "spell-chillwind",
+        ranks: [
+            { effects: [
+                { icon: 'spell-chillwind', description: "Overcast spell: 'Chillwind Upgraded'" },
+                { icon: 'spell-chillwind', description: "Cooldown: -30% to 'Chillwind'" }
+            ] },
+            { effects: [
+                { icon: 'spell-chillwind', description: "Overcast spell: 'Chillwind Upgraded'" },
+                { icon: 'spell-chillwind', description: "Cooldown: -50% to 'Chillwind'" },
+                { icon: 'spell-chillwind', description: "Winds of Magic cost: -1 for 'Chillwind'" },
+                { icon: 'spell-chillwind', description: "Winds of Magic cost: -2 for 'Chillwind Upgraded'" },
+                { icon: 'spell-chillwind', description: "Miscast base chance: -15% for 'Chillwind Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [8, 6],
+            cooldown: '29',
+            attributes: {
+                type: 'Wind',
+                duration: '3 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '150m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                cannotTargetIf: 'On a wall, Climbing',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Additional effect of Frostbite', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes minor', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Small, forward-moving area of effect', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Good against armor', uptick: 'up-green', color: 'green' }
+                ],
+                contact: [
+                    { text: 'Frostbite (20 seconds)', color: 'red' },
+                    { text: '-20', icon: 'reload-time-stat', postText: 'Reload Skill', color: 'red' },
+                    { text: '-48%', icon: 'movement-character', postText: 'Speed', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Inspiring Presence',
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
         icon: "battle-morale",

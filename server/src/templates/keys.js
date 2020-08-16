@@ -29,7 +29,7 @@ exports.darkelves = {
         { ...darkelves.rows.row1.malekith },
         { ...darkelves.rows.row2.malekith },
         { ...darkelves.rows.row3.malekith },
-        // { ...darkelves.rows.row4.malekith },
+        { ...darkelves.rows.row4.malekith },
         { ...darkelves.rows.row6.malekith },
         { ...darkelves.rows.row9.darkElves }
     ]

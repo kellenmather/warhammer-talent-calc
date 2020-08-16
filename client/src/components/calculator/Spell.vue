@@ -3,11 +3,11 @@
         <div class="segment">
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', spell.rarity)"></a></span>
             <div class="spell-name inline-block" :style="getGradient('rarity', spell.rarity)">
-                <p class="inline-block title">{{name}}</p>
+                <p class="inline-block title">{{getName(name)}}</p>
                 <div class="mana-cost inline-block">
                     <span v-if="spell.cost || spell.uses">
                         <span class="icon"><a class="icon-small" :style="getIcon('spellStyles', spell.cost ? 'mana' : 'uses')"></a></span>
-                        <p style="paddingLeft:28px;">{{spell.cost || spell.uses}}</p>
+                        <p style="paddingLeft:28px;">{{(spell.cost) ? spell.cost[displayLevel()] : spell.uses}}</p>
                     </span>
                 </div>
                 <div class="cooldown inline-block">
@@ -28,13 +28,16 @@
                 <tr v-for="(attribute, index) in spell.attributes" :key="index">
                     <!-- split on camal case and first letter to uppcase -->
                     <td>{{index.charAt(0).toUpperCase() + index.slice(1).split(/(?=[A-Z])/).join(' ')}}:</td>
-                    <td v-if="typeof(attribute) === 'object'">
+                    <td v-if="Array.isArray(attribute)">
                         <span :style="fontColor(effect.color)" class="effects" v-for="(effect, j) in attribute" :key="j">
                             <a v-if="effect.uptick" :style="getIcon('spellStyles', effect.uptick)"></a>
                             {{effect.text}}
                             <a v-if="effect.icon" class="effect-icon" :style="getIcon('smallIcons', effect.icon)"></a>
                             {{effect.postText}}
-                        </span>
+                        </span>                    </td>
+                    <td v-else-if="typeof(attribute) === 'object'">
+                        <!-- how do i deal with mistcast -->
+                        {{attribute[displayLevel()]}}
                     </td>
                     <td v-else>{{attribute}}</td>
                 </tr>
@@ -77,6 +80,16 @@ export default {
         },
         fontColor(item) {
             return {'color': this.colors[item]}
+        },
+        displayLevel() {
+            console.log('here is what level will be displayed: ', (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 2) ? this.currentRank -1 : this.currentRank)
+            // prioritize level over rank when level value is greater than 0
+            if (this.currentRank === -1) return 0
+            return (this.specificRank > 0 ) ? this.specificRank -1 : (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 2) ? this.currentRank -1 : this.currentRank;
+        },
+        getName(name) {
+            console.log(this.spell.attributes.miscastChance, name);
+            return (!this.spell.attributes.miscastChance) ? name : name + ' Upgraded'
         }
     }
 };
