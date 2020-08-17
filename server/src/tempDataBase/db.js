@@ -1042,6 +1042,536 @@ exports.skills = [
         }
     },
     {
+        name: "Spirit Leech",
+        description: "The Wizard extends an ebon hand towards the chosen foe, leeching its spirit through tainted sorcery.",
+        icon: "spell-spirit-leech",
+        ranks: [
+            { effects: [
+                { icon: 'spell-spirit-leech', description: "Overcast spell: 'Spirit Leech Upgraded'" },
+                { icon: 'spell-spirit-leech', description: "Cooldown: -30% to 'Spirit Leech'" }
+            ] },
+            { effects: [
+                { icon: 'spell-spirit-leech', description: "Overcast spell: 'Spirit Leech Upgraded'" },
+                { icon: 'spell-spirit-leech', description: "Cooldown: -50% to 'Spirit Leech'" },
+                { icon: 'spell-spirit-leech', description: "Winds of Magic cost: -2 for 'Spirit Leech'" },
+                { icon: 'spell-spirit-leech', description: "Winds of Magic cost: -2 for 'Spirit Leech Upgraded'" },
+                { icon: 'spell-spirit-leech', description: "Miscast base chance: -15% for 'Spirit Leech Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [11, 9],
+            cooldown: '32',
+            attributes: {
+                type: 'Direct Damage',
+                duration: '13 seconds',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '300m', uptick: 'range' }
+                ],
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended cast range', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes damage to combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single combatant', uptick: 'up-green', color: 'green' },
+                    { text: 'Chance opponent will resist damage', uptick: 'down-red', color: 'red' },
+                    { text: 'Weak vs. multiple combatants', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Doom & Darkness",
+        description: "Spirits of the departed assail the Wizard's foes, sapping their resolve and causing dread among their numbers.",
+        icon: "spell-doom-darkness",
+        ranks: [
+            { effects: [
+                { icon: 'spell-doom-darkness', description: "Overcast spell: 'Doom & Darkness Upgraded'" },
+                { icon: 'spell-doom-darkness', description: "Cooldown: -30% to 'Doom & Darkness'" }
+            ] },
+            { effects: [
+                { icon: 'spell-doom-darkness', description: "Overcast spell: 'Doom & Darkness Upgraded'" },
+                { icon: 'spell-doom-darkness', description: "Cooldown: -50% to 'Doom & Darkness'" },
+                { icon: 'spell-doom-darkness', description: "Winds of Magic cost: -1 for 'Doom & Darkness'" },
+                { icon: 'spell-doom-darkness', description: "Winds of Magic cost: -2 for 'Doom & Darkness Upgraded'" },
+                { icon: 'spell-doom-darkness', description: "Miscast base chance: -15% for 'Doom & Darkness Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [14, 12],
+            cooldown: '43',
+            attributes: {
+                type: 'Hex',
+                target: [
+                    { text: 'Ground, Enemy' },
+                    { text: 'Affects enemies in range' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Added effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: '-16', icon: 'morale-mallus', postText: 'Leadership', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Life-Leeching",
+        description: "Fire feeds fire, two blazes together are stronger and hotter than two apart. The Kindleflame intensifies such fire.",
+        icon: "spell-life-leeching",
+        ranks: [
+            { effects: [{ icon: 'spell-life-leeching', description: "Passive ability: 'Life-Leeching'" }] }
+        ],
+        spell: {
+            description: 'Lore attribute',
+            rarity: 'common',
+            attributes: {
+                type: 'Augment of the Winds',
+                duration: 'Constant',
+                target: 'Self',
+                activeIf: 'Casting',
+                effects: [
+                    { text: 'Improved', icon: 'magic-replenish', postText: 'power recharge rate', color: 'green' },
+                    { text: 'Life Leeching (25 seconds)' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Aspect of the Dread Knight",
+        description: "An invisible aura of horror surrounds the Wizard's allies. Only the bravest foes now stand before them.",
+        icon: "spell-aspect-of-the-dread-knight",
+        ranks: [
+            { effects: [
+                { icon: 'spell-aspect-of-the-dread-knight', description: "Overcast spell: 'Aspect of the Dread Knight Upgraded'" },
+                { icon: 'spell-aspect-of-the-dread-knight', description: "Cooldown: -30% to 'Aspect of the Dread Knight'" }
+            ] },
+            { effects: [
+                { icon: 'spell-aspect-of-the-dread-knight', description: "Overcast spell: 'Aspect of the Dread Knight Upgraded'" },
+                { icon: 'spell-aspect-of-the-dread-knight', description: "Cooldown: -50% to 'Aspect of the Dread Knight'" },
+                { icon: 'spell-aspect-of-the-dread-knight', description: "Winds of Magic cost: -1 for 'Aspect of the Dread Knight'" },
+                { icon: 'spell-aspect-of-the-dread-knight', description: "Winds of Magic cost: -2 for 'Aspect of the Dread Knight Upgraded'" },
+                { icon: 'spell-aspect-of-the-dread-knight', description: "Miscast base chance: -15% for 'Aspect of the Dread Knight Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [9, 7],
+            cooldown: '28',
+            attributes: {
+                type: [
+                    { text: 'Augment'},
+                    { text: 'Instantly affects targets in area'}
+                ],
+                target: [
+                    { text: 'Self, Ground, Ally' },
+                    { text: 'Affects allies in range' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Added effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: '+8', icon: 'morale-character', color: 'green' },
+                    { text: 'Can', icon: 'attribute-causes-terror', postText: 'Cause Terror', uptick: 'up-green', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Soulblight",
+        description: "Harnessing the sickly power of Shyish, the Wizard weakens the foe's will to survive the battle.",
+        icon: "spell-soulblight",
+        ranks: [
+            { effects: [
+                { icon: 'spell-soulblight', description: "Spell: 'Soulblight'" },
+                { icon: 'spell-soulblight', description: "Overcast spell: 'Soulblight'" },
+                { icon: 'spell-soulblight', description: "Cooldown: -30% to 'Soulblight'" }
+            ] },
+            { effects: [
+                { icon: 'spell-soulblight', description: "Overcast spell: 'Soulblight Upgraded'" },
+                { icon: 'spell-soulblight', description: "Cooldown: -50% to 'Soulblight'" },
+                { icon: 'spell-soulblight', description: "Winds of Magic cost: -2 for 'Soulblight'" },
+                { icon: 'spell-soulblight', description: "Winds of Magic cost: -3 for 'Soulblight Upgraded'" },
+                { icon: 'spell-soulblight', description: "Miscast base chance: -15% for 'Soulblight Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [14, 11],
+            cooldown: '45',
+            attributes: {
+                type: [
+                    { text: 'Hex (Area)'},
+                    { text: 'Only acts on targets when in area'}
+                ],
+                duration: '50 seconds',
+                target: [
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: '-30', icon: 'armor-character', postText: 'Armor', color: 'red' },
+                    { text: '-30%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Fate of Bjuna",
+        description: "Following the fate of the unsmiling warrior, Bjuna, the targets of the caster's ire will laugh themselves to death.",
+        icon: "spell-the-fate-of-bjuna",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-fate-of-bjuna', description: "Spell: 'The Fate of Bjuna'" },
+                { icon: 'spell-the-fate-of-bjuna', description: "Cooldown: -150% to 'The Fate of Bjuna'" },
+                { icon: 'spell-the-fate-of-bjuna', description: "Winds of Magic cost: -3 for 'The Fate of Bjuna'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            attributes: {
+                type: 'Direct Damage',
+                duration: '20 seconds',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '100m', uptick: 'range' }
+                ],
+                effects: [
+                    { text: 'Causes damage to combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Chance opponent will resist damage', uptick: 'down-red', color: 'red' },
+                    { text: 'Weak vs. a single combatant', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Purple Sun of Xereus",
+        description: "A colossal orb of purple-edged darkness materialises - those who do not escape its crystalline touch are doomed for eternity!",
+        icon: "spell-the-purple-sun-of-xereus",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-purple-sun-of-xereus', description: "Overcast spell: 'The Purple Sun of Xereus Upgraded'" },
+                { icon: 'spell-the-purple-sun-of-xereus', description: "Cooldown: -30% to 'The Purple Sun of Xereus'" }
+            ] },
+            { effects: [
+                { icon: 'spell-the-purple-sun-of-xereus', description: "Overcast spell: 'The Purple Sun of Xereus Upgraded'" },
+                { icon: 'spell-the-purple-sun-of-xereus', description: "Cooldown: -50% to 'The Purple Sun of Xereus'" },
+                { icon: 'spell-the-purple-sun-of-xereus', description: "Winds of Magic cost: -2 for 'The Purple Sun of Xereus'" },
+                { icon: 'spell-the-purple-sun-of-xereus', description: "Winds of Magic cost: -3 for 'The Purple Sun of Xereus Upgraded'" },
+                { icon: 'spell-the-purple-sun-of-xereus', description: "Miscast base chance: -15% for 'The Purple Sun of Xereus Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            cost: [24, 7],
+            cooldown: '54',
+            attributes: {
+                type: 'Vortex',
+                duration: '22 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '150m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                cannotTargetIf: 'On a wall',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes major', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Huge, randomly-moving area of effect', uptick: 'up-green', color: 'green' },
+                    { text: 'Can disrupt unit formation', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Good against armor', uptick: 'up-green', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Fireball",
+        description: "A Wizard conjures a boiling ball of magical flame and hurls it at a nearby foe.",
+        icon: "spell-fireball",
+        ranks: [
+            { effects: [
+                { icon: 'spell-fireball', description: "Overcast spell: 'Fireball Upgraded'" },
+                { icon: 'spell-fireball', description: "Cooldown: -30% to 'Fireball'" }
+            ] },
+            { effects: [
+                { icon: 'spell-fireball', description: "Overcast spell: 'Fireball Upgraded'" },
+                { icon: 'spell-fireball', description: "Cooldown: -50% to 'Fireball'" },
+                { icon: 'spell-fireball', description: "Winds of Magic cost: -1 for 'Fireball'" },
+                { icon: 'spell-fireball', description: "Winds of Magic cost: -2 for 'Fireball Upgraded'" },
+                { icon: 'spell-fireball', description: "Miscast base chance: -15% for 'Fireball Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [9, 7],
+            cooldown: '29',
+            attributes: {
+                type: 'Magic Missile',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '300m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Manning equipment, Climbing',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased', icon: 'icon-armor-piercing-ranged', postText: 'armor-piercing damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Greater', icon: 'icon-armor-piercing-ranged', postText: 'armor-piercing explosion damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes moderate magical & fire damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Powerful explosion', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Effective at long range', uptick: 'up-green', color: 'green' },
+                    { text: 'Weak against armor', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Kindleflame",
+        description: "Fire feeds fire, two blazes together are stronger and hotter than two apart. The Kindleflame intensifies such fire.",
+        icon: "spell-kindleflame",
+        ranks: [
+            { effects: [{ icon: 'spell-kindleflame', description: "Passive ability: 'Kindleflame'" }] }
+        ],
+        spell: {
+            description: 'Lore attribute',
+            rarity: 'common',
+            attributes: {
+                type: 'Ward Save Hex (Area)',
+                duration: 'Constant',
+                target: [
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                activeIf: 'Casting',
+                effectRange: 'Map-wide',
+                effects: [
+                    { text: 'Kindleflame (15 seconds)', color: 'red' },
+                    { text: '+22% Weakness to', icon: 'icon-fire', postText: 'Fire Damage', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Cascading Fire-Cloak",
+        description: "A blazing aura surrounds the Pyromancer's chosen ally, shielding them with protective flame and augmenting their abilities.",
+        icon: "spell-cascading-fire-cloak",
+        ranks: [
+            { effects: [
+                { icon: 'spell-cascading-fire-cloak', description: "Spell: 'Cascading Fire-Cloak'" },
+                { icon: 'spell-cascading-fire-cloak', description: "Cooldown: -50 to 'Cascading Fire-Cloak'" },
+                { icon: 'spell-cascading-fire-cloak', description: "Winds of Magic cost: -1 for 'Cascading Fire-Cloak'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            attributes: {
+                type: 'Augment',
+                duration: '19 seconds',
+                target: [
+                    { text: 'Self, Ally' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effects: [
+                    { text: '+25%', icon: 'icon-armor-piercing', postText: 'Armor-Piercing Weapon Damage', color: 'green' },
+                    { text: '+24', icon: 'defense-character', postText: 'Melee Defense', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Flaming Sword of Rhuin",
+        description: "The Wizard ensorcels allied weapons, making them burn with a savage fire. The targets of the spell are augmented with superior flaming blades.",
+        icon: "spell-flaming-sword-of-rhuin",
+        ranks: [
+            { effects: [
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Spell: 'Flaming Sword of Rhuin Upgraded'" },
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Overcast spell: 'Flaming Sword of Rhuin Upgraded'" },
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Cooldown: -30% to 'Flaming Sword of Rhuin'" }
+            ] },
+            { effects: [
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Overcast spell: 'Flaming Sword of Rhuin Upgraded'" },
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Cooldown: -50% to 'Flaming Sword of Rhuin'" },
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Winds of Magic cost: -2 for 'Flaming Sword of Rhuin'" },
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Winds of Magic cost: -2 for 'Flaming Sword of Rhuin Upgraded'" },
+                { icon: 'spell-flaming-sword-of-rhuin', description: "Miscast base chance: -15% for 'Flaming Sword of Rhuin Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [12, 10],
+            cooldown: '44',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)'},
+                    { text: 'Only acts on target when in area'}
+                ],
+                duration: '44 seconds',
+                target: [
+                    { text: 'Self, Ground, Ally' },
+                    { text: 'Affects allies in range' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                imbues: [{ text: 'Magical Damage', icon: 'icon-fire', postText: 'Fire Damage', uptick: 'icon-magic' }],
+                effects: [
+                    { text: 'Extended effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: '+30%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'green' },
+                    { text: '+25%', icon: 'icon-ranged-damage-base', postText: 'Base Missile Damage', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Burning Head",
+        description: "A cackling, flaming visage appears before the Wizard. With a gleeful screech, it swirls around the battlefield, immolating anything in its way.",
+        icon: "spell-the-burning-head",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-burning-head', description: "Spell: 'The Burning Head Upgraded'" },
+                { icon: 'spell-the-burning-head', description: "Overcast spell: 'The Burning Head Upgraded'" },
+                { icon: 'spell-the-burning-head', description: "Cooldown: -30% to 'The Burning Head'" }
+            ] },
+            { effects: [
+                { icon: 'spell-the-burning-head', description: "Overcast spell: 'The Burning Head Upgraded'" },
+                { icon: 'spell-the-burning-head', description: "Cooldown: -50% to 'The Burning Head'" },
+                { icon: 'spell-the-burning-head', description: "Winds of Magic cost: -2 for 'The Burning Head'" },
+                { icon: 'spell-the-burning-head', description: "Winds of Magic cost: -3 for 'The Burning Head Upgraded'" },
+                { icon: 'spell-the-burning-head', description: "Miscast base chance: -15% for 'The Burning Head Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [16, 13],
+            cooldown: '37',
+            attributes: {
+                type: 'Wind',
+                duration: '20 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '150m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                cannotTargetIf: 'Flying, On a wall',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes major magical & fire damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Small, forward-moving area of effect', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Good against armor', uptick: 'up-green', color: 'green' }
+                ],
+                contact: [
+                    { text: 'Burnt! (10 seconds)', color: 'red' },
+                    { text: '-8', icon: 'morale-mallus', postText: 'Leadership', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Piercing Bolts of Burning",
+        description: "A Wizard conjures a boiling ball of magical flame and hurls it at a nearby foe.",
+        icon: "spell-piercing-bolts-of-burning",
+        ranks: [
+            { effects: [
+                { icon: 'spell-piercing-bolts-of-burning', description: "Spell: 'Piercing Bolts of Burning Upgraded'" },
+                { icon: 'spell-piercing-bolts-of-burning', description: "Overcast spell: 'Piercing Bolts of Burning Upgraded'" },
+                { icon: 'spell-piercing-bolts-of-burning', description: "Cooldown: -30% to 'Piercing Bolts of Burning'" }
+            ] },
+            { effects: [
+                { icon: 'spell-piercing-bolts-of-burning', description: "Overcast spell: 'Piercing Bolts of Burning Upgraded'" },
+                { icon: 'spell-piercing-bolts-of-burning', description: "Cooldown: -50% to 'Piercing Bolts of Burning'" },
+                { icon: 'spell-piercing-bolts-of-burning', description: "Winds of Magic cost: -2 for 'Piercing Bolts of Burning'" },
+                { icon: 'spell-piercing-bolts-of-burning', description: "Winds of Magic cost: -3 for 'Piercing Bolts of Burning Upgraded'" },
+                { icon: 'spell-piercing-bolts-of-burning', description: "Miscast base chance: -15% for 'Piercing Bolts of Burning Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            cost: [17, 14],
+            cooldown: '47',
+            attributes: {
+                type: 'Bombardment',
+                duration: '9 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased number of missiles', icon: 'icon-armor-piercing-ranged', postText: 'armor-piercing damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Wider strike area', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes major magical & fire damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Large strike area', uptick: 'up-green', color: 'green' },
+                    { text: 'Good against armor', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single unit', uptick: 'up-green', color: 'green' }                ]
+            }
+        }
+    },
+    {
+        name: "Flame Storm",
+        description: "A Wizard conjures a boiling ball of magical flame and hurls it at a nearby foe.",
+        icon: "spell-flame-storm",
+        ranks: [
+            { effects: [
+                { icon: 'spell-flame-storm', description: "Overcast spell: 'Flame Storm Upgraded'" },
+                { icon: 'spell-flame-storm', description: "Cooldown: -30% to 'Flame Storm'" }
+            ] },
+            { effects: [
+                { icon: 'spell-flame-storm', description: "Overcast spell: 'Flame Storm Upgraded'" },
+                { icon: 'spell-flame-storm', description: "Cooldown: -50% to 'Flame Storm'" },
+                { icon: 'spell-flame-storm', description: "Winds of Magic cost: -3 for 'Flame Storm'" },
+                { icon: 'spell-flame-storm', description: "Winds of Magic cost: -3 for 'Flame Storm Upgraded'" },
+                { icon: 'spell-flame-storm', description: "Miscast base chance: -15% for 'Flame Storm Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            cost: [20, 17],
+            cooldown: '50',
+            attributes: {
+                type: 'Vortex',
+                target: [
+                    { text: 'Ground' },
+                    { text: '150m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Manning equipment, Climbing',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Increased damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes major magical & fire damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Large, randomly-moving area of effect', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Weak vs. a single combatant', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Inspiring Presence',
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
         icon: "battle-morale",

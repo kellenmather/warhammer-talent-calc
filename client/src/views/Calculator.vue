@@ -176,11 +176,9 @@ export default {
                 if (this.lord === races[i].type && this.type === races[i].subType) {
                     return races[i].name
                 } else if (this.lord === races[i].type && races[i].school && races[i].school.includes(this.type)) {
-                    let magicType = this.type.split('-');
-                    for (let i = 0; i < magicType.length; i++) {
-                        magicType[i] = magicType[i].charAt(0).toUpperCase() + magicType[i].slice(1);
-                    }
-                    return races[i].name + ' (' + magicType.join(' ') + ')'
+                    let magicType = this.type
+                    magicType = magicType.charAt(0).toUpperCase() + magicType.slice(1).split(/(?=[A-Z])/).join(' ');
+                    return races[i].name + ' (' + magicType + ')'
                 }
             }
         }

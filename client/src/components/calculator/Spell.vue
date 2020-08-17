@@ -82,13 +82,11 @@ export default {
             return {'color': this.colors[item]}
         },
         displayLevel() {
-            console.log('here is what level will be displayed: ', (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 2) ? this.currentRank -1 : this.currentRank)
             // prioritize level over rank when level value is greater than 0
             if (this.currentRank === -1) return 0
             return (this.specificRank > 0 ) ? this.specificRank -1 : (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 2) ? this.currentRank -1 : this.currentRank;
         },
         getName(name) {
-            console.log(this.spell.attributes.miscastChance, name);
             return (!this.spell.attributes.miscastChance) ? name : name + ' Upgraded'
         }
     }
