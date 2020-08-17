@@ -1,4 +1,28 @@
 exports.magic = {
+    beasts: {
+        row: 4,
+        content: [
+            {
+                blockContent: ["Wyssan's Wildform"]
+            },
+            {
+                restrictionChoice: "Wyssan's Wildform",
+                blockContent: ['The Amber Spear', 'Wild Heart', 'Flock of Doom', "Pann's Impenetrable Pelt"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ['Evasion']
+            },
+            {
+                restrictionChoice: 'Evasion',
+                blockContent: ['The Curse of Anraheir', 'Transformation of Kadon', 'Earthing', 'Magical Reserves']
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ['Arcane Conduit']
+            },
+        ]
+    },
     fire: {
         row: 4,
         content: [
@@ -64,6 +88,30 @@ exports.magic = {
             {
                 restrictionChoice: 'Evasion',
                 blockContent: ['The Fate of Bjuna', 'The Purple Sun of Xereus', 'Earthing', 'Magical Reserves']
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ['Arcane Conduit']
+            },
+        ]
+    },
+    shadow: {
+        row: 4,
+        content: [
+            {
+                blockContent: ["Melkoth's Mystifying Miasma"]
+            },
+            {
+                restrictionChoice: "Melkoth's Mystifying Miasma",
+                blockContent: ['The Penumbral Pendulum', 'Smoke & Mirrors', 'The Enfeebling Foe', 'The Withering']
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ['Evasion']
+            },
+            {
+                restrictionChoice: 'Evasion',
+                blockContent: ['Pit of Shades', "Okkam's Mindrazor", 'Earthing', 'Magical Reserves']
             },
             {
                 restrictionCount: 4,

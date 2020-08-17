@@ -1301,6 +1301,557 @@ exports.skills = [
         }
     },
     {
+        name: "Melkoth's Mystifying Miasma",
+        description: "The caster weaves a confounding fog that numbs and deludes enemies, causing them to stumble and stagger.",
+        icon: "spell-melkoths-mystifying-miasma",
+        ranks: [
+            { effects: [
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Overcast spell: 'Melkoth's Mystifying Miasma Upgraded'" },
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Cooldown: -30% to 'Melkoth's Mystifying Miasma'" }
+            ] },
+            { effects: [
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Overcast spell: 'Melkoth's Mystifying Miasma Upgraded'" },
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Cooldown: -50% to 'Melkoth's Mystifying Miasma'" },
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Winds of Magic cost: -1 for 'Melkoth's Mystifying Miasma'" },
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Winds of Magic cost: -2 for 'Melkoth's Mystifying Miasma Upgraded'" },
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Miscast base chance: -15% for 'Melkoth's Mystifying Miasma Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [8, 6],
+            cooldown: '29',
+            attributes: {
+                type: 'Direct Damage',
+                duration: '14 seconds',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '300m', uptick: 'range' }
+                ],
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended cast range', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes damage to combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Weak vs. a single comatant', uptick: 'down-red', color: 'red' },
+                    { text: '-24%', icon: 'movement-character', postText: 'Speed', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Penumbral Pendulum",
+        description: "A spectral pendulum is summoned by the Wizard. On command, it swings, razor sharp and with lethal speed, through the foe",
+        icon: "spell-the-penumbral-pendulum",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-penumbral-pendulum', description: "Spell: 'The Penumbral Pendulum Upgraded'" },
+                { icon: 'spell-the-penumbral-pendulum', description: "Overcast spell: 'The Penumbral Pendulum Upgraded'" },
+                { icon: 'spell-the-penumbral-pendulum', description: "Cooldown: -30% to 'The Penumbral Pendulum'" }
+            ] },
+            { effects: [
+                { icon: 'spell-the-penumbral-pendulum', description: "Overcast spell: 'The Penumbral Pendulum Upgraded'" },
+                { icon: 'spell-the-penumbral-pendulum', description: "Cooldown: -50% to 'The Penumbral Pendulum'" },
+                { icon: 'spell-the-penumbral-pendulum', description: "Winds of Magic cost: -2 for 'The Penumbral Pendulum'" },
+                { icon: 'spell-the-penumbral-pendulum', description: "Winds of Magic cost: -3 for 'The Penumbral Pendulum Upgraded'" },
+                { icon: 'spell-the-penumbral-pendulum', description: "Miscast base chance: -15% for 'The Penumbral Pendulum Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [18, 15],
+            cooldown: '40',
+            attributes: {
+                type: 'Wind',
+                duration: '3 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                cannotTargetIf: 'Flying, On a wall',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased', icon: 'icon-armor-piercing', postText: 'armor-piercing damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes massive', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Small, forward-moving area of effect', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Weak vs. a single combatant', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Smoke & Mirrors",
+        description: "A conjured shadow is just as obfuscating as a real one - the Shadow Wizard is master or mistress of the 'concealing' arts.",
+        icon: "spell-smoke-mirrors",
+        ranks: [
+            { effects: [{ icon: 'spell-smoke-mirrors', description: "Passive ability: 'Smoke & Mirrors'" }] }
+        ],
+        spell: {
+            description: 'Lore attribute',
+            rarity: 'common',
+            attributes: {
+                type: 'Augment (Area)',
+                duration: 'Constant',
+                target: [
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                activeIf: 'Casting',
+                effectRange: 'Map-wide',
+                effects: [
+                    { text: 'Smoke & Mirrors (24 seconds)', color: 'green' },
+                    { text: '+12%', icon: 'movement-character', postText: 'Speed', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Enfeebling Foe",
+        description: "When cast this spell enfeebles enemy minds; they feel the crushing weight of reality bearing down upon them.",
+        icon: "spell-the-enfeebling-foe",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-enfeebling-foe', description: "Spell: 'The Enfeebling Foe Upgraded'" },
+                { icon: 'spell-the-enfeebling-foe', description: "Overcast spell: 'The Enfeebling Foe Upgraded'" },
+                { icon: 'spell-the-enfeebling-foe', description: "Cooldown: -30% to 'The Enfeebling Foe'" }
+            ] },
+            { effects: [
+                { icon: 'spell-the-enfeebling-foe', description: "Overcast spell: 'The Enfeebling Foe Upgraded'" },
+                { icon: 'spell-the-enfeebling-foe', description: "Cooldown: -50% to 'The Enfeebling Foe'" },
+                { icon: 'spell-the-enfeebling-foe', description: "Winds of Magic cost: -1 for 'The Enfeebling Foe'" },
+                { icon: 'spell-the-enfeebling-foe', description: "Winds of Magic cost: -2 for 'The Enfeebling Foe Upgraded'" },
+                { icon: 'spell-the-enfeebling-foe', description: "Miscast base chance: -15% for 'The Enfeebling Foe Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [10, 8],
+            cooldown: '30',
+            attributes: {
+                type: 'Hex',
+                duration: '44 seconds',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: '-24', icon: 'defense-character', postText: 'Melee Defense', uptick: 'down-red', color: 'red' },
+                    { text: '-24', icon: 'melee-character', postText: 'Melee Attack', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Withering",
+        description: "The Wizard destroys their enemies form within, corroding foes' minds with doubt and crisis.",
+        icon: "spell-the-withering",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-withering', description: "Spell: 'The Withering Upgraded'" },
+                { icon: 'spell-the-withering', description: "Overcast spell: 'The Withering Upgraded'" },
+                { icon: 'spell-the-withering', description: "Cooldown: -30% to 'The Withering'" }
+            ] },
+            { effects: [
+                { icon: 'spell-the-withering', description: "Overcast spell: 'The Withering Upgraded'" },
+                { icon: 'spell-the-withering', description: "Cooldown: -50% to 'The Withering'" },
+                { icon: 'spell-the-withering', description: "Winds of Magic cost: -1 for 'The Withering'" },
+                { icon: 'spell-the-withering', description: "Winds of Magic cost: -2 for 'The Withering Upgraded'" },
+                { icon: 'spell-the-withering', description: "Miscast base chance: -15% for 'The Withering Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [14, 12],
+            cooldown: '43',
+            attributes: {
+                type: [
+                    { text: 'Hex (Area)'},
+                    { text: 'Only acts on target when in area'}
+                ],
+                target: [
+                    { text: 'Ground, Enemy' },
+                    { text: 'Affects enemies in range' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Added effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: '-30', icon: 'armor-character', postText: 'Armor', color: 'red' },
+                    { text: '-8', icon: 'morale-mallus', postText: 'Leadership', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Pit of Shades",
+        description: "The spellcaster opens a vortex leading into the Pit. Anything caught within it will be lost forever.",
+        icon: "spell-pit-of-shades",
+        ranks: [
+            { effects: [
+                { icon: 'spell-pit-of-shades', description: "Spell: 'Pit of Shades Upgraded'" },
+                { icon: 'spell-pit-of-shades', description: "Overcast spell: 'Pit of Shades Upgraded'" },
+                { icon: 'spell-pit-of-shades', description: "Cooldown: -30% to 'Pit of Shades'" }
+            ] },
+            { effects: [
+                { icon: 'spell-pit-of-shades', description: "Overcast spell: 'Pit of Shades Upgraded'" },
+                { icon: 'spell-pit-of-shades', description: "Cooldown: -50% to 'Pit of Shades'" },
+                { icon: 'spell-pit-of-shades', description: "Winds of Magic cost: -3 for 'Pit of Shades'" },
+                { icon: 'spell-pit-of-shades', description: "Winds of Magic cost: -3 for 'Pit of Shades Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [20, 17],
+            cooldown: '49',
+            attributes: {
+                type: 'Vortex',
+                duration: '13 seconds',
+                target: [
+                    { text: 'Ground' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                miscastChance: '50%',
+                effects: [
+                    { text: 'Increased', icon: 'icon-armor-piercing', postText: 'armor-piercing damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes moderate', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Can disrupt unit formation', uptick: 'up-green', color: 'green' },
+                    { text: 'Huge, stationary area of effect', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple units', uptick: 'up-green', color: 'green' },
+                    { text: 'Good against armor', uptick: 'up-green', color: 'green' }                ]
+            }
+        }
+    },
+    {
+        name: "Okkam's Mindrazor",
+        description: "The supernatural solution is often the best; weapons materialise before the caster's allies, allowing them to slice through flesh, soul, and consciousness.",
+        icon: "spell-okkams-mindrazor",
+        ranks: [
+            { effects: [
+                { icon: 'spell-okkams-mindrazor', description: "Spell: 'Okkam's Mindrazor Upgraded'" },
+                { icon: 'spell-okkams-mindrazor', description: "Overcast spell: 'Okkam's Mindrazor Upgraded'" },
+                { icon: 'spell-okkams-mindrazor', description: "Cooldown: -30% to 'Okkam's Mindrazor'" }
+            ] },
+            { effects: [
+                { icon: 'spell-okkams-mindrazor', description: "Overcast spell: 'Okkam's Mindrazor Upgraded'" },
+                { icon: 'spell-okkams-mindrazor', description: "Cooldown: -50% to 'Okkam's Mindrazor'" },
+                { icon: 'spell-okkams-mindrazor', description: "Winds of Magic cost: -2 for 'Okkam's Mindrazor'" },
+                { icon: 'spell-okkams-mindrazor', description: "Winds of Magic cost: -3 for 'Okkam's Mindrazor Upgraded'" },
+                { icon: 'spell-okkams-mindrazor', description: "Miscast base chance: -15% for 'Okkam's Mindrazor Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [16, 13],
+            cooldown: '46',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)'},
+                    { text: 'Only acts on target when in area'}
+                ],
+                target: [
+                    { text: 'Self, Ground, Ally' },
+                    { text: 'Affects allies in range' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                imbues: [{ postText: 'Magical Damage', icon: 'icon-magic' }],
+                effects: [
+                    { text: 'Added effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: '+50%', icon: 'icon-damage-base', postText: 'Base Damage', color: 'green' },
+                    { text: '+50%', icon: 'icon-armor-piercing', postText: 'Armor-Piercing Weapon Damage', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Wyssan's Wildform",
+        description: "The spellcaster unleashes the best within, using its fury to transform allies into bestial forms.",
+        icon: "spell-wyssans-wildform",
+        ranks: [
+            { effects: [
+                { icon: 'spell-wyssans-wildform', description: "Overcast spell: 'Wyssan's Wildform Upgraded'" },
+                { icon: 'spell-wyssans-wildform', description: "Cooldown: -30% to 'Wyssan's Wildform'" }
+            ] },
+            { effects: [
+                { icon: 'spell-wyssans-wildform', description: "Overcast spell: 'Wyssan's Wildform Upgraded'" },
+                { icon: 'spell-wyssans-wildform', description: "Cooldown: -50% to 'Wyssan's Wildform'" },
+                { icon: 'spell-wyssans-wildform', description: "Winds of Magic cost: -1 for 'Wyssan's Wildform'" },
+                { icon: 'spell-wyssans-wildform', description: "Winds of Magic cost: -1 for 'Wyssan's Wildform Upgraded'" },
+                { icon: 'spell-wyssans-wildform', description: "Miscast base chance: -15% for 'Wyssan's Wildform Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [8, 7],
+            cooldown: '28',
+            attributes: {
+                type: [
+                    { text: 'Augment'},
+                    { text: 'Instantly affects targets in area'}
+                ],
+                target: [
+                    { text: 'Self, Ground, Ally' },
+                    { text: 'Affects allies in range' },
+                    { text: '300m', uptick: 'range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Added effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: '+30', icon: 'armor-character', postText: 'Armor', uptick: 'up-green', color: 'green' },
+                    { text: '+30%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', uptick: 'up-green', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Amber Spear",
+        description: "Sounding a gnarled horn, the caster summons a glowing amber spear and hurls it at the foe with uncanny accuracy.",
+        icon: "spell-the-amber-spear",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-amber-spear', description: "Spell: 'The Amber Spear Upgraded'" },
+                { icon: 'spell-the-amber-spear', description: "Overcast spell: 'The Amber Spear Upgraded'" },
+                { icon: 'spell-the-amber-spear', description: "Cooldown: -30% to 'The Amber Spear'" }
+            ] },
+            { effects: [
+                { icon: 'spell-the-amber-spear', description: "Overcast spell: 'The Amber Spear Upgraded'" },
+                { icon: 'spell-the-amber-spear', description: "Cooldown: -50% to 'The Amber Spear'" },
+                { icon: 'spell-the-amber-spear', description: "Winds of Magic cost: -2 for 'The Amber Spear'" },
+                { icon: 'spell-the-amber-spear', description: "Winds of Magic cost: -2 for 'The Amber Spear Upgraded'" },
+                { icon: 'spell-the-amber-spear', description: "Miscast base chance: -15% for 'The Amber Spear Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [11, 9],
+            cooldown: '43',
+            attributes: {
+                type: 'Magic Missile',
+                target: [
+                    { text: 'Enemy' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Manning equipment, Climbing',
+                projectileRange: '200m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased', icon: 'icon-armor-piercing', postText: 'armor-piercing damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Greater', icon: 'icon-armor-piercing-ranged', postText: 'armor-piercing explosion damage', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes moderate', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Effective at all ranges', uptick: 'up-green', color: 'green' },
+                    { text: 'Good against armor', uptick: 'up-green', color: 'green' },
+                    { text: 'Can cause damage to friendly combatants', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Wild Heart",
+        description: "The spellcaster attunes the magic of the wild, channelling its ancient and arcane power.",
+        icon: "spell-wild-heart",
+        ranks: [
+            { effects: [{ icon: 'spell-wild-heart', description: "Passive ability: 'Wild Heart'" }] }
+        ],
+        spell: {
+            description: 'Lore attribute',
+            rarity: 'common',
+            attributes: {
+                type: 'Augment of the Winds (Area)',
+                duration: 'Constant',
+                target: 'Self',
+                activeIf: 'Casting',
+                effects: [
+                    { text: 'Improved', icon: 'magic-replenish', postText: 'power recharge rate', uptick: 'up-green', color: 'green' },
+                    { text: 'Improved', icon: 'magic-pool', postText: 'power reserves', uptick: 'up-green', color: 'green' },
+                    { text: 'Wild Heart (29 seconds)' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Flock of Doom",
+        description: "With a mighty bellow, the caster invokes Corvus the Crow Lord, summoning his servants to peck at the foe's eyes.",
+        icon: "spell-flock-of-doom",
+        ranks: [
+            { effects: [
+                { icon: 'spell-flock-of-doom', description: "Spell: 'Flock of Doom Upgraded'" },
+                { icon: 'spell-flock-of-doom', description: "Overcast spell: 'Flock of Doom Upgraded'" },
+                { icon: 'spell-flock-of-doom', description: "Cooldown: -30% to 'Flock of Doom'" }
+            ] },
+            { effects: [
+                { icon: 'spell-flock-of-doom', description: "Overcast spell: 'Flock of Doom Upgraded'" },
+                { icon: 'spell-flock-of-doom', description: "Cooldown: -50% to 'Flock of Doom'" },
+                { icon: 'spell-flock-of-doom', description: "Winds of Magic cost: -1 for 'Flock of Doom'" },
+                { icon: 'spell-flock-of-doom', description: "Winds of Magic cost: -2 for 'Flock of Doom Upgraded'" },
+                { icon: 'spell-flock-of-doom', description: "Miscast base chance: -15% for 'Flock of Doom Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'common',
+            cost: [12, 10],
+            cooldown: '30',
+            attributes: {
+                type: [
+                    { text: 'Direct Damage (Area)'},
+                    { text: 'Only acts on targets when in area'}
+                ],
+                duration: '14 seconds',
+                target: [
+                    { text: 'Ground, Enemy' },
+                    { text: 'Affects enemies in range' },
+                    { text: '300m', uptick: 'range' }
+                ],
+                effectRange: '30m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Extended effect duration', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Extended cast range', uptick: 'up-blue', color: 'blue' },
+                    { text: 'Causes damage to combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. multiple combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'High chance opponent will resist damage', uptick: 'down-red', color: 'red' },
+                    { text: 'Weak vs. a single combatant', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Pann's Impenetrable Pelt",
+        description: "Calling upon the beast spirits of the wild, the caster sheathes vulnerable flesh in unyielding fur and hide.",
+        icon: "spell-panns-impenetrable-pelt",
+        ranks: [
+            { effects: [
+                { icon: 'spell-fireball', description: "Spell: 'Pann's Impenetrable Pelt Upgraded'" },
+                { icon: 'spell-fireball', description: "Overcast spell: 'Pann's Impenetrable Pelt Upgraded'" },
+                { icon: 'spell-fireball', description: "Cooldown: -30% to 'Pann's Impenetrable Pelt'" }
+            ] },
+            { effects: [
+                { icon: 'spell-fireball', description: "Overcast spell: 'Pann's Impenetrable Pelt Upgraded'" },
+                { icon: 'spell-fireball', description: "Cooldown: -50% to 'Pann's Impenetrable Pelt'" },
+                { icon: 'spell-fireball', description: "Winds of Magic cost: -1 for 'Pann's Impenetrable Pelt'" },
+                { icon: 'spell-fireball', description: "Winds of Magic cost: -2 for 'Pann's Impenetrable Pelt Upgraded'" },
+                { icon: 'spell-fireball', description: "Miscast base chance: -15% for 'Pann's Impenetrable Pelt Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'uncommon',
+            cost: [13, 11],
+            cooldown: '43',
+            attributes: {
+                type: [
+                    { text: 'Augment (Area)'},
+                    { text: 'Instantly affects targets in area'}
+                ],
+                duration: '44 seconds',
+                target: [
+                    { text: 'Self, Ground, Ally' },
+                    { text: 'Affects allies in range' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effectRange: '40m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Good against AP damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Added effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: '+24%', icon: 'movement-character', postText: 'Speed', uptick: 'up-green', color: 'green' },
+                    { text: '+22%', icon: 'resistance-physical', postText: 'Physical Resistance', uptick: 'up-green', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "The Curse of Anraheir",
+        description: "Nebulous nature spirits assail the foe, clawing at them with hands not nearly as insubstantial as they appear.",
+        icon: "spell-the-curse-of-anraheir",
+        ranks: [
+            { effects: [
+                { icon: 'spell-the-curse-of-anraheir', description: "Spell: 'The Curse of Anraheir Upgraded'" },
+                { icon: 'spell-the-curse-of-anraheir', description: "Overcast spell: 'The Curse of Anraheir Upgraded'" },
+                { icon: 'spell-the-curse-of-anraheir', description: "Cooldown: -30% to 'The Curse of Anraheir'" }
+            ] },
+            { effects: [
+                { icon: 'spell-the-curse-of-anraheir', description: "Overcast spell: 'The Curse of Anraheir Upgraded'" },
+                { icon: 'spell-the-curse-of-anraheir', description: "Cooldown: -50% to 'The Curse of Anraheir'" },
+                { icon: 'spell-the-curse-of-anraheir', description: "Winds of Magic cost: -2 for 'The Curse of Anraheir'" },
+                { icon: 'spell-the-curse-of-anraheir', description: "Winds of Magic cost: -2 for 'The Curse of Anraheir Upgraded'" },
+                { icon: 'spell-the-curse-of-anraheir', description: "Miscast base chance: -15% for 'The Curse of Anraheir Upgraded'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            cost: [14, 12],
+            cooldown: '47',
+            attributes: {
+                type: [
+                    { text: 'Hex'},
+                    { text: 'Instantly affects targets in area'}
+                ],
+                target: [
+                    { text: 'Ground, Enemy' },
+                    { text: 'Affects enemies in range' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                effectRange: '55m',
+                miscastChance:  {0: '50', 1: '35'},
+                effects: [
+                    { text: 'Increased effect area', uptick: 'up-blue', color: 'blue' },
+                    { text: '-24', icon: 'melee-character', postText: 'Melee Attack', color: 'red' },
+                    { text: '-30', icon: 'accuracy-character', postText: 'Accuracy', color: 'red' },
+                    { text: '-24%', icon: 'movement-character', postText: 'Speed', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Transformation of Kadon",
+        description: "Fire feeds fire, two blazes together are stronger and hotter than two apart. The Kindleflame intensifies such fire.",
+        icon: "spell-transformation-of-kadon",
+        ranks: [
+            { effects: [
+                { icon: 'spell-transformation-of-kadon', description: "Spell: 'Transformation of Kadon'" },
+                { icon: 'spell-transformation-of-kadon', description: "Passive ability: 'Transformation of Kadon'" }
+            ] }
+        ],
+        spell: {
+            description: 'Spell',
+            rarity: 'rare',
+            cost: [8],
+            cooldown: '45',
+            uses: 2,
+            attributes: {
+                type: 'Augment',
+                target: [
+                    { text: 'Self, Ground' },
+                    { text: '60m', uptick: 'range' }
+                ],
+                cannotUseIf: 'Climbing',
+                cannotTargetIf: 'Climbing or manning equipment or on a platform',
+                effects: [
+                    { text: 'Summons a Manticore', uptick:'up-green', color: 'green' },
+                    { text: 'Powerful unit ideal for combat', uptick: 'up-green', color: 'green' },
+                    { text: 'Summoned units degrade over time', uptick: 'down-red', color: 'red' },
+                    { text: 'Spawned unit fights in this battle only', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
         name: "Fireball",
         description: "A Wizard conjures a boiling ball of magical flame and hurls it at a nearby foe.",
         icon: "spell-fireball",
