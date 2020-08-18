@@ -3173,10 +3173,10 @@ exports.skills = [
         icon: "battle-armor",
         ranks: [
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'ranged-damage', description: "Missile damage: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'armor', description: "Armour: +10 for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'resistance-missile', description: "Missile resistance: 15% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", rank: 7, ps: "Lord's army" },
+                { icon: 'ranged-damage', description: "Missile damage: +12% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", rank: 7, ps: "Lord's army" },
+                { icon: 'armor', description: "Armour: +10 for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", rank: 7, ps: "Lord's army" },
+                { icon: 'resistance-missile', description: "Missile resistance: 15% for Bleakswords, Dreadspears, Darkshards and Reaper Bolt Thrower units", psIcon: 'goldChevron', rank: 7, ps: "Lord's army" }
             ] }
         ]
     },
@@ -3186,9 +3186,9 @@ exports.skills = [
         icon: "battle-speed",
         ranks: [
             { effects: [
-                { icon: 'movement', description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'accuracy', description: "Range: +15% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'armor', description: "Armour: +10  for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
+                { icon: 'movement', description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", rank: 7, ps: "Lord's army" },
+                { icon: 'accuracy', description: "Range: +15% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", rank: 7, ps: "Lord's army" },
+                { icon: 'armor', description: "Armour: +10  for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", rank: 7, ps: "Lord's army" }
             ] }
         ]
     },
@@ -3198,9 +3198,9 @@ exports.skills = [
         icon: "battle-attack",
         ranks: [
             { effects: [
-                { icon: 'charge', description: "Charge bonus: +12 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'armor', description: "Armour: +5 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
+                { icon: 'charge', description: "Charge bonus: +12 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", rank: 7, ps: "Lord's army" },
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", rank: 7, ps: "Lord's army" },
+                { icon: 'armor', description: "Armour: +5 for Black Guard of Naggarond, Har Ganeth Executioners, Cold One Knights, Cold One Dread Knights and Cold One Chariot units", rank: 7, ps: "Lord's army" }
             ] }
         ]
     },
@@ -3210,9 +3210,9 @@ exports.skills = [
         icon: "battle-damage",
         ranks: [
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'movement', description: "Speed +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" },
-                { icon: 'resistance-physical', description: "Physical resistance: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", psIcon: 'goldChevron', postScript: "Rank 7 and above", ppostPostScript: "Lord's army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", rank: 7, ps: "Lord's army" },
+                { icon: 'movement', description: "Speed +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", rank: 7, ps: "Lord's army" },
+                { icon: 'resistance-physical', description: "Physical resistance: +10% for Witch Elves, Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore, Sisters of Slaughter and bloodwrack Medusae units", rank: 7, ps: "Lord's army" }
             ] }
         ]
     },

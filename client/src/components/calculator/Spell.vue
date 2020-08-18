@@ -4,16 +4,22 @@
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', spell.rarity)"></a></span>
             <div class="spell-name inline-block" :style="getGradient('rarity', spell.rarity)">
                 <p class="inline-block title">{{getName(name)}}</p>
-                <div class="mana-cost inline-block">
-                    <span v-if="spell.cost || spell.uses">
-                        <span class="icon"><a class="icon-small" :style="getIcon('spellStyles', spell.cost ? 'mana' : 'uses')"></a></span>
-                        <p style="paddingLeft:28px;">{{(spell.cost) ? spell.cost[displayLevel()] : spell.uses}}</p>
-                    </span>
-                </div>
-                <div class="cooldown inline-block">
+                <div class="spell-cost inline-block">
                     <span v-if="spell.cooldown">
                         <span class="icon"><a class="icon-small" :style="getIcon('spellStyles', 'icon-cooldown-2')"></a></span>
                         <p style="paddingLeft:28px;">{{spell.cooldown}}</p>
+                    </span>
+                </div>
+                <div class="spell-cost inline-block">
+                    <span v-if="spell.cost">
+                        <span class="icon"><a class="icon-small" :style="getIcon('spellStyles', 'mana')"></a></span>
+                        <p style="paddingLeft:28px;">{{spell.cost[displayLevel()]}}</p>
+                    </span>
+                </div>
+                <div class="spell-cost inline-block">
+                    <span v-if="spell.uses">
+                        <span class="icon"><a class="icon-small" :style="getIcon('spellStyles', 'uses')"></a></span>
+                        <p style="paddingLeft:28px;">{{spell.uses}}</p>
                     </span>
                 </div>
             </div>
@@ -125,13 +131,11 @@ export default {
 }
 .spell-name p {
     margin-top: 3px;
-    width: 80%;
+    width: 70%;
 }
-.mana-cost {
-    min-width: 10%;
-}
-.cooldown {
-    width: 10%;
+.spell-cost {
+    float: right;
+    width: 8%;
 }
 .rarity-icon {
     width: 25px;

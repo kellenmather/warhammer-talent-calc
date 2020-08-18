@@ -46,6 +46,7 @@ export default {
     display: block;
 }
 .home {
+    color: #EBE6CD;
     padding-top: 5px;
     background-repeat: repeat-x;
 }

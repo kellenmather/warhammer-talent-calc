@@ -23,6 +23,9 @@
             <div v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
                 <span><a :style="getBackground(effect.icon)" class="small-icon" ></a></span>
                 <span class="effect inline-block" >{{effect.description}}
+                    <span v-if="effect.rank">
+                         (<a :style="getBackground('experience-7')" class="tiny-icon"></a>Rank 7 and above)
+                    </span>
                     <span style="display: block" v-if="effect.ps">
                         <span v-if="effect.ps==='Lord\'s army'">
                         (<a v-if="effect.ps==='Lord\'s army'" :style="getBackground('icon-army')" class="tiny-icon"></a>
@@ -131,7 +134,7 @@ export default {
     color: white;
     word-wrap: normal;
     line-height:normal;
-    font-size:.95em;
+    font-size: 1em;
 
 }
 .title {

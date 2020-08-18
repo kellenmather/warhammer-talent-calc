@@ -215,6 +215,7 @@ export default {
     min-height: 100vh;
     background-repeat: no-repeat;
     background-position: center, left top 90px, right bottom;
+    font-size: .95em;
 }
 .calc-row {
     height: 80px;
