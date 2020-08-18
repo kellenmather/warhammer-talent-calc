@@ -196,6 +196,146 @@ exports.rows = {
                     blockContent: ['Ward of Hekarti']
                 }
             ]
+        },
+        malus: {
+            row: 1,
+            content: [
+                {
+                    quest: 5,
+                    blockContent: ['The Warpsword of Khaine']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['Spite']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['Sadistic']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['Eternal Hatred']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['Beast Tamer']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Khaine']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Hekarti']
+                }
+            ]
+        },
+        lokhir: {
+            row: 1,
+            content: [
+                {
+                    quest: 2,
+                    blockContent: ['Red Blades']
+                },
+                {
+                    quest: 11,
+                    blockContent: ['Helm of the Kraken']
+                },
+                {
+                    restrictionLevel: 18,
+                    blockContent: ['Maelstrom']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['Sadistic']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['Eternal Hatred']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Khaine']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Hekarti']
+                }
+            ]
+        },
+        morathi: {
+            row: 1,
+            content: [
+                {
+                    quest: 2,
+                    blockContent: ['Amber Amulet']
+                },
+                {
+                    quest: 4,
+                    blockContent: ['Wand of the Kharaidon']
+                },
+                {
+                    quest: 6,
+                    blockContent: ['Heartrender & the Darksword']
+                },
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['Sulephet']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ["Hekarti's Blessing"]
+                },
+                {
+                    restrictionChoice: "Hekarti's Blessing",
+                    blockContent: ['Earthing', 'Magical Reserves', 'The First Sorceress']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['Blessed by Evil']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Ward of Khaine']
+                }
+            ]
+        },
+        hellebron: {
+            row: 1,
+            content: [
+                {
+                    quest: 2,
+                    blockContent: ['Amulet of Dark Fire']
+                },
+                {
+                    quest: 8,
+                    blockContent: ['Deathsword and the Cursed Blade']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['Dark Steed']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['Cauldron of Blood']
+                },
+                {
+                    restrictionLevel: 14,
+                    blockContent: ['Manticore']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ["Greater Ward of Khaine"]
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['Witchbrew']
+                },
+                {
+                    restrictionChoice: "Witchbrew",
+                    blockContent: ['The Second Cauldron', 'Secrets of the Cauldron']
+                }
+            ]
         }
     },
     row2: {
@@ -266,6 +406,96 @@ exports.rows = {
                 {
                     restrictionChoice: 'Warleader',
                     blockContent: ['Scoured & Stripped', 'Triumph of Evil', 'Reach Equal Grasp']
+                }
+            ]
+        },
+        malus: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['The Waking']
+                },
+                {
+                    restrictionChoice: 'The Waking',
+                    blockContent: ['Pain Tolerance', 'Lying in Wait']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['The Slumber']
+                },
+                {
+                    restrictionChoice: 'The Slumber',
+                    blockContent: ['Avatar of Terror', 'Supernatural Tissue']
+                },
+                {
+                    restrictionLevel: 9,
+                    blockContent: ['Cold Heart']
+                },
+                {
+                    restrictionLevel: 11,
+                    blockContent: ['Drachau Tyrant']
+                },
+                {
+                    restrictionLevel: 15,
+                    blockContent: ['Contempt & Hatred']
+                }
+            ]
+        },
+        lokhir: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['Bonded by Blood']
+                },
+                {
+                    restrictionChoice: 'Bonded by Blood',
+                    blockContent: ['Corsair Noble', 'Ahead of the Tide', 'Master of the Blessed Dread', 'Slaver']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['Patriarch of the Fellhearts']
+                }
+            ]
+        },
+        morathi: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    restrictionLimited: ['Tenacious'],
+                    blockContent: ['Insidious']
+                },
+                {
+                    restrictionChoice: 'Insidious',
+                    blockContent: ['Endless Scheming', 'Favourite Assets', 'Shroud of Despair']
+                },
+                {
+                    restrictionLevel: 12,
+                    restrictionLimited: ['Insidious'],
+                    blockContent: ['Tenacious']
+                },
+                {
+                    restrictionChoice: 'Tenacious',
+                    blockContent: ['Rituals of Blood', 'Grotesque Sacrifices', 'Absolute Devotion']
+                }
+            ]
+        },
+        hellebron: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['Champion of Khaine']
+                },
+                {
+                    restrictionChoice: 'Champion of Khaine',
+                    blockContent: ['Favour of Khaine', 'Daughters of Despair', 'Rapturous Murder', 'Playthings of the Queen']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['Blood Queen']
                 }
             ]
         }
@@ -351,12 +581,56 @@ exports.rows = {
                     blockContent: ['Deadly Onslaught']
                 },
                 {
-                    restrictionChoice: 'Foe-Seeker',
+                    restrictionChoice: 'Deadly Onslaught',
                     blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
                 },
                 {
                     restrictionCount: 4,
                     blockContent: ['Gaze of Malice']
+                }
+            ]
+        },
+        morathi: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ['Impaling Attack'],
+                },
+                {
+                    restrictionChoice: 'Impaling Attack',
+                    blockContent: ['Blade Master', 'Hard to Hit', 'Wound-Maker', 'Survivalist'],
+                },
+                {
+                    restrictionCount: 3,
+                    blockContent: ['Foe-Seeker']
+                },
+                {
+                    restrictionChoice: 'Foe-Seeker',
+                    blockContent: ['Enchanting Beauty', 'A Thousand & One Dark Blessings', 'Deadly Onslaught']
+                }
+            ]
+        },
+        hellebron: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ['Dance of Death'],
+                },
+                {
+                    restrictionChoice: 'Dance of Death',
+                    blockContent: ['Devastating Charge', 'Conviction', 'Wild-Eyed', 'Impassioned'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Blood Frenzy']
+                },
+                {
+                    restrictionChoice: 'Blood Frenzy',
+                    blockContent: ['Fervour', 'Tenacity', 'Blade Shield', 'Fleet-Footed']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Heroic Killing Blow']
                 }
             ]
         }
@@ -385,78 +659,6 @@ exports.rows = {
                     restrictionCount: 4,
                     blockContent: ['Beastslaver']
                 }
-            ]
-        },
-        darkMagic: {
-            row: 4,
-            content: [
-                {
-                    blockContent: ['Chillwind']
-                },
-                {
-                    restrictionChoice: 'Chillwind',
-                    blockContent: ['Spiteful Conjuration', 'Power of Darkness', 'Word of Pain', 'Bladewind']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Evasion']
-                },
-                {
-                    restrictionChoice: 'Evasion',
-                    blockContent: ['Doombolt', 'Soul Stealer', 'Earthing', 'Magical Reserves']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Arcane Conduit']
-                },
-            ]
-        },
-        fire: {
-            row: 4,
-            content: [
-                {
-                    blockContent: ['Fireball']
-                },
-                {
-                    restrictionChoice: 'Fireball',
-                    blockContent: ['Kindleflame', 'Cascading Fire-Cloak', 'Flaming Sword of Rhuin', 'The Burning Head']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Evasion']
-                },
-                {
-                    restrictionChoice: 'Evasion',
-                    blockContent: ['Piercing Bolts of Burning', 'Flame Storm', 'Earthing', 'Magical Reserves']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Arcane Conduit']
-                },
-            ]
-        },
-        death: {
-            row: 4,
-            content: [
-                {
-                    blockContent: ['Spirit Leech']
-                },
-                {
-                    restrictionChoice: 'Spirit Leech',
-                    blockContent: ['Doom & Darkness', 'Life-Leeching', 'Aspect of the Dread Knight', 'Soulblight']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Evasion']
-                },
-                {
-                    restrictionChoice: 'Evasion',
-                    blockContent: ['The Fate of Bjuna', 'The Purple Sun of Xereus', 'Earthing', 'Magical Reserves']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Arcane Conduit']
-                },
             ]
         }
     },

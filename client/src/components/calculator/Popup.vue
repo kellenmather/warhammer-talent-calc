@@ -22,7 +22,17 @@
         <div class="stats">
             <div v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
                 <span><a :style="getBackground(effect.icon)" class="small-icon" ></a></span>
-                <span class="effect inline-block" >{{effect.description}}<span style="display: block" v-if="effect.ps"> (<a v-if="effect.ps==='lords army'" :style="getBackground('icon-army')" class="tiny-icon"></a>{{effect.ps}})</span></span>
+                <span class="effect inline-block" >{{effect.description}}
+                    <span style="display: block" v-if="effect.ps">
+                        <span v-if="effect.ps==='Lord\'s army'">
+                        (<a v-if="effect.ps==='Lord\'s army'" :style="getBackground('icon-army')" class="tiny-icon"></a>
+                        {{effect.ps}})
+                        </span>
+                        <span v-else :style="{ color: effect.color}">
+                            ({{effect.ps}})
+                        </span>
+                    </span>
+                </span>
             </div>
         </div>
         <div v-if="hasNext() && !specificRank" class="title" style="paddingTop: 10px;">
@@ -167,7 +177,7 @@ export default {
     display: inline-block;
     width: 18px;
     height: 18px;
-    padding-right: 20px;
+    padding-right: 18px;
 }
 .effect {
     max-width: 540px;

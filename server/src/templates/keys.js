@@ -43,6 +43,35 @@ let darkelves = {
         { ...Darkelves.rows.row6.malekith },
         { ...Darkelves.rows.row9.darkElves }
     ],
+    malus: [
+        { ...Darkelves.rows.row1.malus },
+        { ...Darkelves.rows.row2.malus },
+        { ...Darkelves.rows.row3.shield },
+        { ...Darkelves.rows.row6.shield },
+        { ...Darkelves.rows.row9.darkElves }
+    ],
+    lokhir: [
+        { ...Darkelves.rows.row1.lokhir },
+        { ...Darkelves.rows.row2.lokhir },
+        { ...Darkelves.rows.row3.shield },
+        { ...Darkelves.rows.row6.shield },
+        { ...Darkelves.rows.row9.darkElves }
+    ],
+    morathi: [
+        { ...Darkelves.rows.row1.morathi },
+        { ...Darkelves.rows.row2.morathi },
+        { ...Darkelves.rows.row3.morathi },
+        { ...Schools.magic.morathi },
+        { ...Darkelves.rows.row6.malekith },
+        { ...Darkelves.rows.row9.darkElves }
+    ],
+    hellebron: [
+        { ...Darkelves.rows.row1.hellebron },
+        { ...Darkelves.rows.row2.hellebron },
+        { ...Darkelves.rows.row3.hellebron },
+        { ...Darkelves.rows.row6.malekith },
+        { ...Darkelves.rows.row9.darkElves }
+    ],
     sorceress: [
         { ...Darkelves.rows.row1.sorceress },
         { ...Darkelves.rows.row2.lords },

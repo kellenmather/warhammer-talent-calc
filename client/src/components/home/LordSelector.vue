@@ -83,9 +83,6 @@ export default {
         selection: function() {
             this.setRace();
         }
-    },
-    beforeUpdate() {
-        this.setRace();
     }
 };
 </script>

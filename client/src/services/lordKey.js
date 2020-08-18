@@ -37,7 +37,7 @@ exports.legendary = {
         { name: 'Morathi', type: 'morathi', subType: 'legendary' }, 
         { name: 'Hellebron', type: 'hellebron', subType: 'legendary' },
         { name: 'Lokhir Fellheart', type: 'lokhir', subType: 'legendary' },
-        { name: 'Mallus Darkblade', type: 'mallus', subType: 'legendary' }
+        { name: 'Malus Darkblade', type: 'malus', subType: 'legendary' }
     ],
     'highelves': [
         { name: 'Tyrion', type: 'tyrion', subType: 'legendary' }, 

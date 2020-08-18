@@ -55,7 +55,7 @@ exports.skills = [
             { effects: [
                 { icon: "item-ability", description: "Post battle chance of stealing a magic item: +50%" },
                 { icon: "melee-character", description: "Melee attack: +12" },
-                { icon: "weapon-damage-character", description: "Weapon strength: +12%" },
+                { icon: "damage", description: "Weapon strength: +12%" },
                 { icon: "leadership-malus", description: "Attacks cause 'discouraged' effect, reducing leadership" },
                 { icon: "ability-destroyer", description: "Passive ability: 'Destroyer'" }
             ] }
@@ -117,6 +117,250 @@ exports.skills = [
         }
     },
     {
+        name: "The Warpsword of Khaine",
+        description: "The Time of Blood is at hand!",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "melee-character", description: "Melee attack: +10" },
+                { icon: "damage", description: "Weapon strength: +15%" },
+                { icon: "ambush", description: "Ambush defence chance: +40%", ps: "Lord's army" },
+                { icon: "ability-sword", description: "Passive ability: 'The Warpsword of Khaine'" }
+            ] }
+        ],
+        spell: {
+            description: 'Weapon',
+            rarity: 'legendary',
+            attributes: {
+                type: 'Augment',
+                duration: 'Constant',
+                target: 'Self',
+                activeIf: 'In melee',
+                disabledIf: 'Leadership is broken',
+                effects: [
+                    { text: 'Restores', icon: 'hp', postText: '8 Hit Points per second', uptick: 'up-green', color: 'green' },
+                    { text: '+5%', icon: 'resistance-ward-save', postText: 'Damage Resistance', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Red Blades",
+        description: "These blades gain their red hue from both the Indan Bloodsteel from wich they are forged and the viscera which so often covers them.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "melee-character", description: "Melee attack: +10" },
+                { icon: "damage", description: "Weapon strength: +15%" },
+                { icon: "sunder", description: "Enables sundering attacks" },
+                { icon: "income", description: "Income from sacking settlements: +20%" }
+            ] }
+        ]
+    },
+    {
+        name: "Helm of the Kraken",
+        description: "Bow down before the true Lord of the Sea.",
+        icon: "item-armour",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "ability-armor", description: "Passive ability: 'Helm of the Kraken'" },
+                { icon: "armor-character", description: "Armor: +15" },
+                { icon: "terror", description: "Attribute: Causes Terror" }
+            ] }
+        ],
+        spell: {
+            description: 'Item',
+            rarity: 'legendary',
+            attributes: {
+                type: 'Regeneration',
+                duration: 'Constant',
+                target: 'Self',
+                activeIf: 'In melee',
+                effects: [
+                    { text: 'Restores', icon: 'hp', postText: '4 Hit Points per second', uptick: 'up-green', color: 'green' },
+                    { text: '+9', icon: 'defense-character', postText: 'Melee Defense', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Amber Amulet",
+        description: "There are being and creatures that can mend bone and knit flesh at an incredible rate. A mighty boon, but one stunted by fire.",
+        icon: "item-talisman",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "magic", description: "Winds of Magic power reserve: +5" },
+                { icon: "resistance-ward-save", description: "Ward save: 20%" },
+                { icon: "agent", description: "Enemy Hero action success chance: -10%" },
+                { icon: "replenishment", description: "Casualty replenishment rate: +5%", ps: "Lord's army" },
+                { icon: "wound-time", description: "Wound recovery time: -3" },
+                { icon: "ability-regeneration", description: "Passive ability: 'Regeneration'" }
+            ] }
+        ],
+        spell: {
+            description: 'Unit ability',
+            rarity: 'common',
+            attributes: {
+                type: 'Regeneration',
+                duration: 'Constant',
+                target: 'Self',
+                effects: [
+                    { text: 'Restores', icon: 'hp', postText: '4 Hit Points per second', uptick: 'up-green', color: 'green' },
+                    { text: '+25% Weakness to', icon: 'icon-fire', postText: 'Fire Damage', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Wand of the Kharaidon",
+        description: "The sky opens and a bolt of burning, pure Chaos black lightning hurtles towards the foe.",
+        icon: "item-arcane",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "item-ability", description: "Magic item drop chance: +5%" },
+                { icon: "magic", description: "Winds of Magic power reserve: +10" },
+                { icon: "magic-cooldown", description: "Cooldown: -15% to all spells" },
+                { icon: "spell-soul-stealer", description: "Winds of Magic cost: -2 for 'Soulstealer'" },
+                { icon: "spell-doombolt", description: "Bound spell: 'Wand of the Kharaidon'" }
+            ] }
+        ],
+        spell: {
+            description: 'Bound spell',
+            rarity: 'legendary',
+            uses: 2,
+            cooldown: '120',
+            attributes: {
+                type: 'Bombardment',
+                duration: '7 seconds',
+                target: [ 
+                    { text: 'Enemy' },
+                    { text: '200m', uptick: 'range' }
+                ],
+                cannotUseIf: 'climbing',
+                effects: [
+                    { text: 'Causes major', icon: 'icon-magic', postText: 'magical damage', uptick: 'up-green', color: 'green' },
+                    { text: 'Medium strike area', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single combatant', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single unit', uptick: 'up-green', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Heartrender & the Darksword",
+        description: "The paired weapons of Morathi make the Hag Sorceress extremely deadly in combat.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +5", ps: "local province" },
+                { icon: "charge-character", description: "Charge bonus: +30" },
+                { icon: "defense-character", description: "Melee defense: +5" },
+                { icon: "melee-character", description: "Melee attack: +10" },
+                { icon: "damage", description: "Weapon strength: +15%" },
+                { icon: "magical-attacks", description: "Enables magical attacks" },
+                { icon: "religion-chaos", description: "Chaos corruption: +5", ps: "local province" },
+                { icon: "ability-heartrender", description: "Passive ability: 'Heartrender & the Darksword'" }
+            ] }
+        ],
+        spell: {
+            description: 'Weapon',
+            rarity: 'legendary',
+            attributes: {
+                type: [ 
+                    { text: 'Hex (Area)'},
+                    { text: 'Only acts on target when in area' }
+                ],
+                duration: 'Constant',
+                target: [ 
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                activeIf: 'In melee',
+                effectRange: '40m',
+                effects: [
+                    { text: '-9', icon: 'defense-character', postText: 'Melee Defense', color: 'red' },
+                    { text: '-9', icon: 'melee-character', postText: 'Melee Attack', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Amulet of Dark Fire",
+        description: "This amulet wreathes its wearer in a mystical flame that burns magic instead of flesh.",
+        icon: "item-talisman",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "resistance-ward-save", description: "Ward save: 15%" },
+                { icon: "agent", description: "Enemy Hero action success chance: -10%" },
+                { icon: "ability-talisman", description: "Passive ability: 'Amulet of Dark Fire'" }
+            ] }
+        ],
+        spell: {
+            description: 'Item',
+            rarity: 'legendary',
+            attributes: {
+                type: [ 
+                    { text: 'Ward Save (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: 'Constant',
+                target: [ 
+                    { text: 'Self' },
+                    { text: 'Affects allies in range' }
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '+22%', icon: 'resistance-magic', postText: 'Magic Resistance', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: "Deathsword and the Cursed Blade",
+        description: "The Deathsword glistens with murder and the Cursed Blade moves with a life of its own.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +5" },
+                { icon: "melee-character", description: "Melee attack: +3" },
+                { icon: "damage", description: "Weapon strength: +10%" },
+                { icon: "magical-attacks", description: "Enables magical attacks" },
+                { icon: "ability-sword", description: "Passive ability: 'The Cursed Blade'" }
+            ] }
+        ],
+        spell: {
+            description: 'Weapon',
+            rarity: 'legendary',
+            cooldown: '1',
+            attributes: {
+                type: [ 
+                    { text: 'Direct Damage (Area)'},
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: '10 seconds',
+                target: [ 
+                    { text: 'Around self' },
+                    { text: 'Affects enemies in range' }
+                ],
+                activeIf: 'Losing melee combat',
+                effectRange: '30m',
+                effects: [
+                    { text: 'Causes damage to combatants', uptick: 'up-green', color: 'green' },
+                    { text: 'Strong vs. a single combatant', uptick: 'up-green', color: 'green' },
+                    { text: 'Chance opponent will resist damage', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Dark Steed',
         description: "True horses no longer, Dark Magic corrupts the finest Elven steeds and turns them into black-flanked killers.",
         icon: "dark-steed",
@@ -131,6 +375,30 @@ exports.skills = [
         ranks: [
             { effects: [{ icon: 'mount', description: "Mount: Cold One" }] }
         ]
+    },
+    {
+        name: 'Cauldron of Blood',
+        description: "A gift from Khaine, containing the secret of eternal youth and beauty. His brides may bathe in it to renew their vitality.",
+        icon: "cauldron-of-blood",
+        ranks: [
+            { effects: [{ icon: 'mount', description: "Mount: Cauldron of Blood" }] }
+        ]
+    },
+    {
+        name: 'Sulephet',
+        description: "The only Dark Pegasus to bear a name is Morathi's personal mount, who carries the Hag Sorceress into the fray.",
+        icon: "dark-steed",
+        ranks: [
+            { effects: [{ icon: 'mount', description: "Mount: Sulephet" }] }
+        ] 
+    },
+    {
+        name: 'Spite',
+        description: "Larger than most others of its kind, the ferocious Cold One named 'Spite' is truly a creature fit for a heartless murderer like Malus Darkblade.",
+        icon: "cold-one",
+        ranks: [
+            { effects: [{ icon: 'mount', description: "Mount: Spite" }] }
+        ] 
     },
     {
         name: 'Cold One Chariot',
@@ -185,6 +453,16 @@ exports.skills = [
         ]
     },
     {
+        name: 'Maelstrom',
+        description: "This terrifying Black Dragon, Fellheart's favourite mount, belches noxious fumes in place of fire as it carries the Krakenlord to battle.",
+        icon: "black-dragon",
+        ranks: [
+            { effects: [
+                { icon: 'mount', description: "Mount: Maelstrom" }
+            ] }
+        ]
+    },
+    {
         name: 'Sadistic',
         description: "There is great pleasure to be derived from the humiliation and suffering of others; this one has felt and revelled in it.",
         icon: "character-attack",
@@ -202,8 +480,8 @@ exports.skills = [
         icon: "character-damage",
         ranks: [
             { effects: [
-                { icon: 'weapon-damage-character', description: "Weapon strength: +10% when fighting against High Elves" },
-                { icon: 'weapon-damage-character', description: "Weapon strength: +6%" }
+                { icon: 'damage', description: "Weapon strength: +10% when fighting against High Elves" },
+                { icon: 'damage', description: "Weapon strength: +6%" }
             ] }
         ]
     },
@@ -263,6 +541,12 @@ exports.skills = [
         ranks: [{ effects: [{ icon: 'resistance-missile', description: "Missile resistance: 10%" }] }]
     },
     {
+        name: 'Greater Ward of Khaine',
+        description: "The Bloody-handed God watches over his disciples.",
+        icon: "character-ward-save",
+        ranks: [{ effects: [{ icon: 'resistance-missile', description: "Missile resistance: 15%" }] }]
+    },
+    {
         name: 'Ward of Hekarti',
         description: "Magic's dark mistress has a care for her dutiful acolytes.",
         icon: "character-ward-save",
@@ -273,6 +557,49 @@ exports.skills = [
         description: "Who wants to live forever? As it turns out, most beings wouldn't say no...",
         icon: "character-wound-time",
         ranks: [{ effects: [{ icon: 'wound-time', description: "When normally killed in battle, this Lord will be wounded instead" }] }]
+    },
+    {
+        name: 'Witchbrew',
+        description: "Distilled from the blood of Hag Queens, this evil brew dives imbibers into an ecstasy of destruction.",
+        icon: "ability-witchbrew",
+        ranks: [
+            { effects: [{ icon: 'ability-witchbrew', description: "Ability: 'Witchbrew'" }] }
+        ],
+        spell: {
+            description: 'Character ability',
+            cooldown: '90',
+            uses: 3,
+            rarity: 'uncommon',
+            attributes: {
+                type: 'Augment',
+                duration: "47 seconds",
+                target: "Self",
+                effects: [
+                    { text: '+60%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'green' },
+                    { text: '+24', icon: 'melee-character', postText: 'Melee Attack', color: 'green' },
+                    { text: 'Rampage!', uptick: 'down-red', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: 'The Second Cauldron',
+        description: "Why stop at one, when you can have two?",
+        icon: "character-cooldown",
+        ranks: [{ effects: [
+                { icon: 'ability-witchbrew', description: "Cooldown: -33% to 'Witchbrew'" },
+                { icon: 'ability-witchbrew', description: "Ability number of uses: +2 for 'Witchbrew'" }
+            ]
+        }]
+    },
+    {
+        name: 'Secrets of the Cauldron',
+        description: "With enough sacrifices, the deepest secrets of the Cauldron of Blood will be yours.",
+        icon: "character-health",
+        ranks: [{ effects: [
+                { icon: 'health-character', description: "Hit points: +12%" }
+            ]
+        }]
     },
     {
         name: 'Martial Name of Power',
@@ -304,8 +631,8 @@ exports.skills = [
         icon: "battle-defense",
         ranks: [
             { effects: [
-                { icon: "armor-piercing", description: "Armor-piercing weapon damage: +5 for all units when defending", ps: "lords army" },
-                { icon: "defense", description: "Armor: +15 for all units when defending", ps: "lords army" }
+                { icon: "armor-piercing", description: "Armor-piercing weapon damage: +5 for all units when defending", ps: "Lord's army" },
+                { icon: "defense", description: "Armor: +15 for all units when defending", ps: "Lord's army" }
             ] }
         ]
     },
@@ -315,8 +642,8 @@ exports.skills = [
         icon: "battle-damage",
         ranks: [
             { effects: [
-                { icon: "weapon-damage", description: "Weapon strength: +10%", ps: "lords army" },
-                { icon: "melee", description: "Melee attack: +5 for all units", ps: "lords army" }
+                { icon: "weapon-damage", description: "Weapon strength: +10%", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +5 for all units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -326,10 +653,345 @@ exports.skills = [
         icon: "character-magic",
         ranks: [
             { effects: [
-                { icon: "resistance-magic", description: "Magic resistance: +15% for all units", ps: "lords army" },
-                { icon: "magical-attacks", description: "Enables magical attacks", ps: "lords army" },
-                { icon: "technology", description: "Research rate: +10%", ps: "lords army" }
+                { icon: "resistance-magic", description: "Magic resistance: +15% for all units", ps: "Lord's army" },
+                { icon: "magical-attacks", description: "Enables magical attacks", ps: "Lord's army" },
+                { icon: "technology", description: "Research rate: +10%", ps: "Lord's army" }
             ] }
+        ]
+    },
+    {
+        name: 'Champion of Khaine',
+        description: "As Khaine's chosen bride, she is his champion and envoy, and no harm will come to her.",
+        icon: "character-ward-save",
+        ranks: [{ effects: [{ icon: 'resistance-physical', description: "Physical resistance: 10%" }] }]
+    },
+    {
+        name: 'Favour of Khaine',
+        description: "Khaine's favour is bestowed on those that seek to bring murder into the world.",
+        icon: "character-cooldown",
+        ranks: [
+            { effects: [
+                { icon: "ability-gaze-of-khaine", description: "Cooldown: -33% to 'Gaze of Khaine'" },
+                { icon: "ability-gaze-of-khaine", description: "Ability number of uses: +2 for 'Gaze of Khaine" }
+            ] }
+        ]
+    },
+    {
+        name: 'Rapturous Murder',
+        description: "Give in to the Blood Queen's affection - her love is so intense as to kill.",
+        icon: "rituals-of-blood",
+        ranks: [
+            { effects: [
+                { icon: "bonus-vs-small-character", description: "Bonus vs. Infantry: +12" },
+                { icon: "charge-character", description: "Charge bonus: +20" }
+            ] }
+        ]
+    },
+    {
+        name: 'Playthings of the Queen',
+        description: "Whether Elf, Dwarf, or man, Their souls now serve the pleasure of the Blood Queen.",
+        icon: "character-slaves",
+        ranks: [
+            { effects: [
+                { icon: "army", description: "Casualties captured post-battle: +35%" },
+                { icon: "loyalty", description: "Loyalty: +2 for new recruits", ps: "factionwide" },
+                { icon: "slaves", description: "Slave decline rate: -20%", ps: "local province" }
+            ] }
+        ]
+    },
+    {
+        name: 'Blood Queen',
+        description: "The need for blood - to bathe in its viscous goodness - will always drive the Crone of Har Ganeth onward.",
+        icon: "regeneration",
+        ranks: [
+            { effects: [
+                { icon: 'experience', description: "Unit Rank: +3 for Death Night army" },
+                { icon: 'health-character', description: "Hit points: +12%" },
+                { icon: 'ability-regeneration', description: "Passive ability: 'Regeneration'" }
+            ] }
+        ],
+        spell: {
+            description: 'Unit ability',
+            rarity: 'common',
+            attributes: {
+                type: 'Regeneration',
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: 'Restores', icon: 'hp', postText: '4 Hit Points per second', uptick: "up-green", color: 'green' },
+                    { text: '+25% Weakness to', icon: 'icon-fire', postText: 'Fire Damage', color: 'red' }
+                ]
+            }
+        }
+    },
+    {
+        name: 'Daughters of Despair',
+        description: "Witch Elves are drawn to their monarch, for no other commands Khaine's word like she.",
+        icon: "character-bonus-vs-infantry",
+        ranks: [
+            { effects: [
+                { icon: "bonus-vs-small", description: "Bonus vs. Infantry: +8 for Witch Elves, Sisters of Slaughter and Har Ganeth Executioners units", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +6 for Witch Elves, Sisters of Slaughter and Har Ganeth Executioners units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Insidious',
+        description: "Slowly, gradually, subtly harming all those that block her path.",
+        icon: "insidious",
+        ranks: [
+            { effects: [
+                { icon: "agent", description: "Hero action success chance: +5%", ps: "all characters" },
+                { icon: "khainite-assassin", description: "Hero recruit rank: +2 for Khainite Assassins", ps: "factionwide" }
+            ] }
+        ]
+    },
+    {
+        name: 'Endless Scheming',
+        description: "A plan so complex, so labyrinthine, can change even as it comes to furition.",
+        icon: "endless-scheming",
+        ranks: [
+            { effects: [
+                { icon: "subterfuge", description: "Assassinate action: Additional 5% success chance", ps: "all characters" },
+                { icon: "campaign-movement", description: "Campaign movement range: +5%", ps: "all characters factionwide" }
+            ] }
+        ]
+    },
+    {
+        name: 'Favourite Assets',
+        description: "The most skilled amongst her possessions are held aloft, that they may burn all the more brightly.",
+        icon: "favourite-assets",
+        ranks: [
+            { effects: [
+                { icon: "melee", description: "Melee attack: +10 for Shades and Dark Riders units", ps: "local armies" },
+                { icon: "melee", description: "Melee attack: +5 for Lords and embedded Heroes", ps: "local armies" },
+                { icon: "defense", description: "Melee defense: +5 for Lords and embedded Heroes", ps: "local armies" },
+                { icon: "defense", description: "Melee defense: +10 for Shades, Dark Riders, Doomfire Warlock and Scourgerunner Chariot units", ps: "local armies" }
+            ] }
+        ]
+    },
+    {
+        name: 'Shroud of Despair',
+        description: "Light is driven from the battlefield; numbing darkness rushes to fill the void.",
+        icon: "shroud-of-despair",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +5", ps: "local province" },
+                { icon: "religion", description: "Owning faction's favoured corruption: +5", ps: "when in own region" },
+                { icon: "morale", description: "Enemy leadership: -10", ps: "local region" }
+            ] }
+        ]
+    },
+    {
+        name: 'Tenacious',
+        description: "More than determined, she ensures her nefarious goal is always kept firmly in sight.",
+        icon: "character-slaves",
+        ranks: [
+            { effects: [
+                { icon: "military", description: "Casualties captured post-battle: +15%", ps: "all armies" },
+                { icon: "income", description: "Income from post-battle loot: +10%", ps: "all characters" }
+            ] }
+        ]
+    },
+    {
+        name: 'Rituals of Blood',
+        description: "Blood, preferably from a still-living 'donor', can enhance and intensify the effects of ceremonial magic.",
+        icon: "rituals-of-blood",
+        ranks: [
+            { effects: [
+                { icon: "experience", description: "Unit experience gain per turn: +25", ps: "Lord's army" },
+                { icon: "resistance-ward-save", description: "Ward save: 5% for all units", ps: "Lord's army" },
+                { icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Grotesque Sacrifices',
+        description: "The grimmer the offereing, the more likely it is to attract exactly the right kind of attention.",
+        icon: "character-chaos-corruption",
+        ranks: [
+            { effects: [
+                { icon: "diplomacy", description: "Diplomatic relations: +10 with Beastmen Warherds" },
+                { icon: "diplomacy", description: "Diplomatic relations: +30 with Norsca" },
+                { icon: "item-ability", description: "Magic item drop chance: +10%", ps: "all characters" },
+                { icon: "religion", description: "Owning faction's favoured corruption: +1", ps: "all regions" }
+            ] }
+        ]
+    },
+    {
+        name: 'Absolute Devotion',
+        description: "Always ready to fan the flames of hatred in the Witch King's heart; when he has been betrayed, none have fought so hard to restore his rule.",
+        icon: "absolute-devotion",
+        ranks: [
+            { effects: [
+                { icon: "coin", description: "Upkeep: -30% for all units", ps: "Lord's army" },
+                { icon: "disaster", description: "Attrition: -50% casualties suffered from all attrition", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Bonded by Blood',
+        description: "Murder in the frontline, bang your head against the deck. The metal takes its price...",
+        icon: "character-army",
+        ranks: [
+            { effects: [
+                { icon: "army", description: "Lord recruit rank: +1", ps: "factionwide" },
+                { icon: "loyalty", description: "Loyalty: +1 for new recruits", ps: "factionwide" }
+            ] }
+        ]
+    },
+    {
+        name: 'Corsair Noble',
+        description: "The Krakenlord comes from a very long line of raiders, admirals and map-makers; a chip off the old block, you might say!",
+        icon: "character-morale",
+        ranks: [
+            { effects: [
+                { icon: "morale", description: "Leadership: +8 for Black Ark Corsairs units", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +8 for Black Ark Corsairs units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Ahead of the Tide',
+        description: "The best sailors know their charts back to front and are always leagues ahead of the tide.",
+        icon: "character-charge",
+        ranks: [
+            { effects: [
+                { icon: "charge-character", description: "Charge bonus: +15" },
+                { icon: "damage", description: "Weapon strength: +10%" }
+            ] }
+        ]
+    },
+    {
+        name: 'Master of the Blessed Dread',
+        description: "Showing his hand from the off, that there might be no confusion amongst his crews, Felheart had his father's officers sacrificed to Mathlann.",
+        icon: "character-military-spending",
+        ranks: [
+            { effects: [
+                { icon: "growth", description: "Black Ark growth: +5 (cumulative)", ps: "all armies factionwide" },
+                { icon: "income", description: "Income from Ports: +5%", ps: "all regions" }
+            ] }
+        ]
+    },
+    {
+        name: 'Slaver',
+        description: "Those unfortunates captured during a scrap will serve the Dreadfleet one way or another.",
+        icon: "character-slaves",
+        ranks: [
+            { effects: [
+                { icon: "army", description: "Casualties captured post-battle: +12%" },
+                { icon: "coin", description: "Upkeep: -5% for all units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Patriarch of the Fellhearts',
+        description: "Never was a name so perfectly descriptive, and this one is their leader!",
+        icon: "character-public-order",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +4", ps: "local province" },
+                { icon: "army", description: "Lord recruit rank: +3", ps: "factionwide" }
+            ] }
+        ]
+    },
+    {
+        name: 'The Waking',
+        description: "Each sip of the elixir is a harsh reminder of what he has become.",
+        icon: "the-waking",
+        ranks: [
+            { effects: [
+                { icon: "the-blood-price", description: "Cooldown: -20% to 'The Blood Price'" },
+                { icon: "the-daemons-curse", description: "Cooldown: -20% to 'The Daemons Curse" }
+            ] }
+        ]
+    },
+    {
+        name: 'Pain Tolerance',
+        description: "Malus does not bleed, nor feel pain. Such expressions of the flesh have long since fallen away.",
+        icon: "character-defense",
+        ranks: [
+            { effects: [
+                { icon: "resistance-missile", description: "Missile resistance: 10%", ps: "Until transformed into Tz'arkan", color: "#F429FF" },
+                { icon: "defense-character", description: "Melee defense: +10", ps: "Until transformed into Tz'arkan", color: "#F429FF" }
+            ] }
+        ]
+    },
+    {
+        name: 'Lying in Wait',
+        description: "Every moment of silence is but a slaughter yet begun.",
+        icon: "lying-in-wait",
+        ranks: [
+            { effects: [
+                { icon: "ambush", description: "Ambush success chance: +15%", ps: "Lord's army" },
+                { icon: "underway", description: "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +20%" },
+                { icon: "stalk", description: "Attribute: Stalk", ps: "Until transformed into Tz'arkan", color: "#F429FF" }
+            ] }
+        ]
+    },
+    {
+        name: 'The Slumber',
+        description: "If nothing else, Malus Darkblade, you can be counted on to react to adversity with as much violence as is physically possible.",
+        icon: "the-slumber",
+        ranks: [
+            { effects: [
+                { icon: "bloodstorm", description: "Cooldown: -20% to 'Bloodstorm'" },
+                { icon: "reaper-of-souls", description: "Cooldown: -20% to 'Reaper of Souls" }
+            ] }
+        ]
+    },
+    {
+        name: 'Avatar of Terror',
+        description: "He is unnatural; an aberrant of the darkest kind. To lay eyes upon him in battle stirs a primal fear in the hearts of men and Elves alike.",
+        icon: "terror",
+        ranks: [
+            { effects: [
+                { icon: "morale", description: "Enemy leadership: -7" },
+                { icon: "attribute-causes-terror", description: "Attribute: Causes Terror", ps: "While transformed into Tz'arkan", color: "#F429FF" }
+            ] }
+        ]
+    },
+    {
+        name: 'Supernatural Tissue',
+        description: "Wounds of the body can be unmade, for they are immaterial and insignificant.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [
+                { icon: "replenishment", description: "Casualty replenishment rate: +30% for Lords", ps: "Lord's army" },
+                { icon: "resistance-ward-save", description: "Ward save: 10%", ps: "While transformed into Tz'arkan", color: "#F429FF" }
+            ] }
+        ]
+    },
+    {
+        name: 'Cold Heart',
+        description: "The Lord of Ruin is coming for you. Onwards, beasts of the deep earth!",
+        icon: "character-movement",
+        ranks: [
+            { effects: [
+                { icon: "campaign-movement", description: "Campaign movement range: +5%" },
+                { icon: "disaster", description: "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +20%", ps: "Lord's army" },
+                { icon: "vigour", description: "Vigour loss reduction: -50% for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Drachau Tyrant',
+        description: "Sleepless nights afford the Lord of Hag Graef time to viciously and efficiently tackle tedious matters. Like taxes, always taxes...",
+        icon: "character-movement",
+        ranks: [
+            { effects: [
+                { icon: "loyalty", description: "On turn start, Lords in this character's region have a chance to gain 1 loyalty", ps: "local region" },
+                { icon: "public-order", description: "Public order: +3", ps: "local province" },
+                { icon: "coin", description: "Upkeep: -10% for all units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        name: 'Contempt & Hatred',
+        description: "With hate, all things are possible.",
+        icon: "contempt-hatred",
+        ranks: [
+            { effects: [{ icon: "damage", description: "Weapon strength: +20% when fighting against anything and everything" }] }
         ]
     },
     {
@@ -387,7 +1049,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "coin", description: "Upkeep: -10% for all units", ps: "all armies"},
-                { icon: "morale", description: "Leadership: +5", ps: "lords army"},
+                { icon: "morale", description: "Leadership: +5", ps: "Lord's army"},
                 { icon: "income", description: "Income from post-battle loot: +5%", ps: "all characters" }
             ] }
         ]
@@ -411,8 +1073,8 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "army", description: "Lord recruit rank: +2", ps: "factionwide"},
-                { icon: "disaster", description: "Attrition: -50% casualties suffered from all attrition", ps: "lords army"},
-                { icon: "replenishment", description: "Casualty replenishment rate: +15%", ps: "lords army" }
+                { icon: "disaster", description: "Attrition: -50% casualties suffered from all attrition", ps: "Lord's army"},
+                { icon: "replenishment", description: "Casualty replenishment rate: +15%", ps: "Lord's army" }
             ] }
         ]
     },
@@ -433,8 +1095,8 @@ exports.skills = [
         icon: "rapacious-predators",
         ranks: [
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army"},
-                { icon: 'turns', description: "Recruitment duration: -1 turn for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army"},
+                { icon: 'turns', description: "Recruitment duration: -1 turn for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -491,6 +1153,55 @@ exports.skills = [
         ]
     },
     {
+        name: 'Dance of Death',
+        description: "So much of war is an art. Over time and with much practice, combat moves can resemble a series of perfectly-rehearsed dance moves.",
+        icon: "character-attack",
+        ranks: [
+            { effects: [
+                { icon: 'defense-character', description: "Melee defense: +4" },
+                { icon: 'melee-character', description: "Melee attack: +4" }
+            ] }
+        ]
+    },
+    {
+        name: 'Conviction',
+        description: "Such is this one's conviction that others have no choice but to believe.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [{ icon: 'charge-character', description: "Leadership: +4" }] },
+            { effects: [{ icon: 'charge-character', description: "Leadership: +9" }] }
+        ]
+    },
+    {
+        name: 'Wild-Eyed',
+        description: "Don't look into their eyes, there is only death there!",
+        icon: "character-attack",
+        ranks: [
+            { effects: [{ icon: 'melee-character', description: "Melee attack: +4" }] },
+            { effects: [{ icon: 'melee-character', description: "Melee attack: +9" }] }
+        ]
+    },
+    {
+        name: 'Impassioned',
+        description: "There is nothing but utter belief. There is no reasoning with this one.",
+        icon: "character-defense",
+        ranks: [
+            { effects: [{ icon: 'defense-character', description: "Melee attack: +4" }] },
+            { effects: [{ icon: 'defense-character', description: "Melee attack: +9" }] }
+        ]
+    },
+    {
+        name: 'Impaling Attack',
+        description: "Every fibre of their being is charged and ready for action - wherever, whenever.",
+        icon: "character-charge",
+        ranks: [
+            { effects: [
+                { icon: 'morale-character', description: "Speed: +10%" },
+                { icon: 'morale-character', description: "Charge bonus: +15" }
+            ]
+        }]
+    },
+    {
         name: 'Devastating Charge',
         description: "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
         icon: "character-charge",
@@ -504,16 +1215,8 @@ exports.skills = [
         description: "Hand-to-hand combat is a lethal match of cut and thrust. However, it's not all about offensive strikes; parries and other defensive moves can also win the day.",
         icon: "character-defense",
         ranks: [
-            {
-                effects: [
-                    { icon: 'defense-character', description: "Melee defense: +6"}
-                ]
-            },
-            {
-                effects: [
-                    { icon: 'defense-character', description: "Melee defense: +12"}
-                ]
-            }
+            { effects: [{ icon: 'defense-character', description: "Melee defense: +6"}] },
+            { effects: [{ icon: 'defense-character', description: "Melee defense: +12"}] }
         ]
     },
     {
@@ -566,7 +1269,36 @@ exports.skills = [
                 target: 'Self',
                 effects: [
                     { text: '+24%', icon: 'movement-character', postText: 'Speed', color: 'green' },
-                    { text: '+18%', icon: 'fatigue', postText: 'Vigour', color: 'blue' }
+                    { text: '+18%', icon: 'fatigue', postText: 'Vigour', color: 'green' }
+                ]
+            }
+         }
+    },
+    {
+        name: 'Blood Frenzy',
+        description: "Where the Blood Queen treads, murder follows in her wake.",
+        icon: "blood-frenzy",
+        ranks: [
+            { effects: [{ icon: 'blood-frenzy', description: "Passive ability: 'Blood Frenzy'" }] }
+        ],
+        spell: {
+            description: 'Lord ability',
+            cooldown: '45',
+            rarity: 'uncommon',
+            attributes: {
+                type: 'Augment',
+                duration: '90 seconds',
+                target: 'Self',
+                rechargeIf: 'Engaged in melee',
+                effects: [
+                    { icon: 'stage-1', postText: 'Stage One (30 seconds)', color: 'green' },
+                    { text: '+6%', icon: 'icon-armor-piercing', postText: 'Armour-Piercing Weapon Damage', color: 'green' },
+                    { icon: 'stage-2', postText: 'Stage Two (30 seconds)', color: 'green' },
+                    { text: '+12%', icon: 'icon-armor-piercing', postText: 'Armour-Piercing Weapon Damage', color: 'green' },
+                    { text: '+9%', icon: 'fatigue', postText: 'Vigour', color: 'green' },
+                    { icon: 'stage-3', postText: 'Stage Three (30 seconds)', color: 'green' },
+                    { text: '+18%', icon: 'icon-armor-piercing', postText: 'Armour-Piercing Weapon Damage', color: 'green' },
+                    { text: '+18%', icon: 'fatigue', postText: 'Vigour', color: 'green' }
                 ]
             }
          }
@@ -576,8 +1308,35 @@ exports.skills = [
         description: "Such is their power and ferocity, a wound-maker will ravage the foe, cutting and pulverising until there is only one exit - death.",
         icon: "character-damage",
         ranks: [
-            { effects: [{ icon: 'weapon-damage-character', description: "Weapon strength: +10%" }] },
-            { effects: [{ icon: 'weapon-damage-character', description: "Weapon strength: +20%" }] }
+            { effects: [{ icon: 'damage', description: "Weapon strength: +10%" }] },
+            { effects: [{ icon: 'damage', description: "Weapon strength: +20%" }] }
+        ]
+    },
+    {
+        name: 'Fervour',
+        description: "This one fights with a fervour to be both admired and despised",
+        icon: "character-damage",
+        ranks: [
+            { effects: [{ icon: 'damage', description: "Weapon strength: +10%" }] },
+            { effects: [{ icon: 'damage', description: "Weapon strength: +20%" }] }
+        ]
+    },
+    {
+        name: 'Survivalist',
+        description: "The enemy's fear; their blood spilt in the mud - these are the things that sustain me.",
+        icon: "character-health",
+        ranks: [
+            { effects: [{ icon: 'health-character', description: "Hit points: +7%" }] },
+            { effects: [{ icon: 'health-character', description: "Hit points: +15%" }] }
+        ]
+    },
+    {
+        name: 'Tenacity',
+        description: "This one will not go down easily - it will be necessary to break both the will and the body first.",
+        icon: "character-health",
+        ranks: [
+            { effects: [{ icon: 'health-character', description: "Hit points: +7%" }] },
+            { effects: [{ icon: 'health-character', description: "Hit points: +15%" }] }
         ]
     },
     {
@@ -594,16 +1353,8 @@ exports.skills = [
         description: "A blade that sings in defence will not let its wielder be penetrated.",
         icon: "character-defense",
         ranks: [
-            {
-                effects: [
-                    { icon: "defense-character", description: "Melee defense: +6"}
-                ]
-            },
-            {
-                effects: [
-                    { icon: "defense-character", description: "Melee defense: +12"}
-                ]
-            }
+            { effects: [{ icon: "defense-character", description: "Melee defense: +6"}] },
+            { effects: [{ icon: "defense-character", description: "Melee defense: +12"}] }
         ]
     },
     {
@@ -625,6 +1376,37 @@ exports.skills = [
         ]
     },
     {
+        name: 'A Thousand & One Dark Blessings',
+        description: "The Hag Sorceress' allegiance to the Ruinous influence of the Chaos Gods grants her a degree of protection against magical attack.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [{ icon: 'resistance-magic', description: "Magic resistance: +10%" }] },
+            { effects: [{ icon: 'resistance-physical', description: "Physical resistance: +15%" }] }
+        ]
+    },
+    {
+        name: 'Heroic Killing Blow',
+        description: "There are powerful beings who can decapitate a dragon or plunge a sword into the heart of a griffon in one might strike.",
+        icon: "ability-heroic-killing-blow",
+        ranks: [
+            { effects: [{ icon: 'ability-heroic-killing-blow', description: "Ability: 'Heroic Killing Blow'" }] }
+        ],
+        spell: {
+            description: 'Character ability',
+            cooldown: '90',
+            rarity: 'uncommon',
+            attributes: {
+                type: 'Augment',
+                duration: "25 seconds",
+                target: "Self",
+                effects: [
+                    { text: '+50%', icon: 'icon-armor-piercing', postText: 'Armor-Piercing Weapon Damage', color: 'green' },
+                    { text: '+50%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
         name: 'Deadly Onslaught',
         description: "The war is endless. The cycle of charging, clashing, and bloody hand-to-hand fighting is without end. It will never stop.",
         icon: "ability-deadly-onslaught",
@@ -643,6 +1425,34 @@ exports.skills = [
                     { text: '+25%', icon: 'icon-armor-piercing', postText: 'Armor-Piercing Weapon Damage', color: 'green' },
                     { text: '+25%', icon: 'icon-damage-base', postText: 'Base Weapon Damage', color: 'green' },
                     { text: '+36%', icon: 'charge-character', postText: 'Charge Bonus', color: 'green' }
+                ]
+            }
+        }
+    },
+    {
+        name: 'Enchanting Beauty',
+        description: "Morathi's strange, magical allure enchants opponents, making them question their loyalties and allegiances.",
+        icon: "enchanting-beauty",
+        ranks: [
+            { effects: [{ icon: 'enchanting-beaty', description: "Passive ability: 'Enchanting Beauty'" }] }
+        ],
+        spell: {
+            description: 'Lord ability',
+            rarity: 'rare',
+            attributes: {
+                type: [ 
+                    { text: 'Hex (Area)' },
+                    { text: 'Only acts on targets when in area' }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" },
+                ],
+                effectRange: '40m',
+                effects: [
+                    { text: '-9', icon: 'melee-character', postText: 'Melee Attack', color: 'red' },
+                    { text: '-8%', icon: 'charge-character', postText: 'Charge Bonus', color: 'red' }
                 ]
             }
         }
@@ -1016,6 +1826,35 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: 'magic', description: "Winds of Magic power reserve: +15" }
+            ] }
+        ]
+    },
+    {
+        name: 'The First Sorceress',
+        description: "All the hate, envy, and malice uttered in prayer each day, returned a thousand-fold.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: 'wizard', description: "Unlocks Hero recruitment: Sorceress", ps: "all provinces" },
+                { icon: 'wizard', description: "Hero capacity: +1 for Sorceresses" },
+                { icon: 'wizard', description: "Hero recruit rank:+2 for Sorceresses", ps: "factionwide" }
+            ] }
+        ]
+    },
+    {
+        name: 'Blessed by Evil',
+        description: "Evil takes flight; blotting out the moon on blackened wings, calling us to the dance...",
+        icon: "blood-lust",
+        ranks: [
+            { effects: [
+                { icon: 'magic-character', description: "Miscast base chance: -15%" },
+                { icon: 'magic-cooldown', description: "Cooldown: -20% to all spells" },
+                { icon: 'spell-power-of-darkness', description: "Winds of Magic cost: -2 for 'Power of Darkness'" },
+                { icon: 'spell-soul-stealer', description: "Winds of Magic cost: -3 for 'Soulstealer'" },
+                { icon: 'spell-melkoths-mystifying-miasma', description: "Winds of Magic cost: -1 for 'Melkoth\'s Mystifying Miasma Upgraded'" },
+                { icon: 'spell-pit-of-shades', description: "Winds of Magic cost: -2 for 'Pit of Shades Upgraded'" },
+                { icon: 'spell-doom-darkness', description: "Winds of Magic cost: -2 for 'Doom & Darkness Upgraded'" },
+                { icon: 'spell-soulblight', description: "Winds of Magic cost: -2 for 'Soulblight Upgraded'" }
             ] }
         ]
     },
@@ -2136,15 +2975,15 @@ exports.skills = [
         icon: "battle-defense",
         ranks: [
             { effects: [
-                { icon: 'defense', description: "Melee defense: +4 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" }
+                { icon: 'defense', description: "Melee defense: +4 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +6 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +8 for Dreadspears, Bleakswords and Black Ark Corsairs units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -2154,15 +2993,15 @@ exports.skills = [
         icon: "battle-ammo",
         ranks: [
             { effects: [
-                { icon: 'ammo', description: "Ammunition: +8% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" }
+                { icon: 'ammo', description: "Ammunition: +8% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'ammo', description: "Ammunition: +12% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" },
-                { icon: 'reload-time', description: "Reload time reduction: +7% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" }
+                { icon: 'ammo', description: "Ammunition: +12% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "Lord's army" },
+                { icon: 'reload-time', description: "Reload time reduction: +7% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'ammo', description: "Ammunition: +20% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" },
-                { icon: 'reload-time', description: "Reload time reduction: +10% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "lords army" }
+                { icon: 'ammo', description: "Ammunition: +20% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "Lord's army" },
+                { icon: 'reload-time', description: "Reload time reduction: +10% for Darkshards, Black Ark Corsairs and Reaper Bolt Thrower units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -2172,17 +3011,17 @@ exports.skills = [
         icon: "battle-charge",
         ranks: [
             { effects: [
-                { icon: 'charge', description: "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" }
+                { icon: 'charge', description: "Charge bonus: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'ranged-damage', description: "Missile damage: +9% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
-                { icon: 'charge', description: "Charge bonus: +9 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" }
+                { icon: 'ranged-damage', description: "Missile damage: +9% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +6 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "Lord's army" },
+                { icon: 'charge', description: "Charge bonus: +9 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'ranged-damage', description: "Missile damage: +12% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +8 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" },
-                { icon: 'charge', description: "Charge bonus: +12 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "lords army" }
+                { icon: 'ranged-damage', description: "Missile damage: +12% for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +8 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "Lord's army" },
+                { icon: 'charge', description: "Charge bonus: +12 for Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -2192,17 +3031,17 @@ exports.skills = [
         icon: "battle-damage",
         ranks: [
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +6% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
-                { icon: 'charge', description: "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
-                { icon: 'reload-time', description: "Reload time reduction: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "Lord's army" },
+                { icon: 'charge', description: "Charge bonus: +9 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "Lord's army" },
+                { icon: 'reload-time', description: "Reload time reduction: +9% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'weapon-damage', description: "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
-                { icon: 'charge', description: "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" },
-                { icon: 'reload-time', description: "Reload time reduction: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "lords army" }
+                { icon: 'weapon-damage', description: "Weapon strength: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "Lord's army" },
+                { icon: 'charge', description: "Charge bonus: +12 for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "Lord's army" },
+                { icon: 'reload-time', description: "Reload time reduction: +12% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Madusae units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -2212,15 +3051,15 @@ exports.skills = [
         icon: "battle-attack",
         ranks: [
             { effects: [
-                { icon: 'melee', description: "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +4 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +8 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -2229,14 +3068,14 @@ exports.skills = [
         description: "An elite even amongst elites, this accomplished warrior directs the cut-and-thrust of melee - a choreographer of death, you might say.",
         icon: "battle-attack",
         ranks: [
-            { effects: [{ icon: 'melee', description: "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" }] },
+            { effects: [{ icon: 'melee', description: "Melee attack: +4 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "Lord's army" }] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +6 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'melee', description: "Melee attack: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" },
-                { icon: 'defense', description: "Melee defense: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "lords army" }
+                { icon: 'melee', description: "Melee attack: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "Lord's army" },
+                { icon: 'defense', description: "Melee defense: +8 for Witch Elves, Har Ganeth Executioners, Black Guard of Naggarond and Sisters of Slaughter units", ps: "Lord's army" }
             ] }
         ]
     },
@@ -2532,9 +3371,9 @@ exports.skills = [
         description: "You will serve me, wretch, or you will die, there is no other option.",
         icon: "campaign-military-spending",
         ranks: [
-            { effects: [{ icon: "treasury", description: "Recruitment cost: -3%", ps: "lords army" }] },
-            { effects: [{ icon: "treasury", description: "Recruitment cost: -8%", ps: "lords army" }] },
-            { effects: [{ icon: "treasury", description: "Recruitment cost: -15%", ps: "lords army" }] }            
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -3%", ps: "Lord's army" }] },
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -8%", ps: "Lord's army" }] },
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -15%", ps: "Lord's army" }] }            
         ]
     },
     {
@@ -2543,17 +3382,17 @@ exports.skills = [
         icon: "campaign-military-spending",
         ranks: [
             { effects: [
-                { icon: "coin-plus", description: "Income from raiding: +5%", ps: "lords army" },
+                { icon: "coin-plus", description: "Income from raiding: +5%", ps: "Lord's army" },
                 { icon: "coin-plus", description: "Income from looting settlements: +4%" },
                 { icon: "coin-plus", description: "Income from sacking settlements: +4%" }
             ] },
             { effects: [
-                { icon: "coin-plus", description: "Income from raiding: +12%", ps: "lords army" },
+                { icon: "coin-plus", description: "Income from raiding: +12%", ps: "Lord's army" },
                 { icon: "coin-plus", description: "Income from looting settlements: +9%" },
                 { icon: "coin-plus", description: "Income from sacking settlements: +9%" }
             ] },
             { effects: [
-                { icon: "coin-plus", description: "Income from raiding: +20%", ps: "lords army" },
+                { icon: "coin-plus", description: "Income from raiding: +20%", ps: "Lord's army" },
                 { icon: "coin-plus", description: "Income from looting settlements: +15%" },
                 { icon: "coin-plus", description: "Income from sacking settlements: +15%" }
             ] }            
@@ -2583,9 +3422,9 @@ exports.skills = [
         description: "A good quartermaster can ration equipment and foodstuffs efficiently, making supplies last longer.",
         icon: "campaign-military-spending",
         ranks: [
-            { effects: [{ icon: "coin", description: "Upkeep: -3% for all units", ps: "lords army" }] },
-            { effects: [{ icon: "coin", description: "Upkeep: -8% for all units", ps: "lords army" }] },
-            { effects: [{ icon: "coin", description: "Upkeep: -15% for all units", ps: "lords army" }] }
+            { effects: [{ icon: "coin", description: "Upkeep: -3% for all units", ps: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -8% for all units", ps: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -15% for all units", ps: "Lord's army" }] }
         ]
     },
     {
@@ -2594,15 +3433,15 @@ exports.skills = [
         icon: 'campaign-ambush',
         ranks: [
             { effects: [
-                { icon: 'ambush', description: "Ambush success chance: +6%", ps: "lords army" },
+                { icon: 'ambush', description: "Ambush success chance: +6%", ps: "Lord's army" },
                 { icon: 'ambush', description: "Ambush defense chance: +5%" }
             ] },
             { effects: [
-                { icon: 'ambush', description: "Ambush success chance: +16%", ps: "lords army" },
+                { icon: 'ambush', description: "Ambush success chance: +16%", ps: "Lord's army" },
                 { icon: 'ambush', description: "Ambush defense chance: +10%" }
             ] },
             { effects: [
-                { icon: 'ambush', description: "Ambush success chance: +30%", ps: "lords army" },
+                { icon: 'ambush', description: "Ambush success chance: +30%", ps: "Lord's army" },
                 { icon: 'ambush', description: "Ambush defense chance: +20%" },
                 { icon: 'vanguard', description: "Attribute: Vanguard Deployment" } // TODO this skill has gameplay explanation
             ] }            
@@ -2614,16 +3453,16 @@ exports.skills = [
         icon: 'campaign-replenishment',
         ranks: [
             { effects: [
-                { icon: 'disaster', description: "Attrition: -3% casualties suffered from all attrition", ps: "lords army" },
-                { icon: 'replenishment', description: "Casualty replenishment rate: +3%", ps: "lords army" }
+                { icon: 'disaster', description: "Attrition: -3% casualties suffered from all attrition", ps: "Lord's army" },
+                { icon: 'replenishment', description: "Casualty replenishment rate: +3%", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'disaster', description: "Attrition: -8% casualties suffered from all attrition", ps: "lords army" },
-                { icon: 'replenishment', description: "Casualty replenishment rate: +8%", ps: "lords army" }
+                { icon: 'disaster', description: "Attrition: -8% casualties suffered from all attrition", ps: "Lord's army" },
+                { icon: 'replenishment', description: "Casualty replenishment rate: +8%", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: 'disaster', description: "Attrition: -15% casualties suffered from all attrition", ps: "lords army" },
-                { icon: 'replenishment', description: "Casualty replenishment rate: +15%", ps: "lords army" }
+                { icon: 'disaster', description: "Attrition: -15% casualties suffered from all attrition", ps: "Lord's army" },
+                { icon: 'replenishment', description: "Casualty replenishment rate: +15%", ps: "Lord's army" }
             ] }
         ]
     },
@@ -2633,7 +3472,7 @@ exports.skills = [
         icon: 'campaign-agent',
         ranks: [
             { effects: [
-                { icon: "coin", description: "Upkeep: -8% for all units", ps: "lords army" },
+                { icon: "coin", description: "Upkeep: -8% for all units", ps: "Lord's army" },
                 { icon: 'campaign-movement', description: "Campaign movement range: +5%" },
                 { icon: 'agent', description: "Enemy Hero action success chance: -10%" },
                 { icon: 'agent', description: "Hero self-defense: +25% chance of wounding aggressors" },
@@ -2641,4 +3480,4 @@ exports.skills = [
             ] }     
         ]
     }
-];
+]
