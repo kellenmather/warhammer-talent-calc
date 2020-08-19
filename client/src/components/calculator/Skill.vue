@@ -80,10 +80,13 @@ export default {
 
             let horizontalScroll = document.querySelector("#calculator").scrollLeft;
             let verticalScroll = document.querySelector("#html").scrollTop;
-            let obj = this.$el
+            let obj = this.$el;
 
-            this.left = (event.x - obj.offsetLeft + horizontalScroll + 20)
-            this.top = (event.y - obj.offsetTop + verticalScroll - 45);
+            // this is my current solution for popups extending
+            let rowBalance = this.color === 'row4' ? 90 : this.color === 'row9' ? 190 : 0;
+
+            this.left = (event.x - obj.offsetLeft + horizontalScroll + 20);
+            this.top = (event.y - obj.offsetTop + verticalScroll - 45 - rowBalance);
 
             let mouseX = event.pageX, 
                 mouseY = event.pageY;

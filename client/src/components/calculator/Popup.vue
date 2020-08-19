@@ -43,8 +43,21 @@
         </div>
         <div v-if="hasNext() && !specificRank" class="stats">
             <div v-for="(effect, idx) in info.ranks[displayNextLevel()].effects" :key="idx">
-                <span><a :style="getBackground(effect.icon)" class="small-icon"></a></span>
-                <span class="effect inline-block">{{effect.description}}</span>
+                <span><a :style="getBackground(effect.icon)" class="small-icon" ></a></span>
+                <span class="effect inline-block" >{{effect.description}}
+                    <span v-if="effect.rank">
+                         (<a :style="getBackground('experience-7')" class="tiny-icon"></a>Rank 7 and above)
+                    </span>
+                    <span style="display: block" v-if="effect.ps">
+                        <span v-if="effect.ps==='Lord\'s army'">
+                        (<a v-if="effect.ps==='Lord\'s army'" :style="getBackground('icon-army')" class="tiny-icon"></a>
+                        {{effect.ps}})
+                        </span>
+                        <span v-else :style="{ color: effect.color}">
+                            ({{effect.ps}})
+                        </span>
+                    </span>
+                </span>
             </div>
         </div>
         <Spell
