@@ -1,4 +1,4 @@
-const Darkelves = require('../templates/darkElves.js');
+const Darkelves = require('./darkElves.js');
 const Schools = require('./magicSchools.js');
 
 // This is where each lord has his row reference data saved
@@ -81,7 +81,7 @@ let darkelves = {
 }
 
 exports.getLord = (lord, type) => {
-    let response = darkelves[lord][type] ? JSON.parse(JSON.stringify(darkelves[lord][type])) : JSON.parse(JSON.stringify(darkelves[lord]));
+    let response = darkelves[lord][type] ? darkelves[lord][type] : darkelves[lord];
     if (Schools.magic[type]) response.push(Schools.magic[type])
     return response
 }

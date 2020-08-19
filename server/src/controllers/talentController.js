@@ -1,5 +1,6 @@
 const db = require('../tempDataBase/db.js');
-const Keys = require('../templates/keys.js');
+const DarkElvesKeys = require('../templates/darkElvesKeys.js');
+const HighElvesKeys = require('../templates/highElvesKeys.js');
 
 exports.getRows = (req, res) => {
     res.setHeader('Access-Control-Allow-Credentials', true);
@@ -7,7 +8,21 @@ exports.getRows = (req, res) => {
     let params = req.params;
     let response;
 
-    response = Keys.getLord(params.lord, params.type)
+    console.log(params)
+    
+    switch (params.race) {
+        case 'darkelves':
+            response = DarkElvesKeys.getLord(params.lord, params.type)
+            break;
+        case 'highelves':
+            console.log('he case');
+            response = HighElvesKeys.getLord(params.lord, params.type)
+            break;
+        default:
+            console.log('error');
+    }
+
+    // response = DarkElvesKeys.getLord(params.lord, params.type)
 
     res.send({ response });
 };
