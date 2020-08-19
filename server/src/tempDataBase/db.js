@@ -3351,9 +3351,9 @@ exports.skills = [
         description: "This Lord expects utter obedience from the smallfolk, and has little time for insurrections or petty revolts.",
         icon: 'campaign-public-order',
         ranks: [
-            { effects: [{ icon: 'public-order', description: "Public order: +1", postScript: "local province" }] },
-            { effects: [{ icon: 'public-order', description: "Public order: +2", postScript: "local province" }] },
-            { effects: [{ icon: 'public-order', description: "Public order: +3", postScript: "local province" }] }            
+            { effects: [{ icon: 'public-order', description: "Public order: +1", postScript: "local province", ps: "local province" }] },
+            { effects: [{ icon: 'public-order', description: "Public order: +2", postScript: "local province", ps: "local province" }] },
+            { effects: [{ icon: 'public-order', description: "Public order: +3", postScript: "local province", ps: "local province" }] }            
 
         ]
     },
@@ -3406,7 +3406,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: 'experience', description: "Recruit rank: +1 for all units" },
-                { icon: 'army', description: "Local recruitment capacity: +1", postScript: "local province" }
+                { icon: 'army', description: "Local recruitment capacity: +1", ps: "local province" }
             ] }          
         ]
     },
@@ -3435,16 +3435,16 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: 'ambush', description: "Ambush success chance: +6%", ps: "Lord's army" },
-                { icon: 'ambush', description: "Ambush defense chance: +5%" }
+                { icon: 'ambush', description: "Ambush defense chance: +5%", ps: "Lord's army" }
             ] },
             { effects: [
                 { icon: 'ambush', description: "Ambush success chance: +16%", ps: "Lord's army" },
-                { icon: 'ambush', description: "Ambush defense chance: +10%" }
+                { icon: 'ambush', description: "Ambush defense chance: +10%", ps: "Lord's army" }
             ] },
             { effects: [
                 { icon: 'ambush', description: "Ambush success chance: +30%", ps: "Lord's army" },
-                { icon: 'ambush', description: "Ambush defense chance: +20%" },
-                { icon: 'vanguard', description: "Attribute: Vanguard Deployment" } // TODO this skill has gameplay explanation
+                { icon: 'ambush', description: "Ambush defense chance: +20%", ps: "Lord's army" },
+                { icon: 'vanguard', description: "Attribute: Vanguard Deployment" }
             ] }            
         ]
     },
