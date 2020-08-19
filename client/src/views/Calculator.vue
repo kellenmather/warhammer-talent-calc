@@ -2,17 +2,16 @@
     <div id="calculator" v-if="skills.length > 0" class="container-fluid calc-border calc" :style="getBackground(this.styleGuide)">
         <div class="header-padding">
             <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar unselectable" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
-                <div class="col left-nav action-items">
+                <div class="left-nav action-items">
                     <a @click="$router.push('/')" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
                     <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
                     <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
-                <div class="col lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
+                <div class="middle-nav lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
                     <p>{{getProperName()}}</p>
                 </div>
-                <div class="col right-nav level" :style="getHeaderBackground(this.styleGuide, 'level-frame')">
-                    <p>Level:</p>
-                    <span class="inline-block">{{lordLevel}}</span>
+                <div class="right-nav level" :style="getHeaderBackground(this.styleGuide, 'level-frame')">
+                    <p>{{lordLevel}}</p>
                 </div>
             </div>
         </div>
@@ -236,24 +235,28 @@ export default {
 }
 .left-nav {
     text-align: left;
+    display: inline-block;
+    width: 20%;
 }
 .lord-name {
     background-position: center;
     background-repeat: no-repeat;
     height: 68px;
+    width: 60%;
     font-weight: 600;
     font-size: 1.2em;
     color: #EBE6CD;
-    padding: 0 160px;
 }
 .lord-name p {
     padding-top: 20px;
 }
 .right-nav {
+    width: 20%;
     text-align: right;
 }
 .right-nav p {
     margin-bottom: 0px;
+    padding-right: 12px;
 }
 .header-padding {
     padding-bottom: 160px;
@@ -274,7 +277,7 @@ export default {
     display: inline-block;
     color: #EBE6CD;
     padding-top: 20px;
-    padding-right: 30px;
+    padding-right: 32px;
 }
 .level span {
     color: #EBE6CD;

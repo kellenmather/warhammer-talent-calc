@@ -3320,6 +3320,7 @@ exports.skills = [
         spell: {
             description: 'Character ability',
             rarity: 'uncommon',
+            cooldown: '90',
             attributes: {
                 type: [
                     { text: 'Augment (Area)' },

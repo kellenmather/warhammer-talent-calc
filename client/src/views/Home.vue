@@ -28,7 +28,7 @@ export default {
     },
     data() {
         return {
-            selection: null
+            selection: 'darkelves'
         };
     },
     methods: {

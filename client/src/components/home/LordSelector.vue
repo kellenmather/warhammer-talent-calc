@@ -1,34 +1,36 @@
 <template>
-    <div class="lord-selector unselectable col-12 col-md-5" :style="getAssets('plaque-banner')">
-        <ul v-if="selection">
-            <li class="lord-header">
-                <a @click="changeLords()" :style="getHeader()" type="button" :disabled="!selection"></a>
-            </li>
-        </ul>
-        <ul v-if="showLords">
-            <li v-for="(lord, index) in lords" :key="index" >
-                <div v-if="lord.school" class="banner" :style="getAssets('banner')">
-                    <a :style="getAssets('button-home')" class="home-button" :disabled="!selection" style="display:block">
-                        {{lord.name}}
-                    </a>
-                    <div class="spell-schools">
-                        <a v-for="(magic, index) in lord.school" :key="index" @click="selectLord(lord, magic)" type="button" :style="getImages('spellSchools/' + magic)" />
+    <div class="lord-selector offset-lord-selector unselectable col-12 col-lg-6" :style="getAssets('plaque-banner')">
+        <div class="offset-left">
+            <ul v-if="selection">
+                <li class="lord-header">
+                    <a @click="changeLords()" :style="getHeader()" type="button" :disabled="!selection"></a>
+                </li>
+            </ul>
+            <ul v-if="showLords">
+                <li v-for="(lord, index) in lords" :key="index" >
+                    <div v-if="lord.school" class="banner" :style="getAssets('banner')">
+                        <a :style="getAssets('button-home')" class="home-button" :disabled="!selection" style="display:block">
+                            {{lord.name}}
+                        </a>
+                        <div class="spell-schools">
+                            <a v-for="(magic, index) in lord.school" :key="index" @click="selectLord(lord, magic)" type="button" :style="getImages('spellSchools/' + magic)" />
+                        </div>
                     </div>
-                </div>
-                <div v-else>
-                    <a @click="selectLord(lord)" :style="getAssets('button-home')" type="button" class="home-button" :disabled="!selection">
+                    <div v-else>
+                        <a @click="selectLord(lord)" :style="getAssets('button-home')" type="button" class="home-button" :disabled="!selection">
+                            {{lord.name}}
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <ul v-else> 
+                <li v-for="(lord, index) in legendaryLords" :key="index">
+                    <a @click="selectLord(lord)" :style="getAssets('button-ll')" type="button" class="home-button" :disabled="!selection">
                         {{lord.name}}
                     </a>
-                </div>
-            </li>
-        </ul>
-        <ul v-else> 
-            <li v-for="(lord, index) in legendaryLords" :key="index">
-                <a @click="selectLord(lord)" :style="getAssets('button-ll')" type="button" class="home-button" :disabled="!selection">
-                    {{lord.name}}
-                </a>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -50,6 +52,7 @@ export default {
     },
     methods: {
         setRace() {
+            console.log('2', this.selection)
             if (this.selection) {
                 this.lords = LordKey.lords[this.selection];
                 this.legendaryLords = LordKey.legendary[this.selection];
@@ -89,11 +92,24 @@ export default {
         selection: function() {
             this.setRace();
         }
+    },
+    created() {
+        this.setRace();
     }
 };
 </script>
 
 <style>
+@media (min-width: 1046px) {
+    .offset-left {
+        position: absolute;
+        left: calc(15% - 18px);
+    }
+    .lord-selector.offset-lord-selector {
+        background-position: left 15% top 30px;
+    }
+}
+
 .lord-selector {
     background-position: center top 30px;
     background-repeat: no-repeat;

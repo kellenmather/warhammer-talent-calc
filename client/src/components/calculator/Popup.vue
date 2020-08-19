@@ -4,7 +4,7 @@
         <div v-if="quest" class="title">
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', 'legendary')"></a></span>
             <div class="spell-name inline-block" :style="getGradient('rarity', 'legendary')">
-                <p class="inline-block title">Quest for: {{info.name}} (Unique)</p>
+                <p class="title legend-item">Quest for: {{info.name}} (Unique)</p>
             </div>
         </div>
         <div v-else class="title">
@@ -199,5 +199,9 @@ export default {
     max-width: 540px;
     padding-bottom: 10px;
     vertical-align: middle;
+}
+.legend-item {
+    vertical-align: middle;
+    margin-bottom: 4px;
 }
 </style>
