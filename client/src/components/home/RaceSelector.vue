@@ -53,7 +53,7 @@ export default {
             return img;
         },
         getHeader() {
-            let type = this.wh2 ? 'wh2' : 'wh'
+            let type = this.wh2 ? 'wh' : 'wh2'
             let item, left, right;
             item = require('@/assets/home/' + type + '.png');
             right = require('@/assets/home/right-button.png');
