@@ -21,7 +21,7 @@ console.log('Server ip is: ' + ip);
 
 // require route files here
 const talentRouter = require('./routes/talent');
-
+const messageRouter = require('./routes/message');
 // dependency set up
 app.use(morgan('combined'));
 app.use(cors({
@@ -33,12 +33,7 @@ app.use(bodyParser.json());
 
 // route libraries setup
 app.use('/talent', talentRouter);
-
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Behold The MEVN Stack!'
-    });
-});
+app.use('/message', messageRouter);
 
 // const port = process.env.PORT || 4000;
 app.listen(port, () => {

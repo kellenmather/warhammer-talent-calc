@@ -1488,7 +1488,7 @@ exports.skills = [
         description: "Beastmasters share their minions' belligerence, cutting down foemen with lash, spear, and harpoon before claiming their twitching bodies as fodder.",
         icon: "beastslaver",
         ranks: [
-            { effects: [{ icon: 'deadly-onslaught', description: "Ability: 'Beastslaver'" }] }
+            { effects: [{ icon: 'beastslaver', description: "Ability: 'Beastslaver'" }] }
         ],
         spell: {
             description: 'Lord ability',
@@ -3289,6 +3289,7 @@ exports.skills = [
         spell: {
             description: 'Lord ability',
             rarity: 'uncommon',
+            cooldown: '90',
             attributes: {
                 type: 'Augment',
                 duration: '21 seconds',

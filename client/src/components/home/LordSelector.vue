@@ -1,8 +1,8 @@
 <template>
-    <div class="lord-selector unselectable col-12 col-md-5" :style="getAssets('plaque')">
+    <div class="lord-selector unselectable col-12 col-md-5" :style="getAssets('plaque-banner')">
         <ul v-if="selection">
             <li class="lord-header">
-                <a @click="changeLords()" :style="getAssets(getHeader())" type="button" :disabled="!selection"></a>
+                <a @click="changeLords()" :style="getHeader()" type="button" :disabled="!selection"></a>
             </li>
         </ul>
         <ul v-if="showLords">
@@ -73,7 +73,13 @@ export default {
             return { 'content': 'url(' + item + ')' };
         },
         getHeader() {
-            return this.showLords ? 'banner-lords' : 'banner-legendary'
+            let type = this.showLords ? 'lord' : 'legendary'
+            let item, left, right;
+            item = require('@/assets/home/' + type + '.png');
+            right = require('@/assets/home/right-button.png');
+            left = require('@/assets/home/left-button.png');
+
+            return { 'backgroundImage': 'url(' + left + '), url(' + item + '), url(' + right + ')' };
         },
         changeLords() {
             this.showLords ? this.showLords = false : this.showLords = true;
@@ -89,15 +95,18 @@ export default {
 
 <style>
 .lord-selector {
-    padding-top: 55px;
     background-position: center top 30px;
     background-repeat: no-repeat;
     height: 710px;
+    margin-bottom: 30px;
 }
 .lord-selector ul {
     list-style-type: none;
     padding-left: 0px;
     margin-bottom: 0px;
+}
+.lord-selector ul:first-child {
+    padding-top: 40px;
 }
 .lord-selector ul li {
     padding: 13px 0 10px 0;
@@ -105,14 +114,16 @@ export default {
 }
 .lord-header {
     padding-top: 0px !important;
+    padding-bottom: 0px !important;
     height: 70px;
 }
 .lord-header a {
     display: inline-block;
-    background-position: center;
+    background-position: left center, top center, right center;
     background-repeat: no-repeat;
-    min-width: 350px;
-    height: 58px;
+    z-index: 1;
+    width: 200px;
+    height: 70px;
 }
 .spell-schools {
     margin: 10px auto 0 auto;

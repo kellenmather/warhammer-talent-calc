@@ -31,7 +31,7 @@ export default {
 <style scoped>
 .jumbotron {
     background-color: #262626;
-    min-height: 289.1px;
+    height: 305px;
     margin-bottom: 0px;
 }
 article.col {

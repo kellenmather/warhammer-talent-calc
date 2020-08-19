@@ -7,12 +7,14 @@
                 <LordSelector :selection="selection"/>
             </div>
         </div>
+        <Footer />
     </section>
 </template>
 
 <script>
 // @ is an alias to /src
 import Header from '@/components/home/Header.vue';
+import Footer from '@/components/home/Footer.vue';
 import RaceSelector from '@/components/home/RaceSelector.vue';
 import LordSelector from '@/components/home/LordSelector.vue';
 
@@ -21,7 +23,8 @@ export default {
     components: {
         Header,
         RaceSelector,
-        LordSelector
+        LordSelector,
+        Footer
     },
     data() {
         return {
@@ -49,6 +52,7 @@ export default {
     color: #EBE6CD;
     padding-top: 5px;
     background-repeat: repeat-x;
+    min-height: calc(100vh - 375px)
 }
 .home-button {
     display: inline-block;
