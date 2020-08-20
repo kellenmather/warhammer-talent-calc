@@ -39,7 +39,7 @@ let darkelves = {
         { ...Darkelves.rows.row1.malekith },
         { ...Darkelves.rows.row2.malekith },
         { ...Darkelves.rows.row3.malekith },
-        { ...Schools.magic.fire },
+        { ...Schools.magic.darkMagic },
         { ...Darkelves.rows.row6.malekith },
         { ...Darkelves.rows.row9.darkElves }
     ],

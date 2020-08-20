@@ -529,7 +529,7 @@ exports.skills = [
         ]
     },
     {
-        name: "Hekart's Blessing",
+        name: "Hekarti's Blessing",
         description: "It is easy to favor Hekarti - who pays close attention to Elven desires - over Atharti, but only the foolish allow that to happen.",
         icon: "character-magic",
         ranks: [{ effects: [{ icon: "magic", description: "Winds of Magic power reserve: +8" }] }]
@@ -1568,7 +1568,7 @@ exports.skills = [
                 ],
                 cannotUseIf: "Climbing",
                 cannotTargetIf: "On a wall, Climbing",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Additional effect of Frostbite", uptick: "up-blue", color: "blue" },
                     { text: "Causes minor", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
@@ -1652,7 +1652,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 cannotUseIf: "Climbing",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Additional effect on", icon: "defense-character", postText: "melee defense", uptick: "up-blue", color: "blue" },
                     { text: "-24", icon: "defense-character", postText: "Melee Defense", color: "red" },
@@ -1694,7 +1694,7 @@ exports.skills = [
                 ],
                 cannotUseIf: "Climbing",
                 cannotTargetIf: "On a wall, Climbing",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
                     { text: "Causes major", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
@@ -1758,7 +1758,7 @@ exports.skills = [
                 ],
                 cannotUseIf: "Climbing",
                 cannotTargetIf: "On a wall, Climbing",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased", icon: "icon-armor-piercing-ranged", postText: "armor-piercing damage", uptick: "up-blue", color: "blue" },
                     { text: "Causes major", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
@@ -1909,7 +1909,7 @@ exports.skills = [
                     { text: "Enemy" },
                     { text: "300m", uptick: "range" }
                 ],
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended cast range", uptick: "up-blue", color: "blue" },
                     { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
@@ -1950,7 +1950,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Added effect area", uptick: "up-blue", color: "blue" },
                     { text: "-16", icon: "morale-mallus", postText: "Leadership", color: "red" }
@@ -2013,7 +2013,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
                     { text: "Added effect area", uptick: "up-blue", color: "blue" },
@@ -2057,7 +2057,7 @@ exports.skills = [
                     { text: "Affects enemies in range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
                     { text: "-30", icon: "armor-character", postText: "Armor", color: "red" },
@@ -2127,7 +2127,7 @@ exports.skills = [
                 ],
                 cannotUseIf: "Climbing",
                 cannotTargetIf: "On a wall",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased effect duration", uptick: "up-blue", color: "blue" },
                     { text: "Causes major", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
@@ -2140,20 +2140,20 @@ exports.skills = [
         }
     },
     {
-        name: "Melkot's Mystifying Miasma",
+        name: "Melkoth's Mystifying Miasma",
         description: "The caster weaves a confounding fog that numbs and deludes enemies, causing them to stumble and stagger.",
         icon: "spell-melkoths-mystifying-miasma",
         ranks: [
             { effects: [
-                { icon: "spell-melkoths-mystifying-miasma", description: "Overcast spell: \"Melkot's Mystifying Miasma Upgraded\"" },
-                { icon: "spell-melkoths-mystifying-miasma", description: "Cooldown: -30% to \"Melkot's Mystifying Miasma\"" }
+                { icon: "spell-melkoths-mystifying-miasma", description: "Overcast spell: \"Melkoth's Mystifying Miasma Upgraded\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Cooldown: -30% to \"Melkoth's Mystifying Miasma\"" }
             ] },
             { effects: [
-                { icon: "spell-melkoths-mystifying-miasma", description: "Overcast spell: \"Melkot's Mystifying Miasma Upgraded\"" },
-                { icon: "spell-melkoths-mystifying-miasma", description: "Cooldown: -50% to \"Melkot's Mystifying Miasma\"" },
-                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -1 for \"Melkot's Mystifying Miasma\"" },
-                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -2 for \"Melkot's Mystifying Miasma Upgraded\"" },
-                { icon: "spell-melkoths-mystifying-miasma", description: "Miscast base chance: -15% for \"Melkot's Mystifying Miasma Upgraded\"" }
+                { icon: "spell-melkoths-mystifying-miasma", description: "Overcast spell: \"Melkoth's Mystifying Miasma Upgraded\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Cooldown: -50% to \"Melkoth's Mystifying Miasma\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -1 for \"Melkoth's Mystifying Miasma\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -2 for \"Melkoth's Mystifying Miasma Upgraded\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Miscast base chance: -15% for \"Melkoth's Mystifying Miasma Upgraded\"" }
             ] }
         ],
         spell: {
@@ -2168,7 +2168,7 @@ exports.skills = [
                     { text: "Enemy" },
                     { text: "300m", uptick: "range" }
                 ],
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended cast range", uptick: "up-blue", color: "blue" },
                     { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
@@ -2210,7 +2210,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 cannotTargetIf: "Flying, On a wall",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased", icon: "icon-armor-piercing", postText: "armor-piercing damage", uptick: "up-blue", color: "blue" },
                     { text: "Causes massive", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
@@ -2277,7 +2277,7 @@ exports.skills = [
                     { text: "Enemy" },
                     { text: "200m", uptick: "range" }
                 ],
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
                     { text: "-24", icon: "defense-character", postText: "Melee Defense", uptick: "down-red", color: "red" },
@@ -2320,7 +2320,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Added effect area", uptick: "up-blue", color: "blue" },
                     { text: "-30", icon: "armor-character", postText: "Armor", color: "red" },
@@ -2370,21 +2370,21 @@ exports.skills = [
         }
     },
     {
-        name: "Okka's Mindrazor",
+        name: "Okkam's Mindrazor",
         description: "The supernatural solution is often the best; weapons materialise before the caste's allies, allowing them to slice through flesh, soul, and consciousness.",
         icon: "spell-okkams-mindrazor",
         ranks: [
             { effects: [
-                { icon: "spell-okkams-mindrazor", description: "Spell: \"Okka's Mindrazor Upgraded\"" },
-                { icon: "spell-okkams-mindrazor", description: "Overcast spell: \"Okka's Mindrazor Upgraded\"" },
-                { icon: "spell-okkams-mindrazor", description: "Cooldown: -30% to \"Okka's Mindrazor\"" }
+                { icon: "spell-okkams-mindrazor", description: "Spell: \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Overcast spell: \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Cooldown: -30% to \"Okkam's Mindrazor\"" }
             ] },
             { effects: [
-                { icon: "spell-okkams-mindrazor", description: "Overcast spell: \"Okka's Mindrazor Upgraded\"" },
-                { icon: "spell-okkams-mindrazor", description: "Cooldown: -50% to \"Okka's Mindrazor\"" },
-                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -2 for \"Okka's Mindrazor\"" },
-                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -3 for \"Okka's Mindrazor Upgraded\"" },
-                { icon: "spell-okkams-mindrazor", description: "Miscast base chance: -15% for \"Okka's Mindrazor Upgraded\"" }
+                { icon: "spell-okkams-mindrazor", description: "Overcast spell: \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Cooldown: -50% to \"Okkam's Mindrazor\"" },
+                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -2 for \"Okkam's Mindrazor\"" },
+                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -3 for \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Miscast base chance: -15% for \"Okkam's Mindrazor Upgraded\"" }
             ] }
         ],
         spell: {
@@ -2403,7 +2403,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 imbues: [{ postText: "Magical Damage", icon: "icon-magic" }],
                 effects: [
                     { text: "Added effect area", uptick: "up-blue", color: "blue" },
@@ -2414,7 +2414,7 @@ exports.skills = [
         }
     },
     {
-        name: "Wyssa's Wildform",
+        name: "Wyssan's Wildform",
         description: "The spellcaster unleashes the best within, using its fury to transform allies into bestial forms.",
         icon: "spell-wyssans-wildform",
         ranks: [
@@ -2446,7 +2446,7 @@ exports.skills = [
                     { text: "300m", uptick: "range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Added effect area", uptick: "up-blue", color: "blue" },
                     { text: "+30", icon: "armor-character", postText: "Armor", uptick: "up-green", color: "green" },
@@ -2486,7 +2486,7 @@ exports.skills = [
                 ],
                 cannotUseIf: "Manning equipment, Climbing",
                 projectileRange: "200m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased", icon: "icon-armor-piercing", postText: "armor-piercing damage", uptick: "up-blue", color: "blue" },
                     { text: "Greater", icon: "icon-armor-piercing-ranged", postText: "armor-piercing explosion damage", uptick: "up-blue", color: "blue" },
@@ -2556,7 +2556,7 @@ exports.skills = [
                     { text: "300m", uptick: "range" }
                 ],
                 effectRange: "30m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
                     { text: "Extended cast range", uptick: "up-blue", color: "blue" },
@@ -2569,7 +2569,7 @@ exports.skills = [
         }
     },
     {
-        name: "Pan's Impenetrable Pelt",
+        name: "Pann's Impenetrable Pelt",
         description: "Calling upon the beast spirits of the wild, the caster sheathes vulnerable flesh in unyielding fur and hide.",
         icon: "spell-panns-impenetrable-pelt",
         ranks: [
@@ -2603,7 +2603,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Good against AP damage", uptick: "up-green", color: "green" },
                     { text: "Added effect area", uptick: "up-blue", color: "blue" },
@@ -2647,7 +2647,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 effectRange: "55m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased effect area", uptick: "up-blue", color: "blue" },
                     { text: "-24", icon: "melee-character", postText: "Melee Attack", color: "red" },
@@ -2719,7 +2719,7 @@ exports.skills = [
                     { text: "300m", uptick: "range" }
                 ],
                 cannotUseIf: "Manning equipment, Climbing",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased", icon: "icon-armor-piercing-ranged", postText: "armor-piercing damage", uptick: "up-blue", color: "blue" },
                     { text: "Greater", icon: "icon-armor-piercing-ranged", postText: "armor-piercing explosion damage", uptick: "up-blue", color: "blue" },
@@ -2821,7 +2821,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 effectRange: "40m",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 imbues: [{ text: "Magical Damage", icon: "icon-fire", postText: "Fire Damage", uptick: "icon-magic" }],
                 effects: [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
@@ -2863,7 +2863,7 @@ exports.skills = [
                 ],
                 cannotUseIf: "Climbing",
                 cannotTargetIf: "Flying, On a wall",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased effect area", uptick: "up-blue", color: "blue" },
                     { text: "Causes major magical & fire damage", uptick: "up-green", color: "green" },
@@ -2909,7 +2909,7 @@ exports.skills = [
                     { text: "200m", uptick: "range" }
                 ],
                 cannotUseIf: "Climbing",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Increased number of missiles", icon: "icon-armor-piercing-ranged", postText: "armor-piercing damage", uptick: "up-blue", color: "blue" },
                     { text: "Wider strike area", uptick: "up-blue", color: "blue" },
@@ -2949,7 +2949,7 @@ exports.skills = [
                     { text: "150m", uptick: "range" }
                 ],
                 cannotUseIf: "Manning equipment, Climbing",
-                miscastChance:  {0: "50", 1: "35"},
+                miscastChance:  {"0": "50", "1": "35"},
                 effects: [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
                     { text: "Increased damage", uptick: "up-blue", color: "blue" },

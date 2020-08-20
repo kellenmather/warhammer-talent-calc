@@ -184,9 +184,8 @@ export default {
     },
     created() {
         let query = this.race + '/' + this.lord
-        console.log(this.type);
         if (this.type && this.type !== 'legendary') query = query + '/' + this.type
-        ApiService.get("talent/getRows", query) // TODO: change to get by props race and lord current response is static
+        ApiService.get("talent/getRows", query)
             .then(({data}) => {
                 let row = data.response;
                 let rowName;
