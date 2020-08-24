@@ -187,17 +187,15 @@ export default {
         if (this.type && this.type !== 'legendary') query = query + '/' + this.type
         ApiService.get("talent/getRows", query)
             .then(({data}) => {
-                let row = data.response;
+                console.log(data)
+                this.skills = data.skills
+                let row = data.rows;
                 let rowName;
                 for (let i = 0; i < row.length; i++) {
                     rowName = 'row' +  row[i].row
                     this.rows[rowName] = row[i];
                 }
-                this.setCalcState(data.response);
-            })
-        ApiService.get("/talent/getSkills")
-            .then(({data}) => {
-                this.skills = data.response;
+                this.setCalcState(data.rows);
             })
     }
 }

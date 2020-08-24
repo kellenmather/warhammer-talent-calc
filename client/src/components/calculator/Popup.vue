@@ -1,10 +1,11 @@
 <template>
     <!-- <div class="popup-container unselectable" :style="{ top: top + 'px', left: left + 'px'}"> -->
     <div class="popup-container unselectable" :style="getPosition()">
-        <div v-if="quest" class="title">
+        <div v-if="info.quest" class="title">
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', 'legendary')"></a></span>
             <div class="spell-name inline-block" :style="getGradient('rarity', 'legendary')">
-                <p class="title legend-item">Quest for: {{info.name}} (Unique)</p>
+                <p v-if="quest > 1" class="title legend-item">Quest for: {{info.name}} (Unique)</p>
+                <p v-else class="title legend-item">{{info.name}} (Unique)</p>
             </div>
         </div>
         <div v-else class="title">
@@ -22,7 +23,7 @@
         <div class="stats">
             <div v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
                 <span><a :style="getBackground(effect.icon)" class="small-icon" ></a></span>
-                <span class="effect inline-block" >{{effect.description}}
+                <span class="effect inline-block" :style="{ color: effect.color}" >{{effect.description}}
                     <span v-if="effect.rank">
                          (<a :style="getBackground('experience-7')" class="tiny-icon"></a>Rank 7 and above)
                     </span>

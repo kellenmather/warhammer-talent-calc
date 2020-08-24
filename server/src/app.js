@@ -1,4 +1,7 @@
+'use strict';
+
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -36,6 +39,28 @@ app.use('/talent', talentRouter);
 app.use('/message', messageRouter);
 
 // const port = process.env.PORT || 4000;
-app.listen(port, () => {
+// app.listen(port, () => {
+//     console.log(`listening on ${port}`);
+// });
+
+function listen() {
+    app.listen(port);
     console.log(`listening on ${port}`);
-});
+}
+
+const uri = "mongodb+srv://templ-placeholder"
+
+
+connect();
+
+function connect() {
+    mongoose.connection
+      .on('error', console.error.bind(console, 'connection error'))
+      .on('disconnected', connect)
+      .once('open', listen)
+    return mongoose.connect(uri, {
+      keepAlive: 1,
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
+}

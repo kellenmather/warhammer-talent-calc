@@ -30,7 +30,8 @@ export default {
         getMessage() {
             ApiService.get("message/getMessages")
                 .then(({data}) => {
-                    this.message = data.response;
+                    console.log(data)
+                    this.message = data[0].msg;
                 })
         }
     },

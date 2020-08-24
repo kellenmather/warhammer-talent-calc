@@ -14,7 +14,7 @@
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('Tomb Kings', 'disabled')" :style="getAssets('button-home', 'Tomb Kings')">Tomb Kings</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('Vampire Coast', 'disabled')" :style="getAssets('button-home', 'Vampire Coast')">Vampire Coast</a></li>
             </ul>
-            <ul class="wh" v-else>
+            <ul v-else class="wh">
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('The Empire', 'disabled')" :style="getAssets('button-home', 'The Empire')">The Empire</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('Dwarves', 'disabled')" :style="getAssets('button-home', 'Dwarves')">Dwarves</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('Greenskins', 'disabled')" :style="getAssets('button-home', 'Greenskins')">Greenskins</a></li>

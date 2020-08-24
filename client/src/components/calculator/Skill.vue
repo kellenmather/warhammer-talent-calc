@@ -7,7 +7,7 @@
                 <p>{{ block }}</p>
             </span>
         </div>
-        <div v-if="!skill.quest" class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
+        <div v-if="!skill.quest && !skillState[block].quest" class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
             <div 
                 v-for="(rank, index) in skill.ranks" 
                 :key="index" 
