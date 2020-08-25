@@ -28,3 +28,4 @@ npm start
 ```
 
 Now you can view the current state of the website by going to http://localhost:8080
+Switched to MongoDB, without a database connection no talent trees will be viewable
