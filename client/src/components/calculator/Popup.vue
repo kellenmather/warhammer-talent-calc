@@ -1,5 +1,4 @@
 <template>
-    <!-- <div class="popup-container unselectable" :style="{ top: top + 'px', left: left + 'px'}"> -->
     <div class="popup-container unselectable" :style="getPosition()">
         <div v-if="info.quest" class="title">
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', 'legendary')"></a></span>

@@ -1,7 +1,7 @@
 <template>
-    <div id="calculator" v-if="skills.length > 0" class="container-fluid calc-border calc" :style="getBackground(this.styleGuide)">
+    <div id="calculator" v-if="skills.length > 0" class="container-fluid calc-border calc unselectable" :style="getBackground(this.styleGuide)">
         <div class="header-padding">
-            <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar unselectable" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
+            <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
                 <div class="left-nav action-items">
                     <a @click="$router.push('/')" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
                     <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
@@ -59,7 +59,8 @@ export default {
             saveState: {},
             skillPointAllocation: {},
             lordLevel: 1,
-            styleGuide: 'wh2'
+            styleGuide: 'wh2',
+            secret: false
         }
     },
     methods: {
@@ -82,9 +83,6 @@ export default {
                     skillsObject[skillNames[i]] = skill
                 }
             }
-            
-            // create object with skills to pass to row
-
             // return object
             return skillsObject
         },
@@ -142,7 +140,8 @@ export default {
             this.styleGuide = (this.styleGuide === 'wh2') ? 'wh1' : 'wh2';
         },
         getBackground(style) {
-            let background, top, bottom;
+            let background, top, bottom, save;
+            if (this.secret) style = 'whS'
             try {
                 background = require('@/assets/' + style + '/parchment.png');
                 top = require('@/assets/' + style + '/parchment-top-stain.png');
@@ -180,14 +179,20 @@ export default {
                     return races[i].name + ' (' + magicType + ')'
                 }
             }
+        },
+        secretMethod() {
+            this.secret = false
+            if (this.lord === 'alarielle' || this.lord === 'princess') {
+                if (Math.floor(Math.random()*10) === 1) this.secret = true 
+            }
         }
     },
     created() {
+        this.secretMethod();
         let query = this.race + '/' + this.lord
         if (this.type && this.type !== 'legendary') query = query + '/' + this.type
         ApiService.get("talent/getRows", query)
             .then(({data}) => {
-                console.log(data)
                 this.skills = data.skills
                 let row = data.rows;
                 let rowName;
@@ -274,7 +279,9 @@ export default {
     display: inline-block;
     color: #EBE6CD;
     padding-top: 20px;
-    padding-right: 32px;
+    padding-right: 15px;
+    width: 60px;
+    text-align: center;
 }
 .level span {
     color: #EBE6CD;

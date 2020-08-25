@@ -1443,7 +1443,7 @@ exports.skills = [
         description: "Morath's strange, magical allure enchants opponents, making them question their loyalties and allegiances.",
         icon: "enchanting-beauty",
         ranks: [
-            { effects: [{ icon: "enchanting-beaty", description: "Passive ability: \"Enchanting Beauty\"" }] }
+            { effects: [{ icon: "enchanting-beauty", description: "Passive ability: \"Enchanting Beauty\"" }] }
         ],
         spell: {
             description: "Lord ability",

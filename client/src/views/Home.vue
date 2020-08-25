@@ -1,7 +1,7 @@
 <template>
     <section>
         <Header :selection="selection"/>
-        <div class='container-fluid home' :style="getAssets()">
+        <div class='container-fluid home unselectable' :style="getAssets()">
             <div class="row justify-content-center">
                 <RaceSelector @raceSelected="selectedRace"/>
                 <LordSelector :selection="selection"/>

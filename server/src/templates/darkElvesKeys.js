@@ -38,8 +38,8 @@ let darkelves = {
     malekith: [
         { ...DarkElves.rows.row1.malekith },
         { ...DarkElves.rows.row2.malekith },
-        { ...DarkElves.rows.row3.malekith },
         { ...Schools.magic.darkMagic },
+        { ...DarkElves.rows.row4.malekith },
         { ...DarkElves.rows.row6.malekith },
         { ...DarkElves.rows.row9.darkElves }
     ],
@@ -60,8 +60,8 @@ let darkelves = {
     morathi: [
         { ...DarkElves.rows.row1.morathi },
         { ...DarkElves.rows.row2.morathi },
-        { ...DarkElves.rows.row3.morathi },
         { ...Schools.magic.morathi },
+        { ...DarkElves.rows.row4.morathi },
         { ...DarkElves.rows.row6.malekith },
         { ...DarkElves.rows.row9.darkElves }
     ],

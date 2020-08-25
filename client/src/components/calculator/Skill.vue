@@ -1,8 +1,8 @@
 <template>
-    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button">
+    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button unselectable">
         <div :style="getBorder(skill.quest)" class="skill-border"></div>
-        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block unselectable" :style="getIcon(skill.icon)"></div>
-        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block unselectable" :style="isObtained()">
+        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block" :style="getIcon(skill.icon)"></div>
+        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block" :style="isObtained()">
             <span class="position-block">
                 <p>{{ block }}</p>
             </span>
@@ -13,7 +13,7 @@
                 :key="index" 
                 @mouseover="showRank(index + 1)" 
                 @mouseleave="hideRank()" 
-                class="skill-rank unselectable" 
+                class="skill-rank" 
                 :style="[obtainedRank(skillState[block].value, index)]">
             </div>
         </div>
@@ -82,8 +82,8 @@ export default {
             let verticalScroll = document.querySelector("#html").scrollTop;
             let obj = this.$el;
 
-            // this is my current solution for popups extending
-            let rowBalance = this.color === 'row4' ? 90 : this.color === 'row9' ? 190 : 0;
+            // this is my current solution for popups extending off screen
+            let rowBalance = this.color === 'row9' ? 190 : 0;
 
             this.left = (event.x - obj.offsetLeft + horizontalScroll + 20);
             this.top = (event.y - obj.offsetTop + verticalScroll - 45 - rowBalance);
@@ -94,9 +94,6 @@ export default {
             if (this.window.width < mouseX + 620) {
                 this.left = (event.x - obj.offsetLeft + horizontalScroll - 620);
             }
-            // } else if ((this.window.height + verticalScroll) < mouseY + 300) {
-            //     this.bottom = (obj.offsetTop - event.y + verticalScroll + 20)
-            // }
         },
         showRank: function(rank) {
             this.specificRank = rank;
@@ -309,7 +306,7 @@ export default {
     line-height:normal;
     width: 100px;
     height: 43px;
-    left: 102px;
+    left: 100px;
 }
 .position-block p {
     display: table-cell;

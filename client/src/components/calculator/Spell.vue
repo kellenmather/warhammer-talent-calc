@@ -1,5 +1,5 @@
 <template>
-    <div class="spell">
+    <div class="spell unselectable">
         <div class="segment">
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', spell.rarity)"></a></span>
             <div class="spell-name inline-block" :style="getGradient('rarity', spell.rarity)">
@@ -44,7 +44,7 @@
                         </span>                    </td>
                     <td v-else-if="typeof(attribute) === 'object'">
                         <!-- how do i deal with mistcast -->
-                        {{attribute[displayLevel()]}}
+                        {{attribute[displayLevel()]}}%
                     </td>
                     <td v-else>{{attribute}}</td>
                 </tr>

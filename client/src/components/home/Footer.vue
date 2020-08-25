@@ -1,10 +1,18 @@
 <template>
 <article>
-    <div class="footer" :style="getAssets()">
+    <div class="footer unselectable" :style="getAssets()">
         <div class="footer-content">
-            <span>
-                {{this.message}}
-            </span>
+            <div v-if="message && message.icon" class="footer-img">
+                <a :style="getIcon(this.message.icon)" class="footer-icon footer-left"></a>
+            </div>
+            <div class="footer-text">
+                <span v-if="message">
+                    {{this.message.msg}}
+                </span>
+            </div>
+            <div v-if="message && message.icon2" class="footer-img">
+                <a :style="getIcon(this.message.icon2)" class="footer-icon footer-right"></a>
+            </div>  
         </div>
     </div>
 </article>
@@ -22,17 +30,27 @@ export default {
     },
     methods: {
         getAssets() {
-            let img = require('@/assets/home/bottom-divide.png');
-            let img2 = require('@/assets/home/footer.png');
-            img = { 'backgroundImage': 'url(' + img + '), url(' + img2 + ')' };
-            return img;
+            if (this.message) {
+                let img = require('@/assets/home/bottom-divide.png');
+                let img2 = require('@/assets/home/footer.png');
+                img = { 'backgroundImage': 'url(' + img + '), url(' + img2 + ')' };
+                return img;
+            }
         },
         getMessage() {
             ApiService.get("message/getMessages")
                 .then(({data}) => {
-                    console.log(data)
-                    this.message = data[0].msg;
+                    this.message = data[0];
                 })
+        },
+        getIcon(icon) {
+            try {            
+                icon = require('@/assets/smallIcons/' + icon + '.png')              
+                return { 'content': 'url(' + icon + ')' };
+            } catch {
+                icon = require('@/assets/largeIcons/' + icon + '.png')              
+                return [{ 'content': 'url(' + icon + ')', 'backgroundSize': '36px auto', 'height': '28px' }];
+            }
         }
     },
     created() {
@@ -44,7 +62,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer {
-    display: table;
     color: #EBE6CD;
     background-repeat: repeat-x;
     border: 0;
@@ -53,14 +70,38 @@ export default {
     width: 100%;
 }
 .footer-content {
-    display: table-cell;
-    vertical-align: middle;
     height: 70px;
     border: 0px;
+}
+.footer-text {
+    display: inline-block;
+    height: 70px;
+    max-width: 80%;
+    vertical-align: top;
+}
+.footer-text span {
+    height: 70px;
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center; 
+}
+.footer-img {
+    display: inline-block;
+    height: 70px;
+    width: 50px;
+}
 
-};
 .card-footer span {
-    height: 100%;
+    display: inline-block;
+}
+.footer-icon {
+    min-width: 44px;
+    width: 44px;
+    height: 24px;
+    padding: 0 10px;
+    vertical-align: center;
+    position: relative;
+    top: 24px;
 }
 
 </style>

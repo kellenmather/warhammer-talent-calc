@@ -1,6 +1,6 @@
 exports.magic = {
     beasts: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Wyssan's Wildform"]
@@ -24,7 +24,7 @@ exports.magic = {
         ]
     },
     fire: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Fireball"]
@@ -48,7 +48,7 @@ exports.magic = {
         ]
     },
     darkMagic: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Chillwind"]
@@ -72,7 +72,7 @@ exports.magic = {
         ]
     },
     death: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Spirit Leech"]
@@ -96,7 +96,7 @@ exports.magic = {
         ]
     },
     shadow: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Melkoth's Mystifying Miasma"]
@@ -120,7 +120,7 @@ exports.magic = {
         ]
     },
     highMagic: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Apotheosis"]
@@ -144,7 +144,7 @@ exports.magic = {
         ]
     },
     metal: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Searing Doom"]
@@ -168,7 +168,7 @@ exports.magic = {
         ]
     },
     life: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Awakening of the Wood"]
@@ -192,7 +192,7 @@ exports.magic = {
         ]
     },
     heavens: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Harmonic Convergence"]
@@ -216,7 +216,7 @@ exports.magic = {
         ]
     },
     light: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Shem's Burning Gaze"]
@@ -240,7 +240,7 @@ exports.magic = {
         ]
     },
     morathi: {
-        row: 4,
+        row: 3,
         content: [
             {
                 blockContent: ["Melkoth's Mystifying Miasma"]

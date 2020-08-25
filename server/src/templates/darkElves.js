@@ -566,50 +566,6 @@ exports.rows = {
                 }
             ]
         },
-        malekith: {
-            row: 3,
-            content: [
-                {
-                    blockContent: ['Sea Dragon Cloak'],
-                },
-                {
-                    restrictionChoice: 'Sea Dragon Cloak',
-                    blockContent: ['Devastating Charge', 'Hard to Hit', 'Blade Master', 'Indomitable'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Deadly Onslaught']
-                },
-                {
-                    restrictionChoice: 'Deadly Onslaught',
-                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Gaze of Malice']
-                }
-            ]
-        },
-        morathi: {
-            row: 3,
-            content: [
-                {
-                    blockContent: ['Impaling Attack'],
-                },
-                {
-                    restrictionChoice: 'Impaling Attack',
-                    blockContent: ['Blade Master', 'Hard to Hit', 'Wound-Maker', 'Survivalist'],
-                },
-                {
-                    restrictionCount: 3,
-                    blockContent: ['Foe-Seeker']
-                },
-                {
-                    restrictionChoice: 'Foe-Seeker',
-                    blockContent: ['Enchanting Beauty', 'A Thousand & One Dark Blessings', 'Deadly Onslaught']
-                }
-            ]
-        },
         hellebron: {
             row: 3,
             content: [
@@ -658,6 +614,50 @@ exports.rows = {
                 {
                     restrictionCount: 4,
                     blockContent: ['Beastslaver']
+                }
+            ]
+        },
+        malekith: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['Sea Dragon Cloak'],
+                },
+                {
+                    restrictionChoice: 'Sea Dragon Cloak',
+                    blockContent: ['Devastating Charge', 'Hard to Hit', 'Blade Master', 'Indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Deadly Onslaught']
+                },
+                {
+                    restrictionChoice: 'Deadly Onslaught',
+                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Gaze of Malice']
+                }
+            ]
+        },
+        morathi: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['Impaling Attack'],
+                },
+                {
+                    restrictionChoice: 'Impaling Attack',
+                    blockContent: ['Blade Master', 'Hard to Hit', 'Wound-Maker', 'Survivalist'],
+                },
+                {
+                    restrictionCount: 3,
+                    blockContent: ['Foe-Seeker']
+                },
+                {
+                    restrictionChoice: 'Foe-Seeker',
+                    blockContent: ['Enchanting Beauty', 'A Thousand & One Dark Blessings', 'Deadly Onslaught']
                 }
             ]
         }

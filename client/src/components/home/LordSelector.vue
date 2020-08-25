@@ -52,7 +52,6 @@ export default {
     },
     methods: {
         setRace() {
-            console.log('2', this.selection)
             if (this.selection) {
                 this.lords = LordKey.lords[this.selection];
                 this.legendaryLords = LordKey.legendary[this.selection];

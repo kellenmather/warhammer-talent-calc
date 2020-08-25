@@ -9,7 +9,7 @@
             <ul v-if="wh2">
                 <li><a type="button" class="home-button" @click="selectRace('Dark Elves')" :style="getAssets('button-home', 'Dark Elves')">Dark Elves</a></li>
                 <li><a type="button" class="home-button" @click="selectRace('High Elves')" :style="getAssets('button-home', 'High Elves')">High Elves</a></li>
-                <li><a type="button" class="home-button" @click="selectRace('Lizardmen')" :style="getAssets('button-home', 'Lizardmen')">Lizardmen</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('Lizardmen', 'disabled')" :style="getAssets('button-home', 'Lizardmen')">Lizardmen</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('Skaven', 'disabled')" :style="getAssets('button-home', 'Skaven')">Skaven</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('Tomb Kings', 'disabled')" :style="getAssets('button-home', 'Tomb Kings')">Tomb Kings</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('Vampire Coast', 'disabled')" :style="getAssets('button-home', 'Vampire Coast')">Vampire Coast</a></li>
@@ -53,7 +53,7 @@ export default {
             return img;
         },
         getHeader() {
-            let type = this.wh2 ? 'wh' : 'wh2'
+            let type = this.wh2 ? 'wh2' : 'wh'
             let item, left, right;
             item = require('@/assets/home/' + type + '.png');
             right = require('@/assets/home/right-button.png');

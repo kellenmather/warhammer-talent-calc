@@ -670,30 +670,6 @@ exports.rows = {
                 }
             ]
         },
-        eltharion: {
-            row: 3,
-            content: [
-                {
-                    blockContent: ['Swordplayer'],
-                },
-                {
-                    restrictionChoice: 'Swordplayer',
-                    blockContent: ['Valour of Ages', 'Hard to Hit', 'Blade Master', 'Devastating Charge'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Foe-Seeker']
-                },
-                {
-                    restrictionChoice: 'Foe-Seeker',
-                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Deadly Onslaught']
-                }
-            ]
-        },
         alastar: {
             row: 3,
             content: [
@@ -809,6 +785,30 @@ exports.rows = {
                 }
             ]
         },
+        eltharion: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['Swordplayer'],
+                },
+                {
+                    restrictionChoice: 'Swordplayer',
+                    blockContent: ['Valour of Ages', 'Hard to Hit', 'Blade Master', 'Devastating Charge'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Foe-Seeker']
+                },
+                {
+                    restrictionChoice: 'Foe-Seeker',
+                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Deadly Onslaught']
+                }
+            ]
+        }
     },
     row6: {
         tyrion: {

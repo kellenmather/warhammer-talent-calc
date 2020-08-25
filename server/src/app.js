@@ -5,12 +5,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+require('dotenv').config();
 
 const app = express();
 
 // load port from process.env file
 const port = process.env.PORT || 4000;
-
+const uri = process.env.URI || 'enterURIHere';
 // retrieve vm ip address
 const os = require('os');
 const networkInterfaces = os.networkInterfaces();
@@ -19,8 +20,6 @@ const interfaceKeys = Object.keys(networkInterfaces);
 const ip = networkInterfaces[interfaceKeys[1]][0]['address'];
 // const ip = 'localhost'
 process.env.SERVER_IP = ip;
-console.log('Server ip is: ' + ip);
-
 
 // require route files here
 const talentRouter = require('./routes/talent');
@@ -48,8 +47,7 @@ function listen() {
     console.log(`listening on ${port}`);
 }
 
-const uri = "mongodb+srv://templ-placeholder"
-
+const uri = "mongodb+srv://basic:kpspap@whtalentcluster-jzn4n.mongodb.net/skill?retryWrites=true&w=majority"
 
 connect();
 

@@ -42,8 +42,8 @@ let highelves = {
     eltharion: [
         { ...HighElves.rows.row1.eltharion },
         { ...HighElves.rows.row2.eltharion },
-        { ...HighElves.rows.row3.eltharion },
         { ...Schools.magic.highMagic},
+        { ...HighElves.rows.row4.eltharion },
         { ...HighElves.rows.row6.eltharion },
         { ...HighElves.rows.row9.highElves }
     ],
@@ -80,11 +80,11 @@ exports.getLord = (lord, type) => {
     let data = highelves[lord][type] ? highelves[lord][type] : highelves[lord];
     if (Schools.magic[type]) {
         // High Elves are the only race to have a mage lord that does not have Evasion and Arcane Conduit we work around that below
-        Schools.magic[type].row = 3;
-        Schools.magic[type].content[2].blockContent = ["Potential Energy"]; // replace Evasion with Potential Energy
-        Schools.magic[type].content[3].restrictionChoice = "Potential Energy"; // replace the dependency
-        Schools.magic[type].content[4].blockContent = ["Greater Arcane Conduit"]; // replace Arcane Conduit with Greater Arcane Conduit
-        data.push(Schools.magic[type])
+        let holder = JSON.parse(JSON.stringify(Schools.magic[type])) // prevent unintended manipulation of Schools
+        holder.content[2].blockContent = ["Potential Energy"]; // replace Evasion with Potential Energy
+        holder.restrictionChoice = "Potential Energy"; // replace the dependency
+        holder.blockContent = ["Greater Arcane Conduit"]; // replace Arcane Conduit with Greater Arcane Conduit
+        data.push(holder)
     }
     return data
 }
