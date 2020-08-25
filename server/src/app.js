@@ -47,8 +47,6 @@ function listen() {
     console.log(`listening on ${port}`);
 }
 
-const uri = "mongodb+srv://basic:kpspap@whtalentcluster-jzn4n.mongodb.net/skill?retryWrites=true&w=majority"
-
 connect();
 
 function connect() {
