@@ -23,7 +23,7 @@ let highelves = {
         { ...HighElves.rows.row2.alarielle },
         { ...HighElves.rows.row3.alarielle },
         { ...HighElves.rows.row6.prince },
-        { ...HighElves.rows.row9.highElves }
+        { ...HighElves.rows.row9.alarielle }
     ],
     imrik: [
         { ...HighElves.rows.row1.imrik },
@@ -83,7 +83,7 @@ exports.getLord = (lord, type) => {
         let holder = JSON.parse(JSON.stringify(Schools.magic[type])) // prevent unintended manipulation of Schools
         holder.content[2].blockContent = ["Potential Energy"]; // replace Evasion with Potential Energy
         holder.restrictionChoice = "Potential Energy"; // replace the dependency
-        holder.blockContent = ["Greater Arcane Conduit"]; // replace Arcane Conduit with Greater Arcane Conduit
+        holder.content[4].blockContent = ["Greater Arcane Conduit"]; // replace Arcane Conduit with Greater Arcane Conduit
         data.push(holder)
     }
     return data

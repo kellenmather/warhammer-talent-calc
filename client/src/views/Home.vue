@@ -62,5 +62,13 @@ export default {
     height: 41px;
     padding-top: 6px;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
 
 </style>

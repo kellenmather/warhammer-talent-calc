@@ -386,7 +386,7 @@ exports.skills = [
     },
     {
         name: "Sulephet",
-        description: "The only Dark Pegasus to bear a name is Morath's personal mount, who carries the Hag Sorceress into the fray.",
+        description: "The only Dark Pegasus to bear a name is Morathi's personal mount, who carries the Hag Sorceress into the fray.",
         icon: "dark-steed",
         ranks: [
             { effects: [{ icon: "mount", description: "Mount: Sulephet" }] }
@@ -418,7 +418,7 @@ exports.skills = [
     },
     {
         name: "Dark Pegasus",
-        description: "The corrupted Dark Pegasi fly south from the Chaos Wastes to Naggarot's Iron Mountains to make their nests.",
+        description: "The corrupted Dark Pegasi fly south from the Chaos Wastes to Naggaroth's Iron Mountains to make their nests.",
         icon: "dark-pegasus",
         ranks: [
             { effects: [{ icon: "mount", description: "Mount: Dark Pegasus" }] }
@@ -444,7 +444,7 @@ exports.skills = [
     },
     {
         name: "Seraphon",
-        description: "This terrifying Black Dragon is the Witch Kin's favoured mount upon which to ride into battle.",
+        description: "This terrifying Black Dragon is the Witch King's favoured mount upon which to ride into battle.",
         icon: "black-dragon",
         ranks: [
             { effects: [
@@ -454,7 +454,7 @@ exports.skills = [
     },
     {
         name: "Maelstrom",
-        description: "This terrifying Black Dragon, Fellhear's favourite mount, belches noxious fumes in place of fire as it carries the Krakenlord to battle.",
+        description: "This terrifying Black Dragon, Fellheart's favourite mount, belches noxious fumes in place of fire as it carries the Krakenlord to battle.",
         icon: "black-dragon",
         ranks: [
             { effects: [
@@ -476,7 +476,7 @@ exports.skills = [
     },
     {
         name: "Eternal Hatred",
-        description: "The strength of this warrio's attack never wavers for an instance, such is the opprobrium felt for their hated High Elf cousins.",
+        description: "The strength of this warrior's attack never wavers for an instance, such is the opprobrium felt for their hated High Elf cousins.",
         icon: "character-damage",
         ranks: [
             { effects: [
@@ -492,7 +492,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "character", description: "Leadership aura size: +100%" },
-                { icon: "morale-character", description: "Characte's Aura leadership effect: +5" },
+                { icon: "morale-character", description: "Character's Aura leadership effect: +5" },
                 { icon: "ability-hold-the-line", description: "Passive ability: \"Hold the Line!\"" }
             ] }
         ],
@@ -548,7 +548,7 @@ exports.skills = [
     },
     {
         name: "Ward of Hekarti",
-        description: "Magi's dark mistress has a care for her dutiful acolytes.",
+        description: "Magic's dark mistress has a care for her dutiful acolytes.",
         icon: "character-ward-save",
         ranks: [{ effects: [{ icon: "resistance-magic", description: "Magic resistance: 10%" }] }]
     },
@@ -606,12 +606,12 @@ exports.skills = [
         description: "This one has adopted a warrior name to strike fear into enemy hearts, a moniker backed up by their deeds in battle.",
         icon: "martial-name-of-power",
         ranks: [
-            { effects: [{ icon: "trait-dark-elves", description: "Choose a Name of Power that improves the Characte's own combat skills" }] }
+            { effects: [{ icon: "trait-dark-elves", description: "Choose a Name of Power that improves the Character's own combat skills" }] }
         ]
     },
     {
         name: "Revered Name of Power",
-        description: "This on's chosen name is muttered in hushed tones, reflecting as it does their vile proclivities.",
+        description: "This one's chosen name is muttered in hushed tones, reflecting as it does their vile proclivities.",
         icon: "revered-name-of-power",
         ranks: [
             { effects: [{ icon: "trait-dark-elves", description: "Choose a Name of Power that improves the Lord's army" }] }
@@ -661,13 +661,13 @@ exports.skills = [
     },
     {
         name: "Champion of Khaine",
-        description: "As Khain's chosen bride, she is his champion and envoy, and no harm will come to her.",
+        description: "As Khaine's chosen bride, she is his champion and envoy, and no harm will come to her.",
         icon: "character-ward-save",
         ranks: [{ effects: [{ icon: "resistance-physical", description: "Physical resistance: 10%" }] }]
     },
     {
         name: "Favour of Khaine",
-        description: "Khain's favour is bestowed on those that seek to bring murder into the world.",
+        description: "Khaine's favour is bestowed on those that seek to bring murder into the world.",
         icon: "character-cooldown",
         ranks: [
             { effects: [
@@ -678,7 +678,7 @@ exports.skills = [
     },
     {
         name: "Rapturous Murder",
-        description: "Give in to the Blood Quee's affection - her love is so intense as to kill.",
+        description: "Give in to the Blood Queen's affection - her love is so intense as to kill.",
         icon: "rituals-of-blood",
         ranks: [
             { effects: [
@@ -726,7 +726,7 @@ exports.skills = [
     },
     {
         name: "Daughters of Despair",
-        description: "Witch Elves are drawn to their monarch, for no other commands Khain's word like she.",
+        description: "Witch Elves are drawn to their monarch, for no other commands Khaine's word like she.",
         icon: "character-bonus-vs-infantry",
         ranks: [
             { effects: [
@@ -777,7 +777,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "public-order", description: "Public order: +5", ps: "local province" },
-                { icon: "religion", description: "Owning factio's favoured corruption: +5", ps: "when in own region" },
+                { icon: "religion", description: "Owning faction's favoured corruption: +5", ps: "when in own region" },
                 { icon: "morale", description: "Enemy leadership: -10", ps: "local region" }
             ] }
         ]
@@ -814,13 +814,13 @@ exports.skills = [
                 { icon: "diplomacy", description: "Diplomatic relations: +10 with Beastmen Warherds" },
                 { icon: "diplomacy", description: "Diplomatic relations: +30 with Norsca" },
                 { icon: "item-ability", description: "Magic item drop chance: +10%", ps: "all characters" },
-                { icon: "religion", description: "Owning factio's favoured corruption: +1", ps: "all regions" }
+                { icon: "religion", description: "Owning faction's favoured corruption: +1", ps: "all regions" }
             ] }
         ]
     },
     {
         name: "Absolute Devotion",
-        description: "Always ready to fan the flames of hatred in the Witch Kin's heart; when he has been betrayed, none have fought so hard to restore his rule.",
+        description: "Always ready to fan the flames of hatred in the Witch King's heart; when he has been betrayed, none have fought so hard to restore his rule.",
         icon: "absolute-devotion",
         ranks: [
             { effects: [
@@ -864,7 +864,7 @@ exports.skills = [
     },
     {
         name: "Master of the Blessed Dread",
-        description: "Showing his hand from the off, that there might be no confusion amongst his crews, Felheart had his fathe's officers sacrificed to Mathlann.",
+        description: "Showing his hand from the off, that there might be no confusion amongst his crews, Felheart had his father's officers sacrificed to Mathlann.",
         icon: "character-military-spending",
         ranks: [
             { effects: [
@@ -980,7 +980,7 @@ exports.skills = [
         icon: "character-movement",
         ranks: [
             { effects: [
-                { icon: "loyalty", description: "On turn start, Lords in this characte's region have a chance to gain 1 loyalty", ps: "local region" },
+                { icon: "loyalty", description: "On turn start, Lords in this character's region have a chance to gain 1 loyalty", ps: "local region" },
                 { icon: "public-order", description: "Public order: +3", ps: "local province" },
                 { icon: "coin", description: "Upkeep: -10% for all units", ps: "Lord's army" }
             ] }
@@ -1068,7 +1068,7 @@ exports.skills = [
     },
     {
         name: "Triumph of Evil",
-        description: "They say for evil to triumph, all tha's required is that the good do nothing... or, preferably, are stone dead from the outset.",
+        description: "They say for evil to triumph, all that's required is that the good do nothing... or, preferably, are stone dead from the outset.",
         icon: "triumph-of-evil",
         ranks: [
             { effects: [
@@ -1124,7 +1124,7 @@ exports.skills = [
     },
     {
         name: "Children of Sulekh",
-        description: "Since Sulek's death, her children continue to fight in the Beastmasters' ranks in the name of vengeance for their fallen ancestor.",
+        description: "Since Sulekh's death, her children continue to fight in the Beastmasters' ranks in the name of vengeance for their fallen ancestor.",
         icon: "children-of-sulekh",
         ranks: [
             { effects: [
@@ -1135,7 +1135,7 @@ exports.skills = [
     },
     {
         name: "Master Tormentor",
-        description: "It matters not the nature of the beast; eventually, all submit to the Beastmaste's will or perish under his lash.",
+        description: "It matters not the nature of the beast; eventually, all submit to the Beastmaster's will or perish under his lash.",
         icon: "campaign-experience",
         ranks: [
             { effects: [
@@ -1165,7 +1165,7 @@ exports.skills = [
     },
     {
         name: "Conviction",
-        description: "Such is this on's conviction that others have no choice but to believe.",
+        description: "Such is this one's conviction that others have no choice but to believe.",
         icon: "character-morale",
         ranks: [
             { effects: [{ icon: "charge-character", description: "Leadership: +4" }] },
@@ -1212,7 +1212,7 @@ exports.skills = [
     },
     {
         name: "Hard to Hit",
-        description: "Hand-to-hand combat is a lethal match of cut and thrust. However, i's not all about offensive strikes; parries and other defensive moves can also win the day.",
+        description: "Hand-to-hand combat is a lethal match of cut and thrust. However, it's not all about offensive strikes; parries and other defensive moves can also win the day.",
         icon: "character-defense",
         ranks: [
             { effects: [{ icon: "defense-character", description: "Melee defense: +6"}] },
@@ -1323,7 +1323,7 @@ exports.skills = [
     },
     {
         name: "Survivalist",
-        description: "The enem's fear; their blood spilt in the mud - these are the things that sustain me.",
+        description: "The enemy's fear; their blood spilt in the mud - these are the things that sustain me.",
         icon: "character-health",
         ranks: [
             { effects: [{ icon: "health-character", description: "Hit points: +7%" }] },
@@ -1440,7 +1440,7 @@ exports.skills = [
     },
     {
         name: "Enchanting Beauty",
-        description: "Morath's strange, magical allure enchants opponents, making them question their loyalties and allegiances.",
+        description: "Morathi's strange, magical allure enchants opponents, making them question their loyalties and allegiances.",
         icon: "enchanting-beauty",
         ranks: [
             { effects: [{ icon: "enchanting-beauty", description: "Passive ability: \"Enchanting Beauty\"" }] }
@@ -1595,7 +1595,7 @@ exports.skills = [
     },
     {
         name: "Spiteful Conjuration",
-        description: "As the spellcaster summons Dark Magic, black darts of malice will flit through the air to pierce the victims of the Dark El's spite.",
+        description: "As the spellcaster summons Dark Magic, black darts of malice will flit through the air to pierce the victims of the Dark Elf's spite.",
         icon: "spell-spiteful-conjuration",
         ranks: [
             { effects: [{ icon: "spell-spiteful-conjuration", description: "Passive ability: \"Spiteful Conjuration\"" }] }
@@ -1781,7 +1781,7 @@ exports.skills = [
     },
     {
         name: "Soul Stealer",
-        description: "Tendrils of solidified darkness writhe outwards, draining the lifeforce from foes and renewing the caste's own vigour.",
+        description: "Tendrils of solidified darkness writhe outwards, draining the lifeforce from foes and renewing the caster's own vigour.",
         icon: "spell-soul-stealer",
         ranks: [
             { effects: [
@@ -1931,7 +1931,7 @@ exports.skills = [
     },
     {
         name: "Doom & Darkness",
-        description: "Spirits of the departed assail the Wizar's foes, sapping their resolve and causing dread among their numbers.",
+        description: "Spirits of the departed assail the Wizard's foes, sapping their resolve and causing dread among their numbers.",
         icon: "spell-doom-darkness",
         ranks: [
             { effects: [
@@ -1991,7 +1991,7 @@ exports.skills = [
     },
     {
         name: "Aspect of the Dread Knight",
-        description: "An invisible aura of horror surrounds the Wizar's allies. Only the bravest foes now stand before them.",
+        description: "An invisible aura of horror surrounds the Wizard's allies. Only the bravest foes now stand before them.",
         icon: "spell-aspect-of-the-dread-knight",
         ranks: [
             { effects: [
@@ -2034,7 +2034,7 @@ exports.skills = [
     },
     {
         name: "Soulblight",
-        description: "Harnessing the sickly power of Shyish, the Wizard weakens the fo's will to survive the battle.",
+        description: "Harnessing the sickly power of Shyish, the Wizard weakens the foe's will to survive the battle.",
         icon: "spell-soulblight",
         ranks: [
             { effects: [
@@ -2077,7 +2077,7 @@ exports.skills = [
     },
     {
         name: "The Fate of Bjuna",
-        description: "Following the fate of the unsmiling warrior, Bjuna, the targets of the caste's ire will laugh themselves to death.",
+        description: "Following the fate of the unsmiling warrior, Bjuna, the targets of the caster's ire will laugh themselves to death.",
         icon: "spell-the-fate-of-bjuna",
         ranks: [
             { effects: [
@@ -2380,7 +2380,7 @@ exports.skills = [
     },
     {
         name: "Okkam's Mindrazor",
-        description: "The supernatural solution is often the best; weapons materialise before the caste's allies, allowing them to slice through flesh, soul, and consciousness.",
+        description: "The supernatural solution is often the best; weapons materialise before the caster's allies, allowing them to slice through flesh, soul, and consciousness.",
         icon: "spell-okkams-mindrazor",
         ranks: [
             { effects: [
@@ -2428,15 +2428,15 @@ exports.skills = [
         icon: "spell-wyssans-wildform",
         ranks: [
             { effects: [
-                { icon: "spell-wyssans-wildform", description: "Overcast spell: \"Wyssa's Wildform Upgraded\"" },
-                { icon: "spell-wyssans-wildform", description: "Cooldown: -30% to \"Wyssa's Wildform\"" }
+                { icon: "spell-wyssans-wildform", description: "Overcast spell: \"Wyssan's Wildform Upgraded\"" },
+                { icon: "spell-wyssans-wildform", description: "Cooldown: -30% to \"Wyssan's Wildform\"" }
             ] },
             { effects: [
-                { icon: "spell-wyssans-wildform", description: "Overcast spell: \"Wyssa's Wildform Upgraded\"" },
-                { icon: "spell-wyssans-wildform", description: "Cooldown: -50% to \"Wyssa's Wildform\"" },
-                { icon: "spell-wyssans-wildform", description: "Winds of Magic cost: -1 for \"Wyssa's Wildform\"" },
-                { icon: "spell-wyssans-wildform", description: "Winds of Magic cost: -1 for \"Wyssa's Wildform Upgraded\"" },
-                { icon: "spell-wyssans-wildform", description: "Miscast base chance: -15% for \"Wyssa's Wildform Upgraded\"" }
+                { icon: "spell-wyssans-wildform", description: "Overcast spell: \"Wyssan's Wildform Upgraded\"" },
+                { icon: "spell-wyssans-wildform", description: "Cooldown: -50% to \"Wyssan's Wildform\"" },
+                { icon: "spell-wyssans-wildform", description: "Winds of Magic cost: -1 for \"Wyssan's Wildform\"" },
+                { icon: "spell-wyssans-wildform", description: "Winds of Magic cost: -1 for \"Wyssan's Wildform Upgraded\"" },
+                { icon: "spell-wyssans-wildform", description: "Miscast base chance: -15% for \"Wyssan's Wildform Upgraded\"" }
             ] }
         ],
         spell: {
@@ -2532,7 +2532,7 @@ exports.skills = [
     },
     {
         name: "Flock of Doom",
-        description: "With a mighty bellow, the caster invokes Corvus the Crow Lord, summoning his servants to peck at the fo's eyes.",
+        description: "With a mighty bellow, the caster invokes Corvus the Crow Lord, summoning his servants to peck at the foe's eyes.",
         icon: "spell-flock-of-doom",
         ranks: [
             { effects: [
@@ -2583,16 +2583,16 @@ exports.skills = [
         icon: "spell-panns-impenetrable-pelt",
         ranks: [
             { effects: [
-                { icon: "spell-panns-impenetrable-pelt", description: "Spell: \"Pan's Impenetrable Pelt Upgraded\"" },
-                { icon: "spell-panns-impenetrable-pelt", description: "Overcast spell: \"Pan's Impenetrable Pelt Upgraded\"" },
-                { icon: "spell-panns-impenetrable-pelt", description: "Cooldown: -30% to \"Pan's Impenetrable Pelt\"" }
+                { icon: "spell-panns-impenetrable-pelt", description: "Spell: \"Pann's Impenetrable Pelt Upgraded\"" },
+                { icon: "spell-panns-impenetrable-pelt", description: "Overcast spell: \"Pann's Impenetrable Pelt Upgraded\"" },
+                { icon: "spell-panns-impenetrable-pelt", description: "Cooldown: -30% to \"Pann's Impenetrable Pelt\"" }
             ] },
             { effects: [
-                { icon: "spell-panns-impenetrable-pelt", description: "Overcast spell: \"Pan's Impenetrable Pelt Upgraded\"" },
-                { icon: "spell-panns-impenetrable-pelt", description: "Cooldown: -50% to \"Pan's Impenetrable Pelt\"" },
-                { icon: "spell-panns-impenetrable-pelt", description: "Winds of Magic cost: -1 for \"Pan's Impenetrable Pelt\"" },
-                { icon: "spell-panns-impenetrable-pelt", description: "Winds of Magic cost: -2 for \"Pan's Impenetrable Pelt Upgraded\"" },
-                { icon: "spell-panns-impenetrable-pelt", description: "Miscast base chance: -15% for \"Pan's Impenetrable Pelt Upgraded\"" }
+                { icon: "spell-panns-impenetrable-pelt", description: "Overcast spell: \"Pann's Impenetrable Pelt Upgraded\"" },
+                { icon: "spell-panns-impenetrable-pelt", description: "Cooldown: -50% to \"Pann's Impenetrable Pelt\"" },
+                { icon: "spell-panns-impenetrable-pelt", description: "Winds of Magic cost: -1 for \"Pann's Impenetrable Pelt\"" },
+                { icon: "spell-panns-impenetrable-pelt", description: "Winds of Magic cost: -2 for \"Pann's Impenetrable Pelt Upgraded\"" },
+                { icon: "spell-panns-impenetrable-pelt", description: "Miscast base chance: -15% for \"Pann's Impenetrable Pelt Upgraded\"" }
             ] }
         ],
         spell: {
@@ -2769,7 +2769,7 @@ exports.skills = [
     },
     {
         name: "Cascading Fire-Cloak",
-        description: "A blazing aura surrounds the Pyromance's chosen ally, shielding them with protective flame and augmenting their abilities.",
+        description: "A blazing aura surrounds the Pyromancer's chosen ally, shielding them with protective flame and augmenting their abilities.",
         icon: "spell-cascading-fire-cloak",
         ranks: [
             { effects: [
@@ -2975,7 +2975,7 @@ exports.skills = [
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
         icon: "battle-morale",
         ranks: [
-            { effects: [{ icon: "morale", description: "Characte's aura leadership effect: +5" }] }
+            { effects: [{ icon: "morale", description: "Character's aura leadership effect: +5" }] }
         ]
     },
     {
@@ -3288,7 +3288,7 @@ exports.skills = [
     },
     {
         name: "Whiplash!",
-        description: "The startling crack of the Beastmaste's hefty and ever-so-slightly serrated whip of Dragon-sinew suitably infuriates the beasts for battle.",
+        description: "The startling crack of the Beastmaster's hefty and ever-so-slightly serrated whip of Dragon-sinew suitably infuriates the beasts for battle.",
         icon: "whiplash",
         ranks: [
             { effects: [
@@ -3479,7 +3479,7 @@ exports.skills = [
     },
     {
         name: "Renowned & Feared",
-        description: "This Lor's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
+        description: "This Lord's many deeds - both on and off the battlefield - have brought them renown among their allies and made them feared by their enemies.",
         icon: "campaign-agent",
         ranks: [
             { effects: [

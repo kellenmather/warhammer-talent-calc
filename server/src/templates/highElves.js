@@ -957,6 +957,30 @@ exports.rows = {
                 }
             ]
         },
+        alarielle: {
+            row: 9,
+            content: [
+                {
+                    blockContent: ['Route Marcher']
+                },
+                {
+                    restrictionChoice: 'Route Marcher',
+                    blockContent: ['Radiant', 'Merchant Lord', 'Bonded Service', 'Wary']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Draftmaster']
+                },
+                {
+                    restrictionChoice: 'Draftmaster',
+                    blockContent: ['Lightning Strike', 'Quartermaster', 'Elven Healing', 'Elven Scholar']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['Renowned & Loved']
+                }
+            ]
+        },
         alith: {
             row: 9,
             content: [

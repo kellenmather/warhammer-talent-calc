@@ -2058,6 +2058,35 @@ exports.skills = [
         ]
     },
     {
+        name: "Radiant",
+        description: "She is the Radiant - Isha's chosen - her beauty radiating not merely from without but from within.",
+        icon: "campaign-public-order",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +2" },
+            ] },
+            { effects: [
+                { icon: "public-order", description: "Public order: +4" },
+            ] },
+            { effects: [
+                { icon: "public-order", description: "Public order: +6" },
+            ] }
+        ]
+    },
+    {
+        name: "Renowned & Loved",
+        description: "All Asur adore the Everqueen, but Alarielle is especially beloved for her willingness to join warriors in battle.",
+        icon: "campaign-agent",
+        ranks: [
+            { effects: [
+                { icon: "coin", description: "Upkeep: -8% for all units", ps: "Lord's army" },
+                { icon: "campaign-movement", description: "Campaign movement range: +5%" },
+                { icon: "experience", description: "Recruit rank: +1 for all units" },
+                { icon: "income", description: "Income from all buildings: 15%", ps: "local province" }
+            ] }     
+        ]
+    },
+    {
         name: "Searing Doom",
         description: "A spray of sizzling silver slivers rain from the sky to impale the caster's enemy.",
         icon: "spell-searing-doom",
