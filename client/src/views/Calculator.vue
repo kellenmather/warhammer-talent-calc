@@ -26,7 +26,7 @@
                 :skills="skillAllocation(row)"
                 :styleGuide="styleGuide" />
         </div>
-        <div class="bottom-bar"></div>
+        <div style="paddingBottom: 140px"></div>
     </div>
 </template>
 
@@ -213,10 +213,14 @@ export default {
 }
 .calc {
     background-color: #c9c5bc;
-    min-height: 100vh;
+    /* horizontal scroll messes with the height so we negate the height from the vh */
+    min-height: calc(100vh - 17px);
     background-repeat: no-repeat;
     background-position: center, left top 90px, right bottom;
+    background-attachment: fixed;
     font-size: .95em;
+    display: table;
+    /* overflow: inherit; */
 }
 .calc-row {
     height: 80px;
@@ -224,8 +228,6 @@ export default {
     padding: 0 40px;
 }
 .calc-border {
-    overflow-x: auto;
-    overflow-y: hidden;
     white-space: nowrap;
 }
 .top-bar {

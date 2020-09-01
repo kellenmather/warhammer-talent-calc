@@ -42,6 +42,9 @@ export default {
                 .then(({data}) => {
                     this.message = data[0];
                 })
+                .catch(() => {
+                    this.message = { icon: "public-order-negative", icon2: "public-order-negative", msg: "Server is temporarily down" }
+                })
         },
         getIcon(icon) {
             try {            

@@ -78,7 +78,7 @@ export default {
         },
         mouseMove(event) {
 
-            let horizontalScroll = document.querySelector("#calculator").scrollLeft;
+            let horizontalScroll = document.querySelector("#html").scrollLeft;
             let verticalScroll = document.querySelector("#html").scrollTop;
             let obj = this.$el;
 
