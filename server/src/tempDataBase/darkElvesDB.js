@@ -947,7 +947,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "morale", description: "Enemy leadership: -7" },
-                { icon: "attribute-causes-terror", description: "Attribute: Causes Terror", ps: "While transformed into Tz'arkan", color: "#F429FF" }
+                { icon: "attribute-terror", description: "Attribute: Causes Terror", ps: "While transformed into Tz'arkan", color: "#F429FF" }
             ] }
         ]
     },
@@ -1389,8 +1389,8 @@ exports.skills = [
         description: "The Hag Sorceress' allegiance to the Ruinous influence of the Chaos Gods grants her a degree of protection against magical attack.",
         icon: "character-ward-save",
         ranks: [
-            { effects: [{ icon: "resistance-magic", description: "Magic resistance: +10%" }] },
-            { effects: [{ icon: "resistance-physical", description: "Physical resistance: +15%" }] }
+            { effects: [{ icon: "resistance-magic", description: "Magic resistance: 10%" }] },
+            { effects: [{ icon: "resistance-physical", description: "Physical resistance: 15%" }] }
         ]
     },
     {
@@ -2027,7 +2027,7 @@ exports.skills = [
                     { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
                     { text: "Added effect area", uptick: "up-blue", color: "blue" },
                     { text: "+8", icon: "morale-character", color: "green" },
-                    { text: "Can", icon: "attribute-causes-terror", postText: "Cause Terror", uptick: "up-green", color: "green" }
+                    { text: "Can", icon: "attribute-terror", postText: "Cause Terror", uptick: "up-green", color: "green" }
                 ]
             }
         }
@@ -3197,7 +3197,7 @@ exports.skills = [
             { effects: [
                 { icon: "movement", description: "Speed: +10% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", rank: 7, ps: "Lord's army" },
                 { icon: "accuracy", description: "Range: +15% for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", rank: 7, ps: "Lord's army" },
-                { icon: "armor", description: "Armour: +10  for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", rank: 7, ps: "Lord's army" }
+                { icon: "armor", description: "Armour: +10 for Black Ark Corsairs, Shades, Dark Riders, Doomfire Warlocks and Scourgerunner Chariot units", rank: 7, ps: "Lord's army" }
             ] }
         ]
     },

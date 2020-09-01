@@ -1,6 +1,7 @@
 const db = require('../tempDataBase/db.js');
 const DarkElvesKeys = require('../templates/darkElvesKeys.js');
 const HighElvesKeys = require('../templates/highElvesKeys.js');
+const LizardmenKeys = require('../templates/lizardmenKeys.js');
 const mongoose = require('mongoose');
 const Skill = mongoose.model('Skill', new mongoose.Schema());
 
@@ -19,6 +20,9 @@ exports.getRows = (req, res) => {
         case 'highelves':
             console.log('dark elves shouldnt hit this')
             response.rows = HighElvesKeys.getLord(params.lord, params.type)
+            break;
+        case 'lizardmen':
+            response.rows = LizardmenKeys.getLord(params.lord, params.type)
             break;
         default:
             console.log('error');

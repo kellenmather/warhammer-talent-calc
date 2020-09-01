@@ -654,7 +654,7 @@ exports.skills = [
         description: "The Trickster God knows all manner of ploys and ruses that can be used to counter missile attacks.",
         icon: "character-ward-save",
         ranks: [
-            { effects: [{ icon: "resistance-missile", description: "Missile resistance: +10%" }] }
+            { effects: [{ icon: "resistance-missile", description: "Missile resistance: 10%" }] }
         ]
     },
     {
@@ -662,7 +662,7 @@ exports.skills = [
         description: "Knowledge can be used as a shield against magical attack.",
         icon: "character-ward-save",
         ranks: [
-            { effects: [{ icon: "resistance-magic", description: "Magic resistance: +10%" }] }
+            { effects: [{ icon: "resistance-magic", description: "Magic resistance: 10%" }] }
         ]
     },
     {
@@ -723,7 +723,7 @@ exports.skills = [
         description: "With percise applications of unmaking, any threat may be rendered null and void in turn.",
         icon: "character-ward-save",
         ranks: [
-            { effects: [{ icon: "resistance-ward-save", description: "Ward save: +10%" }] }
+            { effects: [{ icon: "resistance-ward-save", description: "Ward save: 10%" }] }
         ]
     },
     {
@@ -967,7 +967,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "morale", description: "Enemy leadership: -4", ps: "local region" },
-                { icon: "attribute-causes-fear", description: "Attribute: Causes Fear" }
+                { icon: "attribute-fear", description: "Attribute: Causes Fear" }
             ] }
         ]
     },
@@ -1374,7 +1374,7 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "vigour", description: "Vigour loss reduction: -50% for Dragon Prince and Dragon units", ps: "Lord's army" },
-                { icon: "resistance-physical", description: "Physical resistance: +10% for Dragon Prince and Dragon units", ps: "Lord's army" },
+                { icon: "resistance-physical", description: "Physical resistance: 10% for Dragon Prince and Dragon units", ps: "Lord's army" },
                 { icon: "defense", description: "Melee defense: +6 for Dragon Prince and Dragon units", ps: "Lord's army" }
             ] }
         ]
@@ -1630,7 +1630,7 @@ exports.skills = [
     {
         name: "Lion Guardian",
         description: "An expert hunter and a veteran White Lion of Chrace; his rite of passage was to hunt and slay Chrace's fiercest creatures.",
-        icon: "character-general-ability",
+        icon: "character",
         ranks: [
             { effects: [
                 { icon: "bonus-vs-large-character", description: "Bonus vs. Large: +12" },
@@ -1751,7 +1751,7 @@ exports.skills = [
                 effectRange: "Map-wide",
                 effects: [
                     { text: "+24", icon: "melee-character", postText: "Melee Attack", color: "green" },
-                    { icon: "attribute-causes-fear", postText: "Causes Fear", uptick: "up-green", color: "red" }
+                    { icon: "attribute-fear", postText: "Causes Fear", uptick: "up-green", color: "red" }
                 ]
             }
         }
@@ -3265,7 +3265,7 @@ exports.skills = [
                 effects: [
                     { text: "Extended cast range", uptick: "up-blue", color: "blue" },
                     { text: "Restores up to", icon: "hp", postText: "Hit Points", uptick: "up-green", color: "green" },
-                    { text: "Can", icon: "attribute-causes-fear", postText: "Cause Fear", uptick: "up-green", color: "green" }
+                    { text: "Can", icon: "attribute-fear", postText: "Cause Fear", uptick: "up-green", color: "green" }
                 ]
             }
         }

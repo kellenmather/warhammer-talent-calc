@@ -82,7 +82,7 @@ exports.getLord = (lord, type) => {
         // High Elves are the only race to have a mage lord that does not have Evasion and Arcane Conduit we work around that below
         let holder = JSON.parse(JSON.stringify(Schools.magic[type])) // prevent unintended manipulation of Schools
         holder.content[2].blockContent = ["Potential Energy"]; // replace Evasion with Potential Energy
-        holder.restrictionChoice = "Potential Energy"; // replace the dependency
+        holder.content[3].restrictionChoice = "Potential Energy"; // replace the dependency
         holder.content[4].blockContent = ["Greater Arcane Conduit"]; // replace Arcane Conduit with Greater Arcane Conduit
         data.push(holder)
     }

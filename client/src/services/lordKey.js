@@ -15,7 +15,7 @@ exports.lords = {
         { name: 'Red Crested Skink Chief', type: 'skink' },
         { name: 'Saurus Old-Blood', type: 'saurus' },
         { name: 'Kroxigor Ancient', type: 'kroxigor' },
-        { name: 'Slann Mage-Priest', type: 'slann', school: ['fire', 'life', 'light', 'highMagic', 'heavens'] }
+        { name: 'Slann Mage-Priest', type: 'slann', school: ['fire', 'life', 'light', 'highMagic'] }
     ],
     'skaven': [
         { name: 'Master Assassin', type: 'assassin' },
@@ -33,46 +33,46 @@ exports.lords = {
 },
 exports.legendary = {
     'darkelves': [
-        { name: 'Malekith', type: 'malekith', subType: 'legendary' }, 
-        { name: 'Morathi', type: 'morathi', subType: 'legendary' }, 
-        { name: 'Crone Hellebron', type: 'hellebron', subType: 'legendary' },
-        { name: 'Lokhir Fellheart', type: 'lokhir', subType: 'legendary' },
-        { name: 'Malus Darkblade', type: 'malus', subType: 'legendary' }
+        { name: 'Malekith', type: 'malekith' }, 
+        { name: 'Morathi', type: 'morathi' }, 
+        { name: 'Crone Hellebron', type: 'hellebron' },
+        { name: 'Lokhir Fellheart', type: 'lokhir' },
+        { name: 'Malus Darkblade', type: 'malus' }
     ],
     'highelves': [
-        { name: 'Tyrion', type: 'tyrion', subType: 'legendary' }, 
-        { name: 'Teclis', type: 'teclis', subType: 'legendary' },
-        { name: 'Alarielle the Radiant', type: 'alarielle', subType: 'legendary' },
-        { name: 'Alith Anar', type: 'alith', subType: 'legendary' },
-        { name: 'Eltharion', type: 'eltharion', subType: 'legendary' },
-        { name: 'Imrik', type: 'imrik', subType: 'legendary' },
-        { name: 'Alastar the White Lion', type: 'alastar', subType: 'legendary' }
+        { name: 'Tyrion', type: 'tyrion' }, 
+        { name: 'Teclis', type: 'teclis' },
+        { name: 'Alarielle the Radiant', type: 'alarielle' },
+        { name: 'Alith Anar', type: 'alith' },
+        { name: 'Eltharion', type: 'eltharion' },
+        { name: 'Imrik', type: 'imrik' },
+        { name: 'Alastar the White Lion', type: 'alastar' }
     ],
     'lizardmen': [
-        { name: 'Lord Mazdamundi', type: 'mazdamundi', subType: 'legendary' },
-        { name: 'Kroq-Gar', type: 'kroqgar', subType: 'legendary' },
-        { name: "Tehenhauin", type: 'tehenhauin', subType: 'legendary' },
-        { name: "Tiktaq'to", type: "tiktaqto", subType: 'legendary' },
-        { name: "Nakai the Wanderer", type: "nakai", subType: 'legendary' },
-        { name: "Gor-Rok", type: "gorrok", subType: 'legendary' }
+        { name: 'Lord Mazdamundi', type: 'mazdamundi' },
+        { name: 'Kroq-Gar', type: 'kroqgar' },
+        { name: "Tehenhauin", type: 'tehenhauin' },
+        { name: "Tiktaq'to", type: "tiktaqto" },
+        { name: "Nakai the Wanderer", type: "nakai" },
+        { name: "Gor-Rok", type: "gorrok" }
     ],
     'skaven': [
-        { name: 'Queek Headtaker', type: 'queek', subType: 'legendary' },
-        { name: 'Lord Skrolk', type: 'skrolk', subType: 'legendary' },
-        { name: 'Tretch Craventail', type: 'tretch', subType: 'legendary' },
-        { name: 'Ikit Claw', type: 'ikit', subType: 'legendary' },
-        { name: "Deathmaster Snikch", type: "snikch", subType: 'legendary' }
+        { name: 'Queek Headtaker', type: 'queek' },
+        { name: 'Lord Skrolk', type: 'skrolk' },
+        { name: 'Tretch Craventail', type: 'tretch' },
+        { name: 'Ikit Claw', type: 'ikit' },
+        { name: "Deathmaster Snikch", type: "snikch" }
     ],
     'tombkings': [
-        { name: 'Settra the Imperishable', type: 'settra', subType: 'legendary' },
-        { name: 'Arkhan the Black', type: 'arkhan', subType: 'legendary' },
-        { name: 'High Queen Khalida', type: 'khalida', subType: 'legendary' },
-        { name: 'Grand Hierophant Khatep', type: 'khatep', subType: 'legendary' }
+        { name: 'Settra the Imperishable', type: 'settra' },
+        { name: 'Arkhan the Black', type: 'arkhan' },
+        { name: 'High Queen Khalida', type: 'khalida' },
+        { name: 'Grand Hierophant Khatep', type: 'khatep' }
     ],
     'vampirecoast': [
-        { name: 'Luthor Harkon', type: 'harkon', subType: 'legendary' },
-        { name: 'Count Noctilus', type: 'noctilus', subType: 'legendary' },
-        { name: 'Aranessa Saltspite', type: 'aranessa', subType: 'legendary' }, 
-        { name: 'Cylostra Direfin', type: 'cylostra', subType: 'legendary' }
+        { name: 'Luthor Harkon', type: 'harkon' },
+        { name: 'Count Noctilus', type: 'noctilus' },
+        { name: 'Aranessa Saltspite', type: 'aranessa' }, 
+        { name: 'Cylostra Direfin', type: 'cylostra' }
     ]
 }
