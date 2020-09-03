@@ -97,7 +97,6 @@ export default {
             }
             // if the width of the popup would extend off the window with display to the left of cursor
             if (this.window.width < (mouseX - horizontalScroll) + 640) {
-                console.log(this.window.width)
                 this.left = (event.x - obj.offsetLeft + horizontalScroll - 620);
             }
         },
