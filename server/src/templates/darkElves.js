@@ -750,7 +750,7 @@ exports.rows = {
                     blockContent: ['rally']
                 },
                 {
-                    restrictionChoice: 'strengthThroughSpite',
+                    restrictionChoice: 'rally',
                     blockContent: ['cullTheUnworthy', 'ravagerRewards', 'favourTheFortunate', 'conferBloodlust']
                 },
                 {

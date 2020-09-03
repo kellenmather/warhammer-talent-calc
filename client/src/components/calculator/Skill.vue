@@ -45,6 +45,8 @@ export default {
     },
     props: {
         skill: Object,
+        // whole skills object being passed because of properName vs referenceName change address better solution later
+        skills: Object,
         block: String,
         color: String,
         skillState: Object,
@@ -175,7 +177,7 @@ export default {
                 this.disabledReason = 'This quest will automatically begin at rank ' + skillData.quest + '.';
             }
 
-            // 3: Skills that are choose only one of 2 or 3
+            // 3: Skills that are choose only 1 of 2 or more
             if (chooseOneRestriction && chooseOneRestriction.length > 0) {
                 // check skillState for the value of the restricted skills
 
@@ -183,7 +185,7 @@ export default {
                     if (this.skillState[chooseOneRestriction[i]].value > 0) {
                         // if any of the skills have a value greater than 0 this skill shall be disabled
                         this.disabled = true;
-                        this.disabledReason = 'Locked by skill: ' + chooseOneRestriction[i];
+                        this.disabledReason = 'Locked by skill: ' + this.skills[chooseOneRestriction[i]].name;
                         return;
                     }
                 }
@@ -192,7 +194,8 @@ export default {
             // 4: Skill has a prerequisite of another skill
             if (this.skillState[skillRestriction] && this.skillState[skillRestriction].value === 0 ) {
                 this.disabled = true;
-                this.disabledReason = "Available after unlocking: " + skillRestriction;
+
+                this.disabledReason = "Available after unlocking: " + this.skills[skillRestriction].name;
             }
 
             // 5: Skill has multiple prerequisites of the previous block
