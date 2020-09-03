@@ -17,6 +17,13 @@ let lizardmen = {
         { ...Lizardmen.rows.row6.saurus },
         { ...Lizardmen.rows.row9.saurus }
     ],
+    skink: [
+        { ...Lizardmen.rows.row1.skink },
+        { ...Lizardmen.rows.row2.skink },
+        { ...Lizardmen.rows.row3.saurus },
+        { ...Lizardmen.rows.row6.saurus },
+        { ...Lizardmen.rows.row9.saurus }
+    ],
     slann: [
         { ...Lizardmen.rows.row1.slann },
         { ...Lizardmen.rows.row2.slann },

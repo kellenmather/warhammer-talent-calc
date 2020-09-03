@@ -54,6 +54,35 @@ exports.rows = {
                 }
             ]
         },
+        skink: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['hornedOne']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['ripperdactyl']
+                },
+                {
+                    restrictionLevel: 21,
+                    blockContent: ['ancientStegadon']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['agilityOfTheLizard']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['protectionOfTheOldOnes']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['immortality']
+                }
+            ]
+        },
         slann: {
             row: 1,
             content: [
@@ -130,6 +159,23 @@ exports.rows = {
                 {
                     restrictionLevel: 12,
                     blockContent: ['dealerInDeath']
+                }
+            ]
+        },
+        skink: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    blockContent: ["warriorsCrest"]
+                },
+                {
+                    restrictionChoice: 'warriorsCrest',
+                    blockContent: ['junglePatrol', 'dextrousWarrior', 'templeBuilder']
+                },
+                {
+                    restrictionCount: 1,
+                    blockContent: ['beastTamerLizardmen', 'skinkLeader', 'spawnBrothers']
                 }
             ]
         },

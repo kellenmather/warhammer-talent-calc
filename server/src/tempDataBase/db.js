@@ -9,6 +9,33 @@ exports.skills = [
         ]
     },
     {
+        ref: "hornedOne",
+        name: "Horned One",
+        description: "Very rare and virtually extinct, even in Lustria, the Horned One's preternatural swiftness puts it way ahead of other Cold Ones.",
+        icon: "horned-one",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Horned One" }] }
+        ]
+    },
+    {
+        ref: "ripperdactyl",
+        name: "Ripperdactyl",
+        description: "Unique and terrifying flying reptiles that are just as much a danger to their riders as the enemy!",
+        icon: "ripperdactyl",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Ripperdactyl" }] }
+        ]
+    },
+    {
+        ref: "ancientStegadon",
+        name: "Ancient Stegadon",
+        description: "Amongst the largest and most ferocious of their race, the eldest Stegadons have thicker hide and larger horns than others of their kind.",
+        icon: "ancient-stegadon",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Ancient Stegadon" }] }
+        ]
+    },
+    {
         ref: "carnosaur",
         name: "Carnosaur",
         description: "The ultimate jungle hunters, these large, apex predators have terrorised the primordial jungles since the dawn of existence.",
@@ -254,12 +281,113 @@ exports.skills = [
         ]
     },
     {
+        ref: "warriorsCrest",
+        name: "Warriors Crest",
+        description: "It's not just for decoration, you know!",
+        icon: "ability-warriors-crest",
+        ranks: [
+            { effects: [{ icon: "ability-warriors-crest", description: "Ability: \"Warrior's Crest\"" }] }
+        ],
+        spell: {
+            name: "Warrior's Crest",
+            description: "Lord ability",
+            rarity: "uncommon",
+            cooldown: "90",
+            attributes: {
+                type: "Augment",
+                duration: "30 seconds",
+                target: "Self",
+                effects: [
+                    { text: "+40", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+24", icon: "defense-character", postText: "Melee Defense", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "junglePatrol",
+        name: "Jungle Patrol",
+        description: "The Lizardmen's habitat and eco-system shall be guarded against attack from without... and below!",
+        icon: "character-movement",
+        ranks: [
+            { effects: [
+                { icon: "military", description: "Casualties captured post-battle: +10%" },
+                { icon: "campaign-movement", description: "Campaign movement range: +5%" },
+                { icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "dextrousWarrior",
+        name: "Dextrous Warrior",
+        description: "So deft and agile is this one, they've almost reached Saurus levels of battle prowess",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +10" },
+                { icon: "movement", description: "Speed: +10% for Skink, Chameleon Skink and Red Crested Skink units", ps: "Lord's army" },
+                { icon: "resistance-missile", description: "Missile resistance: 10% for Skink, Chameleon Skink and Red Crested Skink units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "templeBuilder",
+        name: "Temple Builder",
+        description: "Lustria's temple-cities contain many fine structures dedicated to the Old Ones that stand in service of the Great Plan.",
+        icon: "character-public-order",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +4", ps: "local province" },
+                { icon: "treasury", description: "Construction cost: -15% for all buildings", ps: "local province" },
+                { icon: "religion", description: "Untainted: +2", ps: "local province" }
+            ] }          
+        ]
+    },
+    {
+        ref: "beastTamerLizardmen",
+        name: "Beast Tamer",
+        description: "If you know the way, almost any beast can be tamed and set to one's will.",
+        icon: "beast-tamer-lizardmen",
+        ranks: [
+            { effects: [
+                { icon: "coin", description: "Upkeep: -20% for Cold One and Terradon Riders units", ps: "Lord's army" },
+                { icon: "experience", description: "Recruit rank: +1 for Cold One and Terradon Riders units", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +15 for Cold One and Terradon Riders units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "skinkLeader",
+        name: "Skink Leader",
+        description: "With the correct leadership, the Lizardmen's traditional workers and artisans can be trained to fight effectively.",
+        icon: "skink-leader",
+        ranks: [
+            { effects: [
+                { icon: "morale", description: "Leadership: +8 for Skink, Chameleon Skink and Red Crested Skink units", ps: "Lord's army" },
+                { icon: "ranged-damage", description: "Missile strength: +10% for Skink and Chameleon Skink units", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +10 for Skink, Chameleon Skink and Red Crested Skink units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "spawnBrothers",
+        name: "Spawn-Brothers",
+        description: "Skinks spawned from the same pool are connected, strengthening and supporting each other in battle by their presence.",
+        icon: "spawn-brothers",
+        ranks: [
+            { effects: [
+                { icon: "melee", description: "Melee attack: +10 for Lords and embedded Heroes", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +10 Lords and Heroes", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
         ref: "obdurateTilDeath",
         name: "Obdurate 'Til Death",
         description: "Dogged determination alone can keep one alive for centuries.",
         icon: "endurance-aura",
         ranks: [
-            { effects: [{ icon: "ability-deadly-onslaught", description: "Ability: \"Endurance Aura\"" }] }
+            { effects: [{ icon: "endurance-aura", description: "Ability: \"Endurance Aura\"" }] }
         ],
         spell: {
             name: "Aura of Endurance",
