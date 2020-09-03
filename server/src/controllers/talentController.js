@@ -18,7 +18,6 @@ exports.getRows = (req, res) => {
             response.rows = DarkElvesKeys.getLord(params.lord, params.type)
             break;
         case 'highelves':
-            console.log('dark elves shouldnt hit this')
             response.rows = HighElvesKeys.getLord(params.lord, params.type)
             break;
         case 'lizardmen':
@@ -28,7 +27,7 @@ exports.getRows = (req, res) => {
             console.log('error');
     }
 
-    // push every skill name to skillArray to prep mongoDB query
+    // push every skill ref to skillArray to prep mongoDB query
     let skillArray = [];
     for (let i = 0; i < response.rows.length; i++) {
         for (let j = 0; j < response.rows[i].content.length; j++) {
@@ -38,7 +37,7 @@ exports.getRows = (req, res) => {
 
     // get all skills from mongoDB that are listed in skillArray
     if (params.race === 'darkelves' || params.race === 'highelves') {
-        Skill.find({ name: { $in: skillArray } }, function(err, test) {
+        Skill.find({ ref: { $in: skillArray } }, function(err, test) {
             if (test) {
                 response.skills = test
                 res.send(response);

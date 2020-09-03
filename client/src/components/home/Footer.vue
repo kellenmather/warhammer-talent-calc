@@ -25,7 +25,7 @@ export default {
     name: 'WarhammerCalculator',
     data() {
         return {
-            message: null
+            message: { msg: '' }
         }
     },
     methods: {

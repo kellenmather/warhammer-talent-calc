@@ -65,22 +65,22 @@ export default {
     },
     methods: {
         skillAllocation(row) {
-            // grab all skill names from each row
-            let skillNames = [];
+            // grab all skill references from each row
+            let skillRefs = [];
             let skillsObject = {};
             if (row) {
-                // push each skill name to skillList array per row
+                // push each skill reference to skillList array per row
                 let blockContent
                 for (let i = 0; i < row.content.length; i++) {
                     blockContent = row.content[i].blockContent;
                     for (let j = 0; j < blockContent.length; j++) {
-                        skillNames.push(blockContent[j])
+                        skillRefs.push(blockContent[j])
                     }
                 }
                 // poplate list of needed skills per row
-                for (let i = 0; i < skillNames.length; i++) {
-                    let skill = this.skills.find((skill) => skill.name === skillNames[i]);
-                    skillsObject[skillNames[i]] = skill
+                for (let i = 0; i < skillRefs.length; i++) {
+                    let skill = this.skills.find((skill) => skill.ref === skillRefs[i]);
+                    skillsObject[skillRefs[i]] = skill
                 }
             }
             // return object
@@ -168,8 +168,9 @@ export default {
             } 
         },
         getProperName() {
-            let classification = this.type === 'legendary' ? 'legendary' : 'lords';
-            let races = LordKey[classification][this.race];
+            // let classification = this.type === 'legendary' ? 'legendary' : 'lords';
+            // combine legendary and lord array into one
+            let races = LordKey.legendary[this.race].concat(LordKey.lords[this.race]);
             for (let i = 0; i < races.length; i++) {
                 if (this.lord === races[i].type && this.type === races[i].subType) {
                     return races[i].name
@@ -291,6 +292,5 @@ export default {
     text-align: center;
     vertical-align: middle;
     width: 45px;
-
 }
 </style>

@@ -5,31 +5,31 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 7,
-                    blockContent: ['Cold One']
+                    blockContent: ['coldOneLizardmen']
                 },
                 {
                     restrictionLevel: 18,
-                    blockContent: ['Carnosaur']
+                    blockContent: ['carnosaur']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Obedience Brings Victory!']
+                    blockContent: ['obedienceBringsVictory']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Agility of the Lizard']
+                    blockContent: ['agilityOfTheLizard']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Protection of the Old Ones']
+                    blockContent: ['protectionOfTheOldOnes']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Honoured Elder']
+                    blockContent: ['honouredElder']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Immortality']
+                    blockContent: ['immortality']
                 }
             ]
         },
@@ -38,19 +38,19 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Obedience Brings Victory!']
+                    blockContent: ['obedienceBringsVictory']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Reptilian Resilience']
+                    blockContent: ['reptilianResilience']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Protection of the Old Ones']
+                    blockContent: ['protectionOfTheOldOnes']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Immortality']
+                    blockContent: ['immortality']
                 }
             ]
         },
@@ -59,15 +59,15 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Telekinesis']
+                    blockContent: ['telekinesis']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Protection of the Old Ones']
+                    blockContent: ['protectionOfTheOldOnes']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Immortality']
+                    blockContent: ['immortality']
                 }
             ]
         }
@@ -78,33 +78,33 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Blessing of Quetzl', 'Blessing of Tepok', 'Blessing of Huanchi', 'Blessing of Tlazcotl', 'Blessing of Itzl'],
-                    blockContent: ['Blessing of Chotec']
+                    restrictionLimited: ['blessingOfQuetzl', 'blessingOfTepok', 'blessingOfHuanchi', 'blessingOfTlazcotl', 'blessingOfItzl'],
+                    blockContent: ['blessingOfChotec']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Blessing of Chotec', 'Blessing of Tepok', 'Blessing of Huanchi', 'Blessing of Tlazcotl', 'Blessing of Itzl'],
-                    blockContent: ['Blessing of Quetzl']
+                    restrictionLimited: ['blessingOfChotec', 'blessingOfTepok', 'blessingOfHuanchi', 'blessingOfTlazcotl', 'blessingOfItzl'],
+                    blockContent: ['blessingOfQuetzl']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Blessing of Quetzl', 'Blessing of Chotec', 'Blessing of Huanchi', 'Blessing of Tlazcotl', 'Blessing of Itzl'],
-                    blockContent: ['Blessing of Tepok']
+                    restrictionLimited: ['blessingOfQuetzl', 'blessingOfChotec', 'blessingOfHuanchi', 'blessingOfTlazcotl', 'blessingOfItzl'],
+                    blockContent: ['blessingOfTepok']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Blessing of Quetzl', 'Blessing of Tepok', 'Blessing of Chotec', 'Blessing of Tlazcotl', 'Blessing of Itzl'],
-                    blockContent: ['Blessing of Huanchi']
+                    restrictionLimited: ['blessingOfQuetzl', 'blessingOfTepok', 'blessingOfChotec', 'blessingOfTlazcotl', 'blessingOfItzl'],
+                    blockContent: ['blessingOfHuanchi']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Blessing of Quetzl', 'Blessing of Tepok', 'Blessing of Huanchi', 'Blessing of Chotec', 'Blessing of Itzl'],
-                    blockContent: ['Blessing of Tlazcotl']
+                    restrictionLimited: ['blessingOfQuetzl', 'blessingOfTepok', 'blessingOfHuanchi', 'blessingOfChotec', 'blessingOfItzl'],
+                    blockContent: ['blessingOfTlazcotl']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Blessing of Quetzl', 'Blessing of Tepok', 'Blessing of Huanchi', 'Blessing of Tlazcotl', 'Blessing of Chotec'],
-                    blockContent: ['Blessing of Itzl']
+                    restrictionLimited: ['blessingOfQuetzl', 'blessingOfTepok', 'blessingOfHuanchi', 'blessingOfTlazcotl', 'blessingOfChotec'],
+                    blockContent: ['blessingOfItzl']
                 }
             ]
         },
@@ -113,23 +113,23 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 10,
-                    blockContent: ["Obdurate 'Til Death"]
+                    blockContent: ["obdurateTilDeath"]
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Reptilian Instincts']
+                    blockContent: ['reptilianInstincts']
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Intimidating Bulk']
+                    blockContent: ['intimidatingBulk']
                 },
                 {
                     restrictionLevel: 12,
-                    blockContent: ['Meat Shield']
+                    blockContent: ['meatShield']
                 },
                 {
                     restrictionLevel: 12,
-                    blockContent: ['Dealer in Death']
+                    blockContent: ['dealerInDeath']
                 }
             ]
         },
@@ -137,20 +137,20 @@ exports.rows = {
             row: 2,
             content: [
                 {
-                    restrictionLevel: 10,
-                    blockContent: ['Reserves of Eldritch Energy']
+                    restrictionLevel: 4,
+                    blockContent: ['reservesOfEldritchEnergy']
                 },
                 {
-                    restrictionChoice: 'Reserves of Eldritch Energy',
-                    blockContent: ['Becalming Cogitation']
+                    restrictionLevel: 8,
+                    blockContent: ['becalmingCogitation']
                 },
                 {
-                    restrictionChoice: 'Becalming Cogitation',
-                    blockContent: ['Arcane Convergence']
+                    restrictionLevel: 12,
+                    blockContent: ['arcaneConvergence']
                 },
                 {
-                    restrictionChoice: 'Arcane Convergence',
-                    blockContent: ['Focus of Mysteries']
+                    restrictionLevel: 16,
+                    blockContent: ['focusOfMysteries']
                 }
             ]
         }
@@ -160,23 +160,23 @@ exports.rows = {
             row: 3,
             content: [
                 {
-                    blockContent: ['Predatory Fighter'],
+                    blockContent: ['predatoryFighter'],
                 },
                 {
-                    restrictionChoice: 'Predatory Fighter',
-                    blockContent: ['Enforcer of Order', 'Thick-Skinned', 'Blade Master', 'Indomitable'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Foe-Seeker']
-                },
-                {
-                    restrictionChoice: 'Foe-Seeker',
-                    blockContent: ['Wound-Maker', 'Scarred Veteran', 'Blade Shield', 'Expeditious Endeavour']
+                    restrictionChoice: 'predatoryFighter',
+                    blockContent: ['enforcerOfOrder', 'thickSkinned', 'bladeMaster', 'indomitable'],
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Deadly Onslaught']
+                    blockContent: ['foeSeeker']
+                },
+                {
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deadlyOnslaught']
                 }
             ]
         },
@@ -184,23 +184,23 @@ exports.rows = {
             row: 3,
             content: [
                 {
-                    blockContent: ['Predatory Fighter'],
+                    blockContent: ['predatoryFighter'],
                 },
                 {
-                    restrictionChoice: 'Predatory Fighter',
-                    blockContent: ['Enforcer of Order', 'Thick-Skinned', 'Blade Master', 'Indomitable'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Miasma of Despair']
-                },
-                {
-                    restrictionChoice: 'Miasma of Despair',
-                    blockContent: ['Wound-Maker', 'Scarred Veteran', 'Blade Shield', 'Expeditious Endeavour']
+                    restrictionChoice: 'predatoryFighter',
+                    blockContent: ['enforcerOfOrder', 'thickSkinned', 'bladeMaster', 'indomitable'],
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Aura of Inertia']
+                    blockContent: ['miasmaOfDespair']
+                },
+                {
+                    restrictionChoice: 'miasmaOfDespair',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['auraOfInertia']
                 }
             ]
         }
@@ -210,20 +210,20 @@ exports.rows = {
             row: 4,
             content: [
                 {
-                    restrictionLevel: 10,
-                    blockContent: ['Unfathomable Presence']
+                    restrictionLevel: 4,
+                    blockContent: ['unfathomablePresence']
                 },
                 {
-                    restrictionChoice: 'Unfathomable Presence',
-                    blockContent: ['Soul of Stone']
+                    restrictionLevel: 8,
+                    blockContent: ['soulOfStone']
                 },
                 {
-                    restrictionChoice: 'Soul of Stone',
-                    blockContent: ['The Harrowing Scrutiny']
+                    restrictionLevel: 12,
+                    blockContent: ['theHarrowingScrutiny']
                 },
                 {
-                    restrictionChoice: 'The Harrowing Scrutiny',
-                    blockContent: ['Transcendent Healing']
+                    restrictionLevel: 16,
+                    blockContent: ['transcendentHealing']
                 }
             ]
         }
@@ -233,23 +233,23 @@ exports.rows = {
             row: 6,
             content: [
                 {
-                    blockContent: ['Inspiring Presence']
+                    blockContent: ['inspiringPresence']
                 },
                 {
-                    restrictionChoice: 'Inspiring Presence',
-                    blockContent: ['Proud Warrior', 'Skirmisher', 'Swift Rider', 'Sacred Guardian', 'Hunt Leader', 'Beast Driver']
+                    restrictionChoice: 'inspiringPresence',
+                    blockContent: ['proudWarrior', 'skirmisher', 'swiftRider', 'sacredGuardian', 'huntLeader', 'beastDriver']
                 },
                 {
                     restrictionCount: 6,
-                    blockContent: ['Rally!']
+                    blockContent: ['rally']
                 },
                 {
-                    restrictionChoice: 'Rally!',
-                    blockContent: ['Jungle Dominion', 'Spawn-Kin', 'Soul Bound', 'Epicentrist']
+                    restrictionChoice: 'rally',
+                    blockContent: ['jungleDominion', 'spawnKin', 'soulBound', 'epicentrist']
                 },
                 {
                     restrictionCount: 1,
-                    blockContent: ['Stand Your Ground!']
+                    blockContent: ['standYourGround']
                 }
             ]
         },
@@ -257,23 +257,23 @@ exports.rows = {
             row: 6,
             content: [
                 {
-                    blockContent: ['Inspiring Presence']
+                    blockContent: ['inspiringPresence']
                 },
                 {
-                    restrictionChoice: 'Inspiring Presence',
-                    blockContent: ['Proud Warrior', 'Skirmisher', 'Swift Rider', 'Sacred Guardian', 'Hunt Leader', 'Beast Driver']
+                    restrictionChoice: 'inspiringPresence',
+                    blockContent: ['proudWarrior', 'skirmisher', 'swiftRider', 'sacredGuardian', 'huntLeader', 'beastDriver']
                 },
                 {
                     restrictionCount: 6,
-                    blockContent: ['Rally!']
+                    blockContent: ['rally']
                 },
                 {
-                    restrictionChoice: 'Rally!',
-                    blockContent: ['Jungle Dominion', 'Spawn-Kin', 'Soul Bound', 'Epicentrist']
+                    restrictionChoice: 'rally',
+                    blockContent: ['jungleDominion', 'spawnKin', 'soulBound', 'epicentrist']
                 },
                 {
                     restrictionCount: 1,
-                    blockContent: ['Slann Forcefield']
+                    blockContent: ['slannForcefield']
                 }
             ]
         }
@@ -283,23 +283,23 @@ exports.rows = {
             row: 9,
             content: [
                 {
-                    blockContent: ['Route Marcher']
+                    blockContent: ['routeMarcher']
                 },
                 {
-                    restrictionChoice: 'Route Marcher',
-                    blockContent: ['Iron Disciplinarian', 'Fervent', 'Bonded Service', 'Ancient Cunning']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Draftmaster']
-                },
-                {
-                    restrictionChoice: 'Draftmaster',
-                    blockContent: ['Lightning Strike', 'Geomantic Sustenance', 'Wary', 'Gifts of the Jungle']
+                    restrictionChoice: 'routeMarcher',
+                    blockContent: ['rronDisciplinarian', 'fervent', 'bondedService', 'ancientCunning']
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Renowned & Feared']
+                    blockContent: ['draftmaster']
+                },
+                {
+                    restrictionChoice: 'draftmaster',
+                    blockContent: ['lightningStrike', 'geomanticSustenance', 'wary', 'giftsOfTheJungle']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['renownedFeared']
                 }
             ]
         }

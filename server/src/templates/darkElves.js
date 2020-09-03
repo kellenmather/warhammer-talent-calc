@@ -5,39 +5,39 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Dark Steed']
+                    blockContent: ['darkSteed']
                 },
                 {
                     restrictionLevel: 7,
-                    blockContent: ['Cold One']
+                    blockContent: ['coldOne']
                 },
                 {
                     restrictionLevel: 14,
-                    blockContent: ['Dark Pegasus']
+                    blockContent: ['darkPegasus']
                 },
                 {
                     restrictionLevel: 18,
-                    blockContent: ['Black Dragon']
+                    blockContent: ['blackDragon']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Sadistic']
+                    blockContent: ['sadistic']
                 },
                 {
                     restrictionLevel: 6,
-                    blockContent: ['Eternal Hatred']
+                    blockContent: ['eternalHatred']
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Ward of Hekarti']
+                    blockContent: ['wardOfHekarti']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Immortality']
+                    blockContent: ['immortality']
                 }
             ]
         },
@@ -46,23 +46,23 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Sadistic']
+                    blockContent: ['sadistic']
                 },
                 {
                     restrictionLevel: 6,
-                    blockContent: ['Eternal Hatred']
+                    blockContent: ['eternalHatred']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Hekarti']
+                    blockContent: ['wardOfHekarti']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Immortality']
+                    blockContent: ['immortality']
                 }
             ]
         },
@@ -71,39 +71,39 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 7,
-                    blockContent: ['Dark Steed']
+                    blockContent: ['darkSteed']
                 },
                 {
                     restrictionLevel: 12,
-                    blockContent: ['Cold One']
+                    blockContent: ['coldOne']
                 },
                 {
                     restrictionLevel: 16,
-                    blockContent: ['Dark Pegasus']
+                    blockContent: ['darkPegasus']
                 },
                 {
                     restrictionLevel: 18,
-                    blockContent: ['Manticore']
+                    blockContent: ['manticore']
                 },
                 {
                     restrictionLevel: 22,
-                    blockContent: ['Black Dragon']
+                    blockContent: ['blackDragon']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ["Hekarti's Blessing"]
+                    blockContent: ["hekartisBlessing"]
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Hekarti']
+                    blockContent: ['wardOfHekarti']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Immortality']
+                    blockContent: ['immortality']
                 }
             ]
         },
@@ -112,35 +112,35 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 9,
-                    blockContent: ['Scourgerunner Chariot']
+                    blockContent: ['scourgerunnerChariot']
                 },
                 {
                     restrictionLevel: 14,
-                    blockContent: ['Manticore']
+                    blockContent: ['manticore']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Sadistic']
+                    blockContent: ['sadistic']
                 },
                 {
                     restrictionLevel: 6,
-                    blockContent: ['Eternal Hatred']
+                    blockContent: ['eternalHatred']
                 },
                 {
                     restrictionLevel: 13,
-                    blockContent: ['Beast Tamer']
+                    blockContent: ['beastTamer']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Hekarti']
+                    blockContent: ['wardOfHekarti']
                 },
                 {
                     restrictionLevel: 20,
-                    blockContent: ['Immortality']
+                    blockContent: ['immortality']
                 }
             ]
         },
@@ -149,51 +149,51 @@ exports.rows = {
             content: [
                 {
                     quest: 2,
-                    blockContent: ['Armor of Midnight']
+                    blockContent: ['armorOfMidnight']
                 },
                 {
                     quest: 6,
-                    blockContent: ['Circlet of Iron']
+                    blockContent: ['circletOfIron']
                 },
                 {
                     quest: 10,
-                    blockContent: ['Destroyer']
+                    blockContent: ['destroyer']
                 },
                 {
                     quest: 14,
-                    blockContent: ['Supreme Spellshield']
+                    blockContent: ['supremeSpellshield']
                 },
                 {
                     restrictionLevel: 7,
-                    blockContent: ['Cold One']
+                    blockContent: ['coldOne']
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Cold One Chariot']
+                    blockContent: ['coldOneChariot']
                 },
                 {
                     restrictionLevel: 18,
-                    blockContent: ['Seraphon']
+                    blockContent: ['seraphon']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Sadistic']
+                    blockContent: ['sadistic']
                 },
                 {
                     restrictionLevel: 6,
-                    blockContent: ['Eternal Hatred']
+                    blockContent: ['eternalHatred']
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Absolute Power']
+                    blockContent: ['absolutePower']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Hekarti']
+                    blockContent: ['wardOfHekarti']
                 }
             ]
         },
@@ -202,31 +202,31 @@ exports.rows = {
             content: [
                 {
                     quest: 5,
-                    blockContent: ['The Warpsword of Khaine']
+                    blockContent: ['theWarpswordOfKhaine']
                 },
                 {
                     restrictionLevel: 7,
-                    blockContent: ['Spite']
+                    blockContent: ['spite']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Sadistic']
+                    blockContent: ['sadistic']
                 },
                 {
                     restrictionLevel: 6,
-                    blockContent: ['Eternal Hatred']
+                    blockContent: ['eternalHatred']
                 },
                 {
                     restrictionLevel: 13,
-                    blockContent: ['Beast Tamer']
+                    blockContent: ['beastTamer']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Hekarti']
+                    blockContent: ['wardOfHekarti']
                 }
             ]
         },
@@ -235,31 +235,31 @@ exports.rows = {
             content: [
                 {
                     quest: 2,
-                    blockContent: ['Red Blades']
+                    blockContent: ['redBlades']
                 },
                 {
                     quest: 11,
-                    blockContent: ['Helm of the Kraken']
+                    blockContent: ['helmOfTheKraken']
                 },
                 {
                     restrictionLevel: 18,
-                    blockContent: ['Maelstrom']
+                    blockContent: ['maelstrom']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Sadistic']
+                    blockContent: ['sadistic']
                 },
                 {
                     restrictionLevel: 6,
-                    blockContent: ['Eternal Hatred']
+                    blockContent: ['eternalHatred']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Hekarti']
+                    blockContent: ['wardOfHekarti']
                 }
             ]
         },
@@ -268,35 +268,35 @@ exports.rows = {
             content: [
                 {
                     quest: 2,
-                    blockContent: ['Amber Amulet']
+                    blockContent: ['amberAmulet']
                 },
                 {
                     quest: 4,
-                    blockContent: ['Wand of the Kharaidon']
+                    blockContent: ['wandOfTheKharaidon']
                 },
                 {
                     quest: 6,
-                    blockContent: ['Heartrender & the Darksword']
+                    blockContent: ['heartrenderTheDarksword']
                 },
                 {
                     restrictionLevel: 12,
-                    blockContent: ['Sulephet']
+                    blockContent: ['sulephet']
                 },
                 {
                     restrictionLevel: 6,
-                    blockContent: ["Hekarti's Blessing"]
+                    blockContent: ["hekartisBlessing"]
                 },
                 {
-                    restrictionChoice: "Hekarti's Blessing",
-                    blockContent: ['Earthing', 'Magical Reserves', 'The First Sorceress']
+                    restrictionChoice: "hekartisBlessing",
+                    blockContent: ['earthing', 'magicalReserves', 'theFirstSorceress']
                 },
                 {
                     restrictionCount: 2,
-                    blockContent: ['Blessed by Evil']
+                    blockContent: ['blessedByEvil']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Ward of Khaine']
+                    blockContent: ['wardOfKhaine']
                 }
             ]
         },
@@ -305,35 +305,35 @@ exports.rows = {
             content: [
                 {
                     quest: 2,
-                    blockContent: ['Amulet of Dark Fire']
+                    blockContent: ['amuletOfDarkFire']
                 },
                 {
                     quest: 8,
-                    blockContent: ['Deathsword and the Cursed Blade']
+                    blockContent: ['deathswordAndTheCursedBlade']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Dark Steed']
+                    blockContent: ['darkSteed']
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Cauldron of Blood']
+                    blockContent: ['cauldronOfBlood']
                 },
                 {
                     restrictionLevel: 14,
-                    blockContent: ['Manticore']
+                    blockContent: ['manticore']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ["Greater Ward of Khaine"]
+                    blockContent: ["greaterWardOfKhaine"]
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Witchbrew']
+                    blockContent: ['witchbrew']
                 },
                 {
-                    restrictionChoice: "Witchbrew",
-                    blockContent: ['The Second Cauldron', 'Secrets of the Cauldron']
+                    restrictionChoice: "witchbrew",
+                    blockContent: ['theSecondCauldron', 'secretsOfTheCauldron']
                 }
             ]
         }
@@ -344,18 +344,18 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Revered Name of Power', 'Aristocratic Name of Power'],
-                    blockContent: ['Martial Name of Power']
+                    restrictionLimited: ['reveredNameOfPower', 'reveredNameOfPower'],
+                    blockContent: ['martialNameOfPower']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Martial Name of Power', 'Aristocratic Name of Power'],
-                    blockContent: ['Revered Name of Power']
+                    restrictionLimited: ['martialNameOfPower', 'reveredNameOfPower'],
+                    blockContent: ['reveredNameOfPower']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Martial Name of Power', 'Revered Name of Power'],
-                    blockContent: ['Aristocratic Name of Power']
+                    restrictionLimited: ['martialNameOfPower', 'reveredNameOfPower'],
+                    blockContent: ['reveredNameOfPower']
                 }
             ]
         },
@@ -364,25 +364,25 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Revered Name of Power'],
-                    blockContent: ['Martial Name of Power']
+                    restrictionLimited: ['reveredNameOfPower'],
+                    blockContent: ['martialNameOfPower']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['Martial Name of Power'],
-                    blockContent: ['Revered Name of Power']
+                    restrictionLimited: ['martialNameOfPower'],
+                    blockContent: ['reveredNameOfPower']
                 },
                 {
                     restrictionLevel: 4,
-                    blockContent: ['Unassailable']
+                    blockContent: ['unassailable']
                 },
                 {
                     restrictionLevel: 7,
-                    blockContent: ['Unstoppable']
+                    blockContent: ['unstoppable']
                 },
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Unknowable']
+                    blockContent: ['unknowable']
                 }
             ]
         },
@@ -391,21 +391,21 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 12,
-                    restrictionLimited: ['Warleader'],
-                    blockContent: ['Tyrant']
+                    restrictionLimited: ['warleader'],
+                    blockContent: ['tyrant']
                 },
                 {
-                    restrictionChoice: 'Tyrant',
-                    blockContent: ['Motivation Through Fear', 'Seditious or Sanguine', 'Efforts Redoubled']
+                    restrictionChoice: 'tyrant',
+                    blockContent: ['motivationThroughFear', 'seditiousOrSanguine', 'effortsRedoubled']
                 },
                 {
                     restrictionLevel: 12,
-                    restrictionLimited: ['Tyrant'],
-                    blockContent: ['Warleader']
+                    restrictionLimited: ['tyrant'],
+                    blockContent: ['warleader']
                 },
                 {
-                    restrictionChoice: 'Warleader',
-                    blockContent: ['Scoured & Stripped', 'Triumph of Evil', 'Reach Equal Grasp']
+                    restrictionChoice: 'warleader',
+                    blockContent: ['scouredStripped', 'triumphOfEvil', 'reachEqualGrasp']
                 }
             ]
         },
@@ -414,31 +414,31 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 8,
-                    blockContent: ['The Waking']
+                    blockContent: ['theWaking']
                 },
                 {
-                    restrictionChoice: 'The Waking',
-                    blockContent: ['Pain Tolerance', 'Lying in Wait']
+                    restrictionChoice: 'theWaking',
+                    blockContent: ['painTolerance', 'lyingInWait']
                 },
                 {
                     restrictionLevel: 8,
-                    blockContent: ['The Slumber']
+                    blockContent: ['theSlumber']
                 },
                 {
-                    restrictionChoice: 'The Slumber',
-                    blockContent: ['Avatar of Terror', 'Supernatural Tissue']
+                    restrictionChoice: 'theSlumber',
+                    blockContent: ['avatarOfTerror', 'supernaturalTissue']
                 },
                 {
                     restrictionLevel: 9,
-                    blockContent: ['Cold Heart']
+                    blockContent: ['coldHeart']
                 },
                 {
                     restrictionLevel: 11,
-                    blockContent: ['Drachau Tyrant']
+                    blockContent: ['drachauTyrant']
                 },
                 {
                     restrictionLevel: 15,
-                    blockContent: ['Contempt & Hatred']
+                    blockContent: ['contemptHatred']
                 }
             ]
         },
@@ -447,15 +447,15 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 12,
-                    blockContent: ['Bonded by Blood']
+                    blockContent: ['bondedByBlood']
                 },
                 {
-                    restrictionChoice: 'Bonded by Blood',
-                    blockContent: ['Corsair Noble', 'Ahead of the Tide', 'Master of the Blessed Dread', 'Slaver']
+                    restrictionChoice: 'bondedByBlood',
+                    blockContent: ['corsairNoble', 'aheadOfTheTide', 'masterOfTheBlessedDread', 'slaver']
                 },
                 {
                     restrictionCount: 2,
-                    blockContent: ['Patriarch of the Fellhearts']
+                    blockContent: ['patriarchOfTheFellhearts']
                 }
             ]
         },
@@ -464,21 +464,21 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 12,
-                    restrictionLimited: ['Tenacious'],
-                    blockContent: ['Insidious']
+                    restrictionLimited: ['tenacious'],
+                    blockContent: ['insidious']
                 },
                 {
-                    restrictionChoice: 'Insidious',
-                    blockContent: ['Endless Scheming', 'Favourite Assets', 'Shroud of Despair']
+                    restrictionChoice: 'insidious',
+                    blockContent: ['endlessScheming', 'favouriteAssets', 'shroudOfDespair']
                 },
                 {
                     restrictionLevel: 12,
-                    restrictionLimited: ['Insidious'],
-                    blockContent: ['Tenacious']
+                    restrictionLimited: ['insidious'],
+                    blockContent: ['tenacious']
                 },
                 {
-                    restrictionChoice: 'Tenacious',
-                    blockContent: ['Rituals of Blood', 'Grotesque Sacrifices', 'Absolute Devotion']
+                    restrictionChoice: 'tenacious',
+                    blockContent: ['ritualsOfBlood', 'grotesqueSacrifices', 'absoluteDevotion']
                 }
             ]
         },
@@ -487,15 +487,15 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 10,
-                    blockContent: ['Champion of Khaine']
+                    blockContent: ['championOfKhaine']
                 },
                 {
-                    restrictionChoice: 'Champion of Khaine',
-                    blockContent: ['Favour of Khaine', 'Daughters of Despair', 'Rapturous Murder', 'Playthings of the Queen']
+                    restrictionChoice: 'championOfKhaine',
+                    blockContent: ['favourOfKhaine', 'daughtersOfDespair', 'rapturousMurder', 'playthingsOfTheQueen']
                 },
                 {
                     restrictionCount: 2,
-                    blockContent: ['Blood Queen']
+                    blockContent: ['bloodQueen']
                 }
             ]
         }
@@ -505,23 +505,23 @@ exports.rows = {
             row: 3,
             content: [
                 {
-                    blockContent: ['Sea Dragon Cloak'],
+                    blockContent: ['seaDragonCloak'],
                 },
                 {
-                    restrictionChoice: 'Sea Dragon Cloak',
-                    blockContent: ['Devastating Charge', 'Deadeye', 'Blade Master', 'Indomitable'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Foe-Seeker']
-                },
-                {
-                    restrictionChoice: 'Foe-Seeker',
-                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Piercing Shots', 'Expeditious Endeavour']
+                    restrictionChoice: 'seaDragonCloak',
+                    blockContent: ['devastatingCharge', 'deadeye', 'bladeMaster', 'indomitable'],
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Volley of Dark Arrows']
+                    blockContent: ['foeSeeker']
+                },
+                {
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['woundMaker', 'fullPlateArmour', 'piercingShots', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['volleyOfDarkArrows']
                 }
             ]
         },
@@ -529,23 +529,23 @@ exports.rows = {
             row: 3,
             content: [
                 {
-                    blockContent: ['Sea Dragon Cloak'],
+                    blockContent: ['seaDragonCloak'],
                 },
                 {
-                    restrictionChoice: 'Sea Dragon Cloak',
-                    blockContent: ['Devastating Charge', 'Hard to Hit', 'Blade Master', 'Indomitable'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Foe-Seeker']
-                },
-                {
-                    restrictionChoice: 'Foe-Seeker',
-                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
+                    restrictionChoice: 'seaDragonCloak',
+                    blockContent: ['devastatingCharge', 'hardToHit', 'bladeMaster', 'indomitable'],
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Deadly Onslaught']
+                    blockContent: ['foeSeeker']
+                },
+                {
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['woundMaker', 'fullPlateArmour', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deadlyOnslaught']
                 }
             ]
         },
@@ -554,15 +554,15 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 8,
-                    blockContent: ['Rapacious Predators']
+                    blockContent: ['rapaciousPredators']
                 },
                 {
-                    restrictionChoice: 'Rapacious Predators',
-                    blockContent: ['Sorceresses of Ghrond', 'Titanic Beasts', 'Children of Sulekh']
+                    restrictionChoice: 'rapaciousPredators',
+                    blockContent: ['sorceressesOfGhrond', 'titanicBeasts', 'childrenOfSulekh']
                 },
                 {
                     restrictionCount: 2,
-                    blockContent: ['Master Tormentor']
+                    blockContent: ['masterTormentor']
                 }
             ]
         },
@@ -570,23 +570,23 @@ exports.rows = {
             row: 3,
             content: [
                 {
-                    blockContent: ['Dance of Death'],
+                    blockContent: ['danceOfDeath'],
                 },
                 {
-                    restrictionChoice: 'Dance of Death',
-                    blockContent: ['Devastating Charge', 'Conviction', 'Wild-Eyed', 'Impassioned'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Blood Frenzy']
-                },
-                {
-                    restrictionChoice: 'Blood Frenzy',
-                    blockContent: ['Fervour', 'Tenacity', 'Blade Shield', 'Fleet-Footed']
+                    restrictionChoice: 'danceOfDeath',
+                    blockContent: ['devastatingCharge', 'conviction', 'wildEyed', 'impassioned'],
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Heroic Killing Blow']
+                    blockContent: ['bloodFrenzy']
+                },
+                {
+                    restrictionChoice: 'bloodFrenzy',
+                    blockContent: ['fervour', 'tenacity', 'bladeShield', 'fleetFooted']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['heroicKillingBlow']
                 }
             ]
         }
@@ -596,24 +596,24 @@ exports.rows = {
             row: 4,
             content: [
                 {
-                    blockContent: ['Sea Dragon Cloak'],
+                    blockContent: ['seaDragonCloak'],
                     seadragoncloak: 0
                 },
                 {
-                    restrictionChoice: 'Sea Dragon Cloak',
-                    blockContent: ['Devastating Charge', 'Hard to Hit', 'Blade Master', 'Indomitable'],
+                    restrictionChoice: 'seaDragonCloak',
+                    blockContent: ['devastatingCharge', 'hardToHit', 'bladeMaster', 'indomitable'],
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Foe-Seeker']
+                    blockContent: ['foeSeeker']
                 },
                 {
-                    restrictionChoice: 'Foe-Seeker',
-                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['woundMaker', 'fullPlateArmour', 'bladeShield', 'expeditiousEndeavour']
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Beastslaver']
+                    blockContent: ['beastslaver']
                 }
             ]
         },
@@ -621,23 +621,23 @@ exports.rows = {
             row: 4,
             content: [
                 {
-                    blockContent: ['Sea Dragon Cloak'],
+                    blockContent: ['seaDragonCloak'],
                 },
                 {
-                    restrictionChoice: 'Sea Dragon Cloak',
-                    blockContent: ['Devastating Charge', 'Hard to Hit', 'Blade Master', 'Indomitable'],
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Deadly Onslaught']
-                },
-                {
-                    restrictionChoice: 'Deadly Onslaught',
-                    blockContent: ['Wound-Maker', 'Full Plate Armour', 'Blade Shield', 'Expeditious Endeavour']
+                    restrictionChoice: 'seaDragonCloak',
+                    blockContent: ['devastatingCharge', 'hardToHit', 'bladeMaster', 'indomitable'],
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Gaze of Malice']
+                    blockContent: ['deadlyOnslaught']
+                },
+                {
+                    restrictionChoice: 'deadlyOnslaught',
+                    blockContent: ['woundMaker', 'fullPlateArmour', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['gazeOfMalice']
                 }
             ]
         },
@@ -645,19 +645,19 @@ exports.rows = {
             row: 4,
             content: [
                 {
-                    blockContent: ['Impaling Attack'],
+                    blockContent: ['impalingAttack'],
                 },
                 {
-                    restrictionChoice: 'Impaling Attack',
-                    blockContent: ['Blade Master', 'Hard to Hit', 'Wound-Maker', 'Survivalist'],
+                    restrictionChoice: 'impalingAttack',
+                    blockContent: ['bladeMaster', 'hardToHit', 'woundMaker', 'survivalist'],
                 },
                 {
                     restrictionCount: 3,
-                    blockContent: ['Foe-Seeker']
+                    blockContent: ['foeSeeker']
                 },
                 {
-                    restrictionChoice: 'Foe-Seeker',
-                    blockContent: ['Enchanting Beauty', 'A Thousand & One Dark Blessings', 'Deadly Onslaught']
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['enchantingBeauty', 'aThousandOneDarkBlessings', 'deadlyOnslaught']
                 }
             ]
         }
@@ -667,23 +667,23 @@ exports.rows = {
             row: 6,
             content: [
                 {
-                    blockContent: ['Inspiring Presence']
+                    blockContent: ['inspiringPresence']
                 },
                 {
-                    restrictionChoice: 'Inspiring Presence',
-                    blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
+                    restrictionChoice: 'inspiringPresence',
+                    blockContent: ['lineBreaker', 'sheafmaster', 'raidLeader', 'lashMaster', 'knightLord', 'slaughterlord']
                 },
                 {
                     restrictionCount: 6,
-                    blockContent: ['Loose!']
+                    blockContent: ['loose']
                 },
                 {
-                    restrictionChoice: 'Loose!',
-                    blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
+                    restrictionChoice: 'loose',
+                    blockContent: ['cullTheUnworthy', 'ravagerRewards', 'favourTheFortunate', 'conferBloodlust']
                 },
                 {
                     restrictionCount: 1,
-                    blockContent: ['Darken the Skies']
+                    blockContent: ['darkenTheSkies']
                 }
             ]
         },
@@ -691,23 +691,23 @@ exports.rows = {
             row: 6,
             content: [
                 {
-                    blockContent: ['Inspiring Presence']
+                    blockContent: ['inspiringPresence']
                 },
                 {
-                    restrictionChoice: 'Inspiring Presence',
-                    blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
+                    restrictionChoice: 'inspiringPresence',
+                    blockContent: ['lineBreaker', 'sheafmaster', 'raidLeader', 'lashMaster', 'knightLord', 'slaughterlord']
                 },
                 {
                     restrictionCount: 6,
-                    blockContent: ['Strength Through Spite']
+                    blockContent: ['strengthThroughSpite']
                 },
                 {
-                    restrictionChoice: 'Strength Through Spite',
-                    blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
+                    restrictionChoice: 'strengthThroughSpite',
+                    blockContent: ['cullTheUnworthy', 'ravagerRewards', 'favourTheFortunate', 'conferBloodlust']
                 },
                 {
                     restrictionCount: 1,
-                    blockContent: ['Kindle the Fury']
+                    blockContent: ['kindleTheFury']
                 }
             ]
         },
@@ -715,23 +715,23 @@ exports.rows = {
             row: 6,
             content: [
                 {
-                    blockContent: ['Inspiring Presence']
+                    blockContent: ['inspiringPresence']
                 },
                 {
-                    restrictionChoice: 'Inspiring Presence',
-                    blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
+                    restrictionChoice: 'inspiringPresence',
+                    blockContent: ['lineBreaker', 'sheafmaster', 'raidLeader', 'lashMaster', 'knightLord', 'slaughterlord']
                 },
                 {
                     restrictionCount: 6,
-                    blockContent: ['Strength Through Spite']
+                    blockContent: ['strengthThroughSpite']
                 },
                 {
-                    restrictionChoice: 'Strength Through Spite',
-                    blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
+                    restrictionChoice: 'strengthThroughSpite',
+                    blockContent: ['cullTheUnworthy', 'ravagerRewards', 'favourTheFortunate', 'conferBloodlust']
                 },
                 {
                     restrictionCount: 1,
-                    blockContent: ['Whiplash!']
+                    blockContent: ['whiplash']
                 }
             ]
         },
@@ -739,23 +739,23 @@ exports.rows = {
             row: 6,
             content: [
                 {
-                    blockContent: ['Inspiring Presence']
+                    blockContent: ['inspiringPresence']
                 },
                 {
-                    restrictionChoice: 'Inspiring Presence',
-                    blockContent: ['Line Breaker', 'Sheafmaster', 'Raid Leader', 'Lash Master', 'Knight Lord', 'Slaughterlord']
+                    restrictionChoice: 'inspiringPresence',
+                    blockContent: ['lineBreaker', 'sheafmaster', 'raidLeader', 'lashMaster', 'knightLord', 'slaughterlord']
                 },
                 {
                     restrictionCount: 6,
-                    blockContent: ['Rally!']
+                    blockContent: ['rally']
                 },
                 {
-                    restrictionChoice: 'Strength Through Spite',
-                    blockContent: ['Cull the Unworthy', 'Ravager Rewards', 'Favour the Fortunate', 'Confer Bloodlust']
+                    restrictionChoice: 'strengthThroughSpite',
+                    blockContent: ['cullTheUnworthy', 'ravagerRewards', 'favourTheFortunate', 'conferBloodlust']
                 },
                 {
                     restrictionCount: 1,
-                    blockContent: ['Stand or Die!']
+                    blockContent: ['standOrDie']
                 }
             ]
         }
@@ -765,23 +765,23 @@ exports.rows = {
             row: 9,
             content: [
                 {
-                    blockContent: ['Route Marcher']
+                    blockContent: ['routeMarcher']
                 },
                 {
-                    restrictionChoice: 'Route Marcher',
-                    blockContent: ['Iron Disciplinarian', 'Dreaded Slaver', 'Serve Or Die', 'Infamous Raider']
-                },
-                {
-                    restrictionCount: 4,
-                    blockContent: ['Draftmaster']
-                },
-                {
-                    restrictionChoice: 'Draftmaster',
-                    blockContent: ['Lightning Strike', 'Quartermaster', 'Fleeting Shadow', 'Elven Healing']
+                    restrictionChoice: 'routeMarcher',
+                    blockContent: ['ironDisciplinarian', 'dreadedSlaver', 'serveOrDie', 'infamousRaider']
                 },
                 {
                     restrictionCount: 4,
-                    blockContent: ['Renowned & Feared']
+                    blockContent: ['draftmaster']
+                },
+                {
+                    restrictionChoice: 'draftmaster',
+                    blockContent: ['lightningStrike', 'quartermaster', 'fleetingShadow', 'elvenHealing']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['renownedFeared']
                 }
             ]          
         }

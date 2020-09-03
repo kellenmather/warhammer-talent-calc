@@ -3,23 +3,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Wyssan's Wildform"]
+                blockContent: ["wyssansWildform"]
             },
             {
-                restrictionChoice: "Wyssan's Wildform",
-                blockContent: ["The Amber Spear", "Wild Heart", "Flock of Doom", "Pann's Impenetrable Pelt"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["The Curse of Anraheir", "Transformation of Kadon", "Earthing", "Magical Reserves"]
+                restrictionChoice: "wyssansWildform",
+                blockContent: ["theAmberSpear", "wildHeart", "flockOfDoom", "pannsImpenetrablePelt"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["theCurseOfAnraheir", "transformationOfKadon", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -27,23 +27,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Fireball"]
+                blockContent: ["fireball"]
             },
             {
-                restrictionChoice: "Fireball",
-                blockContent: ["Kindleflame", "Cascading Fire-Cloak", "Flaming Sword of Rhuin", "The Burning Head"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Piercing Bolts of Burning", "Flame Storm", "Earthing", "Magical Reserves"]
+                restrictionChoice: "fireball",
+                blockContent: ["kindleflame", "cascadingFireCloak", "flamingSwordOfRhuin", "theBurningHead"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["piercingBoltsOfBurning", "flameStorm", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -51,23 +51,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Chillwind"]
+                blockContent: ["chillwind"]
             },
             {
-                restrictionChoice: "Chillwind",
-                blockContent: ["Spiteful Conjuration", "Power of Darkness", "Word of Pain", "Bladewind"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Doombolt", "Soul Stealer", "Earthing", "Magical Reserves"]
+                restrictionChoice: "chillwind",
+                blockContent: ["spitefulConjuration", "powerOfDarkness", "wordOfPain", "bladewind"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["doombolt", "soulStealer", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -75,23 +75,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Spirit Leech"]
+                blockContent: ["spiritLeech"]
             },
             {
-                restrictionChoice: "Spirit Leech",
-                blockContent: ["Doom & Darkness", "Life-Leeching", "Aspect of the Dread Knight", "Soulblight"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["The Fate of Bjuna", "The Purple Sun of Xereus", "Earthing", "Magical Reserves"]
+                restrictionChoice: "spiritLeech",
+                blockContent: ["doomDarkness", "lifeLeeching", "aspectOfTheDreadKnight", "soulblight"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["theFateOfBjuna", "thePurpleSunOfXereus", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -99,23 +99,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Melkoth's Mystifying Miasma"]
+                blockContent: ["melkothsMystifyingMiasma"]
             },
             {
-                restrictionChoice: "Melkoth's Mystifying Miasma",
-                blockContent: ["The Penumbral Pendulum", "Smoke & Mirrors", "The Enfeebling Foe", "The Withering"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Pit of Shades", "Okkam's Mindrazor", "Earthing", "Magical Reserves"]
+                restrictionChoice: "melkothsMystifyingMiasma",
+                blockContent: ["thePenumbralPendulum", "smokeMirrors", "theEnfeeblingFoe", "theWithering"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["pitOfShades", "okkamsMindrazor", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -123,23 +123,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Apotheosis"]
+                blockContent: ["apotheosis"]
             },
             {
-                restrictionChoice: "Apotheosis",
-                blockContent: ["Shield of Saphery", "Hand of Glory", "Soul Quench", "Tempest"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Arcane Unforging", "Fiery Convocation", "Earthing", "Magical Reserves"]
+                restrictionChoice: "apotheosis",
+                blockContent: ["shieldOfSaphery", "handOfGlory", "soulQuench", "tempest"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["arcaneUnforging", "fieryConvocation", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -147,23 +147,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Searing Doom"]
+                blockContent: ["searingDoom"]
             },
             {
-                restrictionChoice: "Searing Doom",
-                blockContent: ["Plague of Rust", "Metalshifting", "Glittering Robe", "Gehenna's Golden Hounds"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Transmutation of Lead", "Final Transmutation", "Earthing", "Magical Reserves"]
+                restrictionChoice: "searingDoom",
+                blockContent: ["plagueOfRust", "metalshifting", "glitteringRobe", "gehennasGoldenHounds"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["transmutationOfLead", "finalTransmutation", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -171,23 +171,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Awakening of the Wood"]
+                blockContent: ["awakeningOfTheWood"]
             },
             {
-                restrictionChoice: "Awakening of the Wood",
-                blockContent: ["Life Bloom", "Earth Blood", "Flesh to Stone", "Shield of Thorns"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Regrowth", "The Dwellers Below", "Earthing", "Magical Reserves"]
+                restrictionChoice: "awakeningOfTheWood",
+                blockContent: ["lifeBloom", "earthBlood", "fleshToStone", "shieldOfThorns"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["regrowth", "theDwellersBelow", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -195,23 +195,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Harmonic Convergence"]
+                blockContent: ["harmonicConvergence"]
             },
             {
-                restrictionChoice: "Harmonic Convergence",
-                blockContent: ["Roiling Skies", "Wind Blast", "Curse of the Midnight Wind", "Urannon's Thunderbolt"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Comet of Casandora", "Chain Lightning", "Earthing", "Magical Reserves"]
+                restrictionChoice: "harmonicConvergence",
+                blockContent: ["roilingSkies", "windBlast", "curseOfTheMidnightWind", "urannonsThunderbolt"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["cometOfCasandora", "chainLightning", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -219,23 +219,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Shem's Burning Gaze"]
+                blockContent: ["shemsBurningGaze"]
             },
             {
-                restrictionChoice: "Shem's Burning Gaze",
-                blockContent: ["Exorcism", "Pha's Protection", "Light of Battle", "Net of Amyntok"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Banishment", "Birona's Timewarp", "Earthing", "Magical Reserves"]
+                restrictionChoice: "shemsBurningGaze",
+                blockContent: ["exorcism", "phasProtection", "lightOfBattle", "netOfAmyntok"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["banishment", "bironasTimewarp", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     },
@@ -243,23 +243,23 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["Melkoth's Mystifying Miasma"]
+                blockContent: ["melkothsMystifyingMiasma"]
             },
             {
-                restrictionChoice: "Melkoth's Mystifying Miasma",
-                blockContent: ["Power of Darkness", "Doom & Darkness", "Soulblight", "Life-Leeching"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["Evasion"]
-            },
-            {
-                restrictionChoice: "Evasion",
-                blockContent: ["Pit of Shades", "Soul Stealer", "Spiteful Conjuration", "Smoke & Mirrors"]
+                restrictionChoice: "melkothsMystifyingMiasma",
+                blockContent: ["powerOfDarkness", "doomDarkness", "soulblight", "lifeLeeching"]
             },
             {
                 restrictionCount: 4,
-                blockContent: ["Greater Arcane Conduit"]
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["pitOfShades", "soulStealer", "spitefulConjuration", "smokeMirrors"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["greaterArcaneConduit"]
             },
         ]
     }

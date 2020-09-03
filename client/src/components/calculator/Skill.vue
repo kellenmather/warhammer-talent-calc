@@ -1,10 +1,10 @@
 <template>
-    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button unselectable">
+    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button unselectable" >
         <div :style="getBorder(skill.quest)" class="skill-border"></div>
         <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block" :style="getIcon(skill.icon)"></div>
         <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block" :style="isObtained()">
             <span class="position-block">
-                <p>{{ block }}</p>
+                <p>{{ skill.name }}</p>
             </span>
         </div>
         <div v-if="!skill.quest && !skillState[block].quest" class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
@@ -82,16 +82,22 @@ export default {
             let verticalScroll = document.querySelector("#html").scrollTop;
             let obj = this.$el;
 
-            // this is my current solution for popups extending off screen
-            let rowBalance = this.color === 'row9' ? 190 : 0;
-
             this.left = (event.x - obj.offsetLeft + horizontalScroll + 20);
-            this.top = (event.y - obj.offsetTop + verticalScroll - 45 - rowBalance);
+            this.top = (event.y - obj.offsetTop + verticalScroll - 45 );
 
             let mouseX = event.pageX, 
                 mouseY = event.pageY;
-
-            if (this.window.width < mouseX + 620) {
+            // the last row anchors from the bottom and displays up
+            if (this.color === 'row9') {
+                this.bottom = ( obj.offsetTop - event.y - verticalScroll + 100);
+            }
+            // this row has some very high popups so offset that by lowering the popup top value
+            if (this.color === 'row6') {
+                this.top = (event.y - obj.offsetTop + verticalScroll - 180 );
+            }
+            // if the width of the popup would extend off the window with display to the left of cursor
+            if (this.window.width < (mouseX - horizontalScroll) + 640) {
+                console.log(this.window.width)
                 this.left = (event.x - obj.offsetLeft + horizontalScroll - 620);
             }
         },

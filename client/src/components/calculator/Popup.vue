@@ -124,7 +124,7 @@ export default {
             return {'backgroundImage': "linear-gradient(90deg," + Gradients[type][rarity] + ")"};
         },
         getPosition() {
-            if (this.bottom > 0) {
+            if (this.bottom !== 0) {
                 return { bottom: this.bottom + 'px', left: this.left + 'px'}
             } else {
                 return { top: this.top + 'px', left: this.left + 'px'}
@@ -148,7 +148,6 @@ export default {
     word-wrap: normal;
     line-height:normal;
     font-size: 1em;
-
 }
 .title {
     position: relative;
