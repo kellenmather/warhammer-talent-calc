@@ -238,30 +238,6 @@ exports.magic = {
                 blockContent: ["arcaneConduit"]
             },
         ]
-    },
-    morathi: {
-        row: 3,
-        content: [
-            {
-                blockContent: ["melkothsMystifyingMiasma"]
-            },
-            {
-                restrictionChoice: "melkothsMystifyingMiasma",
-                blockContent: ["powerOfDarkness", "doomDarkness", "soulblight", "lifeLeeching"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["evasion"]
-            },
-            {
-                restrictionChoice: "evasion",
-                blockContent: ["pitOfShades", "soulStealer", "spitefulConjuration", "smokeMirrors"]
-            },
-            {
-                restrictionCount: 4,
-                blockContent: ["greaterArcaneConduit"]
-            },
-        ]
     }
 }
 

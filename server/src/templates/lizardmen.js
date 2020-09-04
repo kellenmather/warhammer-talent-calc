@@ -99,6 +99,104 @@ exports.rows = {
                     blockContent: ['immortality']
                 }
             ]
+        },
+        mazdamundi: {
+            row: 1,
+            content: [
+                {
+                    quest: 6,
+                    blockContent: ['sunburstStandardOfHexoatl']
+                },
+                {
+                    quest: 10,
+                    blockContent: ['cobraMaceOfMazdamundi']
+                },
+                {
+                    restrictionLevel: 18,
+                    blockContent: ['zlaaq']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['telekinesis']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['protectionOfTheOldOnes']
+                }
+            ]
+        },
+        kroqgar: {
+            row: 1,
+            content: [
+                {
+                    quest: 6,
+                    blockContent: ['reveredSpearOfTlanxla']
+                },
+                {
+                    quest: 10,
+                    blockContent: ['handOfGods']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['coldOneLizardmen']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['hornedOne']
+                },
+                {
+                    restrictionLevel: 18,
+                    blockContent: ['grymloq']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['obedienceBringsVictory']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['protectionOfTheOldOnes']
+                },
+                {
+                    blockContent: ['spawningOfXhotl']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['honouredElder']
+                }
+            ]
+        },
+        tehenhauin: {
+            row: 1,
+            content: [
+                {
+                    quest: 1,
+                    blockContent: ['bladeOfTheSerpentsTongue']
+                },
+                {
+                    quest: 8,
+                    blockContent: ['plaqueOfSotek']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['hornedOne']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['ripperdactyl']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['ancientStegadonEngine']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['agilityOfTheLizard']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['protectionOfTheOldOnes']
+                }
+            ]
         }
     },
     row2: {
@@ -199,6 +297,54 @@ exports.rows = {
                     blockContent: ['focusOfMysteries']
                 }
             ]
+        },
+        mazdamundi: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['reservesOfEldritchEnergy']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['becalmingCogitation']
+                },
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['arcaneConvergence']
+                },
+                {
+                    restrictionLevel: 16,
+                    blockContent: ['focusOfMysteries']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['ruinationOfCities']
+                }
+            ]
+        },
+        tehenhauin: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    restrictionLimited: ['promiseOfReconstruction'],
+                    blockContent: ['fanatic']
+                },
+                {
+                    restrictionChoice: 'fanatic',
+                    blockContent: ['prophecyOfEradication', 'disciplesOfSotek', 'tideOfSotek']
+                },
+                {
+                    restrictionLevel: 12,
+                    restrictionLimited: ['fanatic'],
+                    blockContent: ['promiseOfReconstruction']
+                },
+                {
+                    restrictionChoice: 'promiseOfReconstruction',
+                    blockContent: ['soteksGifted', 'reverence', 'enlighten']
+                }
+            ]
         }
     },
     row3: {
@@ -249,7 +395,68 @@ exports.rows = {
                     blockContent: ['auraOfInertia']
                 }
             ]
-        }
+        },
+        mazdamundi: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ["harmonicConvergence"]
+                },
+                {
+                    restrictionChoice: "harmonicConvergence",
+                    blockContent: ["roilingSkies", "apotheosis", "netOfAmyntok", "curseOfTheMidnightWind"]
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ["evasion"]
+                },
+                {
+                    restrictionChoice: "evasion",
+                    blockContent: ["arcaneUnforging", "cometOfCasandora", "shieldOfSaphery", "exorcism"]
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ["greaterArcaneConduit"]
+                },
+            ]
+        },
+        kroqgar: {
+            row: 3,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['annihilateTheBeastmen']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['destroyTheSkaven']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['exterminateTheDarkElves']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['extinguishTheGreenskins']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['killTheDwarfs']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['neutraliseChaos']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['obliterateTheUndead']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['purgeMankind']
+                }
+            ]
+        },
     },
     row4: {
         slann: {
@@ -272,10 +479,83 @@ exports.rows = {
                     blockContent: ['transcendentHealing']
                 }
             ]
+        },
+        mazdamundi: {
+            row: 4,
+            content: [
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['unfathomablePresence']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['soulOfStone']
+                },
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['theHarrowingScrutiny']
+                },
+                {
+                    restrictionLevel: 16,
+                    blockContent: ['transcendentHealing']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['higherStateOfConsciousness']
+                }
+            ]
+        },
+        kroqgar: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['predatoryFighter'],
+                },
+                {
+                    restrictionChoice: 'predatoryFighter',
+                    blockContent: ['enforcerOfOrder', 'thickSkinned', 'bladeMaster', 'indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deadlyOnslaught']
+                },
+                {
+                    restrictionChoice: 'deadlyOnslaught',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['swiftnessOfItzl']
+                }
+            ]
+        },
+        tehenhauin: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['predatoryFighter'],
+                },
+                {
+                    restrictionChoice: 'predatoryFighter',
+                    blockContent: ['enforcerOfOrder', 'thickSkinned', 'bladeMaster', 'indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['foeSeeker']
+                },
+                {
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deadlyOnslaught']
+                }
+            ]
         }
     },
     row6: {
-        saurus: {
+        lizardmen: {
             row: 6,
             content: [
                 {
@@ -325,7 +605,7 @@ exports.rows = {
         }
     },
     row9: {
-        saurus: {
+        lizardmen: {
             row: 9,
             content: [
                 {

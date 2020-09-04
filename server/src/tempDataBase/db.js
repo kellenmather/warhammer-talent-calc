@@ -1,5 +1,177 @@
 exports.skills = [
     {
+        ref: "sunburstStandardOfHexoatl",
+        name: "Sunburst Standard of Hexoatl",
+        description: "This radiant golden totem generates a golden globe of power that shields those within from harm.",
+        icon: "sunburst-standard-of-hexoatl",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "sunburst-standard-of-hexoatl", description: "Passive ability: \"Sunburst Standard of Hexoatl\"" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" },
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "12%", icon: "resistance-missile", postText: "Missile Resistance", color: "green" },
+                    { text: "+9", icon: "defense-character", postText: "Melee Defense", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "cobraMaceOfMazdamundi",
+        name: "Cobra Mace of Mazdamundi",
+        description: "This mace has a life of its own; it strikes out with lightning speed to bite enemy weapons before a blow is struck.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "item-ability", description: "Armor: +15" },
+                { icon: "melee-character", description: "Melee attack: +15" },
+                { icon: "damage", description: "Weapon strength: +12%" },
+                { icon: "poison", description: "Enables poison attacks" },
+                { icon: "religion", description: "Untainted: +5", ps: "local province" }
+            ] }
+        ]
+    },
+    {
+        ref: "reveredSpearOfTlanxla",
+        name: "Revered Spear of Tlanxla",
+        description: "An unspeakably powerful weapon once said to have been wielded by the warlike Old One diety, Tlanxla.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +3", ps: "all provinces" },
+                { icon: "bonus-vs-large-character", description: "Bonus vs. Large: +12" },
+                { icon: "charge-character", description: "Charge bonus: +30" },
+                { icon: "melee-character", description: "Melee attack: +7" },
+                { icon: "damage", description: "Weapon strength: +12%" },
+                { icon: "magical-attacks", description: "Enables magical attacks" }
+            ] }
+        ]
+    },
+    {
+        ref: "handOfGods",
+        name: "Hand of Gods",
+        description: "Bolts of cleansing energy fly from the spellcaster's hands, searing evil wherever they strike.",
+        icon: "item-enchanted",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +10" },
+                { icon: "defense-character", description: "Melee Defense: +6" },
+                { icon: "melee-character", description: "Melee attack: +3" },
+                { icon: "resistance-ward-save", description: "Ward save: 5%" },
+                { icon: "income", description: "Income from post-battle loot: +20%" },
+                { icon: "spell-shems-burning-gaze", description: "Bound spell: \"Hand of Gods\"" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            cooldown: "120",
+            uses: 2,
+            attributes: {
+                type: "Magic Missiles",
+                target: [
+                    { text: "Enemy" },
+                    { text: "250m", uptick: "range" },
+                ],
+                effects: [
+                    { text: "Causes major magical & fire damage", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. a single combatant", uptick: "up-green", color: "green" },
+                    { text: "Good against large combatants", uptick: "up-green", color: "green" },
+                    { text: "Good from a high angle", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "bladeOfTheSerpentsTongue",
+        name: "Blade of the Serpent's Tongue",
+        description: "This sacrificial dagger was crafted by the most skilled of Chaqua's Skink artificers and enchanted to drip with deadly venom!",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +15" },
+                { icon: "damage", description: "Weapon strength: +14%" },
+                { icon: "religion", description: "Untainted: +2", ps: "local province" },
+                { icon: "ability-sword", description: "Passive ability: \"Blade of the Serpent's Tongue\"" }
+            ] }
+        ],
+        spell: {
+            description: "Weapon",
+            rarity: "legendary",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range", uptick: "range" },
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "+8%", icon: "charge-character", postText: "Charge Bonus", color: "green" }
+                ],
+                imbued: [
+                    { icon: "icon-poison", postText: "Poison! (10 seconds)", color: "red" },
+                    { text: "-20%", icon: "icon-armor-piercing-ranged", postText: "Armour-Piercing Missile Damage", color: "red" },
+                    { text: "-20%", icon: "icon-ranged-damage-base", postText: "Base Missile Damage", color: "red" },
+                    { text: "-20%", icon: "icon-damage-base", postText: "Base Weapon Damage", color: "red" },
+                    { text: "-24%", icon: "movement-character", postText: "Speed", color: "red" },
+                    { text: "-20%", icon: "icon-armor-piercing", postText: "Armour-Piercing Weapon Damage", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "plaqueOfSotek",
+        name: "Plaque of Sotek",
+        description: "Upon this stone plaque is inscribed an extract of the Prophecy of Sotek that grants additional warding to Tehenhauin.",
+        icon: "item-enchanted",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +3", ps: "all provinces" },
+                { icon: "magic", description: "Winds of Magic starting amount: +15" },
+                { icon: "ability-arcane", description: "Passive ability: \"Plaque of Sotek\"" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            attributes: {
+                type: "Ward Save",
+                target: "Self",
+                activeIf: "casting",
+                effects: [
+                    { text: "Plaque of Sotek (21 seconds)", color: "green" },
+                    { text: "+22%", icon: "resistance-ward-save", postText: "Damage Resistance", color: "green" },
+                    { text: "+12", icon: "morale-character", postText: "Damage Resistance", color: "green" }
+                ]
+            }
+        }
+    },
+    {
         ref: "coldOneLizardmen",
         name: "Cold One",
         description: "Dark, feral beasts indigenous to Lustria, tempted from their topical jungles to bear the Lizardmen to battle.",
@@ -36,12 +208,39 @@ exports.skills = [
         ]
     },
     {
+        ref: "ancientStegadonEngine",
+        name: "Ancient Stegadon (Engine of the Gods)",
+        description: "Only the eldest, largest and most ferocious of their kind can move the Engine of the Gods!",
+        icon: "ancient-stegadon-engine",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Ancient Stegadon (Engine of the Gods)" }] }
+        ]
+    },
+    {
+        ref: "zlaaq",
+        name: "Zlaaq",
+        description: "The largest Stegadon to be found anywhere, Zlaaq has served Lord Mazdamundi faithfully for almost five hundred years.",
+        icon: "ancient-stegadon",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Zlaaq" }] }
+        ]
+    },
+    {
         ref: "carnosaur",
         name: "Carnosaur",
         description: "The ultimate jungle hunters, these large, apex predators have terrorised the primordial jungles since the dawn of existence.",
         icon: "carnosaur",
         ranks: [
             { effects: [{ icon: "mount", description: "Mount: Carnosaur" }] }
+        ]
+    },
+    {
+        ref: "grymloq",
+        name: "Grymloq",
+        description: "Grymloq is Kroq-Gar's ageless Carnosaur, upon which the great Lizardman Lord has won all his many victories.",
+        icon: "carnosaur",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Grymloq" }] }
         ]
     },
     {
@@ -130,12 +329,53 @@ exports.skills = [
         }
     },
     {
+        ref: "ruinationOfCities",
+        name: "Ruination Of Cities",
+        description: "The Lord unleashes a force of seismic power like no other, causing the tectonic plates themselves to shift and buckle at his behest.",
+        icon: "ability-ruination-of-cities",
+        ranks: [
+            { effects: [{ icon: "ability-ruination-of-cities", description: "Ability: \"The Ruination of Cities\"" }] }
+        ],
+        spell: {
+            name: "The Ruination of Cities",
+            description: "Lord ability",
+            rarity: "rare",
+            cooldown: "120",
+            uses: 2,
+            attributes: {
+                type: "Vortex",
+                duration: "7 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "150m", uptick: "range" },
+                ],
+                cannotTargetIf: "Flying, Climbing",
+                effects: [
+                    { text: "Causes major", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Three damaging rifts spreading outwards", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Random launch directions", uptick: "down-red", color: "red" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
         ref: "protectionOfTheOldOnes",
         name: "Protection of the Old Ones",
         description: "Across teh gulf of space, the serene Potec has shared the secrets of time so that the Lizardmen may protect themselves against supernatural attack.",
         icon: "character-ward-save",
         ranks: [
             { effects: [{ icon: "resistance-magic", description: "Magic resistance: 10%" }] }
+        ]
+    },
+    {
+        ref: "spawningOfXhotl",
+        name: "Spawning of Xhotl",
+        description: "The City of Destiny withstood the Ancient Enemy's infernal onslaught for centuries; subsequent spawnings have magical resistance to physical attack.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [{ icon: "resistance-physical", description: "Physical resistance: 15%" }] }
         ]
     },
     {
@@ -190,6 +430,15 @@ exports.skills = [
         }
     },
     {
+        ref: "higherStateOfConsciousness",
+        name: "Higher State of Consciousness",
+        description: "\"Everywhere we shine, death and life burn into something new...\"",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [{ icon: "resistance-physical", description: "Physical resistance: 25%" }] }
+        ]
+    },
+    {
         ref: "honouredElder",
         name: "Honoured Elder",
         description: "Those Saurus not lost to war may live to a great age - their long service esteemed and respected by younger Lizardmen hungry for experience.",
@@ -200,6 +449,110 @@ exports.skills = [
                 { icon: "resistance-ward-save", description: "Ward save: 5%" },
                 { icon: "coin", description: "Upkeep: -5% for Saurus and Cold One units", ps: "Lord's army" },
                 { icon: "coin", description: "Upkeep: -5% for Temple Guards units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "annihilateTheBeastmen",
+        name: "Annihilate the Beastmen",
+        description: "The relentlessly-bloodthirsty Children of Chaos do not deserve a place in the Old Ones' perfect world.",
+        icon: "annihilate-the-beastmen",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Beastmen Warherds", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Beastmen Warherds", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Beastmen Warherds" }
+            ] }          
+        ]
+    },
+    {
+        ref: "destroyTheSkaven",
+        name: "Destroy the Skaven",
+        description: "The insidious Rat-spawn, who dare threaten Lustria's temple-cities with their vile plagues, must be wiped from its hallowed shores.",
+        icon: "destroy-the-skaven",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Skaven", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Skaven", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Skaven" }
+            ] }          
+        ]
+    },
+    {
+        ref: "exterminateTheDarkElves",
+        name: "Exterminate the Dark Elves",
+        description: "The vicious cruelty of the Druchii has no place within the Great Plan and must be stamped out at all costs.",
+        icon: "exterminate-the-dark-elves",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Dark Elves", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Dark Elves", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Dark Elves" }
+            ] }          
+        ]
+    },
+    {
+        ref: "extinguishTheGreenskins",
+        name: "Extinguish the Greenskins",
+        description: "Resolutely not part of the Great Plan, the disgusting Greenskins are a stain on the surface of the world.",
+        icon: "extinguish-the-greenskins",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Greenskins", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Greenskins", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Greenskins" }
+            ] }          
+        ]
+    },
+    {
+        ref: "killTheDwarfs",
+        name: "Kill the Dwarfs",
+        description: "The self-serving, insular Dawi must all be killed if balance is to be restored to the world.",
+        icon: "kill-the-dwarfs",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Dwarfs", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Dwarfs", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Dwarfs" }
+            ] }          
+        ]
+    },
+    {
+        ref: "neutraliseChaos",
+        name: "Neutralise Chaos",
+        description: "Once before, the Ancient Enemy unmade the Great Plan. It shall not be premitted to do so again.",
+        icon: "neutralise-chaos",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Warriors of Chaos and Norsca", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Warriors of Chaos and Norsca", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Warriors of Chaos and Norsca" }
+            ] }          
+        ]
+    },
+    {
+        ref: "obliterateTheUndead",
+        name: "Obliterate the Undead",
+        description: "The self-serving, insular Dawi must all be killed if balance is to be restored to the world.",
+        icon: "obliterate-the-undead",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Vampire Counts, Vampire Coast and Tomb Kings", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Vampire Counts, Vampire Coast and Tomb Kings", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Vampire Counts, Vampire Coast and Tomb Kings" }
+            ] }          
+        ]
+    },
+    {
+        ref: "purgeMankind",
+        name: "Purge Mankind!",
+        description: "Mankind has developed in a direction not in keeping with the tenets of the Great Plan; they must be stopped.",
+        icon: "purge-mankind",
+        ranks: [
+            { effects: [
+                { icon: "damage", description: "Weapon strength: +10% when fighting against Men", ps: "Lord's army" },
+                { icon: "morale", description: "Leadership: +8 when fighting against Men", ps: "all armies" },
+                { icon: "melee", description: "Melee attack: +10 when fighting against Men" }
             ] }          
         ]
     },
@@ -277,6 +630,105 @@ exports.skills = [
                 { icon: "morale", description: "Leadership: +10 during ambushes", ps: "Lord's army" },
                 { icon: "morale", description: "Leadership: +5 for Stegadon, Bastiladon, Terradon, Ripperdactyl, Carnosaur and Dread Saurian units", ps: "Lord's army" },
                 { icon: "coin", description: "Upkeep: -20% for Terradon Riders, Ripperdactyl Riders, Salamander and Razordon Hunting Packs, Cold Ones, Ancient Salamander, Stegadon, Bastiladon, Carnosaur and Dread Saurian units", ps: "local province" }
+            ] }          
+        ]
+    },
+    {
+        ref: "fanatic",
+        name: "Fanatic",
+        description: "More than just a fantastic orator, Tehenhauin leads his armies personally across Lustria in a crusade against the vermin parasites.",
+        icon: "character-attack",
+        ranks: [
+            { effects: [
+                { icon: "melee-character", description: "Melee attack: +12" },
+                { icon: "resistance-physical", description: "Physical resistance: 10%" }
+            ] }          
+        ]
+    },
+    {
+        ref: "prophecyOfEradication",
+        name: "Prophecy of Eradication",
+        description: "First comes the vermin, then comes the plagues, but it will end with the eradication of the Skaven - for they play no part in the Old Ones' plans",
+        icon: "character-bonus-vs-infantry",
+        ranks: [
+            { effects: [
+                { icon: "icon-bonus-vs-infantry", description: "Bonus vs. Infantry: +15" },
+                { icon: "weapon-damage", description: "Weapon strength: +10% when fighting against Skaven, Warriors of Chaos, Norsca and Beastmen", ps: "Lord's army" },
+                { icon: "damage", description: "Weapon strength: +10%" }
+            ] }          
+        ]
+    },
+    {
+        ref: "disciplesOfSotek",
+        name: "Disciples of Sotek",
+        description: "Those who followed Tehenhauin knew what would befall Lustria if they faltered. The prophecy must be seen through to the bitter end.",
+        icon: "character-armor",
+        ranks: [
+            { effects: [
+                { icon: "armor", description: "Armour: +20 for Skink, Chameleon Skink, Red Crested Skink and Bastiladon (Ark of Sotek) units", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +8 for Skink, Chameleon Skink, Red Crested Skink units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "tideOfSotek",
+        name: "Tide of Sotek",
+        description: "Sotek's children swarm to Tehenhauin's call, vicious serpents that turn the tide of battle in the Prophet's favour.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [
+                { icon: "morale", description: "Leadership: +10 for Skink, Chameleon Skink, Red Crested Skink and Bastiladon (Ark of Sotek) units", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +8 for Skink, Chameleon Skink, Red Crested Skink units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "promiseOfReconstruction",
+        name: "Promise of Eradication",
+        description: "Sotek's prophecy spoke of ruin and destruction but also of hope; with the vermin menace eradicated, the Lizardmen would rebuild anew.",
+        icon: "character-public-order",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +2", ps: "all provinces" },
+                { icon: "income", description: "Tax rate: +30%", ps: "local province" },
+                { icon: "religion", description: "Untainted: +2", ps: "local province" }
+            ] }          
+        ]
+    },
+    {
+        ref: "soteksGifted",
+        name: "Sotek's Gifted",
+        description: "To fulfil the prophecy and overcome the Skaven assault on Lustria, Sotek gifted great power to his followers.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: "magic", description: "Winds of Magic power reserve: +10" },
+                { icon: "magic", description: "Winds of Magic cost: -10% for Lore of Beasts" }
+            ] }          
+        ]
+    },
+    {
+        ref: "reverence",
+        name: "Reverence",
+        description: "Idolised by his followers, Tehenhauin attracts the loyalty of some of the finest Skink spawnings in all of Lustria.",
+        icon: "character-replenishment",
+        ranks: [
+            { effects: [
+                { icon: "replenishment", description: "Casualty replenishment rate: +10% for Skink, Chameleon Skink, Red Crested Skink and Bastiladon (Ark of Sotek) units", ps: "Lord's army" },
+                { icon: "coin", description: "Upkeep: -20% for Skink, Chameleon Skink, Red Crested Skink and Bastiladon (Ark of Sotek) units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "enlighten",
+        name: "Enlighten",
+        description: "Word of the Serpent-God has opened many Skinks' eyes to Tehenhauin's holy cause.",
+        icon: "character-army",
+        ranks: [
+            { effects: [
+                { icon: "sotek-sacrifice", description: "Sacrificial Offerings generated: 10 per turn" },
+                { icon: "army", description: "Global recruitment capacity: +1" },
+                { icon: "army", description: "Local recruitment capacity: +1", ps: "local province" }
             ] }          
         ]
     },
@@ -539,6 +991,31 @@ exports.skills = [
                 { icon: "armor", description: "Armour: +8 for Saurus units", ps: "Lord's army" }
             ] }
         ]
+    },
+    {
+        ref: "swiftnessOfItzl",
+        name: "Swiftness of Itzl",
+        description: "The speed and agility of the great three-horned ruler is sometimes bestowed upon his subjects.",
+        icon: "ability-swiftness-of-itzl",
+        ranks: [
+            { effects: [{ icon: "ability-swiftness-of-itzl", description: "Ability: \"Swiftness of Itzl\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            cooldown: "90",
+            rarity: "uncommon",
+            attributes: {
+                type: "Explosion",
+                duration: "35 seconds",
+                target: "Self",
+                effects: [
+                    { text: "Explosion does not affect friendly troops", uptick: "up-green", color: "green" },
+                    { text: "Allows chance to escape melee", uptick: "up-green", color: "green" },
+                    { text: "Poor against large combatants", uptick: "down-red", color: "red" },
+                    { text: "+36%", icon: "movement-character", postText: "Speed", color: "green" }
+                ]
+            }
+        }
     },
     {
         ref: "miasmaOfDespair",
@@ -896,6 +1373,37 @@ exports.skills = [
     // BELOW THIS LINE IS ALREADY IN MONGODB
 
     // BELOW THIS LINE IS ALREADY IN MONGODB
+    {
+        ref: "rally",
+        name: "Rally!",
+        description: "To rally the troops and bring them back to the fore takes strong leadership skills and an iron will.",
+        icon: "ability-rally",
+        ranks: [
+            { effects: [
+                { icon: "ability-rally", description: "Passive ability: \"Rally!\"" }
+            ] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "common",
+            cooldown: "60",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "14 seconds",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "+16", icon: "morale-character", postText: "Leadership", color: "green" }
+                ]
+            }
+        }
+    },
     {
         name: "Cascading Fire-Cloak",
         description: "A blazing aura surrounds the Pyromancer's chosen ally, shielding them with protective flame and augmenting their abilities.",
@@ -1284,6 +1792,7 @@ exports.skills = [
         ]
     },
     {
+        ref: "inspiringPresence",
         name: "Inspiring Presence",
         description: "There are Lords that radiate power, confidence and fear, inspiring their followers to great or terrible acts.",
         icon: "battle-morale",

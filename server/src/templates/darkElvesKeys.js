@@ -60,7 +60,7 @@ let darkelves = {
     morathi: [
         { ...DarkElves.rows.row1.morathi },
         { ...DarkElves.rows.row2.morathi },
-        { ...Schools.magic.morathi },
+        { ...DarkElves.rows.row3.morathi },
         { ...DarkElves.rows.row4.morathi },
         { ...DarkElves.rows.row6.malekith },
         { ...DarkElves.rows.row9.darkElves }

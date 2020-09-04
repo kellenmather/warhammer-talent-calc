@@ -7,29 +7,53 @@ let lizardmen = {
         { ...Lizardmen.rows.row1.saurus },
         { ...Lizardmen.rows.row2.saurus },
         { ...Lizardmen.rows.row3.saurus },
-        { ...Lizardmen.rows.row6.saurus },
-        { ...Lizardmen.rows.row9.saurus }
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.lizardmen }
     ],
     kroxigor: [
         { ...Lizardmen.rows.row1.kroxigor },
         { ...Lizardmen.rows.row2.kroxigor },
         { ...Lizardmen.rows.row3.kroxigor },
-        { ...Lizardmen.rows.row6.saurus },
-        { ...Lizardmen.rows.row9.saurus }
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.lizardmen }
     ],
     skink: [
         { ...Lizardmen.rows.row1.skink },
         { ...Lizardmen.rows.row2.skink },
         { ...Lizardmen.rows.row3.saurus },
-        { ...Lizardmen.rows.row6.saurus },
-        { ...Lizardmen.rows.row9.saurus }
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.lizardmen }
     ],
     slann: [
         { ...Lizardmen.rows.row1.slann },
         { ...Lizardmen.rows.row2.slann },
         { ...Lizardmen.rows.row4.slann },
         { ...Lizardmen.rows.row6.slann },
-        { ...Lizardmen.rows.row9.saurus }
+        { ...Lizardmen.rows.row9.lizardmen }
+    ],
+    mazdamundi: [
+        { ...Lizardmen.rows.row1.mazdamundi },
+        { ...Lizardmen.rows.row2.mazdamundi },
+        { ...Lizardmen.rows.row3.mazdamundi },
+        { ...Lizardmen.rows.row4.mazdamundi },
+        { ...Lizardmen.rows.row6.slann },
+        { ...Lizardmen.rows.row9.lizardmen }
+    ],
+    kroqgar: [
+        { ...Lizardmen.rows.row1.kroqgar },
+        { ...Lizardmen.rows.row2.saurus },
+        { ...Lizardmen.rows.row3.kroqgar },
+        { ...Lizardmen.rows.row4.kroqgar },
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.lizardmen }
+    ],
+    tehenhauin: [
+        { ...Lizardmen.rows.row1.tehenhauin },
+        { ...Lizardmen.rows.row2.tehenhauin },
+        { ...Schools.magic.beasts },
+        { ...Lizardmen.rows.row4.tehenhauin },
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.lizardmen }
     ]
 }
 
