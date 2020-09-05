@@ -7,8 +7,8 @@
                 <div class="spell-cost inline-block">
                     <span v-if="spell.cooldown">
                         <span class="icon"><a class="icon-small" :style="getIcon('spellStyles', 'icon-cooldown-2')"></a></span>
-                        <p v-if="Array.isArray(spell.cooldown)" style="paddingLeft:28px;">{{spell.cooldown[displayLevel()]}}</p>
-                        <p v-else style="paddingLeft:28px;">{{spell.cooldown}}</p>
+                        <p v-if="Array.isArray(spell.cooldown)" style="paddingLeft:28px">{{spell.cooldown[displayLevel()]}}</p>
+                        <p v-else style="paddingLeft:28px">{{spell.cooldown}}</p>
                     </span>
                 </div>
                 <div class="spell-cost inline-block">
@@ -129,6 +129,7 @@ export default {
     width: calc(100% - 12px);
     background-color: black;
     margin-left: 12px;
+    padding-right: 10px;
 }
 .spell-name p {
     margin-top: 3px;

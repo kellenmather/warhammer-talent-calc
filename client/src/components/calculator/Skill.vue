@@ -96,7 +96,10 @@ export default {
             // this row has some very high popups so offset that by lowering the popup top value
             if (this.color === 'row6') {
                 this.top = (event.y - obj.offsetTop + verticalScroll - 180 );
+                if (this.skill.ranks.length > 2 && this.skill.ranks[1].effects.length > 4 ) this.top -= 180;
             }
+            // deal with insanely long spell popups
+            if (this.color === 'row3') this.top -= 90;
             // if the width of the popup would extend off the window with display to the left of cursor
             if (this.window.width < (mouseX - horizontalScroll) + 640) {
                 this.left = (event.x - obj.offsetLeft + horizontalScroll - 620);

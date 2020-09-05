@@ -22,7 +22,8 @@
         <div class="stats">
             <div v-for="(effect, index) in info.ranks[displayLevel()].effects" :key="index">
                 <span><a :style="getBackground(effect.icon)" class="small-icon" ></a></span>
-                <span class="effect inline-block" :style="{ color: effect.color}" >{{effect.description}}
+                <span class="effect inline-block" :style="{ color: effect.color}" >
+                    {{effect.description}}
                     <span v-if="effect.rank">
                          (<a :style="getBackground('experience-7')" class="tiny-icon"></a>Rank 7 and above)
                     </span>
@@ -44,7 +45,8 @@
         <div v-if="hasNext() && !specificRank" class="stats">
             <div v-for="(effect, idx) in info.ranks[displayNextLevel()].effects" :key="idx">
                 <span><a :style="getBackground(effect.icon)" class="small-icon" ></a></span>
-                <span class="effect inline-block" >{{effect.description}}
+                <span class="effect inline-block">
+                    {{effect.description}}
                     <span v-if="effect.rank">
                          (<a :style="getBackground('experience-7')" class="tiny-icon"></a>Rank 7 and above)
                     </span>
@@ -192,7 +194,9 @@ export default {
     display: inline-block;
     width: 18px;
     height: 18px;
+    vertical-align: bottom;
     padding-right: 18px;
+    margin-bottom: 1px;
 }
 .effect {
     max-width: 540px;
