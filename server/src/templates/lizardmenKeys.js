@@ -54,6 +54,28 @@ let lizardmen = {
         { ...Lizardmen.rows.row4.tehenhauin },
         { ...Lizardmen.rows.row6.lizardmen },
         { ...Lizardmen.rows.row9.lizardmen }
+    ],
+    tiktaqto: [
+        { ...Lizardmen.rows.row1.tiktaqto },
+        { ...Lizardmen.rows.row2.saurus },
+        { ...Lizardmen.rows.row3.tiktaqto },
+        { ...Lizardmen.rows.row4.tiktaqto },
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.lizardmen }
+    ],
+    nakai: [
+        { ...Lizardmen.rows.row1.nakai },
+        { ...Lizardmen.rows.row2.nakai },
+        { ...Lizardmen.rows.row3.kroxigor },
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.nakai }
+    ],
+    gorrok: [
+        { ...Lizardmen.rows.row1.gorrok },
+        { ...Lizardmen.rows.row2.gorrok },
+        { ...Lizardmen.rows.row3.saurus },
+        { ...Lizardmen.rows.row6.lizardmen },
+        { ...Lizardmen.rows.row9.nakai }
     ]
 }
 
@@ -61,8 +83,7 @@ exports.getLord = (lord, type) => {
     let data = lizardmen[lord][type] ? lizardmen[lord][type] : lizardmen[lord];
     if (Schools.magic[type]) {
         let holder = JSON.parse(JSON.stringify(Schools.magic[type])) // prevent unintended manipulation of Schools
-        holder.content[4].blockContent = ["Greater Arcane Conduit"]; // replace Arcane Conduit with Greater Arcane Conduit
-        console.log(holder.content[4].blockContent)
+        holder.content[4].blockContent = ["greaterArcaneConduit"]; // replace Arcane Conduit with Greater Arcane Conduit
         data.push(holder)
     }
     return data

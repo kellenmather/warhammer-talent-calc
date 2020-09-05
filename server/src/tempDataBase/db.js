@@ -172,6 +172,179 @@ exports.skills = [
         }
     },
     {
+        ref: "bladeOfTheAncientSkies",
+        name: "Blade of the Ancient Skies",
+        description: "Carved from the dense, fossilised jawbone of a monstrous, sky-borne predator that became extinct during ages long past.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +3", ps: "all provinces" },
+                { icon: "morale", description: "Leadership: +10", ps: "Lord's army" },
+                { icon: "ability-sword", description: "Passive ability: \"Blade of the Ancient Skies\"" }
+            ] }
+        ],
+        spell: {
+            description: "Weapon",
+            rarity: "legendary",
+            attributes: {
+                type: "Augment",
+                duration: "Constant",
+                target: "Self",
+                activeIf: "Flying",
+                effects: [
+                    { text: "+18%", icon: "icon-base-damage", postText: "Base Weapon Damage", color: "green" },
+                    { text: "+16", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+18%", icon: "icon-armor-piercing", postText: "Armour-Piercing Weapon Damage", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "maskOfHeavens",
+        name: "Mask of Heavens",
+        description: "Its wearer will become one with the mighty Terradons, who will then move in tandem as a single, mighty consciousness.",
+        icon: "item-enchanted",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "campaign-movement", description: "Campaign movement range: +10%" },
+                { icon: "attribute-fatigue-immune", description: "Attribute: Perfect Vigour" },
+                { icon: "ability-enchanted", description: "Passive ability: \"Mask of Heavens\"" }
+            ] }
+        ],
+        spell: {
+            description: "Weapon",
+            rarity: "legendary",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [ 
+                    { text: "Self" },
+                    { text: "Only acts on targets when in area" },
+                ],
+                targetIf: "Flying unit",
+                effectRange: "55m",
+                effects: [
+                    { text: "+23", icon: "armor-character", postText: "Armour", color: "green" },
+                    { text: "+9", icon: "defense-character", postText: "Melee Defense", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "goldenTributes",
+        name: "Golden Tributes",
+        description: "Thought of as a jungle-spirit made flesh, the Wanderer is treated with great deference and adorned with ceremonial tokens.",
+        icon: "item-enchanted",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +5" },
+                { icon: "resistance-ward-save", description: "Ward save: 5%" },
+                { icon: "ability-arcane", description: "Passive ability: \"Golden Tributes\"" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],                
+                effects: [
+                    { icon: "attribute-fatigue-immune", postText: "Perfect Vigour", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theOghamShard",
+        name: "The Ogham Shard",
+        description: "The shard is a fractured piece of one of the original Ogham Waystones, whose mystical properties may keep Chaos at bay.",
+        icon: "item-talisman",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "resistance-magic", description: "Magic resistancer: 25%" },
+                { icon: "replenishment", description: "Casualty replenishment rate: +5%", ps: "Lord's army" },
+                { icon: "religion", description: "Untainted: +3", ps: "local provinces" }
+            ] }
+        ]
+    },
+    {
+        ref: "maceOfUlumak",
+        name: "Mace of Ulumak",
+        description: "It is believed that the Old Ones themselves guide the hand of he who wields the Mace of Ulumak.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "resistance-physical", description: "Physical resistance: 18%" },
+                { icon: "ability-mace-of-ulumak", description: "Ability: \"Mace of Ulumak\"" }
+            ] }
+        ],
+        spell: {
+            description: "Weapon",
+            rarity: "legendary",
+            cooldown: "120",
+            attributes: {
+                type: "Augment",
+                duration: "24 seconds",
+                target: "Self",
+                effects: [
+                    { text: "+50%", icon: "icon-armor-piercing", postText: "Armour-Piercing Weapon Damage", color: "green" },
+                    { text: "+40", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+50%", icon: "icon-base-damage", postText: "Base Weapon Damage", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theShieldOfAeons",
+        name: "The Shield of Aeons",
+        description: "A dozen Kroxigor were needed to haul this matchless shield to the mainland and generations of Skink artisans laboured to carve it.",
+        icon: "item-armour",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "armor-character", description: "Armour: +15" },
+                { icon: "resistance-fire", description: "Fire resistance: 30%" },
+                { icon: "ability-shield-of-aeons", description: "Ability: \"Shield of Aeons\"" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            cooldown: "120",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets in area" }
+                ],
+                duration: "23 seconds",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "+60", icon: "armor-character", postText: "Armour", color: "green" },
+                    { icon: "charge-reflector", postText: "Expert Charge Defense", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
         ref: "coldOneLizardmen",
         name: "Cold One",
         description: "Dark, feral beasts indigenous to Lustria, tempted from their topical jungles to bear the Lizardmen to battle.",
@@ -196,6 +369,15 @@ exports.skills = [
         icon: "ripperdactyl",
         ranks: [
             { effects: [{ icon: "mount", description: "Mount: Ripperdactyl" }] }
+        ]
+    },
+    {
+        ref: "zwup",
+        name: "Zwup",
+        description: "With the utmost speed and agility, Tiktaq'to leads his death-defying Terradon squadron from atop his prized-specimen mount, Zwup",
+        icon: "terradon",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Zwup" }] }
         ]
     },
     {
@@ -449,6 +631,124 @@ exports.skills = [
                 { icon: "resistance-ward-save", description: "Ward save: 5%" },
                 { icon: "coin", description: "Upkeep: -5% for Saurus and Cold One units", ps: "Lord's army" },
                 { icon: "coin", description: "Upkeep: -5% for Temple Guards units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "dropSphereOfTepok",
+        name: "Drop Sphere of Tepok",
+        description: "This magical rock causes a rather large explosion that stuns enemies, slowing them down for the kill.",
+        icon: "ability-drop-sphere-of-tepok",
+        ranks: [
+            { effects: [{ icon: "ability-drop-sphere-of-tepok", description: "Ability: \"Drop Sphere of Tepok\"" }] }
+        ],
+        spell: {
+            description: "Lord ability",
+            rarity: "rare",
+            cooldown: "5",
+            uses: 1,
+            attributes: {
+                type: "Bombardment",
+                target: "Around self",
+                cannotUseIf: "Engaged in melee",
+                effects: [
+                    { text: "Small strike area", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Enemies hit by explosion are slowed (30s)", uptick: "up-green", color: "green" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "dropSphereOfTepokUpgraded",
+        name: "Drop Sphere of Tepok Upgraded",
+        description: "This magical rock causes a rather large explosion that stuns enemies, slowing them down for the kill.",
+        icon: "ability-drop-sphere-of-tepok",
+        ranks: [
+            { effects: [
+                { icon: "ability-drop-sphere-of-tepok", description: "Replaces: \"Drop Sphere of Tepok\"" },
+                { icon: "ability-drop-sphere-of-tepok", description: "Ability: \"Drop Sphere of Tepok Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Lord ability",
+            rarity: "rare",
+            cooldown: "5",
+            uses: 2,
+            attributes: {
+                type: "Bombardment",
+                target: "Around self",
+                cannotUseIf: "Engaged in melee",
+                effects: [
+                    { text: "Small strike area", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Enemies hit by explosion are slowed (30s)", uptick: "up-green", color: "green" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "percisionStrike",
+        name: "Percision Strike",
+        description: "Having honed his senses through myriad battles, the Master of Skies strikes at the most opportune time, emboldening his forces whilst breaking the foe's guard.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [
+                { icon: "morale", description: "Leadership: +10 (when attacking)", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +5 (when attacking)", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "fearlessLeader",
+        name: "Fearless Leader",
+        description: "His sheer confidence in his own abilities causes Tiktaq'to always to lead the charge, often claiming his prize with the first strike.",
+        icon: "character-health",
+        ranks: [
+            { effects: [
+                { icon: "charge-character", description: "Charge bonus: +15", ps: "Lord's army" },
+                { icon: "health-character", description: "Hit points: +8%", ps: "all armies" },
+                { icon: "damage", description: "Weapon strength: +10%" }
+            ] }          
+        ]
+    },
+    {
+        ref: "aerialSuperiority",
+        name: "Aerial Superiority",
+        description: "As Master of Skies, Tiktaq'to leads only the fastest and most resilient flying beasts.",
+        icon: "character-speed",
+        ranks: [
+            { effects: [
+                { icon: "resistance-physical", description: "Physical resistance: 10% for Terradon Riders and Ripperdactyl Riders units", ps: "Lord's army" },
+                { icon: "movement", description: "Speed: +10% for Terradon Riders and Ripperdactyl Riders units", ps: "Lord's army" },
+                { icon: "ammo", description: "Ammunition: +25% for Terradon Riders units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "aeriesFinest",
+        name: "Aerie's Finest",
+        description: "Only those Tiktaq'to picks by hand may fight alongside him and Zwup up in the skies above the battlefield.",
+        icon: "character-experience",
+        ranks: [
+            { effects: [
+                { icon: "experience", description: "Recruit rank: +3 for Terradon Riders and Ripperdactyl Riders units", ps: "Lord's army" },
+                { icon: "replenishment", description: "Casualty replenishment rate: +15% for Terradon Riders and Ripperdactyl Riders units", ps: "Lord's army" },
+                { icon: "ranged-damage", description: "Missle strength: +10% for Terradon Riders units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "skinkCommander",
+        name: "Skink Commander",
+        description: "As one of the greatest Skink Chiefs to fight in service of the Old Ones, Tiktaq'to takes pride in training the next generation of Skink leaders.",
+        icon: "character-agent",
+        ranks: [
+            { effects: [
+                { icon: "skink-chief", description: "Hero capacity: +2 for Skink Chiefs" },
+                { icon: "skink-chief", description: "Hero recruit rank: +4 for Skink Chiefs", ps: "local province" }
             ] }          
         ]
     },
@@ -930,6 +1230,175 @@ exports.skills = [
         ]
     },
     {
+        ref: "legendaryWarrior",
+        name: "Legendary Warrior",
+        description: "Nakai's very presence indicates that a battle of great importance will soon occur.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [
+                { icon: "character", description: "Leadership aura size: +20%" },
+                { icon: "morale-character", description: "Character's aura leadership efect: +5" }
+            ] }          
+        ]
+    },
+    {
+        ref: "daemonCrusher",
+        name: "Daemon Crusher",
+        description: "So many DAemons of Chaos have been slain by Nakai that such entities fear to tread the same ground as him.",
+        icon: "character-charge",
+        ranks: [
+            { effects: [
+                { icon: "charge-character", description: "Charge bonus: +10" },
+                { icon: "damage", description: "Weapon strength: +10%" }
+            ] }          
+        ]
+    },
+    {
+        ref: "coldBloodedReflexes",
+        name: "Cold-Blooded Reflexes",
+        description: "Slowly, carefully, the serpent uncoils, before striking suddenly - like lightning - and sinking its fangs as far as they will go.",
+        icon: "terror",
+        ranks: [
+            { effects: [
+                { icon: "leadership-malus", description: "Attacks cause \"Discouraged\" effect, reducing leadership" },
+                { icon: "attribute-terror", description: "Weapon strength: +10%" }
+            ] }          
+        ]
+    },
+    {
+        ref: "firstSpawning",
+        name: "First Spawning",
+        description: "Revered as a jungle-spirit made manifest, ancient Nakai is the last of the First Spawning, and fights with the Old Ones' long-dormant fury.",
+        icon: "dealer-in-death",
+        ranks: [
+            { effects: [
+                { icon: "movement-character", description: "Speed: +10%", ps: "Lord's army" },
+                { icon: "character", description: "Ability: \"Frenzy\" for Kroxigor and Sacred Kroxigor units", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "adornments",
+        name: "Adornments",
+        description: "Nakai is treated with deference by the Skink Priests, who adorn his massive, battle-scarred body with ceremonial tokens when he returns from the fray.",
+        icon: "character-replenishment",
+        ranks: [
+            { effects: [
+                { icon: "replenishment", description: "Casualty replenishment: +5%", ps: "Lord's army" },
+                { icon: "growth", description: "Horde growth: +3", ps: "Lord's army" }
+            ] }          
+        ]
+    },
+    {
+        ref: "theSacredWanderer",
+        name: "The Sacred Wanderer",
+        description: "This mighty protector of the Lizardmen race is pledged to go wherever the Great Plan deems it necessary for him to be.",
+        icon: "character",
+        ranks: [
+            { effects: [{ icon: "unbreakable", description: "Attribute: Unbreakable" }] }          
+        ]
+    },
+    {
+        ref: "unrelentingAssult",
+        name: "Unrelenting Assult",
+        description: "The stamina of the Great White Lizard is almost inexhaustible, unlike that of his pitiful opponents.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [
+                { icon: "resistance-physical", description: "Physical resistance: 5%" },
+                { icon: "attribute-fatigue-immune", description: "Attribute: Perfect Vigour" }
+            ] }
+        ]
+    },
+    {
+        ref: "impassableDefenses",
+        name: "Impassable Defenses",
+        description: "The solid centre around which the Saurus battle lines advance, and the rock on which Itza's enemies are broken.",
+        icon: "character-defense",
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +10" },
+                { icon: "resistance-magic", description: "Magic resistance: 15%" }
+            ] }
+        ]
+    },
+    {
+        ref: "protectorOfLustria",
+        name: "Protector of Lustria",
+        description: "\"Venerable Old Ones, guide my claw and restore my kin!\"",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [
+                { icon: "resistance-physical", description: "Physical resistance: 10% for Saurus units", ps: "Lord's army" },
+                { icon: "defense-character", description: "Melee defense: +10 for Saurus and Temple Guard units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "unflinching",
+        name: "Unflinching",
+        description: "Never retreat, never surrender. Stare hard into the abyss.",
+        icon: "ability-merely-a-fleshwound",
+        ranks: [
+            { effects: [
+                { icon: "ability-to-the-death", description: "Replaces: \"To the Death\"" },
+                { icon: "ability-merely-a-fleshwound", description: "Ability: \"Merely a Fleshwound\"" }
+            ] }
+        ],
+        spell: {
+            description: "Lord ability",
+            rarity: "uncommon",
+            attributes: {
+                type: "Augment",
+                duration: "Constant",
+                target: "Self",
+                disabledIf: "Hit Points greater than 50% base",
+                effects: [
+                    { text: "+12", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+6", icon: "morale-character", postText: "Leadership", color: "green" },
+                    { icon: "unbreakable", postText: "Unbreakable", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "aMightyOpponent",
+        name: "A Mighty Opponent",
+        description: "A fighting machine, wholly purposed for war and the slaughtering of enemies, Gor-Rok can always be found where the fighting is thickest.",
+        icon: "terror",
+        ranks: [
+            { effects: [
+                { icon: "melee-character", description: "Melee attack: +10" },
+                { icon: "attribute-terror", description: "Attribute: Causes Terror" }
+            ] }          
+        ]
+    },
+    {
+        ref: "theGreatWhiteLizard",
+        name: "The Great White Lizard",
+        description: "The greatest and most renowned of his kind, Gor-Rok's lone spawning and distinctive colouring immediately marked him as a future champion.",
+        icon: "character-health",
+        ranks: [
+            { effects: [
+                { icon: "health-character", description: "Hit points: +8%" },
+                { icon: "ability-regeneration", description: "Passive ability: \"Regeneration\"" }
+            ] }
+        ],
+        spell: {
+            description: "Unit ability",
+            rarity: "common",
+            attributes: {
+                type: "Regeneration",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "Restores", icon: "hp", postText: "4 Hit Points per second", uptick: "up-green", color: "green" },
+                    { text: "+25% Weakness to", icon: "icon-fire", postText: "Fire Damage", color: "red" },
+                ]
+            }
+        }
+    },
+    {
         ref: "enforcerOfOrder",
         name: "Enforcer of Order",
         description: "The Plan *will* be observed, even if every member of the younger races has to die to achieve the Old Ones' goals.",
@@ -1016,6 +1485,31 @@ exports.skills = [
                 ]
             }
         }
+    },
+    {
+        ref: "masterOfSkies",
+        name: "Master of Skies",
+        description: "With the utmost speed and agility, Tiktaq'to leads his death-defying Terradon squadron from atop his prized-specimen mount, Zwup",
+        icon: "ability-master-of-skies",
+        ranks: [
+            { effects: [{ icon: "ability-master-of-skies", description: "Ability: \"Master of the Skies\"" }] }
+        ],
+        spell: {
+            name: "Master of the Skies",
+            description: "Character ability",
+            cooldown: "60",
+            rarity: "common",
+            attributes: {
+                type: "Augment",
+                duration: "31 seconds",
+                target: "Self",
+                rechargeIf: "Flying",
+                effects: [
+                    { text: "+40", icon: "defense-character", postText: "Melee Defense", color: "green" },
+                    { text: "+24%", icon: "movement-character", postText: "Speed", color: "green" }
+                ]
+            }
+         }
     },
     {
         ref: "miasmaOfDespair",
@@ -1293,6 +1787,23 @@ exports.skills = [
             ] },
             { effects: [
                 { icon: "religion", description: "Untainted: +3" },
+            ] }
+        ]
+    },
+    {
+        ref: "spawnedOfItza",
+        name: "Spawned of Itza",
+        description: "A Lord from the Lizardmen's hallowed First City can summon his spawn-kin to battle in Lustria's defense.",
+        icon: "campaign-growth",
+        ranks: [
+            { effects: [
+                { icon: "growth", description: "Horde growth: +1", ps: "Lord's army" },
+            ] },
+            { effects: [
+                { icon: "growth", description: "Horde growth: +2", ps: "Lord's army" },
+            ] },
+            { effects: [
+                { icon: "growth", description: "Horde growth: +3", ps: "Lord's army" },
             ] }
         ]
     },

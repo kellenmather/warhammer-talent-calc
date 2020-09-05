@@ -197,6 +197,85 @@ exports.rows = {
                     blockContent: ['protectionOfTheOldOnes']
                 }
             ]
+        },
+        tiktaqto: {
+            row: 1,
+            content: [
+                {
+                    quest: 1,
+                    blockContent: ['bladeOfTheAncientSkies']
+                },
+                {
+                    quest: 8,
+                    blockContent: ['maskOfHeavens']
+                },
+                {
+                    quest: 1,
+                    blockContent: ['zwup']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['agilityOfTheLizard']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['protectionOfTheOldOnes']
+                }
+            ]
+        },
+        nakai: {
+            row: 1,
+            content: [
+                {
+                    quest: 8,
+                    blockContent: ['goldenTributes']
+                },
+                {
+                    quest: 8,
+                    blockContent: ['theOghamShard']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['obedienceBringsVictory']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['reptilianResilience']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['protectionOfTheOldOnes']
+                }
+            ]
+        },
+        gorrok: {
+            row: 1,
+            content: [
+                {
+                    quest: 2,
+                    blockContent: ['maceOfUlumak']
+                },
+                {
+                    quest: 8,
+                    blockContent: ['theShieldOfAeons']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['obedienceBringsVictory']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['agilityOfTheLizard']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['protectionOfTheOldOnes']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['honouredElder']
+                }
+            ]
         }
     },
     row2: {
@@ -345,6 +424,40 @@ exports.rows = {
                     blockContent: ['soteksGifted', 'reverence', 'enlighten']
                 }
             ]
+        },
+        nakai: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['legendaryWarrior']
+                },
+                {
+                    restrictionChoice: 'legendaryWarrior',
+                    blockContent: ['daemonCrusher', 'coldBloodedReflexes', 'firstSpawning', 'adornments']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['theSacredWanderer']
+                }
+            ]
+        },
+        gorrok: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['unrelentingAssult']
+                },
+                {
+                    restrictionChoice: 'unrelentingAssult',
+                    blockContent: ['impassableDefenses', 'protectorOfLustria', 'unflinching', 'aMightyOpponent']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['theGreatWhiteLizard']
+                }
+            ]
         }
     },
     row3: {
@@ -457,6 +570,27 @@ exports.rows = {
                 }
             ]
         },
+        tiktaqto: {
+            row: 3,
+            content: [
+                {
+                    quest: 1,
+                    blockContent: ['dropSphereOfTepok']
+                },
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['percisionStrike']
+                },
+                {
+                    restrictionChoice: 'percisionStrike',
+                    blockContent: ['fearlessLeader', 'aerialSuperiority', 'aeriesFinest', 'skinkCommander']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['dropSphereOfTepokUpgraded']
+                }
+            ]
+        }
     },
     row4: {
         slann: {
@@ -552,6 +686,30 @@ exports.rows = {
                     blockContent: ['deadlyOnslaught']
                 }
             ]
+        },
+        tiktaqto: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['predatoryFighter'],
+                },
+                {
+                    restrictionChoice: 'predatoryFighter',
+                    blockContent: ['enforcerOfOrder', 'thickSkinned', 'bladeMaster', 'indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['masterOfSkies']
+                },
+                {
+                    restrictionChoice: 'masterOfSkies',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deadlyOnslaught']
+                }
+            ]
         }
     },
     row6: {
@@ -613,7 +771,31 @@ exports.rows = {
                 },
                 {
                     restrictionChoice: 'routeMarcher',
-                    blockContent: ['rronDisciplinarian', 'fervent', 'bondedService', 'ancientCunning']
+                    blockContent: ['ironDisciplinarian', 'fervent', 'bondedService', 'ancientCunning']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['draftmaster']
+                },
+                {
+                    restrictionChoice: 'draftmaster',
+                    blockContent: ['lightningStrike', 'geomanticSustenance', 'wary', 'giftsOfTheJungle']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['renownedFeared']
+                }
+            ]
+        },
+        nakai: {
+            row: 9,
+            content: [
+                {
+                    blockContent: ['routeMarcher']
+                },
+                {
+                    restrictionChoice: 'routeMarcher',
+                    blockContent: ['spawnedOfItza', 'fervent', 'bondedService', 'ancientCunning']
                 },
                 {
                     restrictionCount: 4,

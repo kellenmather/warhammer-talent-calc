@@ -36,7 +36,7 @@ exports.getRows = (req, res) => {
     }
 
     // get all skills from mongoDB that are listed in skillArray
-    if (params.race === 'darkelves' || params.race === 'highelves') {
+    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen') {
         Skill.find({ ref: { $in: skillArray } }, function(err, test) {
             if (test) {
                 response.skills = test
