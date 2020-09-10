@@ -989,7 +989,7 @@ exports.rows = {
                 },
                 {
                     restrictionChoice: 'routeMarcher',
-                    blockContent: ['ironDisciplinarian', 'Looter', 'bondedService', 'wary']
+                    blockContent: ['ironDisciplinarian', 'looter', 'bondedService', 'wary']
                 },
                 {
                     restrictionCount: 4,

@@ -344,18 +344,18 @@ exports.rows = {
             content: [
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['reveredNameOfPower', 'reveredNameOfPower'],
+                    restrictionLimited: ['reveredNameOfPower', 'aristocraticNameOfPower'],
                     blockContent: ['martialNameOfPower']
                 },
                 {
                     restrictionLevel: 10,
-                    restrictionLimited: ['martialNameOfPower', 'reveredNameOfPower'],
+                    restrictionLimited: ['martialNameOfPower', 'aristocraticNameOfPower'],
                     blockContent: ['reveredNameOfPower']
                 },
                 {
                     restrictionLevel: 10,
                     restrictionLimited: ['martialNameOfPower', 'reveredNameOfPower'],
-                    blockContent: ['reveredNameOfPower']
+                    blockContent: ['aristocraticNameOfPower']
                 }
             ]
         },
