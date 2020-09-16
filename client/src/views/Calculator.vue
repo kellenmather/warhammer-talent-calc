@@ -1,9 +1,9 @@
 <template>
-    <div id="calculator" v-if="skills.length > 0" class="container-fluid calc-border calc unselectable" :style="getBackground(this.styleGuide)">
+    <div v-cloak id="calculator" v-if="skills.length > 0" class="container-fluid calc-border calc unselectable" :style="getBackground(this.styleGuide)">
         <div class="header-padding">
             <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
                 <div class="left-nav action-items">
-                    <a @click="$router.push('/')" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
+                    <a @click="$router.push('/' + race + legendary )" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
                     <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
                     <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
@@ -59,6 +59,7 @@ export default {
             saveState: {},
             skillPointAllocation: {},
             lordLevel: 1,
+            legedary: '/',
             styleGuide: 'wh2',
             secret: false
         }
@@ -77,7 +78,7 @@ export default {
                         skillRefs.push(blockContent[j])
                     }
                 }
-                // poplate list of needed skills per row
+                // populate list of needed skills per row
                 for (let i = 0; i < skillRefs.length; i++) {
                     let skill = this.skills.find((skill) => skill.ref === skillRefs[i]);
                     skillsObject[skillRefs[i]] = skill
@@ -173,8 +174,10 @@ export default {
             let races = LordKey.legendary[this.race].concat(LordKey.lords[this.race]);
             for (let i = 0; i < races.length; i++) {
                 if (this.lord === races[i].type && this.type === races[i].subType) {
+                    (races[i].legendary) ? this.legendary = '/legend' : this.legendary = '/';
                     return races[i].name
                 } else if (this.lord === races[i].type && races[i].school && races[i].school.includes(this.type)) {
+                    (races[i].legendary) ? this.legendary = '/legend' : this.legendary = '/';
                     let magicType = this.type
                     magicType = magicType.charAt(0).toUpperCase() + magicType.slice(1).split(/(?=[A-Z])/).join(' ');
                     return races[i].name + ' (' + magicType + ')'

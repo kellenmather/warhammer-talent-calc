@@ -3,7 +3,7 @@
         <div class="segment">
             <span class="icon"><a class="rarity-icon" :style="getIcon('spellStyles', spell.rarity)"></a></span>
             <div class="spell-name inline-block" :style="getGradient('rarity', spell.rarity)">
-                <p class="inline-block title">{{getName(name)}}</p>
+                <p class="inline-block spell-title">{{getName(name)}}</p>
                 <div class="spell-cost inline-block">
                     <span v-if="spell.cooldown">
                         <span class="icon"><a class="icon-small" :style="getIcon('spellStyles', 'icon-cooldown-2')"></a></span>
@@ -172,7 +172,8 @@ export default {
     height: auto;
     width: 16px !important;
 }
-.title {
+.spell-title {
     font-weight: bold;
+    line-height: 1;
 }
 </style>

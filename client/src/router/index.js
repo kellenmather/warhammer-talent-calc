@@ -6,9 +6,8 @@ import Calculator from '../views/Calculator.vue';
 Vue.use(Router)
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
+  { path: '/:race?/:legendary?', name: 'Home', component: Home, props: true },
   { path: '/calc/:race/:lord/:type?', name: 'Calculator', component: Calculator, props: true }
-//   { path: '/sample/:id', name: 'Sample', component: SVGFEDisplacementMapElement, props: true, meta: { noAuth: true } }
 ]
 
 const router = new Router({

@@ -1,7 +1,7 @@
 <template>
     <article class="col">
         <div class="jumbotron header fader" :style="getImage()">
-            <img class="unselectable logo-size-control" alt="Warhammer II logo" src="@/assets/home/wh-tc-logo.png">
+            <img class="unselectable logo logo-size-control" alt="Warhammer II logo" src="@/assets/home/wh-tc-logo.png">
         </div>
     </article>
 </template>
@@ -29,6 +29,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media (max-width: 991px) {
+    .logo-size-control {
+        max-width: 400px;
+    }
+}
+
 .jumbotron {
     background-color: #262626;
     height: 305px;
@@ -43,9 +49,8 @@ article.col {
     border-radius: 0px;
     padding: 2rem 1rem;
 }
-.logo-size-control {
-    max-width: 500px;
-    min-width: 250px;
+.logo {
+    width: 460px;
 }
 .fader img {
     -webkit-animation: fadein 2; /* Safari, Chrome and Opera > 12.1 */

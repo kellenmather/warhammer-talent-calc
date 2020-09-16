@@ -7,23 +7,23 @@
                 </li>
             </ul>
             <ul v-if="wh2">
-                <li><a type="button" class="home-button" @click="selectRace('Dark Elves')" :style="getAssets('button-home', 'Dark Elves')">Dark Elves</a></li>
-                <li><a type="button" class="home-button" @click="selectRace('High Elves')" :style="getAssets('button-home', 'High Elves')">High Elves</a></li>
-                <li><a type="button" class="home-button" @click="selectRace('Lizardmen')" :style="getAssets('button-home', 'Lizardmen')">Lizardmen</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Skaven', 'disabled')" :style="getAssets('button-home', 'Skaven')">Skaven</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Tomb Kings', 'disabled')" :style="getAssets('button-home', 'Tomb Kings')">Tomb Kings</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Vampire Coast', 'disabled')" :style="getAssets('button-home', 'Vampire Coast')">Vampire Coast</a></li>
+                <li><a type="button" class="home-button" @click="selectRace('darkelves')" :style="getAssets('button-home', 'darkelves')">Dark Elves</a></li>
+                <li><a type="button" class="home-button" @click="selectRace('highelves')" :style="getAssets('button-home', 'highelves')">High Elves</a></li>
+                <li><a type="button" class="home-button" @click="selectRace('lizardmen')" :style="getAssets('button-home', 'lizardmen')">Lizardmen</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('skaven', 'disabled')" :style="getAssets('button-home', 'skaven')">Skaven</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('tombkings', 'disabled')" :style="getAssets('button-home', 'tombkings')">Tomb Kings</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('vampirecoast', 'disabled')" :style="getAssets('button-home', 'vampirecoast')">Vampire Coast</a></li>
             </ul>
             <ul v-else class="wh">
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('The Empire', 'disabled')" :style="getAssets('button-home', 'The Empire')">The Empire</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Dwarves', 'disabled')" :style="getAssets('button-home', 'Dwarves')">Dwarves</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Greenskins', 'disabled')" :style="getAssets('button-home', 'Greenskins')">Greenskins</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Vampire Counts', 'disabled')" :style="getAssets('button-home', 'Vampire Counts')">Vampire Counts</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Norsca', 'disabled')" :style="getAssets('button-home', 'Norsca')">Norsca</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Bretonnia', 'disabled')" :style="getAssets('button-home', 'Bretonnia')">Bretonnia</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Wood Elves', 'disabled')" :style="getAssets('button-home', 'Wood Elves')">Wood Elves</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Beastmen Warherds', 'disabled')" :style="getAssets('button-home', 'Beastmen Warherds')">Beastmen Warherds</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('Chaos', 'disabled')" :style="getAssets('button-home', 'Chaos')">Chaos</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('theempire', 'disabled')" :style="getAssets('button-home', 'theempire')">The Empire</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('dwarves', 'disabled')" :style="getAssets('button-home', 'dwarves')">Dwarves</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('greenskins', 'disabled')" :style="getAssets('button-home', 'greenskins')">Greenskins</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('vampirecounts', 'disabled')" :style="getAssets('button-home', 'vampirecounts')">Vampire Counts</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('norsca', 'disabled')" :style="getAssets('button-home', 'norsca')">Norsca</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('bretonnia', 'disabled')" :style="getAssets('button-home', 'bretonnia')">Bretonnia</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('woodelves', 'disabled')" :style="getAssets('button-home', 'woodelves')">Wood Elves</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('beastmenwarherds', 'disabled')" :style="getAssets('button-home', 'beastmenwarherds')">Beastmen Warherds</a></li>
+                <li><a type="button" class="home-button disabled-button" @click="selectRace('chaos', 'disabled')" :style="getAssets('button-home', 'chaos')">Chaos</a></li>
             </ul>
         </div>
     </div>
@@ -34,9 +34,10 @@ import ApiService from '@/services/apiService';
 
 export default {
     name: 'RaceSelector',
+    props: ['race'],
     data() {
         return {
-            selection: 'Dark Elves',
+            selection: 'darkelves',
             wh2: true
         }
     },
@@ -44,7 +45,7 @@ export default {
         selectRace(race, disabled) {
             if (disabled) return
             this.selection = race;
-            this.$emit('raceSelected', race.toLowerCase().split(' ').join(''))
+            this.$emit('raceSelected', race)
         },
         getAssets(item, race) {
             if (race === this.selection) item = item + '-selected';
@@ -64,6 +65,9 @@ export default {
         changeLords() {
             this.wh2 ? this.wh2 = false : this.wh2 = true;
         }
+    },
+    created() {
+        if (this.race) this.selection = this.race;
     }
 };
 </script>
@@ -117,9 +121,8 @@ export default {
 }
 .race-header a {
     display: inline-block;
-    background-position: top center;
+    background-position: top 2px center;
     background-repeat: no-repeat;
-    z-index: 1;
     width: 52px;
     height: 70px;
 }

@@ -678,7 +678,7 @@ exports.rows = {
                 },
                 {
                     restrictionChoice: 'axeLord',
-                    blockContent: ['valourOfAges', 'hardToHit', 'bladeMaster', 'Lion Guardian'],
+                    blockContent: ['valourOfAges', 'hardToHit', 'bladeMaster', 'lionGuardian'],
                 },
                 {
                     restrictionCount: 4,

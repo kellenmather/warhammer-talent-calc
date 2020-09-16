@@ -1301,9 +1301,8 @@ exports.skills = [
         ranks: [
             { effects: [
                 { icon: "public-order", description: "Public order: -1", ps: "all provinces", color: "red" },
-                { icon: "bonus-vs-large-character", description: "Bonus vs. Large: +10" },
-                { icon: "morale-character", description: "Leadership: +20" },
-                { icon: "damage", description: "Weapon strength: +10%" }
+                { icon: "charge-character", description: "Charge bonus: +15" },
+                { icon: "attribute-fear", description: "Attribute: Causes Fear" }
             ] }
         ]
     },

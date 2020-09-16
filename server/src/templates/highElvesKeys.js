@@ -72,7 +72,7 @@ let highelves = {
         { ...HighElves.rows.row1.archmage },
         { ...HighElves.rows.row2.highElves },
         { ...HighElves.rows.row6.princess },
-        { ...HighElves.rows.row9.highElves }
+        { ...HighElves.rows.row9.alith }
     ]
 }
 

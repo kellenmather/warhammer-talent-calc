@@ -1,10 +1,14 @@
 <template>
     <section>
         <Header :selection="selection"/>
-        <div class='container-fluid home unselectable' :style="getAssets()">
+        <div v-cloak class='container-fluid home unselectable' :style="getAssets()">
             <div class="row justify-content-center">
-                <RaceSelector @raceSelected="selectedRace"/>
-                <LordSelector :selection="selection"/>
+                <RaceSelector 
+                    @raceSelected="selectedRace"
+                    :race="race"/>
+                <LordSelector 
+                    :selection="selection"
+                    :legendary="legendary"/>
             </div>
         </div>
         <Footer />
@@ -26,6 +30,7 @@ export default {
         LordSelector,
         Footer
     },
+    props: ['race', 'legendary'],
     data() {
         return {
             selection: 'darkelves'
@@ -39,6 +44,21 @@ export default {
             let img = require('@/assets/home/bottom-divide.png');
             img = { 'backgroundImage': 'url(' + img + ')' };
             return img;
+        }
+    },
+    watch: {
+        legend: function() {
+            console.log('watched');
+            this.$forceUpdate();
+        }
+    },
+    created() {
+        if (this.race) {
+            this.selection = this.race;
+        }
+        if (this.legendary === 'legendary') {
+            console.log('legend detected')
+            this.legend = true;
         }
     }
 };
@@ -69,6 +89,9 @@ a {
 a:hover {
     color: inherit;
     text-decoration: none;
+}
+[v-cloak] {
+    display: none;
 }
 
 </style>

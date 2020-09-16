@@ -42,6 +42,7 @@ export default {
     name: 'LordSelector',
     props: {
         selection: String,
+        legendary: String
     },
     data () {
         return {
@@ -93,6 +94,7 @@ export default {
         }
     },
     created() {
+        if (this.legendary === 'legend') this.showLords = false;
         this.setRace();
     }
 };

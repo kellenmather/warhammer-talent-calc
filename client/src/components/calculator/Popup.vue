@@ -148,11 +148,10 @@ export default {
     opacity: .85;
     color: white;
     word-wrap: normal;
-    line-height:normal;
+    line-height: normal;
     font-size: 1em;
 }
 .title {
-    position: relative;
     color: #EBE6CD;
     font-weight: bold;
     height: 30px;
@@ -204,7 +203,8 @@ export default {
     vertical-align: middle;
 }
 .legend-item {
-    vertical-align: middle;
+    vertical-align: middle !important;
     margin-bottom: 4px;
+    line-height: .9;
 }
 </style>
