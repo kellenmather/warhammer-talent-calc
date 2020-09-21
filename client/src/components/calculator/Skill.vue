@@ -7,7 +7,7 @@
                 <p>{{ skill.name }}</p>
             </span>
         </div>
-        <div v-if="!skill.quest && !skillState[block].quest" class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:20px;' : (skill.ranks.length === 2) ? 'marginTop:10px;' : '' ">
+        <div v-if="!skill.quest && !skillState[block].quest" class="skill-ranks" :style="(skill.ranks.length === 1) ? 'marginTop:23px;' : (skill.ranks.length === 2) ? 'marginTop:15px;' : 'marginTop:7px' ">
             <div 
                 v-for="(rank, index) in skill.ranks" 
                 :key="index" 
@@ -276,7 +276,7 @@ export default {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 220px;
+    width: 210px;
     height: 67px;
 }
 .skill-icon {
@@ -284,22 +284,22 @@ export default {
     height: 72px;
     margin-top: -5px;
     position: absolute;
-    left: 30px;
+    left: 23px;
 }
 .skill-ranks {
     position: absolute;
     height: 60px;
     top: 2px;
-    left: 203px;
+    left: 196px;
 }
 .skill-rank {
     display: block;
     width: 16px;
-    max-height: 20px;
+    max-height: 16px;
 }
 .skill-name {
     margin-top: 11px;
-    margin-left: 65px;
+    margin-left: 68px;
     padding-left: 30px;
     height: 43px;
     width: 136px;

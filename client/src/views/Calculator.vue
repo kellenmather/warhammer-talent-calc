@@ -75,7 +75,9 @@ export default {
                 for (let i = 0; i < row.content.length; i++) {
                     blockContent = row.content[i].blockContent;
                     for (let j = 0; j < blockContent.length; j++) {
-                        skillRefs.push(blockContent[j])
+                        // if else check due to skaven having a restrictionLimited pair inside a block -_-
+                        if (typeof(blockContent[j]) == 'object') skillRefs.push(blockContent[j].name)
+                        else skillRefs.push(blockContent[j])
                     }
                 }
                 // populate list of needed skills per row
@@ -103,18 +105,35 @@ export default {
                     // block containts restrictions and all skills pertaining to those restrictions
                     let block = content[j];
                     for (let k = 0; k < skill.length; k++) {
-                        let skillName = skill[k];
-                        calcState[rowName][skillName] = { 
-                            name: skillName, 
-                            value: quest ? -1 : 0, 
-                            blockMember: (skill.length > 1) ? j : null,
-                            // If NOT on the first iteration find out if skill is the blockLeader
-                            blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
-                            restrictionLevel: block.restrictionLevel || null, 
-                            restrictionLimited: block.restrictionLimited || null, 
-                            restrictionChoice: block.restrictionChoice || null, 
-                            restrictionCount: block.restrictionCount || null,
-                            quest: block.quest || null
+                        // if else check due to skaven having a restrictionLimited pair inside a block -_-
+                        if (typeof(skill[k]) == 'object') {
+                            let skillName = skill[k].name;
+                            calcState[rowName][skillName] = { 
+                                name: skillName, 
+                                value: quest ? -1 : 0, 
+                                blockMember: (skill.length > 1) ? j : null,
+                                // If NOT on the first iteration find out if skill is the blockLeader
+                                blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
+                                restrictionLevel: block.restrictionLevel || null, 
+                                restrictionLimited: skill[k].restrictionLimited || null, 
+                                restrictionChoice: block.restrictionChoice || null, 
+                                restrictionCount: block.restrictionCount || null,
+                                quest: block.quest || null
+                            }
+                        } else {
+                            let skillName = skill[k];
+                            calcState[rowName][skillName] = { 
+                                name: skillName, 
+                                value: quest ? -1 : 0, 
+                                blockMember: (skill.length > 1) ? j : null,
+                                // If NOT on the first iteration find out if skill is the blockLeader
+                                blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
+                                restrictionLevel: block.restrictionLevel || null, 
+                                restrictionLimited: block.restrictionLimited || null, 
+                                restrictionChoice: block.restrictionChoice || null, 
+                                restrictionCount: block.restrictionCount || null,
+                                quest: block.quest || null
+                            }
                         }
                     }
                 }
@@ -197,14 +216,20 @@ export default {
         if (this.type && this.type !== 'legendary') query = query + '/' + this.type
         ApiService.get("talent/getRows", query)
             .then(({data}) => {
+                this.setCalcState(data.rows);
                 this.skills = data.skills
                 let row = data.rows;
                 let rowName;
                 for (let i = 0; i < row.length; i++) {
                     rowName = 'row' +  row[i].row
-                    this.rows[rowName] = row[i];
+                    if (this.race === 'skaven' && rowName === 'row9') {
+                        row[i].content[1].blockContent[3] = 'dictatorial';
+                        row[i].content[1].blockContent[4] = 'corruptive';
+                        this.rows[rowName] = row[i];
+                    } else {
+                        this.rows[rowName] = row[i];
+                    }
                 }
-                this.setCalcState(data.rows);
             })
     }
 }

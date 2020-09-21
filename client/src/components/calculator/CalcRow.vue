@@ -50,18 +50,25 @@ export default {
 .grouping {
     padding: 10px 10px 10px 0;
     border: 1px solid darkgray;
-    margin-right: 30px;
     height: 82px;
 }
 .skill-button {
     height: 67px;
-    width: 222px;
+    width: 210px;
     margin-right: 25px;
     line-height: 60px;
     position: relative;
     color: black;
 }
+.grouping .skill-button {
+    margin-left: -6px;
+    margin-right: 10px;
+}
 .grouping .skill-button:last-child {
     margin-right: 0px;
 }
+.grouping .skill-button:first-child {
+    margin-left: 0px;
+}
+
 </style>

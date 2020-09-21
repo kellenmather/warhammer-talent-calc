@@ -238,7 +238,7 @@ exports.rows = {
                     blockContent: ['redBlades']
                 },
                 {
-                    quest: 11,
+                    quest: 10,
                     blockContent: ['helmOfTheKraken']
                 },
                 {
