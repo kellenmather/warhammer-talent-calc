@@ -1878,7 +1878,7 @@ exports.skills = [
         icon: "battle-charge",
         ranks: [
             { effects: [
-                { icon: "charge", description: "Charge bonus: +6 for Cold One Knights, Cold One Dread Knights and Cold One Chariot units", ps: "Lord's army" }
+                { icon: "charge", description: "Charge bonus: +6 for Chariot, War Lion and Dragon Princes units", ps: "Lord's army" }
             ] },
             { effects: [
                 { icon: "melee", description: "Melee attack: +6 for Chariot, War Lion and Dragon Princes units", ps: "Lord's army" },

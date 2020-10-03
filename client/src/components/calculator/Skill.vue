@@ -1,9 +1,9 @@
 <template>
-    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button unselectable" >
-        <div :style="getBorder(skill.quest)" class="skill-border"></div>
-        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-icon inline-block" :style="getIcon(skill.icon)"></div>
-        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block" :style="isObtained()">
-            <span class="position-block">
+    <div @mouseover="showPopup()" @mousemove="mouseMove" @mouseleave="hidePopup()" class="skill-button unselectable" :class="skill.quest ? 'quest-button' : ''">
+        <div :style="getBorder(skill.quest)" :class="skill.quest ? 'quest-border' : 'skill-border'"></div>
+        <div @click="onClick" @contextmenu.prevent="onRightClick" :class="skill.quest ? 'quest-icon' : 'skill-icon'" :style="getIcon(skill.icon)"></div>
+        <div @click="onClick" @contextmenu.prevent="onRightClick" class="skill-name inline-block" :class="skill.quest ? 'quest-name' : '' " :style="isObtained()">
+            <span class="position-block" :class="skill.quest ? 'quest-block' : ''">
                 <p>{{ skill.name }}</p>
             </span>
         </div>
@@ -276,10 +276,24 @@ export default {
     position: absolute;
     top: 0px;
     left: 0px;
+    width: 189px;
+    height: 67px;
+}
+.quest-border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 210px;
     height: 67px;
 }
 .skill-icon {
+    width: 72px;
+    height: 72px;
+    margin-top: -5px;
+    position: absolute;
+    left: 2px;
+}
+.quest-icon {
     width: 72px;
     height: 72px;
     margin-top: -5px;
@@ -290,7 +304,7 @@ export default {
     position: absolute;
     height: 60px;
     top: 2px;
-    left: 196px;
+    left: 175px;
 }
 .skill-rank {
     display: block;
@@ -299,8 +313,7 @@ export default {
 }
 .skill-name {
     margin-top: 11px;
-    margin-left: 68px;
-    padding-left: 30px;
+    margin-left: 42px;
     height: 43px;
     width: 136px;
     cursor: context-menu;
@@ -310,6 +323,9 @@ export default {
     color: #ECE9CB;
     /* color: #EBE6CD; */
 }
+.quest-name {
+    margin-left: 68px;
+}
 .position-block {
     display:table;
     position: absolute;
@@ -317,7 +333,10 @@ export default {
     line-height:normal;
     width: 100px;
     height: 43px;
-    left: 100px;
+    left: 72px;
+}
+.quest-block {
+    left: 94px;
 }
 .position-block p {
     display: table-cell;

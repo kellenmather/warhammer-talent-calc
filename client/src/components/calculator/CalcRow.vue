@@ -48,27 +48,25 @@ export default {
 
 <style>
 .grouping {
-    padding: 10px 10px 10px 0;
+    padding: 10px;
     border: 1px solid darkgray;
     height: 82px;
 }
 .skill-button {
     height: 67px;
-    width: 210px;
-    margin-right: 25px;
+    width: 192px;
+    margin-right: 20px;
+    margin-left: 20px;
     line-height: 60px;
     position: relative;
     color: black;
 }
+.quest-button {
+    width: 210px;
+}
 .grouping .skill-button {
-    margin-left: -6px;
     margin-right: 10px;
-}
-.grouping .skill-button:last-child {
-    margin-right: 0px;
-}
-.grouping .skill-button:first-child {
-    margin-left: 0px;
+    margin-left: 10px;
 }
 
 </style>
