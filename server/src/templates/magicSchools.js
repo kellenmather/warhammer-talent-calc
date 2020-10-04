@@ -291,11 +291,11 @@ exports.magic = {
         row: 3,
         content: [
             {
-                blockContent: ["warpLightning"]
+                blockContent: ["pestilentBreath"]
             },
             {
-                restrictionChoice: "warpLightning",
-                blockContent: ["muskOfFear", "howlingWarpgale", "deathFrenzy", "scorch"]
+                restrictionChoice: "pestilentBreath",
+                blockContent: ["plagueRash", "blessWithFilth", "wither", "vermintide"]
             },
             {
                 restrictionCount: 4,
@@ -303,7 +303,7 @@ exports.magic = {
             },
             {
                 restrictionChoice: "evasion",
-                blockContent: ["theDreadedThirteenth", "earthing", "magicalReserves"]
+                blockContent: ["plague", "theDreadedThirteenth", "earthing", "magicalReserves"]
             },
             {
                 restrictionCount: 4,

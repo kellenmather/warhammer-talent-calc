@@ -1078,6 +1078,252 @@ exports.skills = [
         }
     },
     {
+        ref: "pestilentBreath",
+        name: "Pestilent Breath",
+        description: "The Skaven utters a vile phrase and belches forth an impossibly foul cloud.",
+        icon: "spell-pestilent-breath",
+        ranks: [
+            { effects: [
+                { icon: "spell-pestilent-breath", description: "Overcast spell: \"Pestilent Breath Upgraded\"" },
+                { icon: "spell-pestilent-breath", description: "Cooldown: -30% to \"Pestilent Breath\"" }
+            ] },
+            { effects: [
+                { icon: "spell-pestilent-breath", description: "Overcast spell: \"Pestilent Breath Upgraded\"" },
+                { icon: "spell-pestilent-breath", description: "Cooldown -50% to \"Pestilent Breath\"" },
+                { icon: "spell-pestilent-breath", description: "Winds of Magic cost: -2 for \"Pestilent Breath\"" },
+                { icon: "spell-pestilent-breath", description: "Winds of Magic cost: -2 for \"Pestilent Breath Upgraded\"" },
+                { icon: "spell-pestilent-breath", description: "Miscast base chance: -15% for \"Pestilent Breath Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "32",
+            cost: [11, 9],
+            rarity: "common",
+            attributes: {
+                type: "Breath",
+                duration: "8 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "100m", uptick: "range" }
+                ],
+                cannotUseIf: "Climbing",
+                cannotTargetIf: "On a wall",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Additional poison contact effect", uptick: "up-blue", color: "blue" },
+                    { text: "Causes moderate magical", postText: "magical damage", icon: "icon-magic", uptick: "up-green", color: "green" },
+                    { text: "Can disrupt unit formation", uptick: "up-green", color: "green" },
+                    { text: "Expanding tear-shaped attack", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Weak against armour", uptick: "down-red", color: "red" }
+                ],
+                contact: [
+                    { postText: "Poison! (10 seconds)", icon: "icon-poison", color: "red" },
+                    { text: "-20%", postText: "Armour-Piercing Missile Damage", icon: "icon-armor-piercing-ranged", color: "red" },
+                    { text: "-20%", postText: "Base Missile Damage", icon: "icon-ranged-damage-base", color: "red" },
+                    { text: "-20%", postText: "Base Weapon Damage", icon: "icon-damage-base", color: "red" },
+                    { text: "-24%", postText: "Speed", icon: "movement-character", color: "red" },
+                    { text: "-20%", postText: "Armour-Piercing Weapon Damage", icon: "icon-armor-piercing", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "plagueRash",
+        name: "Plague Rash",
+        description: "Itchy, nasty buboes are spread as the spells of Plague are cast, infecting the enemy populace with sickness.",
+        icon: "spell-plague-rash",
+        ranks: [
+            { effects: [{ icon: "spell-plague-rash", description: "Passive ability: \"Plague Rash\"" }] }
+        ],
+        spell: {
+            description: "Lore attribute",
+            rarity: "common",
+            attributes: {
+                type: "Augment",
+                duration: "Constant",
+                target: [
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" }
+                ],
+                activeIf: "Casting",
+                effectRange: "Map-wide",
+                effects: [
+                    { text: "Plague Rash (10 seconds)", color: "red" },
+                    { text: "-12%", icon: "movement-character", postText: "Speed", color: "red" },
+                    { text: "-5%", icon: "fatigue", postText: "Vigour", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "blessWithFilth",
+        name: "Bless with Filth",
+        description: "A foul mist wraps around the weapons of an allied pack, their blades dripping with noxious filth.",
+        icon: "spell-bless-with-filth",
+        ranks: [
+            { effects: [
+                { icon: "spell-bless-with-filth", description: "Overcast spell: \"Bless with Filth Upgraded\"" },
+                { icon: "spell-bless-with-filth", description: "Cooldown: -30% to \"Bless with Filth\"" }
+            ] },
+            { effects: [
+                { icon: "spell-bless-with-filth", description: "Overcast spell: \"Bless with Filth Upgraded\"" },
+                { icon: "spell-bless-with-filth", description: "Cooldown -50% to \"Bless with Filth\"" },
+                { icon: "spell-bless-with-filth", description: "Winds of Magic cost: -1 for \"Bless with Filth\"" },
+                { icon: "spell-bless-with-filth", description: "Winds of Magic cost: -2 for \"Bless with Filth Upgraded\"" },
+                { icon: "spell-bless-with-filth", description: "Miscast base chance: -15% for \"Bless with Filth Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "29",
+            cost: [8, 6],
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Instantly affects targets in area" }
+                ],
+                duration: "44 seconds",
+                target: [
+                    { text: "Self, Ground, Ally" },
+                    { text: "Affects allies in range" },
+                    { text: "200m", uptick: "range" }
+                ],
+                effectRange: "40m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended cast range", uptick: "up-blue", color: "blue" }
+                ],
+                imbued: [
+                    { postText: "Poison! (10 seconds)", icon: "icon-poison", color: "red" },
+                    { text: "-20%", postText: "Armour-Piercing Missile Damage", icon: "icon-armor-piercing-ranged", color: "red" },
+                    { text: "-20%", postText: "Base Missile Damage", icon: "icon-ranged-damage-base", color: "red" },
+                    { text: "-20%", postText: "Base Weapon Damage", icon: "icon-damage-base", color: "red" },
+                    { text: "-24%", postText: "Speed", icon: "movement-character", color: "red" },
+                    { text: "-20%", postText: "Armour-Piercing Weapon Damage", icon: "icon-armor-piercing", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "wither",
+        name: "Wither",
+        description: "Chanting passages from the Liber Bubonicus, the Wizard casts a hex of wasting and corrosion.",
+        icon: "spell-wither",
+        ranks: [
+            { effects: [
+                { icon: "spell-wither", description: "Spell: \"Wither\"" },
+                { icon: "spell-wither", description: "Overcast spell: \"Wither Upgraded\"" },
+                { icon: "spell-wither", description: "Cooldown: -30% to \"Wither\"" }
+            ] },
+            { effects: [
+                { icon: "spell-wither", description: "Overcast spell: \"Wither Upgraded\"" },
+                { icon: "spell-wither", description: "Cooldown -50% to \"Wither\"" },
+                { icon: "spell-wither", description: "Winds of Magic cost: -2 for \"Wither\"" },
+                { icon: "spell-wither", description: "Winds of Magic cost: -3 for \"Wither Upgraded\"" },
+                { icon: "spell-wither", description: "Miscast base chance: -15% for \"Wither Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "37",
+            cost: [16, 13],
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Hex (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "12 seconds",
+                target: [
+                    { text: "Ground, Enemy" },
+                    { text: "Affects enemies in range" },
+                    { text: "200m", uptick: "range" }
+                ],
+                effectRange: "40m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Greater effect on", postText: "armour", icon: "armor-character", uptick: "up-blue", color: "blue" },
+                    { text: "-60", postText: "armour", icon: "armor-character", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "vermintide",
+        name: "Vermintide",
+        description: "A terrible bell chimes from afar. By its thirteenth toll, Skaven have been brought forth through a hole in reality.",
+        icon: "spell-vermintide",
+        ranks: [
+            { effects: [
+                { icon: "spell-vermintide", description: "Spell: \"Vermintide\"" },
+                { icon: "spell-vermintide", description: "Cooldown: -50% to: \"Vermintide\"" },
+                { icon: "spell-vermintide", description: "Winds of Magic cost: -2 for \"Vermintide\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "20",
+            cost: [4],
+            uses: 5,
+            rarity: "uncommon",
+            attributes: {
+                type: "Augment",
+                target: [
+                    { text: "Ground" },
+                    { text: "60m", uptick: "range" }
+                ],
+                cannotTargetIf: "Climbing or manning equipment or on a platform",
+                effects: [
+                    { text: "Summons a unit of Clanrats", uptick: "up-green", color: "green" },
+                    { text: "Good at defending spellcaster", uptick: "up-green", color: "green" },
+                    { text: "Summoned units degrade over time", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "plague",
+        name: "Plague",
+        description: "The caster unleashes a vile disease  that scours the battlefield in search of victims to infect and instantly petrify.",
+        icon: "spell-plague",
+        ranks: [
+            { effects: [
+                { icon: "spell-plague", description: "Spell: \"Plague\"" },
+                { icon: "spell-plague", description: "Overcast spell: \"Plague Upgraded\"" },
+                { icon: "spell-plague", description: "Cooldown: -30% to \"Plague\"" }
+            ] },
+            { effects: [
+                { icon: "spell-plague", description: "Overcast spell: \"Plague Upgraded\"" },
+                { icon: "spell-plague", description: "Cooldown -50% to \"Plague\"" },
+                { icon: "spell-plague", description: "Winds of Magic cost: -3 for \"Plague\"" },
+                { icon: "spell-plague", description: "Winds of Magic cost: -4 for \"Plague Upgraded\"" },
+                { icon: "spell-plague", description: "Miscast base chance: -15% for \"Plague Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "50",
+            cost: [16, 12],
+            rarity: "rare",
+            attributes: {
+                type: "Vortex",
+                duration: "20 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "150m", uptick: "range" }
+                ],
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Increased", postText: "armour-piercing damage", icon: "icon-armor-piercing", uptick: "up-blue", color: "blue" },
+                    { text: "Causes major", postText: "magical damage", icon: "icon-magic", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
         ref: "theDreadedThirteenth",
         name: "The Dreaded Thirteenth",
         description: "A terrible bell chimes from afar. By its thirteenth toll, Skaven have been brought forth through a hole in reality.",
@@ -1099,6 +1345,7 @@ exports.skills = [
             description: "Spell",
             cooldown: [52, 26],
             cost: [20, 17],
+            uses: 2,
             rarity: "rare",
             attributes: {
                 type: "Explosion",
