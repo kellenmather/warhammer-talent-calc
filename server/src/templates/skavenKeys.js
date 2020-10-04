@@ -17,6 +17,21 @@ let skaven = {
         { ...Skaven.rows.row3.assassin },
         { ...Skaven.rows.row6.warlord },
         { ...Skaven.rows.row9.skaven }
+    ],
+    warlock: [
+        { ...Skaven.rows.row1.warlock },
+        { ...Skaven.rows.row2.warlock },
+        { ...Schools.magic.warlock },
+        { ...Skaven.rows.row4.warlock },
+        { ...Skaven.rows.row6.warlord },
+        { ...Skaven.rows.row9.skaven }
+    ],
+    seer: [
+        { ...Skaven.rows.row1.seer },
+        { ...Skaven.rows.row2.seer },
+        { ...Skaven.rows.row4.seer },
+        { ...Skaven.rows.row6.warlord },
+        { ...Skaven.rows.row9.skaven }
     ]
 }
 

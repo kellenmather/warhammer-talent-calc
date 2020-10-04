@@ -49,6 +49,56 @@ exports.rows = {
                 }
             ]
         },
+        warlock: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['doomFlayer']
+                },
+                {
+                    restrictionLevel: 15,
+                    blockContent: ['doomwheel']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['immortality']
+                }
+            ]
+        },
+        seer: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 16,
+                    blockContent: ['screamingBell']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['warpstoneTokens']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['immortality']
+                }
+            ]
+        },
     },
     row2: {
         warlord: {
@@ -85,6 +135,41 @@ exports.rows = {
                 {
                     restrictionCount: 3,
                     blockContent: ['cracklebombs']
+                }
+            ]
+        },
+        warlock: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['powerOverload']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['specimenCollector']
+                },
+                {
+                    restrictionLevel: 13,
+                    restrictionChoice: 'specimenCollector',
+                    blockContent: ['vehicleEngineer', 'weaponsEngineer', 'constructionEngineer']
+                },
+                {
+                    restrictionCount: 1,
+                    blockContent: ['brassOrb']
+                }
+            ]
+        },
+        seer: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['voiceOfTheHornedRat']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['envoyOfTheCouncil']
                 }
             ]
         }
@@ -135,6 +220,32 @@ exports.rows = {
                 {
                     restrictionCount: 4,
                     blockContent: ['deadlyOnslaught']
+                }
+            ]
+        }
+    },
+    row4: {
+        warlock: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['tailWeapon'],
+                },
+                {
+                    restrictionChoice: 'tailWeapon',
+                    blockContent: ['augmentedWeapon', 'scarredVeteran', 'warpForgedArmour', 'fearRepressionStimuli'],
+                }
+            ]
+        },
+        seer: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['tailWeapon'],
+                },
+                {
+                    restrictionChoice: 'tailWeapon',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'expeditiousEndeavour'],
                 }
             ]
         }

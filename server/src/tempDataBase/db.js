@@ -375,6 +375,45 @@ exports.skills = [
         ]
     },
     {
+        ref: "doomFlayer",
+        name: "Doom-Flayer",
+        description: "A motorised ball of whirling, razor-sharp, eviscerating death, designed to plough through enemy lines with hellish vigour.",
+        icon: "doom-flayer",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Doom-Flayer" }] }
+        ]
+    },
+    {
+        ref: "doomwheel",
+        name: "Doomwheel",
+        description: "Those opponents who smile at first sight of this powerful war machine clearly have no idea what's about to hit them.",
+        icon: "doom-wheel",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Doomwheel" }] }
+        ]
+    },
+    {
+        ref: "screamingBell",
+        name: "Screaming Bell",
+        description: "An unholy battle altar dedicated to the Great Horned Rat, its ominous tolling strikes awe into evil Skaven hearts and fear into their opponents.",
+        icon: "screaming-bell",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Screaming Bell" }] }
+        ]
+    },
+    {
+        ref: "warpstoneTokens",
+        name: "Warpstone Tokens",
+        description: "As an aid to spellcasting, they are peerless. It is highly dangerous, of course, but a sure-fire route to limitless power.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: "magic-character", description: "Miscast base chance: +5%", color: "red" },
+                { icon: "magic", description: "Winds of Magic power reserve: +13" }
+            ] }
+        ]
+    },
+    {
         ref: "sneaky",
         name: "Sneaky",
         description: "Furtive, scheming, sly, cunning, underhand, devious, conniving, double-dealing, and sneaky - valuable traits if you wish to stay alive!",
@@ -461,6 +500,27 @@ exports.skills = [
         ]
     },
     {
+        ref: "voiceOfTheHornedRat",
+        name: "Voice of the Horned Rat",
+        description: "All the hate, envy, and malice uttered in prayer each day, returned a thousand-fold.",
+        icon: "character",
+        ranks: [
+            { effects: [
+                { icon: "character", description: "Leadership aura size: +20%" },
+                { icon: "morale-character", description: "Character's aura leadership effect: +10" }
+            ] }
+        ]
+    },
+    {
+        ref: "envoyOfTheCouncil",
+        name: "Envoy of the Council",
+        description: "Skaven society is a tyranny moderated by assassination; this one is its ambassador.",
+        icon: "character-diplomacy",
+        ranks: [
+            { effects: [{ icon: "diplomacy", description: "Diplomatic relations: +10 with Skaven" }] }
+        ]
+    },
+    {
         ref: "expertAmbusher",
         name: "Expert Ambusher",
         description: "Kill-Surprise!",
@@ -531,6 +591,90 @@ exports.skills = [
         }
     },
     {
+        ref: "powerOverload",
+        name: "Power Overload",
+        description: "Warp-energy is pulsing - through his veins a charge is racing. On a scale of one to ten, this one's operating on eleven!",
+        icon: "character-cooldown",
+        ranks: [
+            { effects: [{ icon: "magic-cooldown", description: "Cooldown: -10% to all spells" }] }
+        ]
+    },
+    {
+        ref: "specimenCollector",
+        name: "Specimen Collector",
+        description: "This one harvests what he needs, forever on a quest to acquire the 'resources' made necessary by his research.",
+        icon: "character-replenishment",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: -2", ps: "local enemy province" },
+                { icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "vehicleEngineer",
+        name: "Vehicle Engineer",
+        description: "Although in a somewhat ad-hoc fashion, he nevertheless fixes things as he goes, managing to avoid more than a few scrapes in the process already.",
+        icon: "character-experience",
+        ranks: [
+            { effects: [
+                { icon: "treasury", description: "Recruitment duration: -1 for Doom-Flayers and Doomwheel units", ps: "Lord's army" },
+                { icon: "experience", description: "Recruit rank: +1 for Doom-Flayer and Doomwheel units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "weaponsEngineer",
+        name: "Weapons Engineer",
+        description: "If you could once kill with it, this one can make it kill again, more and better.",
+        icon: "character-military-spending",
+        ranks: [
+            { effects: [{ icon: "coin", description: "Upkeep: -15% for Warplock Jezzail, Ratling Gun and Warpfire Thrower Weapon Team units" }] }
+        ]
+    },
+    {
+        ref: "constructionEngineer",
+        name: "Construcction Engineer",
+        description: "This one's natural talents lend themselves to the technical side of construction, ensuring vital buildings stay mostly upright when they are required to do so.",
+        icon: "character-construction",
+        ranks: [
+            { effects: [
+                { icon: "treasury", description: "Construction cost: -15% for all buildings", ps: "local region" },
+                { icon: "construction", description: "Construction time: -15% for all buildings", ps: "local province" }
+            ] }
+        ]
+    },
+    {
+        ref: "brassOrb",
+        name: "Brass Orb",
+        description: "Possession of this orb enables the user to inexorably drag the foe into a turbulent vortex of pain and death.",
+        icon: "ability-brass-orb",
+        ranks: [
+            { effects: [{ icon: "ability-brass-orb", description: "Ability: \"Brass Orb\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            cooldown: "90",
+            uses: 3,
+            rarity: "uncommon",
+            attributes: {
+                type: "Vortex",
+                duration: "13 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "200m", uptick: "range" },
+                ],
+                effects: [
+                    { text: "Causes minor", postText: "magical damage", icon: "icon-magic", uptick: "up-green", color: "green" },
+                    { text: "Huge, stationary area of effect", uptick: "up-green", color: "green" },
+                    { text: "Can disrupt unit formation", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
         ref: "tailWeapon",
         name: "Tail Weapon",
         description: "Whether by attachment or mutation, something nasty and spiky on your tail has got to bring no little advantage in battle.",
@@ -539,6 +683,55 @@ exports.skills = [
             { effects: [
                 { icon: "melee-character", description: "Melee attack: +3" },
                 { icon: "damage", description: "Weapon strength: +4%" }
+            ] }
+        ]
+    },
+    {
+        ref: "augmentedWeapon",
+        name: "Augmented Weapon",
+        description: "This blade is attached to a Warp-generator that channels crackling energy along the weapon.",
+        icon: "character-damage",
+        ranks: [
+            { effects: [
+                { icon: "melee-character", description: "Melee attack: +7" },
+                { icon: "damage", description: "Weapon strength: +5%" },
+                { icon: "magical-attacks", description: "Enables magical attacks" }
+            ] },
+            { effects: [
+                { icon: "melee-character", description: "Melee attack: +15" },
+                { icon: "damage", description: "Weapon strength: +10%" },
+                { icon: "magical-attacks", description: "Enables magical attacks" }
+            ] }
+        ]
+    },
+    {
+        ref: "warpForgedArmour",
+        name: "Warp-Forged Armour",
+        description: "A Warpstone-enchanted breastplate and a thick steel helmet are useful to protect the wearer from shrapnel.",
+        icon: "character-armor",
+        ranks: [
+            { effects: [
+                { icon: "armor-character", description: "Armour: +15" },
+                { icon: "resistance-missile", description: "Missile resistance: 5%" }
+            ] },
+            { effects: [
+                { icon: "armor-character", description: "Armour: +30" },
+                { icon: "resistance-missile", description: "Missile resistance: 10%" }
+            ] }
+        ]
+    },
+    {
+        ref: "fearRepressionStimuli",
+        name: "Fear Repression Stimuli",
+        description: "There's nothing that cannot be conquered, even perfidious, duplicitous, treacherous fear.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [
+                { icon: "morale-character", description: "Leadership: +8" }
+            ] },
+            { effects: [
+                { icon: "morale-character", description: "Character's aura leadership effect: +5" },
+                { icon: "morale-character", description: "Leadership: +8" }
             ] }
         ]
     },
@@ -580,6 +773,347 @@ exports.skills = [
                     { text: "Poor against large combatants", uptick: "down-red", color: "red" },
                     { text: "+24%", icon: "movement-character", postText: "Speed", color: "green" },
                     { text: "+8", icon: "morale-character", postText: "Leadership", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "warpLightning",
+        name: "Warp Lightning",
+        description: "Dire greenish-black lightning strikes at the Skaven's chittered command.",
+        icon: "spell-warp-lightning",
+        ranks: [
+            { effects: [
+                { icon: "spell-warp-lightning", description: "Overcast spell: \"Warp Lightning\"" },
+                { icon: "spell-warp-lightning", description: "Cooldown: -30% to \"Warp Lightning\"" }
+            ] },
+            { effects: [
+                { icon: "spell-warp-lightning", description: "Overcast spell: \"Warp Lightning Upgraded\"" },
+                { icon: "spell-warp-lightning", description: "Cooldown: -50% to \"Warp Lightning\"" },
+                { icon: "spell-warp-lightning", description: "Winds of Magic cost: -1 for \"Warp Lightning\"" },
+                { icon: "spell-warp-lightning", description: "Winds of Magic cost: -2 for \"Warp Lightning Upgraded\"" },
+                { icon: "spell-warp-lightning", description: "Miscast base chance: -15% for \"Warp Lightning Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "30",
+            cost: [11, 9],
+            rarity: "common",
+            attributes: {
+                type: "Bombardment",
+                duration: "5 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotUseIf: "Climbing",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Increased number of missiles", uptick: "up-blue", color: "blue" },
+                    { text: "Causes moderate", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Medium strike area", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "muskOfFear",
+        name: "Musk of Fear",
+        description: "As the Lore of Ruin siphons the Winds of MAgic, an unholy despair takes hold on the surface dwellers... the rats lurk in the shadows.",
+        icon: "spell-musk-of-fear",
+        ranks: [
+            { effects: [{ icon: "spell-musk-of-fear", description: "Passive ability: \"Musk of Fear\"" }] }
+        ],
+        spell: {
+            description: "Lore attribute",
+            rarity: "common",
+            attributes: {
+                type: "Hex (Area)",
+                duration: "Constant",
+                target: [
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" }
+                ],
+                activeIf: "Casting",
+                effectRange: "Map-wide",
+                effects: [
+                    { text: "Musk of Fear (8 seconds)", color: "red" },
+                    { text: "-12", icon: "melee-character", postText: "Melee Attack", color: "red" },
+                    { text: "-4", icon: "morale-character", postText: "Leadership", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "howlingWarpgale",
+        name: "Howling Warpgale",
+        description: "The caster gestures twitchingly to the skies and fierce gales swirl about, making flight impossible.",
+        icon: "spell-howling-warpgale",
+        ranks: [
+            { effects: [
+                { icon: "spell-howling-warpgale", description: "Overcast spell: \"Howling Warpgale\"" },
+                { icon: "spell-howling-warpgale", description: "Cooldown: -30% to \"Howling Warpgale\"" }
+            ] },
+            { effects: [
+                { icon: "spell-howling-warpgale", description: "Overcast spell: \"Howling Warpgale Upgraded\"" },
+                { icon: "spell-howling-warpgale", description: "Cooldown: -50% to \"Howling Warpgale\"" },
+                { icon: "spell-howling-warpgale", description: "Winds of Magic cost: -1 for \"Howling Warpgale\"" },
+                { icon: "spell-howling-warpgale", description: "Winds of Magic cost: -2 for \"Howling Warpgale Upgraded\"" },
+                { icon: "spell-howling-warpgale", description: "Miscast base chance: -15% for \"Howling Warpgale Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "30",
+            cost: [9, 7],
+            rarity: "common",
+            attributes: {
+                type: [
+                    { text: "Hex (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "28 seconds",
+                target: [
+                    { text: "Ground, Enemy" },
+                    { text: "Affects enemies in range" },
+                    { text: "100m", uptick: "range" }
+                ],
+                cannotUseIf: "Climbing",
+                targetIf: "Flying unit",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
+                    { text: "Cannot move", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "deathFrenzy",
+        name: "Death Frenzy",
+        description: "Gesticulating wildly, the caster gifts an allied unit with a rabid, frothing need to attack and consume the foe!",
+        icon: "spell-death-frenzy",
+        ranks: [
+            { effects: [
+                { icon: "spell-death-frenzy", description: "Spell: \"Death Frenzy\"" },
+                { icon: "spell-death-frenzy", description: "Overcast spell: \"Death Frenzy Upgraded\"" },
+                { icon: "spell-death-frenzy", description: "Cooldown: -30% to \"Death Frenzy\"" }
+            ] },
+            { effects: [
+                { icon: "spell-death-frenzy", description: "Overcast spell: \"Death Frenzy Upgraded\"" },
+                { icon: "spell-death-frenzy", description: "Cooldown: -50% to \"Death Frenzy\"" },
+                { icon: "spell-death-frenzy", description: "Winds of Magic cost: -2 for \"Death Frenzy\"" },
+                { icon: "spell-death-frenzy", description: "Winds of Magic cost: -3 for \"Death Frenzy Upgraded\"" },
+                { icon: "spell-death-frenzy", description: "Miscast base chance: -15% for \"Death Frenzy Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "43",
+            cost: [12, 9],
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Augment" },
+                    { text: "Instantly affects targets in area" }
+                ],
+                duration: "28 seconds",
+                target: [
+                    { text: "Self, Ground, Ally" },
+                    { text: "Affects allies in range" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotUseIf: "Climbing",
+                effectRange: "40m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Added effect area", uptick: "up-blue", color: "blue" },
+                    { text: "+30%", icon: "icon-damage-base", postText: "Base Weapon Damage", color: "green" },
+                    { text: "+24", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { postText: "Immune to Psychology", icon: "attribute-psychology", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "scorch",
+        name: "Scorch",
+        description: "The sorcerer thrusts his paws into the ground summoning forth a great gout of green flame.",
+        icon: "spell-scorch",
+        ranks: [
+            { effects: [
+                { icon: "spell-scorch", description: "Spell: \"Scorch\"" },
+                { icon: "spell-scorch", description: "Overcast spell: \"Scorch Upgraded\"" },
+                { icon: "spell-scorch", description: "Cooldown: -30% to \"Scorch\"" }
+            ] },
+            { effects: [
+                { icon: "spell-scorch", description: "Overcast spell: \"Scorch Upgraded\"" },
+                { icon: "spell-scorch", description: "Cooldown -50% to \"Scorch\"" },
+                { icon: "spell-scorch", description: "Winds of Magic cost: -2 for \"Scorch\"" },
+                { icon: "spell-scorch", description: "Winds of Magic cost: -3 for \"Scorch Upgraded\"" },
+                { icon: "spell-scorch", description: "Miscast base chance: -15% for \"Scorch Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "43",
+            cost: [11, 8],
+            rarity: "uncommon",
+            attributes: {
+                type: "Breath",
+                duration: "12 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "450m", uptick: "range" }
+                ],
+                cannotUseIf: "Climbing",
+                cannotTargetIf: "On a wall",
+                effectRange: "40m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended cast range", uptick: "up-blue", color: "blue" },
+                    { text: "Causes major magical & fire damage", uptick: "up-green", color: "green" },
+                    { text: "Long, thin, expanding, tear-shaped attack", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" },
+                    { text: "Weak against armour", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "cracksCall",
+        name: "Cracks Call",
+        description: "With the incantation invoked, the Skaven stamps his horrible, rattish foot, causing the very ground to split asunder.",
+        icon: "spell-cracks-call",
+        ranks: [
+            { effects: [
+                { icon: "spell-cracks-call", description: "Spell: \"Cracks Call\"" },
+                { icon: "spell-cracks-call", description: "Overcast spell: \"Cracks Call Upgraded\"" },
+                { icon: "spell-cracks-call", description: "Cooldown: -30% to \"Cracks Call\"" }
+            ] },
+            { effects: [
+                { icon: "spell-cracks-call", description: "Overcast spell: \"Cracks Call Upgraded\"" },
+                { icon: "spell-cracks-call", description: "Cooldown -50% to \"Cracks Call\"" },
+                { icon: "spell-cracks-call", description: "Winds of Magic cost: -3 for \"Cracks Call\"" },
+                { icon: "spell-cracks-call", description: "Winds of Magic cost: -4 for \"Cracks Call Upgraded\"" },
+                { icon: "spell-cracks-call", description: "Miscast base chance: -15% for \"Cracks Call Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "52",
+            cost: [20, 16],
+            rarity: "rare",
+            attributes: {
+                type: "Wind",
+                duration: "10 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "150m", uptick: "range" }
+                ],
+                cannotUseIf: "Climbing",
+                cannotTargetIf: "Flying, On a wall",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Increased damage", uptick: "up-blue", color: "blue" },
+                    { text: "Causes major", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Medium, forward-moving area of effect", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "flensingRuin",
+        name: "Flensing Ruin",
+        description: "Green ribbons of Warp-Energy tear the flesh from the target's bones. It's very nasty to behold - as nasty as it sounds, in fact - but far nastier, of course, if you're the recipient...",
+        icon: "spell-flensing-ruin",
+        ranks: [
+            { effects: [
+                { icon: "spell-flensing-ruin", description: "Spell: \"Flensing Ruin\"" },
+                { icon: "spell-flensing-ruin", description: "Overcast spell: \"Flensing Ruin Upgraded\"" },
+                { icon: "spell-flensing-ruin", description: "Cooldown: -30% to \"Flensing Ruin\"" }
+            ] },
+            { effects: [
+                { icon: "spell-flensing-ruin", description: "Overcast spell: \"Flensing Ruin Upgraded\"" },
+                { icon: "spell-flensing-ruin", description: "Cooldown -50% to \"Flensing Ruin\"" },
+                { icon: "spell-flensing-ruin", description: "Winds of Magic cost: -3 for \"Flensing Ruin\"" },
+                { icon: "spell-flensing-ruin", description: "Winds of Magic cost: -4 for \"Flensing Ruin Upgraded\"" },
+                { icon: "spell-flensing-ruin", description: "Miscast base chance: -15% for \"Flensing Ruin Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "52",
+            cost: [22, 18],
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Direct Damage (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "20 seconds",
+                target: [
+                    { text: "Ground, Enemy" },
+                    { text: "Affects enemies in range" },
+                    { text: "100m", uptick: "range" }
+                ],
+                effectRange: "30m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
+                    { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. a single combatant", uptick: "up-green", color: "green" },
+                    { text: "Chance opponent will resist damage", uptick: "down-red", color: "red" },
+                    { text: "Weak vs. a single unit", uptick: "down-red", color: "red" },
+                    { text: "-30", icon: "armor-character", postText: "Armour", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theDreadedThirteenth",
+        name: "The Dreaded Thirteenth",
+        description: "A terrible bell chimes from afar. By its thirteenth toll, Skaven have been brought forth through a hole in reality.",
+        icon: "spell-the-dreaded-thirteenth",
+        ranks: [
+            { effects: [
+                { icon: "spell-the-dreaded-thirteenth", description: "Spell: \"The Dreaded Thirteenth\"" },
+                { icon: "spell-the-dreaded-thirteenth", description: "Overcast spell: \"The Dreaded Thirteenth Upgraded\"" }
+            ] },
+            { effects: [
+                { icon: "spell-the-dreaded-thirteenth", description: "Spell: \"The Dreaded Thirteenth\"" },
+                { icon: "spell-the-dreaded-thirteenth", description: "Overcast spell: \"The Dreaded Thirteenth Upgraded\"" },
+                { icon: "spell-the-dreaded-thirteenth", description: "Cooldown -50% to \"The Dreaded Thirteenth\"" },
+                { icon: "spell-the-dreaded-thirteenth", description: "Cooldown -50% to \"The Dreaded Thirteenth Upgraded\"" },
+                { icon: "spell-the-dreaded-thirteenth", description: "Winds of Magic cost: -3 for \"The Dreaded Thirteenth\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: [52, 26],
+            cost: [20, 17],
+            rarity: "rare",
+            attributes: {
+                type: "Explosion",
+                duration: "13 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotTargetIf: "Climbing or manning equipment or on a platform",
+                effects: [
+                    { text: "Summons a unit of Stormvermin (Sword & Shield)", uptick: "up-green", color: "green" },
+                    { text: "Huge explosion area", uptick: "up-green", color: "green" },
+                    { text: "Can disrupt unit formation", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Summoned units degrade over time", uptick: "down-red", color: "red" }
                 ]
             }
         }
@@ -824,6 +1358,73 @@ exports.skills = [
     // already in db
 
     // already in db
+    {
+        ref: "earthing",
+        name: "Earthing",
+        description: "By stabbing a staff or some arcane conduit into the ground, an accomplished magic-user can earth or tether the Winds and hopefully reduce a chance of miscasting.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: "magic-character", description: "Miscast base chance: -15%" }
+            ] }
+        ]
+    },
+    {
+        ref: "magicalReserves",
+        name: "Magical Reserves",
+        description: "A few magic-users have the ability to store the Winds of Magic for later use, increasing their spellcasting power when it really counts.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: "magic", description: "Winds of Magic power reserve: +15" }
+            ] }
+        ]
+    },
+    {
+        ref: "arcaneConduit",
+        name: "Arcane Conduit",
+        description: "A strong mind is needed to channel the Winds of Magic. Those that have such a gift become arcane conduits - funnelling the magical tempest to their cause.",
+        icon: "spell-arcane-conduit",
+        ranks: [
+            { effects: [{ icon: "spell-arcane-conduit", description: "Ability: \"Arcane Conduit\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "uncommon",
+            cooldown: "90",
+            attributes: {
+                type: "Augment of the Winds",
+                duration: "40 seconds",
+                target: "Self",
+                effects: [
+                    { text: "Improved", icon: "magic-pool", postText: "power recharge rate", uptick: "up-green", color: "green" },
+                    { text: "Increase to", icon: "magic-replenish", postText: "power reserves", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "evasion",
+        name: "Evasion",
+        description: "Those with such skills can evade enemy attacks with ease and break from combat, should they feel that it is tactically important to do so.",
+        icon: "spell-evasion",
+        ranks: [
+            { effects: [{ icon: "spell-evasion", description: "Passive ability: \"Evasion\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "common",
+            attributes: {
+                type: "Augment",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "+5", icon: "defense-character", postText: "Melee Defense", color: "green" },
+                    { text: "+6%", icon: "movement-character", postText: "Speed", color: "green" }
+                ]
+            }
+        }
+    },
     {
         ref: "immortality",
         name: "Immortality",

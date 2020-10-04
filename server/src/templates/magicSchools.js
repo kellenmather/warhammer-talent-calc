@@ -236,6 +236,78 @@ exports.magic = {
             {
                 restrictionCount: 4,
                 blockContent: ["arcaneConduit"]
+            }
+        ]
+    },
+    warlock: {
+        row: 3,
+        content: [
+            {
+                blockContent: ["warpLightning"]
+            },
+            {
+                restrictionChoice: "warpLightning",
+                blockContent: ["muskOfFear", "howlingWarpgale", "deathFrenzy", "scorch"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["cracksCall", "flensingRuin", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
+            },
+        ]
+    },
+    ruin: {
+        row: 3,
+        content: [
+            {
+                blockContent: ["warpLightning"]
+            },
+            {
+                restrictionChoice: "warpLightning",
+                blockContent: ["muskOfFear", "howlingWarpgale", "deathFrenzy", "scorch"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["cracksCall", "theDreadedThirteenth", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
+            },
+        ]
+    },
+    plague: {
+        row: 3,
+        content: [
+            {
+                blockContent: ["warpLightning"]
+            },
+            {
+                restrictionChoice: "warpLightning",
+                blockContent: ["muskOfFear", "howlingWarpgale", "deathFrenzy", "scorch"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["theDreadedThirteenth", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
             },
         ]
     }
