@@ -109,20 +109,6 @@ exports.skills = [
         }
     },
     {
-        ref: "theOghamShard",
-        name: "The Ogham Shard",
-        description: "The shard is a fractured piece of one of the original Ogham Waystones, whose mystical properties may keep Chaos at bay.",
-        icon: "item-talisman",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "resistance-magic", description: "Magic resistancer: 25%" },
-                { icon: "replenishment", description: "Casualty replenishment rate: +5%", ps: "Lord's army" },
-                { icon: "religion", description: "Untainted: +3", ps: "local provinces" }
-            ] }
-        ]
-    },
-    {
         ref: "dwarfGouger",
         name: "Dwarf Gouger",
         description: "A weapon created to kill the Dwarf-things, it perfectly suits Queek's furious windmill style of attack.",
@@ -188,6 +174,75 @@ exports.skills = [
         }
     },
     {
+        ref: "whirlOfWeepingBlades",
+        name: "Whirl of Weeping Blades",
+        description: "With a poisoned sword in both hands and his own tail, few warriors can survive long against the Deathmaster.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +20" },
+                { icon: "damage", description: "Weapon strength: +5%" },
+                { icon: "morale", description: "Leadership: +10 for Gutter Runners, Night Runners, Death Runners and Eshin Triads units", rank: 7, ps: "Lord's army" },
+                { icon: "ability-whirl-of-weeping-blades", description: "Ability: \"Whirl of Weeping Blades\"" }
+            ] }
+        ],
+        spell: {
+            description: "Weapon",
+            rarity: "legendary",
+            cooldown: "120",
+            attributes: {
+                type: "Vortex",
+                duration: "5 seconds",
+                target: "Self",
+                cannotUseIf: "On a wall, Manning equipment, Climbing",
+                effects: [
+                    { text: "Causes moderate", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Huge, stationary area of effect", uptick: "up-green", color: "green" },
+                    { text: "Can disrupt unit formation", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Cannot move", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theCloakOfShadows",
+        name: "The Cloak of Shadows",
+        description: "Woven from stolen human hair and spider silk, the cloak both coneals and silences the wearer, making Snikch near invisible in darkness.",
+        icon: "item-armour",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +10" },
+                { icon: "agent", description: "Enemy Hero actions success chance: -10%" },
+                { icon: "ambush", description: "Ambush success chance: +20%", ps: "Lord's army" },
+                { icon: "ability-the-cloak-of-shadows", description: "Passive ability: \"The Cloak of Shadows\"" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            attributes: {
+                type: [
+                    { text: "Hex (Area)" },
+                    { text: "Only acts on targets in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "-9", icon: "defense-character", postText: "Melee Defense", color: "red" },
+                    { text: "-4", icon: "morale-character", postText: "Leadership", color: "red" }
+                ]
+            }
+        }
+    },
+    {
         ref: "ironFrame",
         name: "Iron Frame",
         description: "A mighty metal frame encases the Warlock Engineer's body, giving him amazing strength, dexterity and resistance against both physical and magical harm.",
@@ -244,6 +299,17 @@ exports.skills = [
         icon: "character-health",
         ranks: [
             { effects: [{ icon: "health-character", description: "Hit points: +10%" }] }
+        ]
+    },
+    {
+        ref: "expertThief",
+        name: "Expert Thief",
+        description: "As it turns out, the more important the murder, the more likely they are to be carrying something worth 'appropriating'.",
+        icon: "item-enchanted",
+        ranks: [
+            { effects: [
+                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +25%" }
+            ] }
         ]
     },
     {
@@ -323,6 +389,41 @@ exports.skills = [
         ranks: [
             { effects: [{ icon: "resistance-magic", description: "Magic resistance: 10%" }] }
         ]
+    },
+    {
+        ref: "fromTheShadows",
+        name: "From the Shadows",
+        description: "With almost un-Skaven-like focus, Snikch moves unseen through the battlefield until the moment of murderous truth.",
+        icon: "ability-from-the-shadows",
+        ranks: [ { 
+            effects: [
+                { icon: "income", description: "Income from raiding: +30%", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +10 for Stormvermin units", ps: "Lord's army" },
+                { icon: "ability-from-the-shadows", description: "Ability: \"From the Shadows\"" }
+            ] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "common",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Instantly affects targets in area" }
+                ],
+                duration: "30 seconds",
+                target: [
+                    { text: "Self, Ground, Ally" },
+                    { text: "Affects allies in range" },
+                    { text: "200m", uptick: "range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "Snipe", uptick: "up-green", color: "green" },
+                    { postText: "Stalk", icon: "stalk", uptick: "up-green", color: "green" },
+                    { postText: "Unspottable", icon: "unspottable", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
     },
     {
         ref: "warpstoneWeapon",
@@ -504,6 +605,79 @@ exports.skills = [
                 ]
             }
         }
+    },
+    {
+        ref: "jumpScare",
+        name: "Jump-Scare",
+        description: "All races have moments of weakness - times when their back is turned and their friends are looking the wrong way.",
+        icon: "character-ambush",
+        ranks: [
+            { effects: [
+                { icon: "ambush", description: "Enemy units are afflicted with temporary defensive penalties at the beginning of ambush battles", ps: "Lord's army" },
+                { icon: "ambush", description: "Ambush success chance: +10%", ps: "Lord's army" },
+                { icon: "morale", description: "Ambush success chanceEnemy leadership: -5", ps: "local region" }
+            ] }
+        ]
+    },
+    {
+        ref: "scurryFastQuick",
+        name: "Scurry Fast-Quick",
+        description: "Eshin Assassins are experts at exploiting the briefest vulnerabilities. Bursting out of the darkness to end lives with uncanny skill.",
+        icon: "character-movement",
+        ranks: [
+            { effects: [
+                { icon: "campaign-movement", description: "Campaign movement range: +5%" },
+                { icon: "strider", description: "Attribute: Strider", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "concealHideThem",
+        name: "Conceal-Hide Them",
+        description: "\"You are already kill-dead, man-thing!\"",
+        icon: "ability-concealment-bombs",
+        ranks: [
+            { effects: [
+                { icon: "character-movement", description: "Speed: +10% for infantry units" },
+                { icon: "character", description: "Attribute: \"Concealment Bombs\" for Night Runners and Gutter Runners units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "contractLoopholes",
+        name: "Contract Loopholes",
+        description: "Most of the other clans truggle to find the patience to deal with such things as 'paperwork' - another weakness that Clan Eshin ruthlessly exploits!",
+        icon: "character-military-spending",
+        ranks: [
+            { effects: [
+                { icon: "coin", description: "Upkeep: -25% for all units", ps: "Lord's army" },
+                { icon: "agent", description: "Hero and Lord recruit rank: +3", ps: "all provinces" }
+            ] }
+        ]
+    },
+    {
+        ref: "justDodgeIt",
+        name: "Just Dodge It",
+        description: "They cannot hit what isn't there.",
+        icon: "just-dodge-it",
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +5", ps: "Lord's army" },
+                { icon: "resistance-physical", description: "Physical resistance: 15%" }
+            ] }
+        ]
+    },
+    {
+        ref: "sabotageUnrest",
+        name: "Sabotage & Unrest",
+        description: "Time and time again, Snikch has proven that no wall, no castle and no hidden hole will save you from his Weeping Blades.",
+        icon: "campaign-skaven-corruption",
+        ranks: [
+            { effects: [
+                { icon: "siege", description: "Immediately causes siege attrition at a reduced rate when besieging enemy settlements" },
+                { icon: "public-order", description: "Public order: -5", ps: "local enemy province" }
+            ] }
+        ]
     },
     {
         ref: "warptechAcademy",
@@ -889,6 +1063,35 @@ exports.skills = [
                 effects: [
                     { text: "-24", postText: "Melee Attack", icon: "melee-character", color: "red" },
                     { text: "-40", postText: "Melee Defense", icon: "defense-character", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "deathmastersSigil",
+        name: "Deathmaster's Sigil",
+        description: "Snikch leaves his distinctive symbol traced in blood beside his victims, so others will know the Deathmaster is abroad, and live in mortal dread.",
+        icon: "ability-deathmasters-sigil",
+        ranks: [
+            { effects: [{ icon: "ability-deathmasters-sigil", description: "Ability: \"Deathmaster's Sigil\"" }] }
+        ],
+        spell: {
+            description: "Lord ability",
+            cooldown: "90",
+            rarity: "uncommon",
+            attributes: {
+                type: "Hex",
+                duration: "7 seconds",
+                target: [
+                    { text: "Enemy" },
+                    { text: "100m", uptick: "range" },
+                ],
+                targetIf: "Unit is a Lord or Hero",
+                cannotTargetIf: "Flying, On a wall",
+                effects: [
+                    { text: "Can disrupt unit formation", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" },
+                    { tex: "Cannot move", uptick: "down-red", color: "red" }
                 ]
             }
         }

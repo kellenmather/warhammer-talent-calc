@@ -203,6 +203,42 @@ exports.rows = {
                 }
             ]
         },
+        snikch: {
+            row: 1,
+            content: [
+                {
+                    quest: 3,
+                    blockContent: ['whirlOfWeepingBlades']
+                },
+                {
+                    quest: 5,
+                    blockContent: ['theCloakOfShadows']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['expertThief']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['ratFu']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                },
+                {
+                    blockContent: ['slippery']
+                },
+                {
+                    restrictionLevel: 16,
+                    blockContent: ['fromTheShadows']
+                }
+            ]
+        }
     },
     row2: {
         warlord: {
@@ -353,6 +389,23 @@ exports.rows = {
                 }
             ]
         },
+        snikch: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['jumpScare']
+                },
+                {
+                    restrictionChoice: 'jumpScare',
+                    blockContent: ['scurryFastQuick', 'concealHideThem', 'contractLoopholes', 'justDodgeIt']
+                },
+                {
+                    restrictionCount: 3,
+                    blockContent: ['sabotageUnrest']
+                }
+            ]
+        }
     },
     row3: {
         warlord: {
@@ -475,6 +528,30 @@ exports.rows = {
                 },
             ]
         },
+        snikch: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ['tailWeapon'],
+                },
+                {
+                    restrictionChoice: 'tailWeapon',
+                    blockContent: ['ruinDecay', 'thickSkinned', 'bladeMaster', 'indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['verminousValour']
+                },
+                {
+                    restrictionChoice: 'verminousValour',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deathmastersSigil']
+                }
+            ]
+        },
     },
     row4: {
         warlock: {
@@ -543,7 +620,7 @@ exports.rows = {
         },
     },
     row6: {
-        warlord: {
+        skaven: {
             row: 6,
             content: [
                 {
