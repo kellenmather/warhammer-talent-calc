@@ -1,83 +1,19 @@
 exports.skills = [
     {
-        ref: "sunburstStandardOfHexoatl",
-        name: "Sunburst Standard of Hexoatl",
-        description: "This radiant golden totem generates a golden globe of power that shields those within from harm.",
-        icon: "sunburst-standard-of-hexoatl",
+        ref: "liberBubonicus",
+        name: "Liber Bubonicus",
+        description: "The vile cantrips written within the mouldering pages of the Liber Bubonicus are powerful indeed.",
+        icon: "item-arcane",
         quest: true,
         ranks: [
             { effects: [
-                { icon: "sunburst-standard-of-hexoatl", description: "Passive ability: \"Sunburst Standard of Hexoatl\"" }
-            ] }
-        ],
-        spell: {
-            description: "Item",
-            rarity: "legendary",
-            attributes: {
-                type: [
-                    { text: "Augment (Area)" },
-                    { text: "Only acts on targets when in area" }
-                ],
-                duration: "Constant",
-                target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range" },
-                ],
-                effectRange: "40m",
-                effects: [
-                    { text: "12%", icon: "resistance-missile", postText: "Missile Resistance", color: "green" },
-                    { text: "+9", icon: "defense-character", postText: "Melee Defense", color: "green" }
-                ]
-            }
-        }
-    },
-    {
-        ref: "cobraMaceOfMazdamundi",
-        name: "Cobra Mace of Mazdamundi",
-        description: "This mace has a life of its own; it strikes out with lightning speed to bite enemy weapons before a blow is struck.",
-        icon: "item-weapon",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "item-ability", description: "Armor: +15" },
-                { icon: "melee-character", description: "Melee attack: +15" },
-                { icon: "damage", description: "Weapon strength: +12%" },
-                { icon: "poison", description: "Enables poison attacks" },
-                { icon: "religion", description: "Untainted: +5", ps: "local province" }
-            ] }
-        ]
-    },
-    {
-        ref: "reveredSpearOfTlanxla",
-        name: "Revered Spear of Tlanxla",
-        description: "An unspeakably powerful weapon once said to have been wielded by the warlike Old One diety, Tlanxla.",
-        icon: "item-weapon",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "public-order", description: "Public order: +3", ps: "all provinces" },
-                { icon: "bonus-vs-large-character", description: "Bonus vs. Large: +12" },
-                { icon: "charge-character", description: "Charge bonus: +30" },
-                { icon: "melee-character", description: "Melee attack: +7" },
-                { icon: "damage", description: "Weapon strength: +12%" },
-                { icon: "magical-attacks", description: "Enables magical attacks" }
-            ] }
-        ]
-    },
-    {
-        ref: "handOfGods",
-        name: "Hand of Gods",
-        description: "Bolts of cleansing energy fly from the spellcaster's hands, searing evil wherever they strike.",
-        icon: "item-enchanted",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +10" },
-                { icon: "defense-character", description: "Melee Defense: +6" },
-                { icon: "melee-character", description: "Melee attack: +3" },
-                { icon: "resistance-ward-save", description: "Ward save: 5%" },
-                { icon: "income", description: "Income from post-battle loot: +20%" },
-                { icon: "spell-shems-burning-gaze", description: "Bound spell: \"Hand of Gods\"" }
+                { icon: "magic", description: "Winds of Magic power reserve: +10" },
+                { icon: "spell-plague", description: "Winds of Magic cost: -2 for \"Plague\"" },
+                { icon: "spell-plague", description: "Winds of Magic cost: -2 for \"Plague Upgraded\"" },
+                { icon: "wizard", description: "Hero recruit rank: +4 for Plague Priests", ps: "all provinces" },
+                { icon: "rite", description: "Rite cost: +25% for The Pestilent Scheme" },
+                { icon: "religion-skaven", description: "Skaven corruption: +3", ps: "local province" },
+                { icon: "ability-liber-bubonicus", description: "Ability: \"The Liber Bubonicus\"" }
             ] }
         ],
         spell: {
@@ -86,183 +22,88 @@ exports.skills = [
             cooldown: "120",
             uses: 2,
             attributes: {
-                type: "Magic Missiles",
+                type: "Direct Damage",
+                duration: "15 seconds",
                 target: [
                     { text: "Enemy" },
-                    { text: "250m", uptick: "range" },
+                    { text: "100m", uptick: "range" },
                 ],
                 effects: [
-                    { text: "Causes major magical & fire damage", uptick: "up-green", color: "green" },
-                    { text: "Good against armour", uptick: "up-green", color: "green" },
+                    { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
                     { text: "Strong vs. a single combatant", uptick: "up-green", color: "green" },
-                    { text: "Good against large combatants", uptick: "up-green", color: "green" },
-                    { text: "Good from a high angle", uptick: "up-green", color: "green" }
+                    { text: "Chance opponent will resist damage", uptick: "down-red", color: "red" },
+                    { text: "Weak vs. multiple combatatns", uptick: "down-red", color: "red" }
                 ]
             }
         }
     },
     {
-        ref: "bladeOfTheSerpentsTongue",
-        name: "Blade of the Serpent's Tongue",
-        description: "This sacrificial dagger was crafted by the most skilled of Chaqua's Skink artificers and enchanted to drip with deadly venom!",
-        icon: "item-weapon",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +15" },
-                { icon: "damage", description: "Weapon strength: +14%" },
-                { icon: "religion", description: "Untainted: +2", ps: "local province" },
-                { icon: "ability-sword", description: "Passive ability: \"Blade of the Serpent's Tongue\"" }
-            ] }
-        ],
-        spell: {
-            description: "Weapon",
-            rarity: "legendary",
-            attributes: {
-                type: [
-                    { text: "Augment (Area)" },
-                    { text: "Only acts on targets when in area" }
-                ],
-                duration: "Constant",
-                target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range", uptick: "range" },
-                ],
-                effectRange: "40m",
-                effects: [
-                    { text: "+8%", icon: "charge-character", postText: "Charge Bonus", color: "green" }
-                ],
-                imbued: [
-                    { icon: "icon-poison", postText: "Poison! (10 seconds)", color: "red" },
-                    { text: "-20%", icon: "icon-armor-piercing-ranged", postText: "Armour-Piercing Missile Damage", color: "red" },
-                    { text: "-20%", icon: "icon-ranged-damage-base", postText: "Base Missile Damage", color: "red" },
-                    { text: "-20%", icon: "icon-damage-base", postText: "Base Weapon Damage", color: "red" },
-                    { text: "-24%", icon: "movement-character", postText: "Speed", color: "red" },
-                    { text: "-20%", icon: "icon-armor-piercing", postText: "Armour-Piercing Weapon Damage", color: "red" }
-                ]
-            }
-        }
-    },
-    {
-        ref: "plaqueOfSotek",
-        name: "Plaque of Sotek",
-        description: "Upon this stone plaque is inscribed an extract of the Prophecy of Sotek that grants additional warding to Tehenhauin.",
+        ref: "luckySkullhelm",
+        name: "Lucky Skullhelm",
+        description: "This charmed helmet, fashioned from the skull of a slaughtered foe, protects Tretch from blows of all kinds, be they physical or magical.",
         icon: "item-enchanted",
         quest: true,
         ranks: [
             { effects: [
-                { icon: "public-order", description: "Public order: +3", ps: "all provinces" },
-                { icon: "magic", description: "Winds of Magic starting amount: +15" },
-                { icon: "ability-arcane", description: "Passive ability: \"Plaque of Sotek\"" }
+                { icon: "movement-character", description: "Speed: +10%" },
+                { icon: "resistance-physical", description: "Physical resistance: 10%" },
+                { icon: "ambush", description: "Ambush success chance: +15%", ps: "Lord's army" },
+                { icon: "ability-armor", description: "Passive ability: \"Lucky Skullhelm\"" }
             ] }
         ],
         spell: {
             description: "Item",
-            rarity: "legendary",
-            attributes: {
-                type: "Ward Save",
-                target: "Self",
-                activeIf: "casting",
-                effects: [
-                    { text: "Plaque of Sotek (21 seconds)", color: "green" },
-                    { text: "+22%", icon: "resistance-ward-save", postText: "Damage Resistance", color: "green" },
-                    { text: "+12", icon: "morale-character", postText: "Damage Resistance", color: "green" }
-                ]
-            }
-        }
-    },
-    {
-        ref: "bladeOfTheAncientSkies",
-        name: "Blade of the Ancient Skies",
-        description: "Carved from the dense, fossilised jawbone of a monstrous, sky-borne predator that became extinct during ages long past.",
-        icon: "item-weapon",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "public-order", description: "Public order: +3", ps: "all provinces" },
-                { icon: "morale", description: "Leadership: +10", ps: "Lord's army" },
-                { icon: "ability-sword", description: "Passive ability: \"Blade of the Ancient Skies\"" }
-            ] }
-        ],
-        spell: {
-            description: "Weapon",
             rarity: "legendary",
             attributes: {
                 type: "Augment",
                 duration: "Constant",
                 target: "Self",
-                activeIf: "Flying",
+                activeIf: "Losing melee combat",
                 effects: [
-                    { text: "+18%", icon: "icon-base-damage", postText: "Base Weapon Damage", color: "green" },
-                    { text: "+16", icon: "melee-character", postText: "Melee Attack", color: "green" },
-                    { text: "+18%", icon: "icon-armor-piercing", postText: "Armour-Piercing Weapon Damage", color: "green" }
+                    { text: "Lucky Skullhelm (17 seconds)", color: "green" },
+                    { text: "+24%", postText: "Speed", icon: "movement-character", color: "green" },
+                    { text: "+33%", postText: "Damage Resistance", icon: "resistance-ward-save", color: "green" }
                 ]
             }
         }
     },
     {
-        ref: "maskOfHeavens",
-        name: "Mask of Heavens",
-        description: "Its wearer will become one with the mighty Terradons, who will then move in tandem as a single, mighty consciousness.",
-        icon: "item-enchanted",
+        ref: "rodOfCorruption",
+        name: "Rod of Corruption",
+        description: "The flail of Skrolk is a rusted, pitted ball of miasma that spreads poxes as it is swung",
+        icon: "item-weapon",
         quest: true,
         ranks: [
             { effects: [
-                { icon: "campaign-movement", description: "Campaign movement range: +10%" },
-                { icon: "attribute-fatigue-immune", description: "Attribute: Perfect Vigour" },
-                { icon: "ability-enchanted", description: "Passive ability: \"Mask of Heavens\"" }
-            ] }
-        ],
-        spell: {
-            description: "Weapon",
-            rarity: "legendary",
-            attributes: {
-                type: [
-                    { text: "Augment (Area)" },
-                    { text: "Only acts on targets when in area" }
-                ],
-                duration: "Constant",
-                target: [ 
-                    { text: "Self" },
-                    { text: "Only acts on targets when in area" },
-                ],
-                targetIf: "Flying unit",
-                effectRange: "55m",
-                effects: [
-                    { text: "+23", icon: "armor-character", postText: "Armour", color: "green" },
-                    { text: "+9", icon: "defense-character", postText: "Melee Defense", color: "green" }
-                ]
-            }
-        }
-    },
-    {
-        ref: "goldenTributes",
-        name: "Golden Tributes",
-        description: "Thought of as a jungle-spirit made flesh, the Wanderer is treated with great deference and adorned with ceremonial tokens.",
-        icon: "item-enchanted",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "defense-character", description: "Melee defense: +5" },
-                { icon: "resistance-ward-save", description: "Ward save: 5%" },
-                { icon: "ability-arcane", description: "Passive ability: \"Golden Tributes\"" }
+                { icon: "melee-character", description: "Melee attack: +6" },
+                { icon: "damage", description: "Weapon strength: +10%" },
+                { icon: "spell-wither", description: "Winds of Magic cost: -2 for \"Wither\"" },
+                { icon: "spell-wither", description: "Winds of Magic cost: -2 for \"Wither Upgraded\"" },
+                { icon: "wizard", description: "Hero capacity: +1 for Plague Priests and Eshin Sorcerers" },
+                { icon: "ability-rod-of-corruption", description: "Ability: \"Rod of Corruption\"" }
             ] }
         ],
         spell: {
             description: "Item",
             rarity: "legendary",
+            cooldown: "120",
+            uses: 3,
             attributes: {
                 type: [
-                    { text: "Augment (Area)" },
+                    { text: "Direct Damage (Area)" },
                     { text: "Only acts on targets when in area" }
                 ],
-                duration: "Constant",
+                duration: "11 seconds",
                 target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range" }
-                ],                
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" },
+                ],
+                effectRange: "30m",
                 effects: [
-                    { icon: "attribute-fatigue-immune", postText: "Perfect Vigour", uptick: "up-green", color: "green" }
+                    { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Chance opponent will resist damage", uptick: "down-red", color: "red" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
                 ]
             }
         }
@@ -282,15 +123,17 @@ exports.skills = [
         ]
     },
     {
-        ref: "maceOfUlumak",
-        name: "Mace of Ulumak",
-        description: "It is believed that the Old Ones themselves guide the hand of he who wields the Mace of Ulumak.",
+        ref: "dwarfGouger",
+        name: "Dwarf Gouger",
+        description: "A weapon created to kill the Dwarf-things, it perfectly suits Queek's furious windmill style of attack.",
         icon: "item-weapon",
         quest: true,
         ranks: [
             { effects: [
-                { icon: "resistance-physical", description: "Physical resistance: 18%" },
-                { icon: "ability-mace-of-ulumak", description: "Ability: \"Mace of Ulumak\"" }
+                { icon: "bonus-vs-small-character", description: "Bonus vs. Infantry: +10" },
+                { icon: "damage", description: "Weapon strength: +20% when fighting against Dwarfs" },
+                { icon: "treasury", description: "Recruitment cost: -10%", ps: "Lord's army" },
+                { icon: "ability-dwarf-gouger", description: "Ability: \"Dwarf Gouger\"" }
             ] }
         ],
         spell: {
@@ -299,47 +142,47 @@ exports.skills = [
             cooldown: "120",
             attributes: {
                 type: "Augment",
-                duration: "24 seconds",
+                duration: "36 seconds",
                 target: "Self",
                 effects: [
                     { text: "+50%", icon: "icon-armor-piercing", postText: "Armour-Piercing Weapon Damage", color: "green" },
-                    { text: "+40", icon: "melee-character", postText: "Melee Attack", color: "green" },
-                    { text: "+50%", icon: "icon-base-damage", postText: "Base Weapon Damage", color: "green" }
+                    { text: "+24", icon: "melee-character", postText: "Melee Attack", color: "green" }
                 ]
             }
         }
     },
     {
-        ref: "theShieldOfAeons",
-        name: "The Shield of Aeons",
-        description: "A dozen Kroxigor were needed to haul this matchless shield to the mainland and generations of Skink artisans laboured to carve it.",
+        ref: "warpShardArmour",
+        name: "Warp-Shard Armour",
+        description: "The Warpstone-infused armour plates of Queek Headtaker are as spiteful as their owner.",
         icon: "item-armour",
         quest: true,
         ranks: [
             { effects: [
-                { icon: "armor-character", description: "Armour: +15" },
-                { icon: "resistance-fire", description: "Fire resistance: 30%" },
-                { icon: "ability-shield-of-aeons", description: "Ability: \"Shield of Aeons\"" }
+                { icon: "armor-character", description: "Armour: +10" },
+                { icon: "defense-character", description: "Melee defense: +5" },
+                { icon: "resistance-ward-save", description: "Ward save: 10%" },
+                { icon: "religion-skaven", description: "Skaven corruption: +3", ps: "local province" },
+                { icon: "ability-warp-shard-armour", description: "Passive ability: \"Warp-Shard Armour\"" }
             ] }
         ],
         spell: {
             description: "Item",
             rarity: "legendary",
-            cooldown: "120",
             attributes: {
                 type: [
-                    { text: "Augment (Area)" },
+                    { text: "Hex (Area)" },
                     { text: "Only acts on targets in area" }
                 ],
-                duration: "23 seconds",
+                duration: "Constant",
                 target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range" }
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" }
                 ],
                 effectRange: "40m",
                 effects: [
-                    { text: "+60", icon: "armor-character", postText: "Armour", color: "green" },
-                    { icon: "charge-reflector", postText: "Expert Charge Defense", uptick: "up-green", color: "green" }
+                    { text: "-23", icon: "armor-character", postText: "Armour", color: "red" },
+                    { text: "-5", icon: "defense-character", postText: "Melee Defense", color: "red" }
                 ]
             }
         }
@@ -438,8 +281,8 @@ exports.skills = [
         icon: "character-damage",
         ranks: [
             { effects: [
-                { icon: "magic-character", description: "Miscast base chance: -15%" },
-                { icon: "magic", description: "Winds of Magic power reserve: +15" }
+                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +12" },
+                { icon: "magical-attacks", description: "Enbales magical attacks" }
             ] }
         ]
     },
@@ -496,6 +339,303 @@ exports.skills = [
                 { icon: "income", description: "Income from Settlement buildings: +4%", ps: "all regions" },
                 { icon: "religion-skaven", description: "Skaven corruption: +4", ps: "local province" },
                 { icon: "religion-skaven", description: "Skaven corruption in adjacent provinces: +2" }
+            ] }
+        ]
+    },
+    {
+        ref: "tretchsRaiders",
+        name: "Tretch's Raiders",
+        description: "A master of exploiting others' weaknesses, Tretch and his band are never where you expect them and always where they can do most damage.",
+        icon: "ability-tretchs-raiders",
+        ranks: [ { 
+            effects: [
+                { icon: "income", description: "Income from raiding: +30%", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +10 for Stormvermin units", ps: "Lord's army" },
+                { icon: "ability-tretchs-raiders", description: "Passive ability: \"Tretch's Raiders\"" }
+            ] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                targetIf: "Winning melee combat",
+                effectRange: "40m",
+                effects: [
+                    { text: "+12%", postText: "Base Weapon Damage", icon: "icon-damage-base", color: "green" },
+                    { text: "+9", postText: "Melee Attack", icon: "melee-character", color: "green" },
+                    { text: "+12%", postText: "Armour-Piercing Weapon Damage", icon: "icon-armor-piercing", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "masterOfGuile",
+        name: "Master of Guile",
+        description: "Tretch's sneaky, ultra-duplicitous tactics are dirty, even by Skaven low standards!",
+        icon: "character-subterranean",
+        ranks: [
+            { effects: [
+                { icon: "subterranean", description: "Evasion chance when using the Underway: +10%" },
+                { icon: "ambush", description: "Ambush success chance: +10%", ps: "Lord's army" },
+                { icon: "ambush", description: "Ambush success chance: +10%", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "subterranean", description: "Evasion chance when using the Underway: +20%" },
+                { icon: "ambush", description: "Ambush success chance: +20%", ps: "Lord's army" },
+                { icon: "ambush", description: "Ambush success chance: +20%", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "vanished",
+        name: "Vanished!",
+        description: "\"I turned around and they'd run-scurried off! Covering that distance in no time at all? It can't be natural, yes-yes!\"",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [
+                { icon: "resistance-missile", description: "Missile resistance: +10% for Clanrats and Stormvermin units", ps: "Lord's army" },
+                { icon: "campaign-movement", description: "Campaign movement range: +5%" },
+                { icon: "movement", description: "Speed: +5% for Clanrats and Stormvermin units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "resistance-missile", description: "Missile resistance: +20% for Clanrats and Stormvermin units", ps: "Lord's army" },
+                { icon: "campaign-movement", description: "Campaign movement range: +10%" },
+                { icon: "movement", description: "Speed: +10% for Clanrats and Stormvermin units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "stayHere",
+        name: "\"Stay Here, I'll Get Help!\"",
+        description: "It's not running away. It's knowing when and where to be to secure the best advantage.",
+        icon: "ability-stay-here",
+        ranks: [
+            { effects: [
+                { icon: "ability-stay-here", description: "Cooldown: -33% to \"Stay Here, I'll Get Help!\"" },
+                { icon: "ability-stay-here", description: "Ability number of uses: +2 for \"Stay Here, I'll Get Help!\"" },
+            ] },
+            { effects: [
+                { icon: "ability-stay-here", description: "Cooldown: -50% to \"Stay Here, I'll Get Help!\"" },
+                { icon: "ability-stay-here", description: "Ability number of uses: +3 for \"Stay Here, I'll Get Help!\"" },
+            ] }
+        ]
+    },
+    {
+        ref: "comingBack",
+        name: "Coming Back",
+        description: "\"We'll be back. We're coming back in here.\"",
+        icon: "regeneration",
+        ranks: [
+            { effects: [
+                { icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" },
+                { icon: "wound-time", description: "Wound recovery time: -1" },
+                { icon: "regeneration", description: "Passive ability: \"Regeneration\"" },
+            ] }
+        ],
+        spell: {
+            description: "Unit ability",
+            rarity: "common",
+            attributes: {
+                type: "Regeneration",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "Restores", postText: "4 Hit Points per second", icon: "hp", uptick: "up-green", color: "green" },
+                    { text: "+25% Weakness to", postText: "Fire Damage", icon: "icon-fire", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "loathsomeAppearance",
+        name: "Loathsome Appearance",
+        description: "The hideous countenance that this one presents is an affront to nature and a true sign of the Great Horned Rat's limitless power.",
+        icon: "terror",
+        ranks: [
+            { effects: [{ icon: "attribute-terror", description: "Attribute: Causes Terror" }] }
+        ]
+    },
+    {
+        ref: "plaguelord",
+        name: "Plaguelord",
+        description: "Plants wither and die when this one passes by, so utterly disease-ridden is he.",
+        icon: "plaguelord",
+        ranks: [
+            { effects: [
+                { icon: "wizard", description: "Unlocks Hero recruitment: Plague Priest", ps: "all provinces" },
+                { icon: "wizard", description: "Hero capacity: +1 for Plague Priests and Eshin Sorcerers" },
+                { icon: "wizard", description: "Hero recruit rank: +1 for Plague Priests", ps: "factionwide" },
+                { icon: "experience", description: "Recruit rank: +2 Plague Monks and Plague Claw Catapult units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "wizard", description: "Unlocks Hero recruitment: Plague Priest", ps: "all provinces" },
+                { icon: "wizard", description: "Hero capacity: +2 for Plague Priests and Eshin Sorcerers" },
+                { icon: "wizard", description: "Hero recruit rank: +3 for Plague Priests", ps: "factionwide" },
+                { icon: "experience", description: "Recruit rank: +4 Plague Monks and Plague Claw Catapult units", ps: "Lord's army" },
+                { icon: "coin", description: "Upkeep: -10% for Plague Monks and Plagueclaw Catapult units", ps: "all armies" }
+            ] }
+        ]
+    },
+    {
+        ref: "heraldOfDecay",
+        name: "Herald of Decay",
+        description: "Stench upon pox upon malady; so foul is the Skrolk's putrefaction that only the most serious devotees can stand to be in his presence.",
+        icon: "plaguelord",
+        ranks: [ { 
+            effects: [
+                { icon: "public-order", description: "Public order: -5", ps: "local enemy province", color: "red" },
+                { icon: "religion-skaven", description: "Skaven corruption: +5", ps: "local province" }
+            ] }
+        ]
+    },
+    {
+        ref: "auraOfPestilence",
+        name: "Aura of Pestilence",
+        description: "All around are caught in a deadly miasma of cirulent disease that rips through their bodies with vile momentum.",
+        icon: "ability-aura-of-pestilence",
+        ranks: [
+            { effects: [
+                { icon: "ability-aura-of-pestilence", description: "Passive ability: \"Aura of Pestilence\"" }
+            ] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "common",
+            attributes: {
+                type: [
+                    { text: "Hex (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "-5", postText: "Melee Attack", icon: "melee-character", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "extremelyDistrustful",
+        name: "Extremely Distrustful",
+        description: "Being untrustworthy and treacherous tends to make one suspicious of others.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [
+                { icon: "loyalty", description: "Loyalty: -1 for new recruits", ps: "factionwide", color: "red" },
+                { icon: "agent", description: "Hero self-defense: +15% chance of wounding aggressors" },
+                { icon: "morale", description: "Leadership: +8", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "rendSlaughter",
+        name: "Rend & Slaughter",
+        description: "\"Yes-yes, I will kill-kill all day and through the night until the next. They will all die and then the Council will see my worth, yes-yes!\".",
+        icon: "ability-frenzy",
+        ranks: [
+            { effects: [
+                { icon: "morale-character", description: "Leadership: +8" },
+                { icon: "ability-frenzy", description: "Passive ability: \"Frenzy\"" }
+            ] }
+        ],
+        spell: {
+            description: "Unit ability",
+            rarity: "uncommon",
+            attributes: {
+                type: "Augment",
+                duration: "Constant",
+                target: "Self",
+                disabledIf: "Leadership is lower than 50%",
+                effects: [
+                    { text: "+8", postText: "Melee Attack", icon: "melee-character", color: "green" },
+                    { text: "+8%", postText: "Charge Bonus", icon: "charge-character", color: "green" },
+                    { text: "+15%", postText: "Base Weapon Damage", icon: "icon-damage-base", color: "green" },
+                    { postText: "Immune to Psychology", icon: "attribute-psychology", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "makeExamples",
+        name: "Make Examples!",
+        description: "Oft-times, in order to get your point across, it is necessary to violently kill associates as an example to the others, that they may learn.",
+        icon: "fear",
+        ranks: [
+            { effects: [
+                { icon: "loyalty", description: "Loyalty: +2 for Warlod recruits", ps: "factionwide" },
+                { icon: "loyalty", description: "Loyalty: -2 for Grey Seer recruits", ps: "factionwide", color: "red" },
+                { icon: "character", description: "Leadership aura size: +20%" },
+                { icon: "morale-character", description: "Character's aura leadership effect: +5" },
+                { icon: "attribute-fear", description: "Attribute: Causes Fear" }
+            ] }
+        ]
+    },
+    {
+        ref: "lifeIsVeryCheap",
+        name: "Life is Very Cheap",
+        description: "When you're clearly the better than the rest, others are mere puppets to be toyed with along the way and then casually sacrificed.",
+        icon: "life-is-cheap",
+        ranks: [
+            { effects: [
+                { icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" },
+                { icon: "armor", description: "Armour: +5 for Skavenslaves and Clanrats units", ps: "Lord's army" },
+                { icon: "experience", description: "Recruit rank: +2 for Skavenslaves and Clanrats units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" },
+                { icon: "coin", description: "Upkeep: -10% for Clanrats units", ps: "all armies" },
+                { icon: "armor", description: "Armour: +10 for Skavenslaves and Clanrats units", ps: "Lord's army" },
+                { icon: "experience", description: "Recruit rank: +4 for Skavenslaves and Clanrats units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "crimsonGuard",
+        name: "Crimson Guard",
+        description: "Only the strongest, fiercest, and most ruthless may become members of the most elite claw-unit of all.",
+        icon: "crimson-guard",
+        ranks: [
+            { effects: [
+                { icon: "experience", description: "Recruit rank: +2 for Stormvermin units", ps: "Lord's army" },
+                { icon: "turns", description: "Recruitment duration: -1 turn for Stormvermin units (minimum 1)", ps: "local province" }
+            ] },
+            { effects: [
+                { icon: "experience", description: "Recruit rank: +4 for Stormvermin units", ps: "Lord's army" },
+                { icon: "turns", description: "Recruitment duration: -1 turn for Stormvermin units (minimum 1)", ps: "all provinces" }
+            ] }
+        ]
+    },
+    {
+        ref: "violentRiseToPower",
+        name: "Violent Rise to Power",
+        description: "No act, no matter how despicable, is considered taboo when you're on the way to the very top.",
+        icon: "violent-rise-to-power",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +1", ps: "all provinces" },
+                { icon: "agent", description: "Hero action success chance: +8%", ps: "local characters" },
+                { icon: "agent", description: "Enemy Hero action success chance: -10%" },
+                { icon: "ambush", description: "Ambush success chance: +15%", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "public-order", description: "Public order: +2", ps: "all provinces" },
+                { icon: "agent", description: "Hero action success chance: +12%", ps: "local characters" },
+                { icon: "agent", description: "Enemy Hero action success chance: -20%" },
+                { icon: "ambush", description: "Ambush success chance: +25%", ps: "Lord's army" },
+                { icon: "wound-time", description: "Wound recovery time: -1" }
             ] }
         ]
     },
@@ -586,6 +726,33 @@ exports.skills = [
                 effects: [
                     { text: "Causes magical & fire damage", uptick: "up-green", color: "green" },
                     { text: "Powerful explosion", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "trophyHeads",
+        name: "Trophy Heads",
+        description: "Oft-times, killers retain the heads of their victims as prizes or reminders of dark deeds done.",
+        icon: "ability-trophy-heads",
+        ranks: [
+            { effects: [{ icon: "ability-trophy-heads", description: "Ability: \"Trophy Heads\"" }] }
+        ],
+        spell: {
+            description: "Lord ability",
+            cooldown: "90",
+            rarity: "uncommon",
+            attributes: {
+                type: "Hex",
+                duration: "36 seconds",
+                target: [
+                    { text: "Enemy" },
+                    { text: "150m", uptick: "range" },
+                ],
+                targetIf: "Unit is a Lord or Hero",
+                effects: [
+                    { text: "-24", postText: "Melee Attack", icon: "melee-character", color: "red" },
+                    { text: "-40", postText: "Melee Defense", icon: "defense-character", color: "red" }
                 ]
             }
         }
@@ -687,6 +854,16 @@ exports.skills = [
         ]
     },
     {
+        ref: "opportunist",
+        name: "Opportunist",
+        description: "Alway on the lookout for an opening or advantage in battle - somewhere to put the knife in...",
+        icon: "character-charge",
+        ranks: [
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +7" }] },
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +15" }] }
+        ]
+    },
+    {
         ref: "augmentedWeapon",
         name: "Augmented Weapon",
         description: "This blade is attached to a Warp-generator that channels crackling energy along the weapon.",
@@ -748,6 +925,20 @@ exports.skills = [
             { effects: [
                 { icon: "damage", description: "Weapon strength: +5%" },
                 { icon: "damage", description: "Weapon strength: +10% when fighting against Lizardmen, Dwarfs, High Elves, Greenskins and Men" }
+            ] }
+        ]
+    },
+    {
+        ref: "soothsaying",
+        name: "Soothsaying",
+        description: "Speaking words of power or faith can alter preceptions on the battlefield.",
+        icon: "character",
+        ranks: [
+            { effects: [
+                { icon: "character", description: "Leadership aura size: +20%" }
+            ] },
+            { effects: [
+                { icon: "character", description: "Leadership aura size: +40%" }
             ] }
         ]
     },
@@ -1285,6 +1476,39 @@ exports.skills = [
         }
     },
     {
+        ref: "pestilentBirth",
+        name: "Pestilent Birth",
+        description: "Like a pregnant boil bursting forth, the ground bursts open and pus-coated Plague Monks emerge to do battle at the verminous summoner's bidding.",
+        icon: "spell-pestilent-birth",
+        ranks: [
+            { effects: [
+                { icon: "spell-pestilent-birth", description: "Spell: \"Pestilent Birth\"" },
+                { icon: "spell-pestilent-birth", description: "Cooldown: -50% to: \"Pestilent Birth\"" },
+                { icon: "spell-pestilent-birth", description: "Winds of Magic cost: -3 for \"Pestilent Birth\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            cooldown: "24",
+            cost: [9],
+            uses: 2,
+            rarity: "rare",
+            attributes: {
+                type: "Augment",
+                target: [
+                    { text: "Ground" },
+                    { text: "60m", uptick: "range" }
+                ],
+                cannotTargetIf: "Climbing or manning equipment or on a platform",
+                effects: [
+                    { text: "Summons a unit of Plague Monks", uptick: "up-green", color: "green" },
+                    { text: "Good at flanking enemies", uptick: "up-green", color: "green" },
+                    { text: "Summoned units degrade over time", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
         ref: "plague",
         name: "Plague",
         description: "The caster unleashes a vile disease  that scours the battlefield in search of victims to infect and instantly petrify.",
@@ -1605,6 +1829,79 @@ exports.skills = [
     // already in db
 
     // already in db
+    {
+        ref: "foeSeeker",
+        name: "Foe-Seeker",
+        description: "From one bloodied, lifeless corpse to the next, this one is always looking for the next adversary to best.",
+        icon: "ability-foe-seeker",
+        ranks: [
+            { effects: [{ icon: "ability-foe-seeker", description: "Ability: \"Foe-Seeker\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            cooldown: "60",
+            rarity: "common",
+            attributes: {
+                type: "Augment",
+                duration: "25 seconds",
+                target: "Self",
+                effects: [
+                    { text: "+24%", icon: "movement-character", postText: "Speed", color: "green" },
+                    { text: "+18%", icon: "fatigue", postText: "Vigour", color: "green" }
+                ]
+            }
+         }
+    },
+    {
+        ref: "fervour",
+        name: "Fervour",
+        description: "This one fights with a fervour to be both admired and despised",
+        icon: "character-damage",
+        ranks: [
+            { effects: [{ icon: "damage", description: "Weapon strength: +10%" }] },
+            { effects: [{ icon: "damage", description: "Weapon strength: +20%" }] }
+        ]
+    },
+    {
+        ref: "hardToHit",
+        name: "Hard to Hit",
+        description: "Hand-to-hand combat is a lethal match of cut and thrust. However, it's not all about offensive strikes; parries and other defensive moves can also win the day.",
+        icon: "character-defense",
+        ranks: [
+            { effects: [{ icon: "defense-character", description: "Melee defense: +6"}] },
+            { effects: [{ icon: "defense-character", description: "Melee defense: +12"}] }
+        ]
+    },
+    {
+        ref: "tenacity",
+        name: "Tenacity",
+        description: "This one will not go down easily - it will be necessary to break both the will and the body first.",
+        icon: "character-health",
+        ranks: [
+            { effects: [{ icon: "health-character", description: "Hit points: +7%" }] },
+            { effects: [{ icon: "health-character", description: "Hit points: +15%" }] }
+        ]
+    },
+    {
+        ref: "conviction",
+        name: "Conviction",
+        description: "Such is this one's conviction that others have no choice but to believe.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [{ icon: "charge-character", description: "Leadership: +4" }] },
+            { effects: [{ icon: "charge-character", description: "Leadership: +9" }] }
+        ]
+    },
+    {
+        ref: "wildEyed",
+        name: "Wild-Eyed",
+        description: "Don't look into their eyes, there is only death there!",
+        icon: "character-attack",
+        ranks: [
+            { effects: [{ icon: "melee-character", description: "Melee attack: +4" }] },
+            { effects: [{ icon: "melee-character", description: "Melee attack: +9" }] }
+        ]
+    },
     {
         ref: "earthing",
         name: "Earthing",

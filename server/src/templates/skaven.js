@@ -99,6 +99,81 @@ exports.rows = {
                 }
             ]
         },
+        queek: {
+            row: 1,
+            content: [
+                {
+                    quest: 6,
+                    blockContent: ['warpShardArmour']
+                },
+                {
+                    quest: 10,
+                    blockContent: ['dwarfGouger']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['warpstoneWeapon']
+                }
+            ]
+        },
+        skrolk: {
+            row: 1,
+            content: [
+                {
+                    quest: 6,
+                    blockContent: ['liberBubonicus']
+                },
+                {
+                    quest: 10,
+                    blockContent: ['rodOfCorruption']
+                },
+                {
+                    restrictionLevel: 4,
+                    blockContent: ['warpstoneTokens']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                }
+            ]
+        },
+        tretch: {
+            row: 1,
+            content: [
+                {
+                    quest: 8,
+                    blockContent: ['luckySkullhelm']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['lifeIsCheap']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['warpstoneWeapon']
+                }
+            ]
+        },
     },
     row2: {
         warlord: {
@@ -172,7 +247,66 @@ exports.rows = {
                     blockContent: ['envoyOfTheCouncil']
                 }
             ]
-        }
+        },
+        queek: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['extremelyDistrustful']
+                },
+                {
+                    restrictionChoice: 'extremelyDistrustful',
+                    blockContent: ['rendSlaughter', 'makeExamples', 'lifeIsVeryCheap', 'crimsonGuard', 'violentRiseToPower']
+                }
+            ]
+        },
+        skrolk: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['loathsomeAppearance']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['plaguelord']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['heraldOfDecay']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['voiceOfTheHornedRat']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['envoyOfTheCouncil']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['auraOfPestilence']
+                }
+            ]
+        },
+        tretch: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['tretchsRaiders']
+                },
+                {
+                    restrictionChoice: 'tretchsRaiders',
+                    blockContent: ['masterOfGuile', 'vanished', 'stayHere']
+                },
+                {
+                    restrictionCount: 1,
+                    blockContent: ['comingBack']
+                }
+            ]
+        },
     },
     row3: {
         warlord: {
@@ -190,7 +324,7 @@ exports.rows = {
                     blockContent: ['verminousValour']
                 },
                 {
-                    restrictionChoice: 'foeSeeker',
+                    restrictionChoice: 'verminousValour',
                     blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
                 },
                 {
@@ -214,13 +348,61 @@ exports.rows = {
                     blockContent: ['slippery']
                 },
                 {
-                    restrictionChoice: 'foeSeeker',
+                    restrictionChoice: 'slippery',
                     blockContent: ['woundMaker', 'scarredVeteran', 'piercingShots', 'expeditiousEndeavour']
                 },
                 {
                     restrictionCount: 4,
                     blockContent: ['deadlyOnslaught']
                 }
+            ]
+        },
+        queek: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ['tailWeapon'],
+                },
+                {
+                    restrictionChoice: 'tailWeapon',
+                    blockContent: ['ruinDecay', 'thickSkinned', 'bladeMaster', 'indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['verminousValour']
+                },
+                {
+                    restrictionChoice: 'verminousValour',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['trophyHeads']
+                }
+            ]
+        },
+        skrolk: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ["pestilentBreath"]
+                },
+                {
+                    restrictionChoice: "pestilentBreath",
+                    blockContent: ["plagueRash", "blessWithFilth", "wither", "vermintide"]
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ["evasion"]
+                },
+                {
+                    restrictionChoice: "evasion",
+                    blockContent: ["plague", "pestilentBirth", "earthing", "magicalReserves"]
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ["arcaneConduit"]
+                },
             ]
         }
     },
@@ -248,7 +430,31 @@ exports.rows = {
                     blockContent: ['woundMaker', 'scarredVeteran', 'expeditiousEndeavour'],
                 }
             ]
-        }
+        },
+        skrolk: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['tailWeapon'],
+                },
+                {
+                    restrictionChoice: 'tailWeapon',
+                    blockContent: ['wildEyed', 'opportunist', 'expeditiousEndeavour', 'conviction'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['foeSeeker']
+                },
+                {
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['fervour', 'tenacity', 'soothsaying', 'hardToHit']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deadlyOnslaught']
+                }
+            ]
+        },
     },
     row6: {
         warlord: {

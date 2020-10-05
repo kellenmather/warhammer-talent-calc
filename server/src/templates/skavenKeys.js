@@ -32,6 +32,42 @@ let skaven = {
         { ...Skaven.rows.row4.seer },
         { ...Skaven.rows.row6.warlord },
         { ...Skaven.rows.row9.skaven }
+    ],
+    queek: [
+        { ...Skaven.rows.row1.queek },
+        { ...Skaven.rows.row2.queek },
+        { ...Skaven.rows.row3.queek },
+        { ...Skaven.rows.row6.warlord },
+        { ...Skaven.rows.row9.skaven }
+    ],
+    skrolk: [
+        { ...Skaven.rows.row1.skrolk },
+        { ...Skaven.rows.row2.skrolk },
+        { ...Skaven.rows.row3.skrolk },
+        { ...Skaven.rows.row4.skrolk },
+        { ...Skaven.rows.row6.warlord },
+        { ...Skaven.rows.row9.skaven }
+    ],
+    tretch: [
+        { ...Skaven.rows.row1.tretch },
+        { ...Skaven.rows.row2.tretch },
+        { ...Skaven.rows.row3.queek },
+        { ...Skaven.rows.row6.warlord },
+        { ...Skaven.rows.row9.skaven }
+    ],
+    ikit: [
+        { ...Skaven.rows.row1.seer },
+        { ...Skaven.rows.row2.seer },
+        { ...Skaven.rows.row4.seer },
+        { ...Skaven.rows.row6.warlord },
+        { ...Skaven.rows.row9.skaven }
+    ],
+    snikch: [
+        { ...Skaven.rows.row1.seer },
+        { ...Skaven.rows.row2.seer },
+        { ...Skaven.rows.row4.seer },
+        { ...Skaven.rows.row6.warlord },
+        { ...Skaven.rows.row9.skaven }
     ]
 }
 
