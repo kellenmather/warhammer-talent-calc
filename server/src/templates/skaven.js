@@ -174,6 +174,35 @@ exports.rows = {
                 }
             ]
         },
+        ikit: {
+            row: 1,
+            content: [
+                {
+                    quest: 1,
+                    blockContent: ['ironFrame']
+                },
+                {
+                    quest: 8,
+                    blockContent: ['stormDaemon']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['doomFlayer']
+                },
+                {
+                    restrictionLevel: 15,
+                    blockContent: ['doomwheel']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                }
+            ]
+        },
     },
     row2: {
         warlord: {
@@ -307,6 +336,23 @@ exports.rows = {
                 }
             ]
         },
+        ikit: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['powerOverload']
+                },
+                {
+                    restrictionChoice: 'powerOverload',
+                    blockContent: ['warptechAcademy', 'improvedWarpstoneDetector', 'theVeryLatestThing', 'optimisedProduction']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['doomsdayScientist']
+                }
+            ]
+        },
     },
     row3: {
         warlord: {
@@ -404,7 +450,31 @@ exports.rows = {
                     blockContent: ["arcaneConduit"]
                 },
             ]
-        }
+        },
+        ikit: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ["warpLightning"]
+                },
+                {
+                    restrictionChoice: "warpLightning",
+                    blockContent: ["muskOfFear", "howlingWarpgale", "deathFrenzy", "scorch"]
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ["evasion"]
+                },
+                {
+                    restrictionChoice: "evasion",
+                    blockContent: ["cracksCall", "flensingRuin", "earthing", "magicalReserves"]
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ["unlimitedPower"]
+                },
+            ]
+        },
     },
     row4: {
         warlock: {
@@ -452,6 +522,22 @@ exports.rows = {
                 {
                     restrictionCount: 4,
                     blockContent: ['deadlyOnslaught']
+                }
+            ]
+        },
+        ikit: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['powerArmour'],
+                },
+                {
+                    restrictionChoice: 'powerArmour',
+                    blockContent: ['retractableArmblade', 'doubleInsulation', 'jetPack', 'biometricInterface'],
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: [ { name: 'adrenalineRush', restrictionLimited: ['secondWindSerum'] }, { name: 'secondWindSerum', restrictionLimited: ['adrenalineRush'] }]
                 }
             ]
         },

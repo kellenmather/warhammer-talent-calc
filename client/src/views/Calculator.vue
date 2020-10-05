@@ -226,6 +226,11 @@ export default {
                         row[i].content[1].blockContent[3] = 'dictatorial';
                         row[i].content[1].blockContent[4] = 'corruptive';
                         this.rows[rowName] = row[i];
+                    } 
+                    else if (this.lord === 'ikit' && rowName === 'row4') {
+                        row[i].content[2].blockContent[0] = 'adrenalineRush';
+                        row[i].content[2].blockContent[1] = 'secondWindSerum';
+                        this.rows[rowName] = row[i];
                     } else {
                         this.rows[rowName] = row[i];
                     }

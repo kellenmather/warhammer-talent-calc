@@ -56,9 +56,10 @@ let skaven = {
         { ...Skaven.rows.row9.skaven }
     ],
     ikit: [
-        { ...Skaven.rows.row1.seer },
-        { ...Skaven.rows.row2.seer },
-        { ...Skaven.rows.row4.seer },
+        { ...Skaven.rows.row1.ikit },
+        { ...Skaven.rows.row2.ikit },
+        { ...Skaven.rows.row3.ikit },
+        { ...Skaven.rows.row4.ikit },
         { ...Skaven.rows.row6.warlord },
         { ...Skaven.rows.row9.skaven }
     ],

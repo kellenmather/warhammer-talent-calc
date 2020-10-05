@@ -51,6 +51,7 @@ export default {
     padding: 10px;
     border: 1px solid darkgray;
     height: 82px;
+    margin: 0 10px;
 }
 .skill-button {
     height: 67px;

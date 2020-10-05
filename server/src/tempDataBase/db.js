@@ -188,6 +188,56 @@ exports.skills = [
         }
     },
     {
+        ref: "ironFrame",
+        name: "Iron Frame",
+        description: "A mighty metal frame encases the Warlock Engineer's body, giving him amazing strength, dexterity and resistance against both physical and magical harm.",
+        icon: "item-armour",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "armor-character", description: "Armour: +10" },
+                { icon: "resistance-magic", description: "Magic resistance: 5%" },
+                { icon: "resistance-physical", description: "Physical resistance: 10%" },
+                { icon: "damage", description: "Weapon strength: +10%" }
+            ] }
+        ]
+    },
+    {
+        ref: "stormDaemon",
+        name: "Storm Daemon",
+        description: "A Warpstone-powered device, created by the Warlock Engineers, that crackles with barely-contained power.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +2", ps: "all provinces" },
+                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +25" },
+                { icon: "bonus-vs-large-character", description: "Bonus vs. Large: +10" },
+                { icon: "ability-storm-daemon", description: "Ability: \"Storm Daemon\"" }
+            ] }
+        ],
+        spell: {
+            description: "Weapon",
+            rarity: "legendary",
+            cooldown: "120",
+            uses: 2,
+            attributes: {
+                type: "Magic Missiles",
+                target: [
+                    { text: "Enemy" },
+                    { text: "400m", uptick: "range" }
+                ],
+                projectileRange: "400m",
+                effects: [
+                    { text: "Causes major", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Good penetration", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" },
+                    { text: "Effective at all ranges", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
         ref: "tougherThanHeSeems",
         name: "Tougher Than He Seems",
         description: "Make no mistake - in most cases, a Master Assassin's training is quite literally a baptism of fire.",
@@ -451,6 +501,92 @@ exports.skills = [
                 effects: [
                     { text: "Restores", postText: "4 Hit Points per second", icon: "hp", uptick: "up-green", color: "green" },
                     { text: "+25% Weakness to", postText: "Fire Damage", icon: "icon-fire", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "warptechAcademy",
+        name: "Warptech Academy",
+        description: "Treachery is always a risk; advancing others' careers can quickly become a fatal mistake. However, having accomplished students in your team can outweight the dangers.",
+        icon: "warptech-academy",
+        ranks: [
+            { effects: [
+                { icon: "loyalty", description: "Loyalty: +3 for Warlock Masters", ps: "factionwide" },
+                { icon: "warlock", description: "Hero capactiy: +1 for Warlock Engineers" }
+            ] }
+        ]
+    },
+    {
+        ref: "improvedWarpstoneDetector",
+        name: "Improved Warpstone Detector",
+        description: "This new and improved device upgrades Ikit's earlier invention for maximum efficiency.",
+        icon: "improved-warpstone-detector",
+        ranks: [
+            { effects: [
+                { icon: "ikits-workshop", description: "+50% chance to acquire Warp-fuel after battle" }
+            ] }
+        ]
+    },
+    {
+        ref: "theVeryLatestThing",
+        name: "The Very Latest Thing",
+        description: "You can tweak and prime weapons to your heart's content, but there remains no substitute for a live ammunition test against an equally-muerderous foe!",
+        icon: "character-range",
+        ranks: [
+            { effects: [
+                { icon: "ammo-character", description: "\"Concentrated Flame\" ammunition (increased ranged and anti-large)" },
+                { icon: "ranged-damage-character", description: "Missile strength: +12%" }
+            ] }
+        ]
+    },
+    {
+        ref: "optimisedProduction",
+        name: "Optimised Production",
+        description: "Finding assembly lines inefficient and therefore unsatisfactory, Ikit organises his Skaven workforce to manufacture his designs faster and better than the competition.",
+        icon: "character-experience",
+        ranks: [
+            { effects: [
+                { icon: "treasury", description: "Recruitment duration: -1 for Doom-Flayers and Doomwheel units", ps: "Lord's army" },
+                { icon: "experience", description: "Recruit rank: +2 for Doom-Flayers and Doomwheel units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "doomsdayScientist",
+        name: "Doomsday Scientist",
+        description: "When the end finally comes, this one will be there, cackling like the supremely mad scientist he is.",
+        icon: "ability-brass-orb",
+        ranks: [
+            { effects: [{ icon: "character", description: "Upgrades ability: \"Brass Orb\"" }] }
+        ],
+        spell: {
+            name: "Brass Orb Upgraded",
+            description: "Character ability",
+            cooldown: "90",
+            uses: 3,
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Vortex" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "13 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "Affects enemies in range" },
+                    { text: "200m", uptick: "range" },
+                ],
+                effectRange: "12m",
+                effects: [
+                    { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
+                    { text: "Causes minor", postText: "magical damage", icon: "icon-magic", uptick: "up-green", color: "green" },
+                    { text: "Huge, stationary area of effect", uptick: "up-green", color: "green" },
+                    { text: "Can disrupt unit formation", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" },
+                    { text: "Brass Orb (13 seconds)", color: "red" }
                 ]
             }
         }
@@ -854,6 +990,107 @@ exports.skills = [
         ]
     },
     {
+        ref: "powerArmour",
+        name: "Power Armour",
+        description: "This advanced armour is infused with purest Warp-energy, making it more powerful than other protective measures employed by the Skaven.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [{ icon: "resistance-physical", description: "Physical resistance: 10%" }] }
+        ]
+    },
+    {
+        ref: "retractableArmblade",
+        name: "Retractable Armblade",
+        description: "Shake his hand? You'd better count your limbs, my friend!",
+        icon: "character-attack",
+        ranks: [
+            { effects: [
+                { icon: "melee-character", description: "Melee attack: +8" },
+                { icon: "damage", description: "Weapon strength: +10%" }
+            ] }
+        ]
+    },
+    {
+        ref: "doubleInsulation",
+        name: "Double Insulation",
+        description: "Ikit is famed for his ability to mix magic with mechanical technology; this multi-layered Warp-infused armour affords far more protection than merely extra padding, therefore.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [
+                { icon: "resistance-fire", description: "Fire resistance: 20%" },
+                { icon: "resistance-magic", description: "Magic resistance: 20%" }
+            ] }
+        ]
+    },
+    {
+        ref: "jetPack",
+        name: "Jet Pack",
+        description: "Enormous fun, and guaranteed to surprise the foe, but a proper nightmare when it cuts out mid-air!",
+        icon: "character-charge",
+        ranks: [
+            { effects: [
+                { icon: "movement-character", description: "Speed: +12%" },
+                { icon: "charge-character", description: "Charge bonus: +12" }
+            ] }
+        ]
+    },
+    {
+        ref: "biometricInterface",
+        name: "Biometric Interface",
+        description: "Ikit is alerted to potential health issues by his multifarious inventions, by which ailments can easily be cured, ensuring he is always in peak condition.",
+        icon: "character-health",
+        ranks: [
+            { effects: [{ icon: "health-character", description: "Hit points: +8%" }] }
+        ]
+    },
+    {
+        ref: "adrenalineRush",
+        name: "Adrenaline Rush",
+        description: "\"Power surge now, exploding through, yes-yes-yes-YES!!!!!!\"",
+        icon: "ability-adrenaline-rush",
+        ranks: [
+            { effects: [{ icon: "ability-adrenaline-rush", description: "Passive ability: \"Adrenaline Rush\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "common",
+            attributes: {
+                type: "Augment",
+                duration: "15 seconds",
+                target: "Self",
+                activeIf: "Casting",
+                effects: [
+                    { text: "+50%", postText: "Armour-Piercing Weapon Damage", icon: "icon-armor-piercing", color: "green" },
+                    { postText: "Unbreakable", icon: "unbreakable", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "secondWindSerum",
+        name: "Second-Wind Serum",
+        description: "Be wary of one who can renergise himself in the middle of battle, lest the tide be turned!",
+        icon: "ability-second-wind-serum",
+        ranks: [
+            { effects: [{ icon: "ability-second-wind-serum", description: "Passive ability: \"Second-Wind Serum\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            cooldown: "60",
+            rarity: "common",
+            attributes: {
+                type: "Augment",
+                duration: "15 seconds",
+                target: "Self",
+                activeIf: "Casting",
+                effects: [
+                    { text: "Restores up to", postText: "720 Hit Points", icon: "hp", uptick: "up-green", color: "green" },
+                    { text: "+12", postText: "Melee Defense", icon: "defense-character", color: "green" }
+                ]
+            }
+        }
+    },
+    {
         ref: "opportunist",
         name: "Opportunist",
         description: "Alway on the lookout for an opening or advantage in battle - somewhere to put the knife in...",
@@ -964,6 +1201,30 @@ exports.skills = [
                     { text: "Poor against large combatants", uptick: "down-red", color: "red" },
                     { text: "+24%", icon: "movement-character", postText: "Speed", color: "green" },
                     { text: "+8", icon: "morale-character", postText: "Leadership", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "unlimitedPower",
+        name: "Unlimited Power!",
+        description: "Unlimited power corrupts the already-totally-corrupted utterly.",
+        icon: "spell-unlimited-power",
+        ranks: [
+            { effects: [{ icon: "spell-unlimited-power", description: "Ability: \"Unlimited Power!\"" }] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "uncommon",
+            cooldown: "90",
+            attributes: {
+                type: "Augment of the Winds",
+                duration: "29 seconds",
+                target: "Self",
+                miscastChance:  {"0": "50"},
+                effects: [
+                    { text: "Greatly improved", icon: "magic-pool", postText: "power recharge rate", uptick: "up-green", color: "green" },
+                    { text: "Great increase to", icon: "magic-replenish", postText: "power reserves", uptick: "up-green", color: "green" }
                 ]
             }
         }

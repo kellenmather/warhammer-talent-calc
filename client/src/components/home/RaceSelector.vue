@@ -121,7 +121,8 @@ export default {
 }
 .race-header a {
     display: inline-block;
-    background-position: top 2px center;
+    background-position-y: 6px;
+    background-position: center;
     background-repeat: no-repeat;
     width: 52px;
     height: 70px;
