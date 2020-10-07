@@ -21,7 +21,7 @@
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('vampirecounts', 'disabled')" :style="getAssets('button-home', 'vampirecounts')">Vampire Counts</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('norsca', 'disabled')" :style="getAssets('button-home', 'norsca')">Norsca</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('bretonnia', 'disabled')" :style="getAssets('button-home', 'bretonnia')">Bretonnia</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('woodelves', 'disabled')" :style="getAssets('button-home', 'woodelves')">Wood Elves</a></li>
+                <li><a type="button" class="home-button" @click="selectRace('woodelves')" :style="getAssets('button-home', 'woodelves')">Wood Elves</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('beastmenwarherds', 'disabled')" :style="getAssets('button-home', 'beastmenwarherds')">Beastmen Warherds</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('chaos', 'disabled')" :style="getAssets('button-home', 'chaos')">Chaos</a></li>
             </ul>
@@ -67,7 +67,12 @@ export default {
         }
     },
     created() {
-        if (this.race) this.selection = this.race;
+        if (this.race) {
+            this.selection = this.race;
+            
+            let wh2Races = ['darkelves', 'highelves', 'lizardmen', 'skaven', 'tombkings', 'vampirecoast']
+            wh2Races.includes(this.race) ? this.wh2 = true : this.wh2 = false;
+        }
     }
 };
 </script>

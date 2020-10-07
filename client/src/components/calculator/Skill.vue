@@ -17,6 +17,7 @@
                 :style="[obtainedRank(skillState[block].value, index)]">
             </div>
         </div>
+        <div v-if="isLocked()" :style="getLocked()" @contextmenu.prevent="onRightClick" :class="skill.quest ? 'quest-locked' : 'locked'"></div>
         <div style="position:absolute;">
             <Popup 
                 :info="skill" 
@@ -226,10 +227,6 @@ export default {
             let skillData = this.skillState[this.block];
             let levelRestriction = skillData.restrictionLevel;
             this.rcDisabled = false;
-
-            if ((this.lordLevel - 1) === levelRestriction) {
-                this.rcDisabled = true;
-            }
         },
         handleResize() {
             this.window.width = window.innerWidth;
@@ -252,6 +249,29 @@ export default {
                 return { 'content': 'url(' + asset + ')' };
             } catch {
                 return ''
+            }
+        },
+        getLocked() {
+            let asset;
+            asset = require('@/assets/' + this.styleGuide + '/skill-locked.png');
+            return { 'content': 'url(' + asset + ')' };
+        },
+        isLocked() {
+            let skillData = this.skillState[this.block];
+            let chooseOneRestriction = skillData.restrictionLimited;
+            if (chooseOneRestriction && chooseOneRestriction.length > 0) {
+                // check skillState for the value of the restricted skills
+
+                for (let i = 0; i < chooseOneRestriction.length; i++) {                    
+                    if (this.skillState[chooseOneRestriction[i]].value > 0) {
+                        return true;
+                    }
+                }
+            // show locked skill if quest level greater than lord level
+            } else if (skillData.quest > this.lordLevel) {
+                return true;
+            } else {
+                return false;
             }
         }
     },
@@ -357,5 +377,21 @@ export default {
     display: absolute;
     /* height is set programatically through inline style */
     width: 10px;
+}
+.locked {
+    position: absolute;
+    top: -3px;
+    left: 62px;
+}
+.wh2 .locked {
+    filter: grayscale(100%);
+}
+.quest-locked {
+    position: absolute;
+    top: -3px;
+    left: 82px;
+}
+.wh2 .quest-locked {
+    filter: grayscale(100%);
 }
 </style>

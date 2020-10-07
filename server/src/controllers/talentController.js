@@ -28,19 +28,25 @@ exports.getRows = (req, res) => {
             response.rows = Skaven.getLord(params.lord, params.type)
             break;
         default:
-            console.log('error');
+            console.error('Unsuported Race');
     }
 
     // push every skill ref to skillArray to prep mongoDB query
     let skillArray = [];
     for (let i = 0; i < response.rows.length; i++) {
         for (let j = 0; j < response.rows[i].content.length; j++) {
-            skillArray = skillArray.concat(response.rows[i].content[j].blockContent);
+            for (let k = 0; k < response.rows[i].content[j].blockContent.length; k++) {
+                if (typeof(response.rows[i].content[j].blockContent[k]) == 'object') skillArray.push(response.rows[i].content[j].blockContent[k].name)
+                else skillArray.push(response.rows[i].content[j].blockContent[k]);
+            }
+            // Below used to be sufficient: Had to add third for loop because of skaven restrictionLimited inside block -_-
+            // Change back to below when issue has better resolution
+            // skillArray = skillArray.concat(response.rows[i].content[j].blockContent);
         }
     }
 
     // get all skills from mongoDB that are listed in skillArray
-    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen') {
+    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen' || params.race === 'skaven') {
         Skill.find({ ref: { $in: skillArray } }, function(err, test) {
             if (test) {
                 response.skills = test

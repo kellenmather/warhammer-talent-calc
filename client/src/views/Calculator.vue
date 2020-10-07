@@ -1,5 +1,5 @@
 <template>
-    <div v-cloak id="calculator" v-if="skills.length > 0" class="container-fluid calc-border calc unselectable" :style="getBackground(this.styleGuide)">
+    <div v-cloak id="calculator" v-if="skills.length > 0" :class="styleGuide" class="container-fluid calc-border calc unselectable" :style="getBackground(this.styleGuide)">
         <div class="header-padding">
             <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
                 <div class="left-nav action-items">

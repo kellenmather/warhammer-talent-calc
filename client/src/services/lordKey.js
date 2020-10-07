@@ -29,6 +29,10 @@ exports.lords = {
     'vampirecoast': [
         { name: 'Vampire Fleet Admiral (Pistol)', type: 'pistol', school: ['death', 'deeps', 'vampireDeep'] },
         { name: 'Vampire Fleet Admiral (Polearm)', type: 'polearm', school: ['death', 'deeps', 'vampireDeep'] }
+    ],
+    'woodelves': [
+        { name: 'Ancient Treeman', type: 'treeman' },
+        { name: 'Glade Lord', type: 'glade' }
     ]
 },
 exports.legendary = {
@@ -74,5 +78,9 @@ exports.legendary = {
         { name: 'Count Noctilus', type: 'noctilus', legendary: true },
         { name: 'Aranessa Saltspite', type: 'aranessa', legendary: true }, 
         { name: 'Cylostra Direfin', type: 'cylostra', legendary: true }
+    ],
+    'woodelves': [
+        { name: 'Orion', type: 'orion' },
+        { name: 'Durthu', type: 'durthu' }
     ]
 }
