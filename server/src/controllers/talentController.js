@@ -2,7 +2,8 @@ const db = require('../tempDataBase/db.js');
 const DarkElvesKeys = require('../templates/darkElvesKeys.js');
 const HighElvesKeys = require('../templates/highElvesKeys.js');
 const LizardmenKeys = require('../templates/lizardmenKeys.js');
-const Skaven = require('../templates/skavenKeys.js');
+const SkavenKeys = require('../templates/skavenKeys.js');
+const WoodElvesKeys = require('../templates/woodElvesKeys.js');
 const mongoose = require('mongoose');
 const Skill = mongoose.model('Skill', new mongoose.Schema());
 
@@ -12,20 +13,23 @@ exports.getRows = (req, res) => {
     let params = req.params;
     let response = { rows: null, skills: null };
 
-    console.log(params)
+    console.log(params);
     
     switch (params.race) {
         case 'darkelves':
-            response.rows = DarkElvesKeys.getLord(params.lord, params.type)
+            response.rows = DarkElvesKeys.getLord(params.lord, params.type);
             break;
         case 'highelves':
-            response.rows = HighElvesKeys.getLord(params.lord, params.type)
+            response.rows = HighElvesKeys.getLord(params.lord, params.type);
             break;
         case 'lizardmen':
-            response.rows = LizardmenKeys.getLord(params.lord, params.type)
+            response.rows = LizardmenKeys.getLord(params.lord, params.type);
             break;
         case 'skaven':
-            response.rows = Skaven.getLord(params.lord, params.type)
+            response.rows = SkavenKeys.getLord(params.lord, params.type);
+            break;
+        case 'woodelves':
+            response.rows = WoodElvesKeys.getLord(params.lord, params.type);
             break;
         default:
             console.error('Unsuported Race');
@@ -46,7 +50,7 @@ exports.getRows = (req, res) => {
     }
 
     // get all skills from mongoDB that are listed in skillArray
-    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen' || params.race === 'skaven') {
+    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen' || params.race === 'skaven' || params.race === 'woodelves') {
         Skill.find({ ref: { $in: skillArray } }, function(err, test) {
             if (test) {
                 response.skills = test
