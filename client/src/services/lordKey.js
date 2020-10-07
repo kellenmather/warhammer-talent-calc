@@ -80,7 +80,7 @@ exports.legendary = {
         { name: 'Cylostra Direfin', type: 'cylostra', legendary: true }
     ],
     'woodelves': [
-        { name: 'Orion', type: 'orion' },
-        { name: 'Durthu', type: 'durthu' }
+        { name: 'Orion', type: 'orion', legendary: true },
+        { name: 'Durthu', type: 'durthu', legendary: true }
     ]
 }

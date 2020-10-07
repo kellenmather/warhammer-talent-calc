@@ -236,6 +236,10 @@ export default {
                     }
                 }
             })
+
+        // set wh asset style based on race
+        let wh2Races = ['darkelves', 'highelves', 'lizardmen', 'skaven', 'tombkings', 'vampirecoast']
+        wh2Races.includes(this.race) ? this.styleGuide = 'wh2' : this.styleGuide = 'wh1';
     }
 }
 

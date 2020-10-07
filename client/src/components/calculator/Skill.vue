@@ -171,7 +171,15 @@ export default {
                 return;
             }
 
-            // 2: Lord level is less than the required level or quest level
+            // 2: Skill has a prerequisite of another skill
+            if (this.skillState[skillRestriction] && this.skillState[skillRestriction].value === 0 ) {
+                this.disabled = true;
+
+                this.disabledReason = "Available after unlocking: " + this.skills[skillRestriction].name;
+                return;
+            }
+
+            // 3: Lord level is less than the required level or quest level
             if (levelRestriction && this.lordLevel < levelRestriction - 1 ) {
                 this.disabled = true;
                 this.disabledReason = 'Lord level required: ' + levelRestriction;
@@ -179,9 +187,10 @@ export default {
             } else if (skillData.quest && this.lordLevel < skillData.quest ) {
                 this.disabled = true;
                 this.disabledReason = 'This quest will automatically begin at rank ' + skillData.quest + '.';
+                return;
             }
 
-            // 3: Skills that are choose only 1 of 2 or more
+            // 4: Skills that are choose only 1 of 2 or more
             if (chooseOneRestriction && chooseOneRestriction.length > 0) {
                 // check skillState for the value of the restricted skills
 
@@ -193,13 +202,6 @@ export default {
                         return;
                     }
                 }
-            }
-
-            // 4: Skill has a prerequisite of another skill
-            if (this.skillState[skillRestriction] && this.skillState[skillRestriction].value === 0 ) {
-                this.disabled = true;
-
-                this.disabledReason = "Available after unlocking: " + this.skills[skillRestriction].name;
             }
 
             // 5: Skill has multiple prerequisites of the previous block
