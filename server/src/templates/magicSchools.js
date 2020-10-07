@@ -23,6 +23,30 @@ exports.magic = {
             },
         ]
     },
+    treeman: {
+        row: 2,
+        content: [
+            {
+                blockContent: ["awakeningOfTheWood"]
+            },
+            {
+                restrictionChoice: "awakeningOfTheWood",
+                blockContent: ["lifeBloom", "earthBlood", "fleshToStone", "shieldOfThorns"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
+                blockContent: ["regrowth", "theDwellersBelow", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
+            },
+        ]
+    },
     beasts: {
         row: 3,
         content: [

@@ -30,7 +30,7 @@ let woodElves = {
     ],
     treeman: [
         { ...WoodElves.rows.row1.durthu },
-        { ...Schools.magic.durthu },
+        { ...Schools.magic.treeman },
         { ...WoodElves.rows.row3.woodElves },
         { ...WoodElves.rows.row5.woodElves },
         { ...WoodElves.rows.row6.woodElves },
