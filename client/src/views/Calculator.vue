@@ -76,7 +76,7 @@ export default {
                     blockContent = row.content[i].blockContent;
                     for (let j = 0; j < blockContent.length; j++) {
                         // if else check due to skaven having a restrictionLimited pair inside a block -_-
-                        if (typeof(blockContent[j]) == 'object') skillRefs.push(blockContent[j].name)
+                        if (typeof(blockContent[j]) == 'object') continue;
                         else skillRefs.push(blockContent[j])
                     }
                 }
@@ -105,35 +105,19 @@ export default {
                     // block containts restrictions and all skills pertaining to those restrictions
                     let block = content[j];
                     for (let k = 0; k < skill.length; k++) {
-                        // if else check due to skaven having a restrictionLimited pair inside a block -_-
-                        if (typeof(skill[k]) == 'object') {
-                            let skillName = skill[k].name;
-                            calcState[rowName][skillName] = { 
-                                name: skillName, 
-                                value: quest ? -1 : 0, 
-                                blockMember: (skill.length > 1) ? j : null,
-                                // If NOT on the first iteration find out if skill is the blockLeader
-                                blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
-                                restrictionLevel: block.restrictionLevel || null, 
-                                restrictionLimited: skill[k].restrictionLimited || null, 
-                                restrictionChoice: block.restrictionChoice || null, 
-                                restrictionCount: block.restrictionCount || null,
-                                quest: block.quest || null
-                            }
-                        } else {
-                            let skillName = skill[k];
-                            calcState[rowName][skillName] = { 
-                                name: skillName, 
-                                value: quest ? -1 : 0, 
-                                blockMember: (skill.length > 1) ? j : null,
-                                // If NOT on the first iteration find out if skill is the blockLeader
-                                blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
-                                restrictionLevel: block.restrictionLevel || null, 
-                                restrictionLimited: block.restrictionLimited || null, 
-                                restrictionChoice: block.restrictionChoice || null, 
-                                restrictionCount: block.restrictionCount || null,
-                                quest: block.quest || null
-                            }
+                        // restrictionLimited pair inside a block -_-
+                        let skillName = (typeof(skill[k]) == 'object') ? skill[k].name : skill[k];
+                        calcState[rowName][skillName] = { 
+                            name: skillName, 
+                            value: quest ? -1 : 0, 
+                            blockMember: (skill.length > 1) ? j : null,
+                            // If NOT on the first iteration find out if skill is the blockLeader
+                            blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
+                            restrictionLevel: block.restrictionLevel || null, 
+                            restrictionLimited: skill[k].restrictionLimited || null, 
+                            restrictionChoice: block.restrictionChoice || null, 
+                            restrictionCount: block.restrictionCount || null,
+                            quest: block.quest || null
                         }
                     }
                 }
@@ -222,18 +206,7 @@ export default {
                 let rowName;
                 for (let i = 0; i < row.length; i++) {
                     rowName = 'row' +  row[i].row
-                    if (this.race === 'skaven' && rowName === 'row9') {
-                        row[i].content[1].blockContent[3] = 'dictatorial';
-                        row[i].content[1].blockContent[4] = 'corruptive';
-                        this.rows[rowName] = row[i];
-                    } 
-                    else if (this.lord === 'ikit' && rowName === 'row4') {
-                        row[i].content[2].blockContent[0] = 'adrenalineRush';
-                        row[i].content[2].blockContent[1] = 'secondWindSerum';
-                        this.rows[rowName] = row[i];
-                    } else {
-                        this.rows[rowName] = row[i];
-                    }
+                    this.rows[rowName] = row[i];
                 }
             })
 

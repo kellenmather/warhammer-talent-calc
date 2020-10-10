@@ -33,6 +33,9 @@ exports.lords = {
     'woodelves': [
         { name: 'Ancient Treeman', type: 'treeman' },
         { name: 'Glade Lord', type: 'glade' }
+    ],
+    'norsca': [
+        { name: 'Marauder Chieftain', type: 'marauder' }
     ]
 },
 exports.legendary = {
@@ -82,5 +85,9 @@ exports.legendary = {
     'woodelves': [
         { name: 'Orion', type: 'orion', legendary: true },
         { name: 'Durthu', type: 'durthu', legendary: true }
+    ],
+    'norsca': [
+        { name: 'Wulfrik the Wanderer', type: 'wulfrik', legendary: true },
+        { name: 'Throgg', type: 'throgg', legendary: true }
     ]
 }

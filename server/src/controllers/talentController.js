@@ -4,6 +4,7 @@ const HighElvesKeys = require('../templates/highElvesKeys.js');
 const LizardmenKeys = require('../templates/lizardmenKeys.js');
 const SkavenKeys = require('../templates/skavenKeys.js');
 const WoodElvesKeys = require('../templates/woodElvesKeys.js');
+const NorscaKeys = require('../templates/norscaKeys.js');
 const mongoose = require('mongoose');
 const Skill = mongoose.model('Skill', new mongoose.Schema());
 
@@ -31,6 +32,9 @@ exports.getRows = (req, res) => {
         case 'woodelves':
             response.rows = WoodElvesKeys.getLord(params.lord, params.type);
             break;
+        case 'norsca':
+            response.rows = NorscaKeys.getLord(params.lord, params.type);
+            break;
         default:
             console.error('Unsuported Race');
     }
@@ -40,7 +44,7 @@ exports.getRows = (req, res) => {
     for (let i = 0; i < response.rows.length; i++) {
         for (let j = 0; j < response.rows[i].content.length; j++) {
             for (let k = 0; k < response.rows[i].content[j].blockContent.length; k++) {
-                if (typeof(response.rows[i].content[j].blockContent[k]) == 'object') skillArray.push(response.rows[i].content[j].blockContent[k].name)
+                if (typeof(response.rows[i].content[j].blockContent[k]) == 'object') continue;
                 else skillArray.push(response.rows[i].content[j].blockContent[k]);
             }
             // Below used to be sufficient: Had to add third for loop because of skaven restrictionLimited inside block -_-

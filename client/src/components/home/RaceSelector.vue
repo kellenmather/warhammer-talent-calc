@@ -19,7 +19,7 @@
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('dwarves', 'disabled')" :style="getAssets('button-home', 'dwarves')">Dwarves</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('greenskins', 'disabled')" :style="getAssets('button-home', 'greenskins')">Greenskins</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('vampirecounts', 'disabled')" :style="getAssets('button-home', 'vampirecounts')">Vampire Counts</a></li>
-                <li><a type="button" class="home-button disabled-button" @click="selectRace('norsca', 'disabled')" :style="getAssets('button-home', 'norsca')">Norsca</a></li>
+                <li><a type="button" class="home-button" @click="selectRace('norsca')" :style="getAssets('button-home', 'norsca')">Norsca</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('bretonnia', 'disabled')" :style="getAssets('button-home', 'bretonnia')">Bretonnia</a></li>
                 <li><a type="button" class="home-button" @click="selectRace('woodelves')" :style="getAssets('button-home', 'woodelves')">Wood Elves</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('beastmenwarherds', 'disabled')" :style="getAssets('button-home', 'beastmenwarherds')">Beastmen Warherds</a></li>

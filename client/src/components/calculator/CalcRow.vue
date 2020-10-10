@@ -2,9 +2,10 @@
     <div v-if="row">
         <div v-for="(blocks, index) in row.content" :key="index" class="inline">
             <div :class="(blocks.blockContent.length > 1) ? 'grouping' : null">
-                <Skill 
-                    v-for="(block, idx) in blocks.blockContent" 
-                    :key="idx" :color="color" 
+                <span  v-for="(block, idx) in blocks.blockContent" :key="idx">
+                <Skill
+                    v-if="typeof(block) !== 'object'"
+                    :color="color" 
                     @skillClick="skillClick"
                     @skillRightClick="skillRightClick"
                     :skill="skills[block]"
@@ -14,6 +15,7 @@
                     :lordLevel="lordLevel"
                     :styleGuide="styleGuide"
                     class="inline"/>
+                </span>
             </div>
         </div>
     </div>

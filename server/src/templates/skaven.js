@@ -614,7 +614,7 @@ exports.rows = {
                 },
                 {
                     restrictionCount: 2,
-                    blockContent: [ { name: 'adrenalineRush', restrictionLimited: ['secondWindSerum'] }, { name: 'secondWindSerum', restrictionLimited: ['adrenalineRush'] }]
+                    blockContent: [ 'adrenalineRush','secondWindSerum', { name: 'adrenalineRush', restrictionLimited: ['secondWindSerum'] }, { name: 'secondWindSerum', restrictionLimited: ['adrenalineRush'] } ]
                 }
             ]
         },
@@ -654,7 +654,7 @@ exports.rows = {
                 },
                 {
                     restrictionChoice: 'routeMarcher',
-                    blockContent: ['looter', 'ancientCunning', 'bondedService', { name: 'dictatorial', restrictionLimited: ['corruptive'] }, { name: 'corruptive', restrictionLimited: ['dictatorial'] }]
+                    blockContent: ['looter', 'ancientCunning', 'bondedService', 'dictatorial', 'corruptive', { name: 'dictatorial', restrictionLimited: ['corruptive'] }, { name: 'corruptive', restrictionLimited: ['dictatorial'] }]
                 },
                 {
                     restrictionCount: 4,
