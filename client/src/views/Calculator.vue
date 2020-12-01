@@ -22,6 +22,7 @@
                 :row="row" 
                 :color="index" 
                 :rowState="calcState[index]"
+                :calcState="calcState"
                 :lordLevel="lordLevel" 
                 :skills="skillAllocation(row)"
                 :styleGuide="styleGuide" />
@@ -114,7 +115,7 @@ export default {
                             // If NOT on the first iteration find out if skill is the blockLeader
                             blockLeader: (j === 0) ? null : (content[j - 1].blockContent.length > 1) ? j - 1 : null,
                             restrictionLevel: block.restrictionLevel || null, 
-                            restrictionLimited: skill[k].restrictionLimited || null, 
+                            restrictionLimited: (typeof(skill[k]) == 'object') ? skill[k].restrictionLimited || null : block.restrictionLimited || null, 
                             restrictionChoice: block.restrictionChoice || null, 
                             restrictionCount: block.restrictionCount || null,
                             quest: block.quest || null

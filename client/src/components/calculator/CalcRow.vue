@@ -12,6 +12,7 @@
                     :skills="skills"
                     :block="block" 
                     :skillState="rowState"
+                    :calcState="calcState"
                     :lordLevel="lordLevel"
                     :styleGuide="styleGuide"
                     class="inline"/>
@@ -34,6 +35,7 @@ export default {
         skills: Object,
         color: String,
         rowState: Object,
+        calcState: Object,
         lordLevel: Number,
         styleGuide: String
     },

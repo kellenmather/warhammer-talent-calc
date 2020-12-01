@@ -51,6 +51,7 @@ export default {
         block: String,
         color: String,
         skillState: Object,
+        calcState: Object,
         lordLevel: Number,
         styleGuide: String
     },
@@ -193,7 +194,6 @@ export default {
             // 4: Skills that are choose only 1 of 2 or more
             if (chooseOneRestriction && chooseOneRestriction.length > 0) {
                 // check skillState for the value of the restricted skills
-
                 for (let i = 0; i < chooseOneRestriction.length; i++) {                    
                     if (this.skillState[chooseOneRestriction[i]].value > 0) {
                         // if any of the skills have a value greater than 0 this skill shall be disabled
@@ -208,7 +208,8 @@ export default {
             if (pointRestriction) {
                 
                 // blockLeader value tells us this skill has an associated block of skills
-                if (skillData.blockLeader) {
+                // blockLeader is either the index of the block of skills that is considered the leader of current block or null
+                if (skillData.blockLeader >= 0) {
 
                     let pointCount = 0
                     for(let item in this.skillState) {
@@ -263,7 +264,6 @@ export default {
             let chooseOneRestriction = skillData.restrictionLimited;
             if (chooseOneRestriction && chooseOneRestriction.length > 0) {
                 // check skillState for the value of the restricted skills
-
                 for (let i = 0; i < chooseOneRestriction.length; i++) {                    
                     if (this.skillState[chooseOneRestriction[i]].value > 0) {
                         return true;

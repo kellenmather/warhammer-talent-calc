@@ -9,6 +9,19 @@ let norsca = {
         { ...Norsca.rows.row3.wulfrik },
         { ...Norsca.rows.row6.norsca },
         { ...Norsca.rows.row9.norsca }
+    ],
+    throgg: [
+        { ...Norsca.rows.row1.throgg },
+        { ...Norsca.rows.row3.throgg },
+        { ...Norsca.rows.row6.norsca },
+        { ...Norsca.rows.row9.throgg }
+    ],
+    marauder: [
+        { ...Norsca.rows.row1.marauder },
+        { ...Norsca.rows.row2.marauder },
+        // { ...Norsca.rows.row3.marauder },
+        { ...Norsca.rows.row6.norsca },
+        { ...Norsca.rows.row9.norsca }
     ]
 }
 

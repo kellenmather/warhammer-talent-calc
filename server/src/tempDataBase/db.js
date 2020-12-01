@@ -29,6 +29,42 @@ exports.skills = [
         }
     },
     {
+        ref: "theWintertoothCrown",
+        name: "The Wintertooth Crown",
+        description: "Whether by the crown's own properties, or by the grace of the Dark Gods, all things bestial and savage obey the wearer.",
+        icon: "item-enchanted",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "defense-character", description: "Melee defense: +10" },
+                { icon: "subterranean", description: "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%" },
+                { icon: "religion-chaos", description: "Chaos corruption: +5", ps: "local province" },
+                { icon: "treasury", description: "Recruitment cost: -10%", ps: "Lord's army" },
+                { icon: "ability-the-wintertooth-crown", description: "Ability: \"The Wintertooth Crown\"" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            cooldown: "120",
+            attributes: {
+                type: [ 
+                    { text: "Augment" },
+                    { text: "Instantly affects targets in area" } 
+                ],
+                duration: "24 seconds",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "Unbreakable", icon: "unbreakable", color: "green", uptick: "up-green" }
+                ]
+            }
+        }
+    },
+    {
         ref: "norscanWarhorse",
         name: "Norscan Warhorse",
         description: "The horses of Norsca live for battle, even choosing to graze on the bones of the fallen over grass.",
@@ -63,6 +99,49 @@ exports.skills = [
         ranks: [
             { effects: [{ icon: "damage", description: "Weapon strength: +7% (when attacking)" }] }
         ]
+    },
+    {
+        ref: "mutantRegeneration",
+        name: "Mutant Regeneration",
+        description: "The uncanny ability of quickly regenerating even the most grievous wounds; in due course, almost all will be healed.",
+        icon: "character-replenishment",
+        ranks: [{ effects: [
+            { icon: "replenishment", description: "Casualty replenishment rate: +25% for all Norscan Troll, Norscan Ice Troll & Fimir Warrior units", ps: "Lord's army" },
+            { icon: "resistance-missile", description: "Missile resistance: 20% for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "kingOfTrolls",
+        name: "King of Trolls",
+        description: "Brooding upon his rocky throne, Throgg has pledged to fight all comers, with all the monsters of Troll Country at his side.",
+        icon: "character-military-spending",
+        ranks: [{ effects: [
+            { icon: "public-order", description: "Public order: +2", ps: "local province" },
+            { icon: "morale", description: "Leadership: +12 for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" },
+            { icon: "coin", description: "Upkeep: -10% for all Norscan Troll & Norscan Ice Troll & Fimir Warrior units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "primordialMasters",
+        name: "Primordial Masters",
+        description: "Although corrupt with change and frozen to the very core of their icy hearts, the Frost-Wyrms of the northern wastes are no less vicious for it.",
+        icon: "character-defense",
+        ranks: [{ effects: [
+            { icon: "defense", description: "Melee defense: +15 for Frost-Wyrm units", ps: "Lord's army" },
+            { icon: "charge", description: "Charge bonus: +15 for Frost-Wyrm units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "monstrousFiends",
+        name: "Monstrous Fiends",
+        description: "Witlessly stupid, yet bone-crushingly powerful. Do not be deceived.",
+        icon: "character-defense",
+        ranks: [{ effects: [
+            { icon: "morale", description: "Leadership: +10 for Fimir Warrior units", ps: "Lord's army" },
+            { icon: "melee", description: "Melee attack: +15 for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" },
+            { icon: "defense", description: "Melee defense: +15 for all Fimir Warrior units", ps: "Lord's army" },
+            { icon: "defense", description: "Melee defense: +15 for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" }
+        ] }]
     },
     {
         ref: "theEternalChallenger",
@@ -122,6 +201,36 @@ exports.skills = [
         ]
     },
     {
+        ref: "copiousVomit",
+        name: "Copious Vomit",
+        description: "\"HUUUURGGEHH!!! BLUUUURGGEHH!!! HUUUUUUUUURRRRRGGGGGGGGGGEHH!!!\"",
+        icon: "ability-copious-vomit",
+        ranks: [
+            { effects: [{ icon: "ability-copious-vomit", description: "Ability: \"Copious Vomit\"" }] }
+        ],
+        spell: {
+            description: "Lord ability",
+            cooldown: "60",
+            uses: 3,
+            rarity: "uncommon",
+            attributes: {
+                type: "Magic Missile",
+                target: [
+                    { text: "Enemy" },
+                    { text: "60m", uptick: "range" }
+                ],
+                cannotUseIf: "Engaged in melee, Climbing",
+                cannotTargetIf: "Flying",
+                projectileRange: "60m",
+                effects: [
+                    { text: "Powerful explosion", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. a single unit", uptick: "up-green", color: "green" },
+                    { text: "Good against armour", uptick: "up-green", color: "green" }
+                ]
+            }
+         }
+    },
+    {
         ref: "seafang",
         name: "Seafang",
         description: "There's no outrunning the terrible, flying Longship known as the 'Seafang'; once in its sights, an ogonising, merciless death is your only possible destination.",
@@ -154,6 +263,230 @@ exports.skills = [
                 ]
             }
          }
+    },
+    {
+        ref: "drinkerOfBlood",
+        name: "Drinker of Blood",
+        description: "Dining upon the blood of slaughtered enemies may attract the notice, and maybe the favour, of the Hound.",
+        icon: "character-attack",
+        ranks: [
+            { effects: [{ icon: "melee-character", description: "Melee defense: +6"}] },
+            { effects: [
+                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +15"},
+                { icon: "melee-character", description: "Melee defense: +12"}
+            ] }
+        ]
+    },
+    {
+        ref: "chronsWrath",
+        name: "Chron's Wrath",
+        description: "The Great Hound of War thirsts eternally for blood and slaughter, its rage manifesting itself in the unstoppable martial spirit of its warriors.",
+        icon: "character-charge",
+        ranks: [
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +12"}] },
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +30"}] }
+        ]
+    },
+    {
+        ref: "furyOfTheHound",
+        name: "Fury of the Hound",
+        description: "The Hound's unearthly fury is personified by its Champions' thirst for war and hunger for unending blood and violence.",
+        icon: "ability-berserk",
+        ranks: [
+            { effects: [
+                { icon: "ability-rage", description: "Replaces: \"Rage\"" },
+                { icon: "ability-berserk", description: "Passive ability: \"Berserk\"" }
+            ] }
+        ],
+        spell: {
+            name: "Berserk",
+            description: "Unit ability",
+            cooldown: "30",
+            rarity: "rare",
+            attributes: {
+                type: "Augment",
+                duration: "90 seconds",
+                disabledIf: "Leadership is broken",
+                rechargeIf: "Engaged in melee",
+                effects: [
+                    { icon: "stage-1", postText: "Stage One (30 seconds)", color: "green" },
+                    { text: "+22%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" },
+                    { icon: "stage-2", postText: "Stage Two (30 seconds)", color: "green" },
+                    { text: "+13", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+22%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" },
+                    { icon: "stage-3", postText: "Stage Three (30 seconds)", color: "green" },
+                    { text: "+13", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+22%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" },
+                    { text: "Rampage!", uptick: "down-red", color: "red" }
+                ]
+            }
+         }
+    },
+    {
+        ref: "noxiousVessel",
+        name: "Noxious Vessel",
+        description: "Thusly, the virulent maladies of the Crow are borne forth to repulse and infect its mortal foes; there lieth victory eternal.",
+        icon: "character-damage",
+        ranks: [
+            { effects: [
+                { icon: "resistance-missile", description: "Missile resistance: 8%"}
+            ] },
+            { effects: [
+                { icon: "resistance-missile", description: "Missile resistance: 15%"},
+                { icon: "damage", description: "Weapon strength: +15%"}
+            ] }
+        ]
+    },
+    {
+        ref: "putrefyingOoze",
+        name: "Putrefying Ooze",
+        description: "This fetid, disgusting pus is so repulsive to the untainted that it mimics traditional armour of far greater substance.",
+        icon: "character-armor",
+        ranks: [
+            { effects: [{ icon: "armor-character", description: "Armour: +7"}] },
+            { effects: [{ icon: "armor-character", description: "Armour: +15"}] }
+        ]
+    },
+    {
+        ref: "plagueOfTheCrow",
+        name: "Plague of the Crow",
+        description: "Unstable and miscreated, the Crow's strength spreads and grows like the most successful of diseases, consuming all before consuming itself and beginning again.",
+        icon: "regeneration",
+        ranks: [
+            { effects: [
+                { icon: "poison", description: "Enables poison attacks" },
+                { icon: "ability-regeneration", description: "Passive ability: \"Regeneration\"" }
+            ] }
+        ],
+        spell: {
+            description: "Unit ability",
+            rarity: "common",
+            attributes: {
+                type: "Regeneration",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "Restores", icon: "hp", postText: "4 Hit Points per second", uptick: "up-green", color: "green" },
+                    { text: "+25% Weakness to", postText: "Fire Damage", icon: "icon-fire", color: "red" }
+                ]
+            }
+         }
+    },
+    {
+        ref: "indulgerInTheExotic",
+        name: "Indulger in the Exotic",
+        description: "The Serpent's temptations come in many forms, all of them designed to appeal to the twisted desires buried deep within us all.",
+        icon: "character-damage",
+        ranks: [
+            { effects: [
+                { icon: "health-character", description: "Hit points: +7%"}
+            ] },
+            { effects: [
+                { icon: "health-character", description: "Hit points: +15%"},
+                { icon: "vigour", description: "Vigour loss reduction: -15%"}
+            ] }
+        ]
+    },
+    {
+        ref: "intoxicatingVisions",
+        name: "Intoxicating Visions",
+        description: "Seductive images of sensual luxuries may tempt the enemy from their chosen paths onto roads much, much less travelled and from which there can be no return.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [{ icon: "morale-character", description: "Leadership: +6"}] },
+            { effects: [{ icon: "morale-character", description: "Leadership: +12"}] }
+        ]
+    },
+    {
+        ref: "seductionOfTheSerpent",
+        name: "Seduction of the Serpent",
+        description: "Although the youngest of the Dark Gods, the serpent is no less potent and can bind mortals to eternal service with alluring visions or tantalising temptations.",
+        icon: "ability-seduction-of-the-serpent",
+        ranks: [
+            { effects: [
+                { icon: "attribute-psychology", description: "Attribute: Immune to Psychology" },
+                { icon: "ability-seduction-of-the-serpent", description: "Passive ability: \"Seduction of the Serpent\"" }
+            ] }
+        ],
+        spell: {
+            description: "Lord ability",
+            cooldown: "90",
+            rarity: "uncommon",
+            attributes: {
+                type: "Augment",
+                duration: "17 seconds",
+                target: "Self",
+                effects: [
+                    { text: "+24", icon: "defense-character", postText: "Melee Defense", color: "green" },
+                    { text: "+16", icon: "morale-character", postText: "Leadership", color: "green" }
+                ],
+                imbued: [
+                    { icon: "morale-mallus", postText: "Discouraged! (10 seconds)", color: "red" },
+                    { text: "-16", icon: "morale-character", postText: "Leadership", color: "red" }
+                ]
+            }
+         }
+    },
+    {
+        ref: "spiritWanderer",
+        name: "Spirit Wanderer",
+        description: "More fool they who go to war and quest with minds unfocused, for they risk the Eagle's desolate, underhand deceptions.",
+        icon: "character-speed",
+        ranks: [
+            { effects: [
+                { icon: "movement-character", description: "Speed: +3%"}
+            ] },
+            { effects: [
+                { icon: "movement-character", description: "Speed: +15%"},
+                { icon: "resistance-magic", description: "Magic resistance: 15%"}
+            ] }
+        ]
+    },
+    {
+        ref: "darkDeceiver",
+        name: "Dark Deceiver",
+        description: "The Eagle weaves a complex web of duplicity around its servants, further bracing their combat abilities in subtle, unexpected ways.",
+        icon: "character-defense",
+        ranks: [
+            { effects: [{ icon: "defense-character", description: "Melee defense: +6"}] },
+            { effects: [{ icon: "defense-character", description: "Melee defense: +12"}] }
+        ]
+    },
+    {
+        ref: "sorceryOfTheEagle",
+        name: "Sorcery of the Eagle",
+        description: "Although the youngest of the Dark Gods, the serpent is no less potent and can bind mortals to eternal service with alluring visions or tantalising temptations.",
+        icon: "spell-fireball",
+        ranks: [
+            { effects: [
+                { icon: "magical-attacks", description: "Enables magical attacks" },
+                { icon: "spell-fireball", description: "Bound spell: \"Fireball\"" }
+            ] }
+        ],
+        spell: {
+            name: "Fireball",
+            description: "Bound spell",
+            rarity: "common",
+            uses: 4,
+            cooldown: "60",
+            attributes: {
+                type: "Magic Missile",
+                target: [
+                    { text: "Enemy" },
+                    { text: "300m", uptick: "range" }
+                ],
+                cannotUseIf: "Manning equipment, Climbing",
+                projectileRange: "300m",
+                effects: [
+                    { text: "Causes moderate magical & fire damage", uptick: "up-green", color: "green" },
+                    { text: "Powerful explosion", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Effective at long range", uptick: "up-green", color: "green" },
+                    { text: "Weak against armor", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    
     },
     {
         ref: "deadlyBlade",
@@ -450,6 +783,16 @@ exports.skills = [
         ranks: [{ effects: [
             { icon: "werekin", description: "Hero recruit rank: +5 for Skin Wolf Werekin", ps: "local province" },
             { icon: "werekin", description: "Hero capacity: +1 for Skin Wolf Werekin" }
+        ] }]
+    },
+    {
+        ref: "mastersOfTheFen",
+        name: "Masters of the Fen",
+        description: "The Troll King's horde control the wind-whipped hinterlands of Troll Country, and may yet extend their despoiling influence much further afield.",
+        icon: "campaign-agent",
+        ranks: [{ effects: [
+            { icon: "fimir", description: "Hero recruit rank: +5 for Fimir Balefiends", ps: "local province" },
+            { icon: "fimir", description: "Hero capacity: +1 for Fimir Balefiends" }
         ] }]
     },
     {
