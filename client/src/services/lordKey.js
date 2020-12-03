@@ -1,7 +1,7 @@
 exports.lords = {
     'darkelves': [
-        { name: 'Dreadlord (Sword & Shield)', type: 'dreadlord', subType: 'shield' }, 
-        { name: 'Dreadlord (Sword & Crossbow)', type: 'dreadlord', subType: 'crossbow' }, 
+        { name: 'Dreadlord (Sword & Shield)', type: 'dreadlord' }, 
+        { name: 'Dreadlord (Sword & Crossbow)', type: 'dreadlordranged' }, 
         { name: 'High Beastmaster', type: 'beastmaster' },
         { name: 'Black Ark', type: 'blackArk' },
         { name: 'Supreme Sorceress', type: 'sorceress', school: ['beasts', 'fire', 'shadow', 'death', 'darkMagic'] }

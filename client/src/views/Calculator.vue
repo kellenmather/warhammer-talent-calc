@@ -5,6 +5,7 @@
                 <div class="left-nav action-items">
                     <a @click="$router.push('/' + race + legendary )" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
                     <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
+                    <a @click="getURL()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
                     <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
                 <div class="middle-nav lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
@@ -35,13 +36,14 @@
 import CalcRow from '@/components/calculator/CalcRow.vue';
 import ApiService from '@/services/apiService';
 import LordKey from '@/services/lordKey';
+import UrlKey from '@/services/urlKey';
 
 export default {
     name: 'Calculator',
     components: {
         CalcRow
     },
-    props: ['race', 'lord', 'type'],
+    props: ['race', 'lord', 'type', 'test'],
     data: function () {
         return {
             rows: {
@@ -60,7 +62,7 @@ export default {
             saveState: {},
             skillPointAllocation: {},
             lordLevel: 1,
-            legedary: '/',
+            legendary: '',
             styleGuide: 'wh2',
             secret: false
         }
@@ -141,6 +143,34 @@ export default {
             this.lordLevel = 1;
             this.calcState = JSON.parse(JSON.stringify(this.saveState));
         },
+        getURL() {
+            let digitPair = '';
+            let digitString = '';
+            let urlString = '';
+            let pair = false;
+            for (const row in this.calcState) {
+                let currentRow = this.calcState[row]
+                for (const skill in currentRow) {
+                    if (currentRow[skill].value >= 0) {
+                        digitPair += currentRow[skill].value;
+                        digitString += currentRow[skill].value;
+                        if (pair) {
+                            urlString += UrlKey.keys[digitPair];
+                            digitPair = '';
+                        }
+                        pair = !pair;
+                    }
+                }
+            }
+            if (digitPair !== '') {
+                digitPair += 0;
+                urlString += UrlKey.keys[digitPair];
+                digitPair = '';
+            }
+            console.log('www.warhammercalc.com/calc/' + this.race + '/' + this.lord + '/qoo/' + urlString);
+            // need to get this to copy to computer for pasting
+            // or popup that has text you copy
+        },
         changeStyle() {
             this.styleGuide = (this.styleGuide === 'wh2') ? 'wh1' : 'wh2';
         },
@@ -177,7 +207,7 @@ export default {
             // combine legendary and lord array into one
             let races = LordKey.legendary[this.race].concat(LordKey.lords[this.race]);
             for (let i = 0; i < races.length; i++) {
-                if (this.lord === races[i].type && this.type === races[i].subType) {
+                if (this.lord === races[i].type) {
                     (races[i].legendary) ? this.legendary = '/legend' : this.legendary = '/';
                     return races[i].name
                 } else if (this.lord === races[i].type && races[i].school && races[i].school.includes(this.type)) {
@@ -192,6 +222,34 @@ export default {
             this.secret = false
             if (this.lord === 'alarielle' || this.lord === 'princess') {
                 if (Math.floor(Math.random()*10) === 1) this.secret = true 
+            }
+        },
+        urlCalcState() {
+            if(this.test) {
+                let intString = '';
+                let alphaArray = this.test.split('');
+                for (let i = 0; i < alphaArray.length; i++) {
+                    let letter = alphaArray[i];
+                    intString += UrlKey.values[letter];
+                }
+                
+                let iteration = 0;
+
+                for (const row in this.calcState) {
+                    let currentRow = this.calcState[row];
+                    for (const skill in currentRow) {
+                        if (currentRow[skill].value < 0) {
+                            // is a quest item or free skill
+                            continue;
+                        } else {
+                            if (intString[iteration] > 0) {
+                                this.calcState[row][skill].value = parseInt(intString[iteration]);
+                                this.lordLevel += parseInt(intString[iteration]);
+                            }
+                            iteration++;
+                        }
+                    }
+                }
             }
         }
     },
@@ -209,6 +267,7 @@ export default {
                     rowName = 'row' +  row[i].row
                     this.rows[rowName] = row[i];
                 }
+                this.urlCalcState();
             })
 
         // set wh asset style based on race

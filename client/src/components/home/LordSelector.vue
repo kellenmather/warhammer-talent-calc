@@ -64,7 +64,7 @@ export default {
             if(!race || !lord) {
                 this.$router.push('/');
             } else {
-                this.$router.push("/calc/" + race + "/" + lord.type + "/" + ((lord.subType) ? lord.subType : magic ? magic : ''));
+                this.$router.push("/calc/" + race + "/" + lord.type + "/" + ((lord.subType) ? lord.subType : magic ? magic : 'qoo'));
             }            
         },
         getAssets(item) {

@@ -1,16 +1,46 @@
 exports.skills = [
     {
-        ref: "hornOfTheWildHunt",
-        name: "Horn of the Wild Hunt",
-        description: "When this ancient and revered relic is blown, all Elven forces are driven to the Hunt with a savage determination.",
+        ref: "swordOfTorgald",
+        name: "Sword of Torgald",
+        description: "Although King Torgald's blade is a prized trophy, it is also an eternal reminder of the consequences of grand proclamations afore the Gods.",
+        icon: "item-weapon",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +5", ps: "all provinces" },
+                { icon: "melee-character", description: "Melee attack: +10" },
+                { icon: "damage", description: "Weapon strength: +10%" },
+                { icon: "income", description: "Income from post-battle loot: +10%" },
+                { icon: "ability-sword-of-torgald", description: "Ability: \"Sword of Torgald\"" }
+            ] }
+        ],
+        spell: {
+            description: "Weapon",
+            rarity: "legendary",
+            cooldown: "120",
+            attributes: {
+                type: "Augment",
+                duration: "44 seconds",
+                target: "Self",
+                effects: [
+                    { text: "+90%", postText: "Base Weapon Damage", icon: "icon-base-damage", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theWintertoothCrown",
+        name: "The Wintertooth Crown",
+        description: "Whether by the crown's own properties, or by the grace of the Dark Gods, all things bestial and savage obey the wearer.",
         icon: "item-enchanted",
         quest: true,
         ranks: [
             { effects: [
                 { icon: "defense-character", description: "Melee defense: +10" },
-                { icon: "underway", description: "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%" },
-                { icon: "morale", description: "Leadership: +8", ps: "Lord's army" },
-                { icon: "ability-horn-of-the-wild-hunt", description: "Ability: \"Horn of the Wild Hunt\"" }
+                { icon: "subterranean", description: "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +10%" },
+                { icon: "religion-chaos", description: "Chaos corruption: +5", ps: "local province" },
+                { icon: "treasury", description: "Recruitment cost: -10%", ps: "Lord's army" },
+                { icon: "ability-the-wintertooth-crown", description: "Ability: \"The Wintertooth Crown\"" }
             ] }
         ],
         spell: {
@@ -18,321 +48,195 @@ exports.skills = [
             rarity: "legendary",
             cooldown: "120",
             attributes: {
-                type: "Augment (Area)",
+                type: [ 
+                    { text: "Augment" },
+                    { text: "Instantly affects targets in area" } 
+                ],
                 duration: "24 seconds",
                 target: [
                     { text: "Self" },
                     { text: "Affects allies in range" }
                 ],
-                effectRange: "Map-wide",
+                effectRange: "40m",
                 effects: [
-                    { text: "+54%", icon: "charge-character", postText: "Charge Bonus", color: "green" }
+                    { text: "Unbreakable", icon: "unbreakable", color: "green", uptick: "up-green" }
                 ]
             }
         }
     },
     {
-        ref: "cloakOfIsha",
-        name: "Cloak of Isha",
-        description: "This cloak, renewed annually by Ariel herself, is all Orion needs to protect himself.",
-        icon: "item-talisman",
-        quest: true,
+        ref: "norscanWarhorse",
+        name: "Norscan Warhorse",
+        description: "The horses of Norsca live for battle, even choosing to graze on the bones of the fallen over grass.",
+        icon: "warhorse",
         ranks: [
-            { effects: [
-                { icon: "defense-character", description: "Melee defense: +5" },
-                { icon: "resistance-magic", description: "Magic resistance: 10%" },
-                { icon: "agent", description: "Enemy Hero action success chance: -10%" },
-                { icon: "religion", description: "Untainted: +5", ps: "local province" },
-                { icon: "ability-talisman", description: "Passive ability: \"Cloak of Isha\"" }
-            ] }
-        ],
-        spell: {
-            description: "Item",
-            rarity: "legendary",
-            attributes: {
-                type: "Augment (Area)",
-                duration: "Constant",
-                target: "Self",
-                disabledIf: "Hitpoints greater than 20%",
-                effects: [
-                    { text: "Restores", postText: "8 Hit Points per second", icon: "hp", uptick: "up-green", color: "green" },
-                    { text: "+44%", postText: "Damage Resistance", icon: "resistance-ward-save", color: "green" }
-                ]
-            }
-        }
+            { effects: [{ icon: "mount", description: "Mount: Norscan Warhorse" }] }
+        ]
     },
     {
-        ref: "spearOfKurnous",
-        name: "Spear of Kurnous",
-        description: "When Orion hurls this living weapon with fierce purpose it fells the most powerful foes before returning to its master.",
-        icon: "item-weapon",
-        quest: true,
+        ref: "marauderChariot",
+        name: "Marauder Chariot",
+        description: "Marauder mobs are awarded even greater mobility when riding their crude chariots of bone and wood, lashed together with the guts and sinew of the vanquished.",
+        icon: "chaos-chariot",
         ranks: [
-            { effects: [
-                { icon: "ranged-damage-character", description: "Missile strength: +10%" },
-                { icon: "magical-attacks", description: "Enables magical attacks" },
-                { icon: "treasury", description: "Recruitment cost: -10%", ps: "Lord's army" },
-                { icon: "income", description: "Income from post-battle loot: +10%" },
-                { icon: "ability-spear-of-kurnous", description: "Ability: \"Spear of Kurnous\"" }
-            ] }
+            { effects: [{ icon: "mount", description: "Mount: Marauder Chariot" }] }
+        ]
+    },
+    {
+        ref: "warMammoth",
+        name: "War Mammoth",
+        description: "Tainted and savage they may be, but these behemoths remain willing to bear high-status Marauders into battle, trampling flat everything foolish enough to get in their way.",
+        icon: "mammoth",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: War Mammoth" }] }
+        ]
+    },
+    {
+        ref: "eyeOfTheGods",
+        name: "Eye of the Gods",
+        description: "The slightest glance, the merest glimpse from one of the Dark Gods is sufficient to propel their playthings to ever-greater feats of desolation.",
+        icon: "character-damage",
+        ranks: [
+            { effects: [{ icon: "damage", description: "Weapon strength: +7% (when attacking)" }] }
+        ]
+    },
+    {
+        ref: "mutantRegeneration",
+        name: "Mutant Regeneration",
+        description: "The uncanny ability of quickly regenerating even the most grievous wounds; in due course, almost all will be healed.",
+        icon: "character-replenishment",
+        ranks: [{ effects: [
+            { icon: "replenishment", description: "Casualty replenishment rate: +25% for all Norscan Troll, Norscan Ice Troll & Fimir Warrior units", ps: "Lord's army" },
+            { icon: "resistance-missile", description: "Missile resistance: 20% for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "kingOfTrolls",
+        name: "King of Trolls",
+        description: "Brooding upon his rocky throne, Throgg has pledged to fight all comers, with all the monsters of Troll Country at his side.",
+        icon: "character-military-spending",
+        ranks: [{ effects: [
+            { icon: "public-order", description: "Public order: +2", ps: "local province" },
+            { icon: "morale", description: "Leadership: +12 for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" },
+            { icon: "coin", description: "Upkeep: -10% for all Norscan Troll & Norscan Ice Troll & Fimir Warrior units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "primordialMasters",
+        name: "Primordial Masters",
+        description: "Although corrupt with change and frozen to the very core of their icy hearts, the Frost-Wyrms of the northern wastes are no less vicious for it.",
+        icon: "character-defense",
+        ranks: [{ effects: [
+            { icon: "defense", description: "Melee defense: +15 for Frost-Wyrm units", ps: "Lord's army" },
+            { icon: "charge", description: "Charge bonus: +15 for Frost-Wyrm units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "monstrousFiends",
+        name: "Monstrous Fiends",
+        description: "Witlessly stupid, yet bone-crushingly powerful. Do not be deceived.",
+        icon: "character-defense",
+        ranks: [{ effects: [
+            { icon: "morale", description: "Leadership: +10 for Fimir Warrior units", ps: "Lord's army" },
+            { icon: "melee", description: "Melee attack: +15 for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" },
+            { icon: "defense", description: "Melee defense: +15 for all Fimir Warrior units", ps: "Lord's army" },
+            { icon: "defense", description: "Melee defense: +15 for Norscan Trolls & Norscan Ice Trolls units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "theEternalChallenger",
+        name: "The Eternal Challenger",
+        description: "Beware drunken boasts made in sight of the Dark Gods, lest they hold you to such claims...",
+        icon: "character-damage",
+        ranks: [
+            { effects: [{ icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +15" }] }
+        ]
+    },
+    {
+        ref: "worldWalker",
+        name: "World Walkers",
+        description: "Cursed to seek the deadliest opponents to best and kill in single combat, Wulfrik must forever walk the world.",
+        icon: "character-ambush",
+        ranks: [{ effects: [
+            { icon: "ambush", description: "Ambush success chance: +15%", ps: "Lord's army" },
+            { icon: "underway", description: "Chance of intercepting an army using the Underway, beast-paths or Worldroots: +20%" }
+        ] }]
+    },
+    {
+        ref: "juggernautsOfTheSarl",
+        name: "Juggernauts of the Sarl",
+        description: "Towering mountains of muscle and flesh, these War Mammoths give Wulfrik's tribe the edge over all comers.",
+        icon: "character-attack",
+        ranks: [{ effects: [
+            { icon: "melee", description: "Melee attack: +15 for all Mammoth units", ps: "Lord's army" },
+            { icon: "character", description: "Leadership aura size: +10% for War Mammoth (Warshrine) units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "ferventCreatures",
+        name: "Fervent Creatures",
+        description: "Skin Wolves in the Wanderer's service enjoy the speed and skill beyond even their preternatural capabilities.",
+        icon: "character-charge",
+        ranks: [{ effects: [
+            { icon: "defense", description: "Melee defense: +15 for all Skin Wolves units", ps: "Lord's army" },
+            { icon: "charge", description: "Charge bonus: +15 for all Skin Wolves units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "voiceOfTheDarkGods",
+        name: "Voice of the Dark Gods",
+        description: "This Lord speaks with a dread booming voice - a gift from his Dark Masters to ensure obedience.",
+        icon: "character",
+        ranks: [
+            { effects: [{ icon: "character", description: "Leadership aura size: +80%" }] }
+        ]
+    },
+    {
+        ref: "auraOfChaos",
+        name: "Aura of Chaos",
+        description: "The shadow of the Ruinous Powers looms large, protecting those who bear their mark.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [{ icon: "resistance-missile", description: "Missile resistance: 10%" }] }
+        ]
+    },
+    {
+        ref: "copiousVomit",
+        name: "Copious Vomit",
+        description: "\"HUUUURGGEHH!!! BLUUUURGGEHH!!! HUUUUUUUUURRRRRGGGGGGGGGGEHH!!!\"",
+        icon: "ability-copious-vomit",
+        ranks: [
+            { effects: [{ icon: "ability-copious-vomit", description: "Ability: \"Copious Vomit\"" }] }
         ],
         spell: {
-            description: "Weapon",
-            rarity: "legendary",
-            cooldown: "120",
+            description: "Lord ability",
+            cooldown: "60",
+            uses: 3,
+            rarity: "uncommon",
             attributes: {
                 type: "Magic Missile",
                 target: [
                     { text: "Enemy" },
-                    { text: "200m", uptick: "range" }
+                    { text: "60m", uptick: "range" }
                 ],
-                projectileRange: "200m",
+                cannotUseIf: "Engaged in melee, Climbing",
+                cannotTargetIf: "Flying",
+                projectileRange: "60m",
                 effects: [
-                    { text: "Causes", postText: "armour-piercing damage", icon: "armor-piercing-character", uptick: "up-green", color: "green" },
-                    { text: "Effective at all ranges", uptick: "up-green", color: "green" },
-                    { text: "Good penetration", uptick: "up-green", color: "green" },
-                    { text: "Can cause damage to friendly combatants", uptick: "down-red", color: "red" }
-                ]
-            }
-        }
-    },
-    {
-        ref: "swordOfDaith",
-        name: "Sword of Daith",
-        description: "This blade, like Durthu himself, is steeped in millennia of bitterness and rage waiting to be unleashed.",
-        icon: "item-weapon",
-        quest: true,
-        ranks: [
-            { effects: [
-                { icon: "melee-character", description: "Melee attack: +10" },
-                { icon: "magical-attacks", description: "Enables magical attacks" },
-                { icon: "treasury", description: "Recruitment cost: -10%", ps: "Lord's army" },
-                { icon: "income", description: "Income from post-battle loot: +10%" },
-                { icon: "ability-sword-of-daith", description: "Ability: \"Sword of Daith\"" }
-            ] }
-        ],
-        spell: {
-            description: "Weapon",
-            rarity: "legendary",
-            cooldown: "120",
-            uses: 2,
-            attributes: {
-                type: [
-                    { text: "Direct Damage (Area)" },
-                    { text: "Only acts on targets when in area" }
-                ],
-                duration: "17 seconds",
-                target: [
-                    { text: "Ground, Enemy" },
-                    { text: "Affects enemies in range" },
-                    { text: "100m", uptick: "range" }
-                ],
-                effectRange: "30m",
-                effects: [
-                    { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
-                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
-                    { text: "Chance opponent will resist damage", uptick: "down-red", color: "red" },
-                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" },
-                    { text: "-30", icon: "armor-character", postText: "Armour", uptick: "down-red", color: "red" }
-                ]
-            }
-        }
-    },
-    {
-        ref: "elvenSteedWoodElves",
-        name: "Elven Steed",
-        description: "The bond between rider and steed goes beyond friendship or family; they act as one.",
-        icon: "elven-steed",
-        ranks: [
-            { effects: [{ icon: "mount", description: "Mount: Elven Steed" }] }
-        ]
-    },
-    {
-        ref: "greatEagleWoodElves",
-        name: "Great Eagle",
-        description: "Fly on your wings, like an eagle. Touch the sun. Track the foe, ambush, and defeat.",
-        icon: "great-eagle",
-        ranks: [
-            { effects: [{ icon: "mount", description: "Mount: Great Eagle" }] }
-        ]
-    },
-    {
-        ref: "forestDragon",
-        name: "Forest Dragon",
-        description: "Hailing from deep within the forests of the Old World, this dragon breathes deadly, poisonous fumes instead of fire.",
-        icon: "forest-dragon",
-        ranks: [
-            { effects: [{ icon: "mount", description: "Mount: Forest Dragon" }] }
-        ]
-    },
-    {
-        ref: "rageOfKurnous",
-        name: "Rage of Kurnous",
-        description: "The forest has a great rage, which is manifest in its warriors' violent deeds in Kurnous' name.",
-        icon: "character-damage",
-        ranks: [{ effects: [{ icon: "damage", description: "Weapon strength: +5% for all units", ps: "all armies factionwide" }] }]
-    },
-    {
-        ref: "theSkeweringBranch",
-        name: "The Skewering Branch",
-        description: "No hide nor armour can stand against the piercing fury of a Dryad or Tree Kin's savage limbs.",
-        icon: "character-damage",
-        ranks: [{ effects: [
-            { icon: "armor-piercing", description: "Armour-piercing weapon damage: +3 for Dryads units", ps: "Lord's army" },
-            { icon: "armor-piercing", description: "Armour-piercing weapon damage: +10 for Tree Kin units", ps: "Lord's army" }
-        ] }]
-    },
-    {
-        ref: "skinOfTheWoods",
-        name: "Skin of the Woods",
-        description: "Hewn from the same forest that surrounds them, Tree Kin withstand attacks like the forest withstands the fury of the seasons.",
-        icon: "character-ward-save",
-        ranks: [{ effects: [{ icon: "resistance-ward-save", description: "Ward save: 20% for Tree Kin units", ps: "Lord's army" }] }]
-    },
-    {
-        ref: "asuryansCommand",
-        name: "Asuryan's Command",
-        description: "The Creator blesses the Master of the Hunt, ensuring his shots always fly far and true.",
-        icon: "character-ranged-damage",
-        ranks: [{ effects: [{ icon: "ranged-damage", description: "Missile strength: +5%", ps: "all armies factionwide" }] }]
-    },
-    {
-        ref: "rainOfSpines",
-        name: "Rain of Spines",
-        description: "A ranger should give no reprieve to the foe. Arrows must fall like a deluge, as deadly as lightning.",
-        icon: "character-ranged-damage",
-        ranks: [{ effects: [{ icon: "reload-time", description: "Reload time reduction: +12%", ps: "Lord's army" }] }]
-    },
-    {
-        ref: "speedOfTheHunter",
-        name: "Speed of the Hunter",
-        description: "Elven hunters emulate Kurnous, the God of the Hunt. Their speed and swiftness is therefore without peer.",
-        icon: "character-speed",
-        ranks: [{ effects: [{ icon: "movement", description: "Speed: +6% for Elven units", ps: "Lord's army" }] }]
-    },
-    {
-        ref: "arrowOfKurnous",
-        name: "Arrow of Kurnous",
-        description: "When the arrow flies farther, it may kill sooner, which is vital in the Hunt.",
-        icon: "ability-arrow-of-kurnous",
-        ranks: [
-            { effects: [{ icon: "ability-arrow-of-kurnous", description: "Ability: \"Arrow of Kurnous\"" }] }
-        ],
-        spell: {
-            description: "Hero ability",
-            cooldown: "90",
-            uses: 3,
-            rarity: "uncommon",
-            attributes: {
-                type: "Magic Missiles",
-                duration: "5 seconds",
-                target: [
-                    { text: "Enemy" },
-                    { text: "600m", uptick: "range" }
-                ],
-                projectileRange: "600m",
-                effects: [
-                    { text: "Causes", icon: "icon-armor-piercing", postText: "armour-piercing damage", uptick: "up-green", color: "green" },
-                    { text: "Good penetration", uptick: "up-green", color: "green" },
-                    { text: "Effective at long range", uptick: "up-green", color: "green" }
-                ]
-            }
-         }
-    },
-    {
-        ref: "hawksTalon",
-        name: "Hawk's Talon",
-        description: "Nature manifests at Orion's call, raining a flurry of arrows upon the enemy in defense of Athel Loren.",
-        icon: "ability-hawks-talon",
-        ranks: [
-            { effects: [{ icon: "ability-hawks-talon", description: "Ability: \"Hawk's Talon\"" }] }
-        ],
-        spell: {
-            description: "Weapon",
-            cooldown: "90",
-            uses: 3,
-            rarity: "uncommon",
-            attributes: {
-                type: "Bombardment",
-                duration: "5 seconds",
-                target: [
-                    { text: "Ground" },
-                    { text: "200m", uptick: "range" }
-                ],
-                effects: [
-                    { text: "Causes moderate", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
-                    { text: "Medium strike area", uptick: "up-green", color: "green" },
+                    { text: "Powerful explosion", uptick: "up-green", color: "green" },
                     { text: "Strong vs. a single unit", uptick: "up-green", color: "green" },
-                    { text: "Good against armour", uptick: "up-green", color: "green" },
-                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                    { text: "Good against armour", uptick: "up-green", color: "green" }
                 ]
             }
          }
     },
     {
-        ref: "fleetfinger",
-        name: "Fleetfinger",
-        description: "Nook and fire. Nook again, and fire. Nook a third time, and fire. all in a heartbeat.",
-        icon: "character-ranged-damage",
+        ref: "seafang",
+        name: "Seafang",
+        description: "There's no outrunning the terrible, flying Longship known as the 'Seafang'; once in its sights, an ogonising, merciless death is your only possible destination.",
+        icon: "ability-seafang",
         ranks: [
-            { effects: [{ icon: "reload-time-character", description: "Reload time reduction: +7%" }] },
-            { effects: [{ icon: "reload-time-character", description: "Reload time reduction: +15%" }] }
-        ]
-    },
-    {
-        ref: "piercingShots",
-        name: "Piercing Shots",
-        description: "The forest teaches a warrior not only when to fire but where, which makes a bigger difference.",
-        icon: "character-ranged-damage",
-        ranks: [
-            { effects: [{ icon: "ranged-damage-character", description: "Missile strength: +7%" }] },
-            { effects: [{ icon: "ranged-damage-character", description: "Missile strength: +15%" }] }
-        ]
-    },
-    {
-        ref: "bottomlessQuiver",
-        name: "Bottomless Quiver",
-        description: "Always willing to fight on, a widened quiver allows arrows to rain, almost without end.",
-        icon: "character-ammo",
-        ranks: [
-            { effects: [{ icon: "ammo-character", description: "Missile strength: +15%" }] },
-            { effects: [{ icon: "ammo-character", description: "Missile strength: +30%" }] }
-        ]
-    },
-    {
-        ref: "preyOfAnathRaema",
-        name: "Prey of Anath Raema",
-        description: "By all means summon the bloodthirsty Goddess of the Hunt to assist you, but always make sure you thank her afterwards...",
-        icon: "ability-prey-of-anath-raema",
-        ranks: [
-            { effects: [{ icon: "ability-prey-of-anath-raema", description: "Ability: \"Prey of Anath Raema\"" }] }
-        ],
-        spell: {
-            description: "Character ability",
-            cooldown: "90",
-            uses: 3,
-            rarity: "uncommon",
-            attributes: {
-                type: "Hex",
-                duration: "16 seconds",
-                target: [
-                    { text: "Enemy" },
-                    { text: "100m", uptick: "range" }
-                ],
-                effects: [
-                    { text: "-22%", icon: "resistance-missile", postText: "Missile Resistance", uptick: "down-red", color: "red" },
-                    { text: "Cannot move", uptick: "down-red", color: "red" }
-                ]
-            }
-         }
-    },
-    {
-        ref: "houndsOfOrion",
-        name: "Hounds of Orion",
-        description: "Orion's wolves run with their Lord, defending his person with great savagery and scant regard for their own lives.",
-        icon: "ability-hounds-of-orion",
-        ranks: [
-            { effects: [{ icon: "ability-hounds-of-orion", description: "Ability: \"Hounds of Orion\"" }] }
+            { effects: [{ icon: "ability-seafang", description: "Ability: \"Seafang\"" }] }
         ],
         spell: {
             description: "Lord ability",
@@ -340,447 +244,561 @@ exports.skills = [
             uses: 3,
             rarity: "uncommon",
             attributes: {
-                type: "Vortex",
-                duration: "13 seconds",
+                type: "Wind",
+                duration: "8 seconds",
                 target: [
                     { text: "Ground" },
                     { text: "150m", uptick: "range" }
                 ],
+                cannotUseIf: "Climbing",
                 cannotTargetIf: "Flying, On a wall",
                 effects: [
-                    { text: "Causes major", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
-                    { text: "Medium, randomly-moving area of effect", uptick: "up-green", color: "green" },
-                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
-                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                    { text: "Causes massive", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Small, forward-moving area of effect", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" }
+                ],
+                contact: [
+                    { icon: "icon-frostbite", postText: "Frostbite! (10 seconds)", color: "red" },
+                    { text: "-36%", icon: "movement-character", postText: "Speed", color: "red" }
                 ]
             }
          }
     },
     {
-        ref: "enduranceOfTheOak",
-        name: "Endurance of the Oak",
-        description: "Taking their cue from the forest itself, the Lord endures and overcomes all.",
-        icon: "character-health",
-        ranks: [
-            { effects: [{ icon: "health-character", description: "Hit points: +7%" }] },
-            { effects: [{ icon: "health-character", description: "Hit points: +15%" }] }
-        ]
-    },
-    {
-        ref: "impenetrableBark",
-        name: "Impenetrable Bark",
-        description: "Using the forest itself as a shield, this Lord is protected by their devotion to Athel Loren.",
-        icon: "character-armor",
-        ranks: [
-            { effects: [{ icon: "armor-character", description: "Armour: +15" }] },
-            { effects: [{ icon: "armor-character", description: "Armour: +30" }] }
-        ]
-    },
-    {
-        ref: "temperedRigour",
-        name: "Tempered Rigour",
-        description: "When to strike, when to block, when to dodge. These are all skills the warriors of Athel Loren must perfect.",
+        ref: "drinkerOfBlood",
+        name: "Drinker of Blood",
+        description: "Dining upon the blood of slaughtered enemies may attract the notice, and maybe the favour, of the Hound.",
         icon: "character-attack",
         ranks: [
+            { effects: [{ icon: "melee-character", description: "Melee defense: +6"}] },
             { effects: [
-                { icon: "defense-character", description: "Melee defense: +6" },
-                { icon: "melee-character", description: "Melee attack: +6" }
-            ] },
-            { effects: [
-                { icon: "defense-character", description: "Melee defense: +12" },
-                { icon: "melee-character", description: "Melee attack: +12" }
+                { icon: "armor-piercing-character", description: "Armour-piercing weapon damage: +15"},
+                { icon: "melee-character", description: "Melee defense: +12"}
             ] }
         ]
     },
     {
-        ref: "violentDelights",
-        name: "Violent Delights",
-        description: "There is no greater thrill than to be in the midst of battle, slaughtering in the forest's name.",
+        ref: "chronsWrath",
+        name: "Chron's Wrath",
+        description: "The Great Hound of War thirsts eternally for blood and slaughter, its rage manifesting itself in the unstoppable martial spirit of its warriors.",
+        icon: "character-charge",
+        ranks: [
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +12"}] },
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +30"}] }
+        ]
+    },
+    {
+        ref: "furyOfTheHound",
+        name: "Fury of the Hound",
+        description: "The Hound's unearthly fury is personified by its Champions' thirst for war and hunger for unending blood and violence.",
+        icon: "ability-berserk",
+        ranks: [
+            { effects: [
+                { icon: "ability-rage", description: "Replaces: \"Rage\"" },
+                { icon: "ability-berserk", description: "Passive ability: \"Berserk\"" }
+            ] }
+        ],
+        spell: {
+            name: "Berserk",
+            description: "Unit ability",
+            cooldown: "30",
+            rarity: "rare",
+            attributes: {
+                type: "Augment",
+                duration: "90 seconds",
+                disabledIf: "Leadership is broken",
+                rechargeIf: "Engaged in melee",
+                effects: [
+                    { icon: "stage-1", postText: "Stage One (30 seconds)", color: "green" },
+                    { text: "+22%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" },
+                    { icon: "stage-2", postText: "Stage Two (30 seconds)", color: "green" },
+                    { text: "+13", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+22%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" },
+                    { icon: "stage-3", postText: "Stage Three (30 seconds)", color: "green" },
+                    { text: "+13", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+22%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" },
+                    { text: "Rampage!", uptick: "down-red", color: "red" }
+                ]
+            }
+         }
+    },
+    {
+        ref: "noxiousVessel",
+        name: "Noxious Vessel",
+        description: "Thusly, the virulent maladies of the Crow are borne forth to repulse and infect its mortal foes; there lieth victory eternal.",
         icon: "character-damage",
         ranks: [
-            { effects: [{ icon: "damage", description: "Weapon strength: +15%" }] },
-            { effects: [{ icon: "damage", description: "Weapon strength: +30%" }] }
+            { effects: [
+                { icon: "resistance-missile", description: "Missile resistance: 8%"}
+            ] },
+            { effects: [
+                { icon: "resistance-missile", description: "Missile resistance: 15%"},
+                { icon: "damage", description: "Weapon strength: +15%"}
+            ] }
         ]
     },
     {
-        ref: "callOfTheWoods",
-        name: "Call of the Woods",
-        description: "The Lord embodies the forest; as a result of this, their warriors feel a greater call to defend it.",
-        icon: "ability-call-of-the-woods",
+        ref: "putrefyingOoze",
+        name: "Putrefying Ooze",
+        description: "This fetid, disgusting pus is so repulsive to the untainted that it mimics traditional armour of far greater substance.",
+        icon: "character-armor",
         ranks: [
-            { effects: [{ icon: "ability-call-of-the-woods", description: "Passive ability: \"Call of the Woods\"" }] }
+            { effects: [{ icon: "armor-character", description: "Armour: +7"}] },
+            { effects: [{ icon: "armor-character", description: "Armour: +15"}] }
+        ]
+    },
+    {
+        ref: "plagueOfTheCrow",
+        name: "Plague of the Crow",
+        description: "Unstable and miscreated, the Crow's strength spreads and grows like the most successful of diseases, consuming all before consuming itself and beginning again.",
+        icon: "regeneration",
+        ranks: [
+            { effects: [
+                { icon: "poison", description: "Enables poison attacks" },
+                { icon: "ability-regeneration", description: "Passive ability: \"Regeneration\"" }
+            ] }
         ],
         spell: {
-            description: "Lord ability",
+            description: "Unit ability",
             rarity: "common",
             attributes: {
-                type: [
-                    { text: "Augment" },
-                    { text: "Only acts on targets when in area" }
-                ],
+                type: "Regeneration",
                 duration: "Constant",
-                target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range" }
-                ],
-                effectRange: "30m",
+                target: "Self",
                 effects: [
-                    { text: "+5", icon: "melee-character", postText: "Melee Attack", color: "green" }
+                    { text: "Restores", icon: "hp", postText: "4 Hit Points per second", uptick: "up-green", color: "green" },
+                    { text: "+25% Weakness to", postText: "Fire Damage", icon: "icon-fire", color: "red" }
                 ]
             }
          }
     },
     {
-        ref: "howlOfTheForest",
-        name: "Howl of the Forest",
-        description: "The Lord charges their troops to fight for Athel Loren, for their very souls are tethered to its fate.",
-        icon: "ability-call-of-the-woods",
+        ref: "indulgerInTheExotic",
+        name: "Indulger in the Exotic",
+        description: "The Serpent's temptations come in many forms, all of them designed to appeal to the twisted desires buried deep within us all.",
+        icon: "character-damage",
         ranks: [
             { effects: [
-                { icon: "ability-call-of-the-woods", description: "Replaces ability: \"Call of the Woods\"" },
-                { icon: "ability-howl-of-the-forest", description: "Passive ability: \"Howl of the Forest\"" }
+                { icon: "health-character", description: "Hit points: +7%"}
+            ] },
+            { effects: [
+                { icon: "health-character", description: "Hit points: +15%"},
+                { icon: "vigour", description: "Vigour loss reduction: -15%"}
+            ] }
+        ]
+    },
+    {
+        ref: "intoxicatingVisions",
+        name: "Intoxicating Visions",
+        description: "Seductive images of sensual luxuries may tempt the enemy from their chosen paths onto roads much, much less travelled and from which there can be no return.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [{ icon: "morale-character", description: "Leadership: +6"}] },
+            { effects: [{ icon: "morale-character", description: "Leadership: +12"}] }
+        ]
+    },
+    {
+        ref: "seductionOfTheSerpent",
+        name: "Seduction of the Serpent",
+        description: "Although the youngest of the Dark Gods, the serpent is no less potent and can bind mortals to eternal service with alluring visions or tantalising temptations.",
+        icon: "ability-seduction-of-the-serpent",
+        ranks: [
+            { effects: [
+                { icon: "attribute-psychology", description: "Attribute: Immune to Psychology" },
+                { icon: "ability-seduction-of-the-serpent", description: "Passive ability: \"Seduction of the Serpent\"" }
             ] }
         ],
         spell: {
             description: "Lord ability",
+            cooldown: "90",
             rarity: "uncommon",
             attributes: {
-                type: [
-                    { text: "Augment" },
-                    { text: "Only acts on targets when in area" }
-                ],
-                duration: "Constant",
-                target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range" }
-                ],
-                effectRange: "40m",
+                type: "Augment",
+                duration: "17 seconds",
+                target: "Self",
                 effects: [
-                    { text: "+9", icon: "melee-character", postText: "Melee Attack", color: "green" }
+                    { text: "+24", icon: "defense-character", postText: "Melee Defense", color: "green" },
+                    { text: "+16", icon: "morale-character", postText: "Leadership", color: "green" }
+                ],
+                imbued: [
+                    { icon: "morale-mallus", postText: "Discouraged! (10 seconds)", color: "red" },
+                    { text: "-16", icon: "morale-character", postText: "Leadership", color: "red" }
                 ]
             }
          }
     },
     {
-        ref: "theEyeOfKurnous",
-        name: "The Eye of Kurnous",
-        description: "The Lord sets their eye upon the foe, imbuing their troops with Kurnous' spirit and the will to see his enemies destroyed.",
-        icon: "ability-the-eye-of-kurnous",
-        ranks: [
-            { effects: [{ icon: "ability-the-eye-of-kurnous", description: "Passive ability: \"The Eye of Kurnous\"" }] }
-        ],
-        spell: {
-            description: "Lord ability",
-            rarity: "common",
-            attributes: {
-                type: [
-                    { text: "Augment" },
-                    { text: "Only acts on targets when in area" }
-                ],
-                duration: "Constant",
-                target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range" }
-                ],
-                effectRange: "30m",
-                effects: [
-                    { text: "+10%", icon: "icon-ranged-damage-base", postText: "Base Missile Damage", color: "green" }
-                ]
-            }
-         }
-    },
-    {
-        ref: "sightBeyondSight",
-        name: "Sight Beyond Sight",
-        description: "The Lord charges their troops to fight for Athel Loren, for their very souls are tethered to its fate.",
-        icon: "ability-sight-beyond-sight",
+        ref: "spiritWanderer",
+        name: "Spirit Wanderer",
+        description: "More fool they who go to war and quest with minds unfocused, for they risk the Eagle's desolate, underhand deceptions.",
+        icon: "character-speed",
         ranks: [
             { effects: [
-                { icon: "ability-the-eye-of-kurnous", description: "Replaces ability: \"The Eye of Kurnous\"" },
-                { icon: "ability-sight-beyond-sight", description: "Passive ability: \"Sight Beyond Sight\"" }
+                { icon: "movement-character", description: "Speed: +3%"}
+            ] },
+            { effects: [
+                { icon: "movement-character", description: "Speed: +15%"},
+                { icon: "resistance-magic", description: "Magic resistance: 15%"}
+            ] }
+        ]
+    },
+    {
+        ref: "darkDeceiver",
+        name: "Dark Deceiver",
+        description: "The Eagle weaves a complex web of duplicity around its servants, further bracing their combat abilities in subtle, unexpected ways.",
+        icon: "character-defense",
+        ranks: [
+            { effects: [{ icon: "defense-character", description: "Melee defense: +6"}] },
+            { effects: [{ icon: "defense-character", description: "Melee defense: +12"}] }
+        ]
+    },
+    {
+        ref: "sorceryOfTheEagle",
+        name: "Sorcery of the Eagle",
+        description: "Although the youngest of the Dark Gods, the serpent is no less potent and can bind mortals to eternal service with alluring visions or tantalising temptations.",
+        icon: "spell-fireball",
+        ranks: [
+            { effects: [
+                { icon: "magical-attacks", description: "Enables magical attacks" },
+                { icon: "spell-fireball", description: "Bound spell: \"Fireball\"" }
             ] }
         ],
         spell: {
+            name: "Fireball",
+            description: "Bound spell",
+            rarity: "common",
+            uses: 4,
+            cooldown: "60",
+            attributes: {
+                type: "Magic Missile",
+                target: [
+                    { text: "Enemy" },
+                    { text: "300m", uptick: "range" }
+                ],
+                cannotUseIf: "Manning equipment, Climbing",
+                projectileRange: "300m",
+                effects: [
+                    { text: "Causes moderate magical & fire damage", uptick: "up-green", color: "green" },
+                    { text: "Powerful explosion", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Effective at long range", uptick: "up-green", color: "green" },
+                    { text: "Weak against armor", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    
+    },
+    {
+        ref: "deadlyBlade",
+        name: "Deadly Blade",
+        description: "A deadly blade is especially lethal when in the hands of this master death-maker, killer and slaughterer!",
+        icon: "character-attack",
+        ranks: [
+            { effects: [{ icon: "melee-character", description: "Melee defense: +6"}] },
+            { effects: [{ icon: "melee-character", description: "Melee defense: +12"}] }
+        ]
+    },
+    {
+        ref: "quicksilver",
+        name: "Quicksilver",
+        description: "Blink and you die.",
+        icon: "character-speed",
+        ranks: [
+            { effects: [{ icon: "movement-character", description: "Speed: +7%"}] },
+            { effects: [{ icon: "movement-character", description: "Speed: +15%"}] }
+        ]
+    },
+    {
+        ref: "hunterOfChampions",
+        name: "Hunter of Champions",
+        description: "Cursed to wander the length and breadth of the world, his never-ending quest to challenge and best the most gifted warriors.",
+        icon: "ability-hunter-of-champions",
+        ranks: [
+            { effects: [{ icon: "ability-hunter-of-champions", description: "Ability: \"Hunter of Champions\"" }] }
+        ],
+        spell: {
             description: "Lord ability",
+            cooldown: "90",
             rarity: "uncommon",
             attributes: {
-                type: [
-                    { text: "Augment" },
-                    { text: "Only acts on targets when in area" }
-                ],
-                duration: "Constant",
+                type: "Hex",
+                duration: "24 seconds",
                 target: [
-                    { text: "Self" },
-                    { text: "Affects allies in range" }
+                    { text: "Enemy" },
+                    { text: "100m", uptick: "range" }
                 ],
-                effectRange: "40m",
+                targetIf: "Unit is a Lord or Hero",
                 effects: [
-                    { text: "+15%", icon: "icon-ranged-damage-base", postText: "Base Missile Damage", color: "green" }
+                    { text: "-48%", icon: "movement-character", postText: "Speed", color: "red" },
+                    { text: "-30", icon: "armor-character", postText: "Armour", color: "red" },
+                    { text: "-40", icon: "defense-character", postText: "Melee Defense", color: "red" }
                 ]
             }
          }
     },
     {
-        ref: "piercingThorns",
-        name: "Piercing Thorns",
-        description: "Every blade and barbed branch will eventually find its mark - when they do, the forest's infinite anger is truly felt.",
+        ref: "dominatingPresence",
+        name: "Dominating Presence",
+        description: "A Chaos Lord dominates - lesser beings cringe from a being that is so intently under scrutiny from the Dark Gods.",
+        icon: "battle-morale",
+        ranks: [
+            { effects: [{ icon: "morale", description: "Character's aura leadership effect: +5" }] }
+        ]
+    },
+    {
+        ref: "fearsomeWarriors",
+        name: "Fearsome Warriors",
+        description: "Those who do not bend the knee to the Gods of the North soon find all they hold dear obliterated before them.",
         icon: "battle-attack",
         ranks: [
             { effects: [
-                { icon: "melee", description: "Melee attack: +4 for Eternal Guard and Dryad units", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +4 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "melee", description: "Melee attack: +6 for Eternal Guard and Dryad units", ps: "Lord's army" },
-                { icon: "weapon-damage", description: "Weapon strength: +6% for Eternal Guard and Dryad units", ps: "Lord's army" }
+                { icon: "weapon-damage", description: "Weapon strength: +6% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +6 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "melee", description: "Melee attack: +8 for Eternal Guard and Dryad units", ps: "Lord's army" },
-                { icon: "weapon-damage", description: "Weapon strength: +12% for Eternal Guard and Dryad units", ps: "Lord's army" }
+                { icon: "weapon-damage", description: "Weapon strength: +12% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +8 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", ps: "Lord's army" }
             ] }
         ]
     },
     {
-        ref: "boltsOfTheForest",
-        name: "Bolts of the Forest",
-        description: "Let each bolt be imbued with the strength of Kurnous, and bring death to all his enemies.",
+        ref: "beastSlayers",
+        name: "Beast Slayers",
+        description: "Delighting in death and suffering, these savage warriors follow their ignoble Lord wherever he goes.",
         icon: "battle-ranged-damage",
         ranks: [
             { effects: [
-                { icon: "ranged-damage", description: "Missile strength: +6% for Glade Guard, Deepwood Scouts, and Waywatchers units", ps: "Lord's army" }
+                { icon: "ranged-damage", description: "Missile strength: +6% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "reload-time", description: "Reload time reduction: +5% for Glade Guard, Deepwood Scouts, and Waywatchers units", ps: "Lord's army" },
-                { icon: "ranged-damage", description: "Missile strength: +9% for Glade Guard, Deepwood Scouts, and Waywatchers units", ps: "Lord's army" }
+                { icon: "ammo", description: "Ammunition: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", ps: "Lord's army" },
+                { icon: "ranged-damage", description: "Missile strength: +9% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "reload-time", description: "Reload time reduction: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units", ps: "Lord's army" },
-                { icon: "ranged-damage", description: "Missile strength: +12% for Glade Guard, Deepwood Scouts, and Waywatchers units", ps: "Lord's army" }
+                { icon: "ammo", description: "Ammunition: +20% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", ps: "Lord's army" },
+                { icon: "ranged-damage", description: "Missile strength: +12% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", ps: "Lord's army" }
             ] }
         ]
     },
     {
-        ref: "strikingBranches",
-        name: "Striking Branches",
-        description: "Let the enemy feel the fury of nature, embodied in these warriors as they crash through their lines.",
+        ref: "unnaturalSelection",
+        name: "Unnatural Selection",
+        description: "Only the fiercest creatures can survive the frozen north; the strongest are rounded up for war and starved into viciousness, ready for the next battle.",
         icon: "battle-speed",
         ranks: [
             { effects: [
-                { icon: "movement", description: "Speed: +6% for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" }
+                { icon: "movement", description: "Speed: +6% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "movement", description: "Speed: +9% for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +6 for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" }
+                { icon: "movement", description: "Speed: +9% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +6 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "movement", description: "Speed: +12% for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +12 for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" }
+                { icon: "movement", description: "Speed: +12% for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, and Marauder Chariots units", ps: "Lord's army" }
             ] }
         ]
     },
     {
-        ref: "swingingBoughs",
-        name: "Swinging Boughs",
-        description: "The warrior strikes with the strength of a swinging tree limb; few can stand against such strength.",
+        ref: "frostbitten",
+        name: "Frostbitten",
+        description: "The intense cold cuts into the flesh, burning the foe's extremities until they drop off altogether!",
         icon: "battle-attack",
         ranks: [
             { effects: [
-                { icon: "melee", description: "Melee attack: +4 for Wardancers and Wildwood Ranger units", ps: "Lord's army" }
+                { icon: "melee", description: "Melee attack: +4 for Skin Wolves, Norscan Trolls, and Norscan Ice Troll units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "melee", description: "Melee attack: +6 for Wardancers and Wildwood Ranger units", ps: "Lord's army" },
-                { icon: "defense", description: "Melee defense: +4 for Wardancers and Wildwood Ranger units", ps: "Lord's army" }
+                { icon: "weapon-damage", description: "Weapon strength: +6% for Skin Wolves, Norscan Trolls, and Norscan Ice Troll units", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +6 for Skin Wolves, Norscan Trolls, and Norscan Ice Troll units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "melee", description: "Melee attack: +8 for Wardancers and Wildwood Ranger units", ps: "Lord's army" },
-                { icon: "defense", description: "Melee defense: +8 for Wardancers and Wildwood Ranger units", ps: "Lord's army" }
+                { icon: "weapon-damage", description: "Weapon strength: +12% for Skin Wolves, Norscan Trolls, and Norscan Ice Troll units", ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +8 for Skin Wolves, Norscan Trolls, and Norscan Ice Troll units", ps: "Lord's army" }
             ] }
         ]
     },
     {
-        ref: "ancientBark",
-        name: "Ancient Bark",
-        description: "Centuries upon centuries of existence have given these ancient tree spirits a natural armour, mitigating any physical blows dealth against them.",
+        ref: "hailOfTeeth",
+        name: "Hail of Teeth",
+        description: "The razor-sharp hail of the north is not the only danger in the Norscan sky - its airborne beasts are just as deadly and far less predictable.",
         icon: "battle-defense",
         ranks: [
             { effects: [
-                { icon: "armor", description: "Armour: +6 for Tree Kin and Treeman units", ps: "Lord's army" }
+                { icon: "melee", description: "Melee attack: +4 for Manticore and Frost Wyrm units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "resistance-physical", description: "Physical resistance: 5% for Tree Kin and Treeman units", ps: "Lord's army" },
-                { icon: "armor", description: "Armour: +9 for Tree Kin and Treeman units", ps: "Lord's army" }
+                { icon: "melee", description: "Melee attack: +6 for Manticore and Frost Wyrm units", ps: "Lord's army" },
+                { icon: "armor", description: "Armour: +6 for Manticore and Frost Wyrm units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "resistance-physical", description: "Physical resistance: 10% for Tree Kin and Treeman units", ps: "Lord's army" },
-                { icon: "armor", description: "Armour: +12 for Tree Kin and Treeman units", ps: "Lord's army" }
+                { icon: "melee", description: "Melee attack: +8 for Manticore and Frost Wyrm units", ps: "Lord's army" },
+                { icon: "armor", description: "Armour: +12 for Manticore and Frost Wyrm units", ps: "Lord's army" }
             ] }
         ]
     },
     {
-        ref: "wingsOfTheForest",
-        name: "Wings of the Forest",
-        description: "Not all of the forest's guardians are rooted to the ground - flying enemies will always be in danger from the woodland's airborne protectors.",
-        icon: "battle-damage",
+        ref: "monstersOfTheNorth",
+        name: "Monsters of the North",
+        description: "Giant, deadly, and able to take orders, this Lord's monstrosities are especially terrifying and lethal.",
+        icon: "battle-attack",
         ranks: [
             { effects: [
-                { icon: "weapon-damage", description: "Weapon strength: +6% for Hawk Riders, Great Eagle, and Forest Dragon units", ps: "Lord's army" }
+                { icon: "melee", description: "Melee attack: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "weapon-damage", description: "Weapon strength: +9% for Hawk Riders, Great Eagle, and Forest Dragon units", ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +9 for Hawk Riders, Great Eagle, and Forest Dragon units", ps: "Lord's army" },
-                { icon: "reload-time", description: "Reload time reduction: +5% for Hawk Riders units", ps: "Lord's army" }
+                { icon: "melee", description: "Melee attack: +6 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +4 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units", ps: "Lord's army" }
             ] },
             { effects: [
-                { icon: "weapon-damage", description: "Weapon strength: +12% for Hawk Riders, Great Eagle, and Forest Dragon units", ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +12 for Hawk Riders, Great Eagle, and Forest Dragon units", ps: "Lord's army" },
-                { icon: "reload-time", description: "Reload time reduction: +10% for Hawk Riders units", ps: "Lord's army" }
+                { icon: "melee", description: "Melee attack: +8 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +8 for Fimir Warriors, Norscan Giant, Feral Mammoth, and War Mammoth units", ps: "Lord's army" }
             ] }
         ]
     },
     {
-        ref: "shieldOfTheForest",
-        name: "Shield of the Forest",
-        description: "Armour as hard as the ancient bark of the forest, it repels blows that would rend others asunder.",
-        icon: "battle-defense",
+        ref: "championsOfTheNorth",
+        name: "Champions of the North",
+        description: "In spite of their savage nature, they are possessed of a savage code of conduct and form a loose brotherhood of those considered worthy.",
+        icon: "battle-armor",
         ranks: [
             { effects: [
-                { icon: "resistance-physical", description: "Physical resistance: 15% for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units", rank: 7, ps: "Lord's army" },
-                { icon: "armor", description: "Armour: +12 for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units", rank: 7, ps: "Lord's army" },
-                { icon: "defense", description: "Melee defense: +5 for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units", rank: 7, ps: "Lord's army" }
+                { icon: "resistance-physical", description: "Physical resistance: 15% for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", rank: 7, ps: "Lord's army" },
+                { icon: "armor", description: "Armour: +12 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", rank: 7, ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +5 for Marauders, Marauder Spearmen, Marauder Berserkers, and Marauder Champions units", rank: 7, ps: "Lord's army" },
             ] }
         ]
     },
     {
-        ref: "naturesQuiver",
-        name: "Nature's Quiver",
-        description: "What is a ranger without an arrow? Who can be the best without dozens?",
-        icon: "battle-range",
-        ranks: [
-            { effects: [
-                { icon: "resistance-missile", description: "Missile resistance: 15% for Glade Guard, Deepwood Scouts, and Waywatchers units", rank: 7, ps: "Lord's army" },
-                { icon: "ammo", description: "Ammunition: +20% for Glade Guard, Deepwood Scouts, and Waywatchers units", rank: 7, ps: "Lord's army" },
-                { icon: "accuracy", description: "Range: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units", rank: 7, ps: "Lord's army" }
-            ] }
-        ]
-    },
-    {
-        ref: "swiftSturdy",
-        name: "Swift & Sturdy",
-        description: "Moving like the wind, whistling past tree ranches, the riders of the forest hunt any who would do harm to the place they call home.",
+        ref: "hardenedHunters",
+        name: "Hardened Hunters",
+        description: "No beast too large, no adversary too great; no quarry - mortal or otherwise - can evade them.",
         icon: "battle-ranged-damage",
         ranks: [
             { effects: [
-                { icon: "defense", description: "Melee defense: +5 for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
-                { icon: "weapon-damage", description: "Weapon strength: +12% for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +12 for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
-                { icon: "ranged-damage", description: "Missile strength: +12% for Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
+                { icon: "resistance-missile", description: "Missile resistance: 15% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", psIcon: "goldChevron", rank: 7, ps: "Lord's army" },
+                { icon: "ranged-damage", description: "Missile damage: +12% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", rank: 7, ps: "Lord's army" },
+                { icon: "reload-time", description: "Reload time reduction: +10% for Marauder Hunters, Marauder Horsemen, and Marauder Horsemasters units", rank: 7, ps: "Lord's army" },
             ] }
         ]
     },
     {
-        ref: "theForestsRoar",
-        name: "The Forest's Roar",
-        description: "All of Athel Loren shouts with a fury as old as the ages, and the enemy knows its power.",
-        icon: "battle-attack",
+        ref: "icyWrath",
+        name: "Icy Wrath",
+        description: "The intense cold and near-constant darkness of the far north make for a certain kind of killer.",
+        icon: "battle-damage",
         ranks: [
             { effects: [
-                { icon: "resistance-missile", description: "Missile resistance: 15% for Tree Kin, Treeman, Great Eagel, and Forest Dragon units", rank: 7, ps: "Lord's army" },
-                { icon: "melee", description: "Melee attack: +5 for Tree Kin, Treeman, Great Eagel, and Forest Dragon units", rank: 7, ps: "Lord's army" },
-                { icon: "defense", description: "Melee defense: +5 for Tree Kin, Treeman, Great Eagel, and Forest Dragon units", rank: 7, ps: "Lord's army" }
+                { icon: "weapon-damage", description: "Weapon strength: +12% for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units", rank: 7, ps: "Lord's army" },
+                { icon: "melee", description: "Melee attack: +5 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units", rank: 7, ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +12 for Norscan Warhounds, Norscan Ice Wolves, Manticore, Skin Wolves, and Marauder Chariots units", rank: 7, ps: "Lord's army" }
             ] }
         ]
     },
     {
-        ref: "everReachingTendrils",
-        name: "Ever-Reaching Tendrils",
-        description: "The denizens of the forest will travel many miles to see those who sould threaten Athel Loren put to rout.",
-        icon: "campaign-movement",
+        ref: "hulksOfDeath",
+        name: "Hulks of Death",
+        description: "The freezing darkness and stunning violence of the far north bring no small solace to those who have lost everything and wish to forget.",
+        icon: "battle-ward-save",
         ranks: [
-            { effects: [{ icon: "campaign-movement", description: "Campaign movement range: +10%" }] }
+            { effects: [
+                { icon: "armor", description: "Armour: +12 for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units", rank: 7, ps: "Lord's army" },
+                { icon: "resistance-ward-save", description: "Ward save: 8% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units", rank: 7, ps: "Lord's army" },
+                { icon: "weapon-damage", description: "Weapon strength: +12% for Norscan Trolls, Norscan Ice Trolls, Frost Wyrm, Norscan Giant, Fimir, Feral Mammoth, and War Mammoth units", rank: 7, ps: "Lord's army" }
+            ] }
         ]
     },
     {
-        ref: "wondersOfTheForest",
-        name: "Wonders of the Forest",
-        description: "Athel Loren provides for its deserving children, with wondrous boons gifted in recognition of their many endeavours.",
+        ref: "fightOrDie",
+        name: "Fight or Die!",
+        description: "There is no other choice. There never was.",
+        icon: "ability-fight-or-die",
+        ranks: [
+            { effects: [
+                { icon: "ability-rally", description: "Replaces: \"Rally!\"" },
+                { icon: "ability-fight-or-die", description: "Ability: \"Fight or Die!\"" }
+            ] }
+        ],
+        spell: {
+            description: "Lord ability",
+            rarity: "uncommon",
+            cooldown: "90",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Instantly affects targets in area" }
+                ],
+                duration: "18 seconds",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "+24", icon: "melee-character", postText: "Melee Attack", color: "green" },
+                    { text: "+16", icon: "morale-character", postText: "Leadership", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "despoilers",
+        name: "Despoilers",
+        description: "To despoil, to corrupt and ruin, to break the mortals and take their gods from them - this is what Chaos wants.",
         icon: "campaign-military-spending",
         ranks: [
-            { effects: [
-                { icon: "income", description: "Income from post-battle loot: +10%", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "income", description: "Income from post-battle loot: +20%", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "income", description: "Income from post-battle loot: +30%", ps: "Lord's army" }
-            ] }            
-        ]
-    },
-    {
-        ref: "naturesSalve",
-        name: "Nature's Salve",
-        description: "The Worldroots provide succour for their children, purging the forests of any corrupting infestation.",
-        icon: "campaign-untainted",
-        ranks: [
-            { effects: [{ icon: "religion", description: "Untainted: +1", ps: "local province" }] },
-            { effects: [{ icon: "religion", description: "Untainted: +2", ps: "local province" }] },
-            { effects: [{ icon: "religion", description: "Untainted: +3", ps: "local province" }] }            
+            { effects: [{ icon: "income", description: "Income from sacking settlements: +3%" }] },
+            { effects: [{ icon: "income", description: "Income from sacking settlements: +8%" }] },
+            { effects: [{ icon: "income", description: "Income from sacking settlements: +15%" }] }            
 
         ]
     },
     {
-        ref: "obscuringCanopy",
-        name: "Obscuring Canopy",
-        description: "The magics of the woods obscure and connive, able to turn enemy blades away from their targets.",
+        ref: "norseResilience",
+        name: "Norse Resilience",
+        description: "The bleak, brutal landscape of the far north breeds bloody, warlike tribes in thrall to Chaos' delicious, twisted power.",
+        icon: "campaign-replenishment",
+        ranks: [{ effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +5%" }] }]
+    },
+    {
+        ref: "swellingOfDoom",
+        name: "Swelling of Doom",
+        description: "Maybe it is the influence of the Dark Gods that has caused the populace to burgeon and proliferate beyond their natural bounds?",
+        icon: "campaign-growth",
+        ranks: [
+            { effects: [{ icon: "growth", description: "Growth: +8", ps: "local province" }] },
+            { effects: [{ icon: "growth", description: "Growth: +20", ps: "local province" }] },
+            { effects: [{ icon: "growth", description: "Growth: +36", ps: "local province" }] }            
+
+        ]
+    },
+    {
+        ref: "devourersOfFlesh",
+        name: "Devourers of Flesh",
+        description: "Once Wulfrik has made his infernal offerings, the mangled gore that ermains is devoured by his ravenous, insatiable Werekin.",
         icon: "campaign-agent",
-        ranks: [
-            { effects: [{ icon: "agent", description: "Enemy Hero action success chance: -5%" }] },
-            { effects: [{ icon: "agent", description: "Enemy Hero action success chance: -9%" }] },
-            { effects: [{ icon: "agent", description: "Enemy Hero action success chance: -13%" }] }            
-
-        ]
+        ranks: [{ effects: [
+            { icon: "werekin", description: "Hero recruit rank: +5 for Skin Wolf Werekin", ps: "local province" },
+            { icon: "werekin", description: "Hero capacity: +1 for Skin Wolf Werekin" }
+        ] }]
     },
     {
-        ref: "growthOfTheForest",
-        name: "Growth of the Forest",
-        description: "The forest provides for its warriors, rehabilitating and regenerating wounds suffered in its defense.",
-        icon: "campaign-replenishment",
-        ranks: [{ effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +5%", ps: "Lord's army" }] }]
+        ref: "mastersOfTheFen",
+        name: "Masters of the Fen",
+        description: "The Troll King's horde control the wind-whipped hinterlands of Troll Country, and may yet extend their despoiling influence much further afield.",
+        icon: "campaign-agent",
+        ranks: [{ effects: [
+            { icon: "fimir", description: "Hero recruit rank: +5 for Fimir Balefiends", ps: "local province" },
+            { icon: "fimir", description: "Hero capacity: +1 for Fimir Balefiends" }
+        ] }]
     },
     {
-        ref: "openBranches",
-        name: "Open Branches",
-        description: "From all corners of the forest, they come to defend their homes.",
-        icon: "campaign-army",
-        ranks: [{ effects: [{ icon: "army", description: "Global recruitment capacity: +1" }] }]
-    },
-    {
-        ref: "swiftfingers",
-        name: "Swiftfingers",
-        description: "The dead do not want for material possessions, yet the living may yet find value in them...",
-        icon: "campaign-magic",
-        ranks: [
-            { effects: [
-                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +5%" }
-            ] },
-            { effects: [
-                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +10%" },
-            ] },
-            { effects: [
-                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +15%" },
-            ] }
-        ]
-    },
-    {
-        ref: "perenniality",
-        name: "Perenniality",
-        description: "Like the forest itself, the warriors of Athel Loren ebb and flow and regenerate with the passing of time.",
-        icon: "campaign-replenishment",
-        ranks: [{ effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" }] }]
-    },
-    {
-        ref: "homeAmongstTheBoughs",
-        name: "Home Amongst the Boughs",
-        description: "The forest-dwellers draw from the strength of Kurnous to fight ever harder, and be ever stronger.",
+        ref: "savageSkills",
+        name: "Savage Skills",
+        description: "There's something about the harsh, unforgiving nature of northern life that makes its occupants fight harder and longer than many of their soft, southern equivalents.",
         icon: "campaign-experience",
         ranks: [
             { effects: [{ icon: "experience", description: "Recruit rank: +1 for all units" }] },
@@ -789,38 +807,31 @@ exports.skills = [
         ]
     },
     {
-        ref: "transformationOfKadonEagle",
-        name: "Transformation of Kadon",
-        description: "Kadon, a master of forms, was able to shift his shape into anything he chose. This mastery is used to summon a Great Eagle, as if Kadon himself fights for you.",
-        icon: "spell-transformation-of-kadon",
+        ref: "unnaturalHealing",
+        name: "Unnatural Healing",
+        description: "Something strange - something no scholar really wishes to discover - governs who dies and who lives in the warlike northern wastes.",
+        icon: "campaign-replenishment",
+        ranks: [{ effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" }] }]
+    },
+    {
+        ref: "fuelledByWar",
+        name: "Fuelled by War",
+        description: "War and glory before the Gods are the determining elements in every decision made; there is nothing else worth living - or dying - for.",
+        icon: "campaign-military-spending",
         ranks: [
-            { effects: [
-                { icon: "spell-transformation-of-kadon", description: "Spell: \"Transformation of Kadon\"" },
-                { icon: "magic-character", description: "Winds of Magic cost: -6 for \"Transformation of Kadon\"" }
-            ] }
-        ],
-        spell: {
-            description: "Spell",
-            rarity: "rare",
-            cooldown: "45",
-            cost: [8],
-            uses: 2,
-            attributes: {
-                type: "Augment",
-                target: [
-                    { text: "Self, Ground" },
-                    { text: "60m", uptick: "range" }
-                ],
-                cannotUseIf: "Climbing",
-                cannotTargetIf: "Climbing or manning equipment or on a platform",
-                effects: [
-                    { text: "Summons a Great Eagle", uptick:"up-green", color: "green" },
-                    { text: "Powerful unit ideal for combat", uptick: "up-green", color: "green" },
-                    { text: "Summoned units degrade over time", uptick: "down-red", color: "red" },
-                    { text: "Spawned unit fights in this battle only", uptick: "down-red", color: "red" }
-                ]
-            }
-        }
+            { effects: [{ icon: "coin", description: "Upkeep: -3% for all units", ps: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -8% for all units", ps: "Lord's army" }] },
+            { effects: [{ icon: "coin", description: "Upkeep: -15% for all units", ps: "Lord's army" }] }
+        ]
+    },
+    {
+        ref: "spawnOfChaos",
+        name: "Spawn of Chaos",
+        description: "The tendrils (and tentacles!) of the Northern Gods reach down from the poles and far across the world, twisting and corrupting all they touch.",
+        icon: "campaign-experience",
+        ranks: [
+            { effects: [{ icon: "experience", description: "Unit experience gain per turn: +150", ps: "Lord's army" }] }
+        ]
     },
     // already in db
 
@@ -845,6 +856,27 @@ exports.skills = [
     // already in db
 
     // already in db
+    {
+        ref: "devastatingCharge",
+        name: "Devastating Charge",
+        description: "Some creatures charge home with such fury that the very ground shakes beneath their feet.",
+        icon: "character-charge",
+        ranks: [
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +15" }] },
+            { effects: [{ icon: "charge-character", description: "Charge bonus: +30" }] }
+        ]
+    },
+    {
+        ref: "serveOrDie",
+        name: "Serve Or Die",
+        description: "You will serve me, wretch, or you will die, there is no other option.",
+        icon: "campaign-military-spending",
+        ranks: [
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -3%", ps: "Lord's army" }] },
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -8%", ps: "Lord's army" }] },
+            { effects: [{ icon: "treasury", description: "Recruitment cost: -15%", ps: "Lord's army" }] }            
+        ]
+    },
     {
         ref: "standYourGround",
         name: "Stand Your Ground!",

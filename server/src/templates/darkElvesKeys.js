@@ -4,22 +4,20 @@ const Schools = require('./magicSchools.js');
 // This is where each lord has his row reference data saved
 
 let darkelves = {
-    dreadlord: {
-        crossbow: [
-            { ...DarkElves.rows.row1.dreadlord },
-            { ...DarkElves.rows.row2.lords },
-            { ...DarkElves.rows.row3.crossbow },
-            { ...DarkElves.rows.row6.crossbow },
-            { ...DarkElves.rows.row9.darkElves }
-        ],
-        shield: [
-            { ...DarkElves.rows.row1.dreadlord },
-            { ...DarkElves.rows.row2.lords },
-            { ...DarkElves.rows.row3.shield },
-            { ...DarkElves.rows.row6.shield },
-            { ...DarkElves.rows.row9.darkElves }
-        ]
-    },
+    dreadlord: [
+        { ...DarkElves.rows.row1.dreadlord },
+        { ...DarkElves.rows.row2.lords },
+        { ...DarkElves.rows.row3.shield },
+        { ...DarkElves.rows.row6.shield },
+        { ...DarkElves.rows.row9.darkElves }
+    ],
+    dreadlordranged: [
+        { ...DarkElves.rows.row1.dreadlord },
+        { ...DarkElves.rows.row2.lords },
+        { ...DarkElves.rows.row3.crossbow },
+        { ...DarkElves.rows.row6.crossbow },
+        { ...DarkElves.rows.row9.darkElves }
+    ],
     beastmaster: [
         { ...DarkElves.rows.row1.beastmaster },
         { ...DarkElves.rows.row2.lords },

@@ -7,7 +7,7 @@ Vue.use(Router)
 
 const routes = [
   { path: '/:race?/:legendary?', name: 'Home', component: Home, props: true },
-  { path: '/calc/:race/:lord/:type?', name: 'Calculator', component: Calculator, props: true }
+  { path: '/calc/:race/:lord/:type?/:test?', name: 'Calculator', component: Calculator, props: true }
 ]
 
 const router = new Router({
