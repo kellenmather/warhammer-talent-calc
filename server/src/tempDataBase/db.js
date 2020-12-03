@@ -1648,4 +1648,298 @@ exports.skills = [
             }
         }
     },
+    // above already in db
+
+    // below already in db from other db
+    {
+        ref: "awakeningOfTheWood",
+        name: "Awakening of the Wood",
+        description: "Trees live for thousands of years and have very long memories. When called to fight, cenuries of pent-up wrath are unleashed.",
+        icon: "spell-awakening-of-the-wood",
+        ranks: [
+            { effects: [
+                { icon: "spell-awakening-of-the-wood", description: "Spell: \"Awakening of the Wood\"" },
+                { icon: "spell-awakening-of-the-wood", description: "Cooldown: -30% to \"Awakening of the Wood\"" }
+            ] },
+            { effects: [
+                { icon: "spell-awakening-of-the-wood", description: "Spell: \"Awakening of the Wood\"" },
+                { icon: "spell-awakening-of-the-wood", description: "Cooldown: -50% to \"Awakening of the Wood\"" },
+                { icon: "spell-awakening-of-the-wood", description: "Winds of Magic cost: -1 for \"Awakening of the Wood\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "common",
+            cost: [6, 5],
+            cooldown: [21, 15],
+            attributes: {
+                type: "Explosion",
+                duration: "12 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotUseIf: "Climbing",
+                cannotTargetIf: "Flying",
+                effects: [
+                    { text: "Causes minor", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Large explosion area", uptick: "up-green", color: "green" },
+                    { text: "Weak against armour", uptick: "down-red", color: "red" },
+                    { text: "-48%", icon: "movement-character", postText: "Speed", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "lifeBloom",
+        name: "Life Bloom",
+        description: "Even the simplest of spells can bring forth the full bloom of renewal, reinvigorating and healing the broken and bleeding.",
+        icon: "spell-life-bloom",
+        ranks: [
+            { effects: [
+                { icon: "spell-life-bloom", description: "Passive ability: \"Life Bloom\"" }
+            ] }
+        ],
+        spell: {
+            description: "Lore attribute",
+            rarity: "common",
+            attributes: {
+                type: "Regeneration (Area)",
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                activeIf: "Casting",
+                effectRange: "Map-wide",
+                effects: [
+                    { text: "Triggers when casting spell", uptick: "up-green", color: "green" },
+                    { text: "Restores up to", icon: "hp", postText: "40 Hit Points", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "earthBlood",
+        name: "Earth Blood",
+        description: "Waves of pure High Magic infuse the target, radiating within the body, returning vigour and life.",
+        icon: "spell-earth-blood",
+        ranks: [
+            { effects: [
+                { icon: "spell-earth-blood", description: "Spell: \"Earth Blood\"" },
+                { icon: "spell-earth-blood", description: "Overcast spell: \"Earth Blood Upgraded\"" },
+                { icon: "spell-earth-blood", description: "Cooldown: -30% to \"Earth Blood\"" }
+            ] },
+            { effects: [
+                { icon: "spell-earth-blood", description: "Overcast spell: \"Earth Blood Upgraded\"" },
+                { icon: "spell-earth-blood", description: "Cooldown: -50% to \"Earth Blood\"" },
+                { icon: "spell-earth-blood", description: "Winds of Magic cost: -2 for \"Earth Blood\"" },
+                { icon: "spell-earth-blood", description: "Winds of Magic cost: -3 for \"Earth Blood Upgraded\"" },
+                { icon: "spell-earth-blood", description: "Miscast base chance: -15% for \"Earth Blood Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "common",
+            cost: [11, 8],
+            cooldown: "30",
+            attributes: {
+                type: [
+                    { text: "Regeneration (Area)" },
+                    { text: "Instantly affects targets in area" },
+                ],
+                target: [
+                    { text: "Self, Ground, Ally" },
+                    { text: "Affects allies in range (max: 4)" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotUseIf: "Hit point replenishment cap reached",
+                effectRange: "30m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
+                    { text: "Restores up to", icon: "hp", postText: "672 Hit Points", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "fleshToStone",
+        name: "Flesh to Stone",
+        description: "This spell temporarily transforms allies' mortal flesh into unbreakable rock, increasing tenfold their resistance to attack.",
+        icon: "spell-flesh-to-stone",
+        ranks: [
+            { effects: [
+                { icon: "spell-flesh-to-stone", description: "Spell: \"Flesh to Stone\"" },
+                { icon: "spell-flesh-to-stone", description: "Overcast spell: \"Flesh to Stone Upgraded\"" },
+                { icon: "spell-flesh-to-stone", description: "Cooldown: -30% to \"Flesh to Stone\"" }
+            ] },
+            { effects: [
+                { icon: "spell-flesh-to-stone", description: "Overcast spell: \"Flesh to Stone Upgraded\"" },
+                { icon: "spell-flesh-to-stone", description: "Cooldown: -50% to \"Flesh to Stone\"" },
+                { icon: "spell-flesh-to-stone", description: "Winds of Magic cost: -1 for \"Flesh to Stone\"" },
+                { icon: "spell-flesh-to-stone", description: "Winds of Magic cost: -1 for \"Flesh to Stone Upgraded\"" },
+                { icon: "spell-flesh-to-stone", description: "Miscast base chance: -15% for \"Flesh to Stone Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "uncommon",
+            cost: [10, 9],
+            cooldown: "43",
+            attributes: {
+                type: "Augment",
+                duration: "88 seconds",
+                target: [
+                    { text: "Self, Ally" },
+                    { text: "200m", uptick: "range" }
+                ],
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
+                    { text: "+60", icon: "armor-character", postText: "Armour", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "shieldOfThorns",
+        name: "Shield of Thorns",
+        description: "Prickly gorse bursts from the ground around the caster's allies, protecting them from attack like a spiky, living shield.",
+        icon: "spell-shield-of-thorns",
+        ranks: [
+            { effects: [
+                { icon: "spell-shield-of-thorns", description: "Spell: \"Shield of Thorns\"" },
+                { icon: "spell-shield-of-thorns", description: "Overcast spell: \"Shield of Thorns Upgraded\"" },
+                { icon: "spell-shield-of-thorns", description: "Cooldown: -30% to \"Shield of Thorns\"" }
+            ] },
+            { effects: [
+                { icon: "spell-shield-of-thorns", description: "Overcast spell: \"Shield of Thorns Upgraded\"" },
+                { icon: "spell-shield-of-thorns", description: "Cooldown: -50% to \"Shield of Thorns\"" },
+                { icon: "spell-shield-of-thorns", description: "Winds of Magic cost: -2 for \"Shield of Thorns\"" },
+                { icon: "spell-shield-of-thorns", description: "Winds of Magic cost: -3 for \"Shield of Thorns Upgraded\"" },
+                { icon: "spell-shield-of-thorns", description: "Miscast base chance: -15% for \"Shield of Thorns Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "uncommon",
+            cost: [12, 10],
+            cooldown: "44",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Instantly affects targets in area" },
+                ],
+                duration: "22 seconds",
+                target: [
+                    { text: "Self, Ground, Ally" },
+                    { text: "200m", uptick: "range" }
+                ],
+                effectRange: "40m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Good against AP damage", uptick: "up-green", color: "green" },
+                    { text: "Greater effect on", icon: "damage", postText: "melee damage", uptick: "up-blue", color: "blue" },
+                    { text: "+60%", icon: "icon-damage-base", postText: "Hit Points", color: "green" },
+                    { text: "+22%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "regrowth",
+        name: "Regrowth",
+        description: "By speaking Druthandor's name the Wizard is able to heal allies' injuries much faster than by natural means.",
+        icon: "spell-regrowth",
+        ranks: [
+            { effects: [
+                { icon: "spell-regrowth", description: "Spell: \"Regrowth\"" },
+                { icon: "spell-regrowth", description: "Overcast spell: \"Regrowth Upgraded\"" },
+                { icon: "spell-regrowth", description: "Cooldown: -30% to \"Regrowth\"" }
+            ] },
+            { effects: [
+                { icon: "spell-regrowth", description: "Overcast spell: \"Regrowth Upgraded\"" },
+                { icon: "spell-regrowth", description: "Cooldown: -50% to \"Regrowth\"" },
+                { icon: "spell-regrowth", description: "Winds of Magic cost: -2 for \"Regrowth\"" },
+                { icon: "spell-regrowth", description: "Winds of Magic cost: -3 for \"Regrowth Upgraded\"" },
+                { icon: "spell-regrowth", description: "Miscast base chance: -15% for \"Regrowth Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "rare",
+            cost: [17, 14],
+            cooldown: "48",
+            attributes: {
+                type: "Regeneration",
+                duration: "29 seconds",
+                target: [
+                    { text: "Self, Ally" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotTargetIf: "Hit point replenishment cap reached",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Greater effect on", icon: "hp", postText: "replenishment", uptick: "up-blue", color: "blue" },
+                    { text: "Restores up to", icon: "hp", postText: "2088 Hit Points", uptick: "up-green", color: "green" },
+                    { text: "+100%", icon: "fatigue", postText: "Vigour", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theDwellersBelow",
+        name: "The Dwellers Below",
+        description: "This spell causes gnarled, fibrous hands to emerge from beneath the ground, dragging the foe to a claustrophobic, suffocating end.",
+        icon: "spell-the-dwellers-below",
+        ranks: [
+            { effects: [
+                { icon: "spell-the-dwellers-below", description: "Spell: \"The Dwellers Below\"" },
+                { icon: "spell-the-dwellers-below", description: "Overcast spell: \"The Dwellers Below Upgraded\"" },
+                { icon: "spell-the-dwellers-below", description: "Cooldown: -30% to \"The Dwellers Below\"" }
+            ] },
+            { effects: [
+                { icon: "spell-the-dwellers-below", description: "Overcast spell: \"The Dwellers Below Upgraded\"" },
+                { icon: "spell-the-dwellers-below", description: "Cooldown: -50% to \"The Dwellers Below\"" },
+                { icon: "spell-the-dwellers-below", description: "Winds of Magic cost: -3 for \"The Dwellers Below\"" },
+                { icon: "spell-the-dwellers-below", description: "Winds of Magic cost: -3 for \"The Dwellers Below Upgraded\"" },
+                { icon: "spell-the-dwellers-below", description: "Miscast base chance: -15% for \"The Dwellers Below Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "rare",
+            cost: [21, 18],
+            cooldown: "45",
+            attributes: {
+                type: "Direct Damage",
+                duration: "15 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotTargetIf: "Flying, On a wall",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Greater effect on", icon: "character-movement", postText: "speed", uptick: "up-blue", color: "blue" },
+                    { text: "Causes severe damage to combatants", uptick: "up-green", color: "green" },
+                    { text: "Huge explosion area", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Dwellers Below (2 seconds)", uptick: "down-red", color: "red" },
+                    { text: "-48%", icon: "character-movement", postText: "Speed", color: "red" }
+                ]
+            }
+        }
+    },
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
 ]

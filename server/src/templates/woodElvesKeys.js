@@ -29,7 +29,7 @@ let woodElves = {
         { ...WoodElves.rows.row9.woodElves }
     ],
     treeman: [
-        { ...WoodElves.rows.row1.durthu },
+        { ...WoodElves.rows.row1.treeman },
         { ...Schools.magic.treeman },
         { ...WoodElves.rows.row3.woodElves },
         { ...WoodElves.rows.row5.woodElves },
