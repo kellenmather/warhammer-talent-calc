@@ -5,7 +5,7 @@
                 <div class="left-nav action-items">
                     <a @click="$router.push('/' + race + legendary )" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
                     <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
-                    <!-- <a @click="getURL()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'save')"></a> -->
+                    <a @click="getURL()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'save')"></a>
                     <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
                 <div class="middle-nav lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
@@ -43,7 +43,7 @@ export default {
     components: {
         CalcRow
     },
-    props: ['race', 'lord', 'type', 'test'],
+    props: ['race', 'lord', 'type', 'seed'],
     data: function () {
         return {
             rows: {
@@ -144,32 +144,38 @@ export default {
             this.calcState = JSON.parse(JSON.stringify(this.saveState));
         },
         getURL() {
-            let digitPair = '';
+            let triDigit = '';
             let digitString = '';
             let urlString = '';
-            let pair = false;
+            let i = 0;
             for (const row in this.calcState) {
                 let currentRow = this.calcState[row]
                 for (const skill in currentRow) {
                     if (currentRow[skill].value >= 0) {
-                        digitPair += currentRow[skill].value;
+                        i++;
+                        triDigit += currentRow[skill].value;
                         digitString += currentRow[skill].value;
-                        if (pair) {
-                            urlString += UrlKey.keys[digitPair];
-                            digitPair = '';
+                        if (i % 3 === 0) {
+                            urlString += UrlKey.keys[triDigit];
+                            triDigit = '';
                         }
-                        pair = !pair;
                     }
                 }
             }
-            if (digitPair !== '') {
-                digitPair += 0;
-                urlString += UrlKey.keys[digitPair];
-                digitPair = '';
+            if (triDigit !== '') {
+                console.log('tri didgit here: ', triDigit)
+                if (triDigit.length === 1) {
+                    triDigit += 0;
+                    triDigit += 0;
+                }
+                if (triDigit.length === 2) triDigit += 0
+                console.log('tri didget here after chagne: ', triDigit)
+                urlString += UrlKey.keys[triDigit];
+                triDigit = '';
             }
-            console.log('www.warhammercalc.com/calc/' + this.race + '/' + this.lord + '/qoo/' + urlString);
-            // need to get this to copy to computer for pasting
-            // or popup that has text you copy
+            console.log('www.warhammercalc.com/calc/' + this.race + '/' + this.lord + '/' + this.type + '/' + urlString);
+            // // need to get this to copy to computer for pasting
+            // // or popup that has text you copy
         },
         changeStyle() {
             this.styleGuide = (this.styleGuide === 'wh2') ? 'wh1' : 'wh2';
@@ -225,10 +231,10 @@ export default {
                 if (Math.floor(Math.random()*10) === 1) this.secret = true 
             }
         },
-        urlCalcState() {
-            if(this.test) {
+        urlSetCalcState() {
+            if(this.seed) {
                 let intString = '';
-                let alphaArray = this.test.split('');
+                let alphaArray = this.seed.split('');
                 for (let i = 0; i < alphaArray.length; i++) {
                     let letter = alphaArray[i];
                     intString += UrlKey.values[letter];
@@ -267,7 +273,7 @@ export default {
                     rowName = 'row' +  row[i].row
                     this.rows[rowName] = row[i];
                 }
-                this.urlCalcState();
+                this.urlSetCalcState();
             })
 
         // set wh asset style based on race
