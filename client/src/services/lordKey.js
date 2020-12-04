@@ -32,7 +32,9 @@ exports.lords = {
     ],
     'woodelves': [
         { name: 'Ancient Treeman', type: 'treeman' },
-        { name: 'Glade Lord', type: 'glade' }
+        { name: 'Glade Lord', type: 'glade' },
+        { name: 'Spellweaver', type: 'spellweaver', school: ['life', 'highMagic', 'beasts', 'shadow', 'darkMagic' ] },
+        { name: 'Malevolent Ancient Treeman', type: 'malevolent', school: ['life', 'beasts', 'shadow' ] }
     ],
     'norsca': [
         { name: 'Marauder Chieftain', type: 'marauder' }
@@ -84,7 +86,9 @@ exports.legendary = {
     ],
     'woodelves': [
         { name: 'Orion', type: 'orion', legendary: true },
-        { name: 'Durthu', type: 'durthu', legendary: true }
+        { name: 'Durthu', type: 'durthu', legendary: true },
+        { name: 'Sisters of Twilight', type: 'twilight', legendary: true },
+        { name: 'Drycha', type: 'drycha', legendary: true }
     ],
     'norsca': [
         { name: 'Wulfrik the Wanderer', type: 'wulfrik', legendary: true },

@@ -16,15 +16,24 @@ exports.rows = {
                     blockContent: ['spearOfKurnous']
                 },
                 {
-                    blockContent: ['asuryansCommand']
-                },
-                {
                     restrictionLevel: 10,
                     blockContent: ['rainOfSpines']
                 },
                 {
                     restrictionLevel: 10,
                     blockContent: ['speedOfTheHunter']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['howlOfTheForest']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['sightBeyondSight']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['possessedByTheTricksterGod']
                 }
             ]
         },
@@ -34,10 +43,6 @@ exports.rows = {
                 {
                     quest: 8,
                     blockContent: ['swordOfDaith']
-                },
-                {
-                    restrictionLevel: 5,
-                    blockContent: ['rageOfKurnous']
                 },
                 {
                     restrictionLevel: 5,
@@ -54,6 +59,75 @@ exports.rows = {
                 {
                     restrictionLevel: 10,
                     blockContent: ['speedOfTheHunter']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['howlOfTheForest']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['sightBeyondSight']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['possessedByTheTricksterGod']
+                }
+            ]
+        },
+        twilight: {
+            row: 1,
+            content: [
+                {
+                    quest: 12,
+                    blockContent: ['ceithinHar']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['challengeToDaith']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['rainOfSpines']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['speedOfTheHunter']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['howlOfTheForest']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['sightBeyondSight']
+                },
+                {
+                    restrictionLevel: 6,
+                    blockContent: ['possessedByTheTricksterGod']
+                }
+            ]
+        },
+        drycha: {
+            row: 1,
+            content: [
+                {
+                    quest: 5,
+                    blockContent: ['fangOfTaalroth']
+                },
+                {
+                    restrictionLevel: 5,
+                    blockContent: ['theSkeweringBranch']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['skinOfTheWoods']
+                },
+                {
+                    blockContent: ['darkHeart']
+                },
+                {
+                    restrictionLevel: 14,
+                    blockContent: ['scentOfBlood']
                 }
             ]
         },
@@ -63,6 +137,10 @@ exports.rows = {
                 {
                     restrictionLevel: 4,
                     blockContent: ['elvenSteedWoodElves']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['greatStag']
                 },
                 {
                     restrictionLevel: 12,
@@ -111,22 +189,161 @@ exports.rows = {
                 }
             ]
         },
+        spellweaver: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['elvenSteedWoodElves']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['unicorn']
+                },
+                {
+                    restrictionLevel: 16,
+                    blockContent: ['greatEagleWoodElves']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['speedOfTheHunter']
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['rainOfSpines']
+                },
+                {
+                    restrictionLevel: 9,
+                    blockContent: ['wardOfIshaWoodElf']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['immortality']
+                }
+            ]
+        },
+        malevolentshadow: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 5,
+                    blockContent: ['theSkeweringBranch']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['skinOfTheWoods']
+                },
+                {
+                    blockContent: ['darkHeart']
+                },
+                {
+                    restrictionLevel: 14,
+                    blockContent: ['insidiousGlamour']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['immortality']
+                }
+            ]
+        },
+        malevolentbeasts: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 5,
+                    blockContent: ['theSkeweringBranch']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['skinOfTheWoods']
+                },
+                {
+                    blockContent: ['darkHeart']
+                },
+                {
+                    restrictionLevel: 14,
+                    blockContent: ['scentOfBlood']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['immortality']
+                }
+            ]
+        },
+        malevolentlife: {
+            row: 1,
+            content: [
+                {
+                    restrictionLevel: 5,
+                    blockContent: ['theSkeweringBranch']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['skinOfTheWoods']
+                },
+                {
+                    blockContent: ['darkHeart']
+                },
+                {
+                    restrictionLevel: 14,
+                    blockContent: ['verdantGrowth']
+                },
+                {
+                    restrictionLevel: 20,
+                    blockContent: ['immortality']
+                }
+            ]
+        },
     },
     row2: {
         orion: {
             row: 2,
             content: [
                 {
-                    quest: 1,
-                    blockContent: ['hawksTalon'],
+                    restrictionLevel: 12,
+                    blockContent: ['asuryansCommand'],
                 },
                 {
-                    restrictionChoice: 'hawksTalon',
-                    blockContent: ['fleetfinger', 'piercingShots', 'bottomlessQuiver', 'expeditiousEndeavour'],
+                    restrictionChoice: 'asuryansCommand',
+                    blockContent: ['bountyOfKurnous', 'theHuntersGather', 'eyesOfTheForest', 'partTheBoughs'],
                 },
                 {
-                    restrictionCount: 5,
-                    blockContent: ['preyOfAnathRaema']
+                    restrictionCount: 2,
+                    blockContent: ['neverendingHunt']
+                }
+            ]
+        },
+        twilight: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['inseverable'],
+                },
+                {
+                    restrictionChoice: 'inseverable',
+                    blockContent: ['theQueensEmissaries', 'naestrasVigilance', 'arahansReckoning', 'mastersOfTheAeries'],
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['otherworldlyOfSpirit']
+                }
+            ]
+        },
+        drycha: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['naturesVengeance'],
+                },
+                {
+                    restrictionChoice: 'naturesVengeance',
+                    blockContent: ['rootsOfWoe', 'indoctrinator', 'shiftingWoods', 'theNaturalOrder'],
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['mantraOfTheFallen']
                 }
             ]
         },
@@ -145,6 +362,39 @@ exports.rows = {
                     blockContent: ['preyOfAnathRaema']
                 }
             ]
+        },
+        spellweaver: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['weaverOfTheWinds'],
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['loecsBlessing'],
+                },
+                {
+                    restrictionLevel: 10,
+                    blockContent: ['forestsFury']
+                }
+            ]
+        },
+        woodElves: {
+            row: 2,
+            content: [
+                {
+                    blockContent: ['foeSeeker'],
+                },
+                {
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['enduranceOfTheOak', 'impenetrableBark', 'temperedRigour', 'violentDelights'],
+                },
+                {
+                    restrictionCount: 5,
+                    blockContent: ['deadlyOnslaught']
+                }
+            ]
         }
     },
     row3: {
@@ -153,15 +403,48 @@ exports.rows = {
             content: [
                 {
                     quest: 1,
-                    blockContent: ['houndsOfOrion'],
+                    blockContent: ['hawksTalon'],
                 },
                 {
-                    restrictionChoice: 'houndsOfOrion',
-                    blockContent: ['enduranceOfTheOak', 'impenetrableBark', 'temperedRigour', 'violentDelights'],
+                    restrictionChoice: 'hawksTalon',
+                    blockContent: ['fleetfinger', 'piercingShots', 'bottomlessQuiver', 'expeditiousEndeavour'],
                 },
                 {
                     restrictionCount: 5,
-                    blockContent: ['deadlyOnslaught']
+                    blockContent: ['preyOfAnathRaema']
+                }
+            ]
+        },
+        durthu: {
+            row: 3,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['ancientEnmity'],
+                },
+                {
+                    restrictionChoice: 'ancientEnmity',
+                    blockContent: ['boughwarden', 'wardbark', 'rageOfKurnous', 'oakenHearts'],
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['awakenTheWoods']
+                }
+            ]
+        },
+        twilight: {
+            row: 3,
+            content: [
+                {
+                    blockContent: ['bowAndBlade'],
+                },
+                {
+                    restrictionChoice: 'bowAndBlade',
+                    blockContent: ['enduranceOfTheOak', 'impenetrableBark', 'resilient', 'temperedRigour', 'alwaysReady', 'swiftAndLethal'],
+                },
+                {
+                    restrictionCount: 5,
+                    blockContent: ['preyOfAnathRaema']
                 }
             ]
         },
@@ -182,9 +465,9 @@ exports.rows = {
             ]
         }
     },
-    row5: {
-        woodElves: {
-            row: 5,
+    row4: {
+        malevolent: {
+            row: 4,
             content: [
                 {
                     blockContent: ['callOfTheWoods']
@@ -195,15 +478,89 @@ exports.rows = {
                     blockContent: ['howlOfTheForest']
                 },
                 {
+                    restrictionLevel: 7,
+                    blockContent: ['greaterAspectOfTheOak']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['greaterAspectOfTheBirch']
+                },
+                {
+                    restrictionLevel: 7,
+                    blockContent: ['greaterAspectOfTheWillow']
+                }
+            ]
+        }
+    },
+    row5: {
+        woodElves: {
+            row: 5,
+            content: [
+                {
+                    restrictionLimited: ['danceOfLoec', 'possessedByTheTricksterGod', 'theEyeOfKurnous', 'sightBeyondSight'],
+                    blockContent: ['callOfTheWoods']
+                },
+                {
+                    restrictionLimited: ['danceOfLoec', 'possessedByTheTricksterGod', 'theEyeOfKurnous', 'sightBeyondSight'],
+                    restrictionChoice: 'callOfTheWoods',
+                    restrictionLevel: 6,
+                    blockContent: ['howlOfTheForest']
+                },
+                {
+                    restrictionLimited: ['callOfTheWoods', 'howlOfTheForest', 'danceOfLoec', 'possessedByTheTricksterGod'],
                     blockContent: ['theEyeOfKurnous']
                 },
                 {
+                    restrictionLimited: ['callOfTheWoods', 'howlOfTheForest', 'danceOfLoec', 'possessedByTheTricksterGod'],
                     restrictionChoice: 'theEyeOfKurnous',
                     restrictionLevel: 6,
                     blockContent: ['sightBeyondSight']
                 },
+                {
+                    restrictionLimited: ['callOfTheWoods', 'howlOfTheForest', 'theEyeOfKurnous', 'sightBeyondSight'],
+                    blockContent: ['danceOfLoec']
+                },
+                {
+                    restrictionLimited: ['callOfTheWoods', 'howlOfTheForest', 'theEyeOfKurnous', 'sightBeyondSight'],
+                    restrictionChoice: 'danceOfLoec',
+                    restrictionLevel: 6,
+                    blockContent: ['possessedByTheTricksterGod']
+                },
             ]
-        }
+        },
+        durthu: {
+            row: 5,
+            content: [
+                {
+                    blockContent: ['foeSeeker'],
+                },
+                {
+                    restrictionChoice: 'foeSeeker',
+                    blockContent: ['enduranceOfTheOak', 'impenetrableBark', 'temperedRigour', 'violentDelights'],
+                },
+                {
+                    restrictionCount: 5,
+                    blockContent: ['deadlyOnslaught']
+                }
+            ]
+        },
+        orion: {
+            row: 5,
+            content: [
+                {
+                    quest: 1,
+                    blockContent: ['houndsOfOrion'],
+                },
+                {
+                    restrictionChoice: 'houndsOfOrion',
+                    blockContent: ['enduranceOfTheOak', 'impenetrableBark', 'temperedRigour', 'violentDelights'],
+                },
+                {
+                    restrictionCount: 5,
+                    blockContent: ['deadlyOnslaught']
+                }
+            ]
+        },
     },
     row6: {
         woodElves: {
@@ -248,11 +605,11 @@ exports.rows = {
                 },
                 {
                     restrictionChoice: 'openBranches',
-                    blockContent: ['swiftfingers', 'perenniality', 'homeAmongstTheBoughs']
+                    blockContent: ['lightningStrike', 'swiftfingers', 'perenniality', 'quartermaster']
                 },
                 {
                     restrictionCount: 5,
-                    blockContent: ['lightningStrike']
+                    blockContent: ['homeAmongstTheBoughs']
                 }
             ]
         }

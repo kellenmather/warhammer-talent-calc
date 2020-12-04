@@ -166,13 +166,6 @@ exports.skills = [
         ]
     },
     {
-        ref: "rageOfKurnous",
-        name: "Rage of Kurnous",
-        description: "The forest has a great rage, which is manifest in its warriors' violent deeds in Kurnous' name.",
-        icon: "character-damage",
-        ranks: [{ effects: [{ icon: "damage", description: "Weapon strength: +5% for all units", ps: "all armies factionwide" }] }]
-    },
-    {
         ref: "theSkeweringBranch",
         name: "The Skewering Branch",
         description: "No hide nor armour can stand against the piercing fury of a Dryad or Tree Kin's savage limbs.",
@@ -181,20 +174,6 @@ exports.skills = [
             { icon: "armor-piercing", description: "Armour-piercing weapon damage: +3 for Dryads units", ps: "Lord's army" },
             { icon: "armor-piercing", description: "Armour-piercing weapon damage: +10 for Tree Kin units", ps: "Lord's army" }
         ] }]
-    },
-    {
-        ref: "skinOfTheWoods",
-        name: "Skin of the Woods",
-        description: "Hewn from the same forest that surrounds them, Tree Kin withstand attacks like the forest withstands the fury of the seasons.",
-        icon: "character-ward-save",
-        ranks: [{ effects: [{ icon: "resistance-ward-save", description: "Ward save: 20% for Tree Kin units", ps: "Lord's army" }] }]
-    },
-    {
-        ref: "asuryansCommand",
-        name: "Asuryan's Command",
-        description: "The Creator blesses the Master of the Hunt, ensuring his shots always fly far and true.",
-        icon: "character-ranged-damage",
-        ranks: [{ effects: [{ icon: "ranged-damage", description: "Missile strength: +5%", ps: "all armies factionwide" }] }]
     },
     {
         ref: "rainOfSpines",
@@ -559,44 +538,6 @@ exports.skills = [
         ]
     },
     {
-        ref: "strikingBranches",
-        name: "Striking Branches",
-        description: "Let the enemy feel the fury of nature, embodied in these warriors as they crash through their lines.",
-        icon: "battle-speed",
-        ranks: [
-            { effects: [
-                { icon: "movement", description: "Speed: +6% for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "movement", description: "Speed: +9% for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +6 for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "movement", description: "Speed: +12% for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +12 for Glade Riders, Wild Riders, and Sisters of the Thorn units", ps: "Lord's army" }
-            ] }
-        ]
-    },
-    {
-        ref: "swingingBoughs",
-        name: "Swinging Boughs",
-        description: "The warrior strikes with the strength of a swinging tree limb; few can stand against such strength.",
-        icon: "battle-attack",
-        ranks: [
-            { effects: [
-                { icon: "melee", description: "Melee attack: +4 for Wardancers and Wildwood Ranger units", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "melee", description: "Melee attack: +6 for Wardancers and Wildwood Ranger units", ps: "Lord's army" },
-                { icon: "defense", description: "Melee defense: +4 for Wardancers and Wildwood Ranger units", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "melee", description: "Melee attack: +8 for Wardancers and Wildwood Ranger units", ps: "Lord's army" },
-                { icon: "defense", description: "Melee defense: +8 for Wardancers and Wildwood Ranger units", ps: "Lord's army" }
-            ] }
-        ]
-    },
-    {
         ref: "ancientBark",
         name: "Ancient Bark",
         description: "Centuries upon centuries of existence have given these ancient tree spirits a natural armour, mitigating any physical blows dealth against them.",
@@ -637,19 +578,6 @@ exports.skills = [
         ]
     },
     {
-        ref: "shieldOfTheForest",
-        name: "Shield of the Forest",
-        description: "Armour as hard as the ancient bark of the forest, it repels blows that would rend others asunder.",
-        icon: "battle-defense",
-        ranks: [
-            { effects: [
-                { icon: "resistance-physical", description: "Physical resistance: 15% for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units", rank: 7, ps: "Lord's army" },
-                { icon: "armor", description: "Armour: +12 for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units", rank: 7, ps: "Lord's army" },
-                { icon: "defense", description: "Melee defense: +5 for Eternal Guard, Dryads, Wardancers, and Wildwood Ranger units", rank: 7, ps: "Lord's army" }
-            ] }
-        ]
-    },
-    {
         ref: "naturesQuiver",
         name: "Nature's Quiver",
         description: "What is a ranger without an arrow? Who can be the best without dozens?",
@@ -659,20 +587,6 @@ exports.skills = [
                 { icon: "resistance-missile", description: "Missile resistance: 15% for Glade Guard, Deepwood Scouts, and Waywatchers units", rank: 7, ps: "Lord's army" },
                 { icon: "ammo", description: "Ammunition: +20% for Glade Guard, Deepwood Scouts, and Waywatchers units", rank: 7, ps: "Lord's army" },
                 { icon: "accuracy", description: "Range: +10% for Glade Guard, Deepwood Scouts, and Waywatchers units", rank: 7, ps: "Lord's army" }
-            ] }
-        ]
-    },
-    {
-        ref: "swiftSturdy",
-        name: "Swift & Sturdy",
-        description: "Moving like the wind, whistling past tree ranches, the riders of the forest hunt any who would do harm to the place they call home.",
-        icon: "battle-ranged-damage",
-        ranks: [
-            { effects: [
-                { icon: "defense", description: "Melee defense: +5 for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
-                { icon: "weapon-damage", description: "Weapon strength: +12% for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
-                { icon: "charge", description: "Charge bonus: +12 for Wild Riders, Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
-                { icon: "ranged-damage", description: "Missile strength: +12% for Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
             ] }
         ]
     },
@@ -699,23 +613,6 @@ exports.skills = [
         ]
     },
     {
-        ref: "wondersOfTheForest",
-        name: "Wonders of the Forest",
-        description: "Athel Loren provides for its deserving children, with wondrous boons gifted in recognition of their many endeavours.",
-        icon: "campaign-military-spending",
-        ranks: [
-            { effects: [
-                { icon: "income", description: "Income from post-battle loot: +10%", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "income", description: "Income from post-battle loot: +20%", ps: "Lord's army" }
-            ] },
-            { effects: [
-                { icon: "income", description: "Income from post-battle loot: +30%", ps: "Lord's army" }
-            ] }            
-        ]
-    },
-    {
         ref: "naturesSalve",
         name: "Nature's Salve",
         description: "The Worldroots provide succour for their children, purging the forests of any corrupting infestation.",
@@ -725,67 +622,6 @@ exports.skills = [
             { effects: [{ icon: "religion", description: "Untainted: +2", ps: "local province" }] },
             { effects: [{ icon: "religion", description: "Untainted: +3", ps: "local province" }] }            
 
-        ]
-    },
-    {
-        ref: "obscuringCanopy",
-        name: "Obscuring Canopy",
-        description: "The magics of the woods obscure and connive, able to turn enemy blades away from their targets.",
-        icon: "campaign-agent",
-        ranks: [
-            { effects: [{ icon: "agent", description: "Enemy Hero action success chance: -5%" }] },
-            { effects: [{ icon: "agent", description: "Enemy Hero action success chance: -9%" }] },
-            { effects: [{ icon: "agent", description: "Enemy Hero action success chance: -13%" }] }            
-
-        ]
-    },
-    {
-        ref: "growthOfTheForest",
-        name: "Growth of the Forest",
-        description: "The forest provides for its warriors, rehabilitating and regenerating wounds suffered in its defense.",
-        icon: "campaign-replenishment",
-        ranks: [{ effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +5%", ps: "Lord's army" }] }]
-    },
-    {
-        ref: "openBranches",
-        name: "Open Branches",
-        description: "From all corners of the forest, they come to defend their homes.",
-        icon: "campaign-army",
-        ranks: [{ effects: [{ icon: "army", description: "Global recruitment capacity: +1" }] }]
-    },
-    {
-        ref: "swiftfingers",
-        name: "Swiftfingers",
-        description: "The dead do not want for material possessions, yet the living may yet find value in them...",
-        icon: "campaign-magic",
-        ranks: [
-            { effects: [
-                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +5%" }
-            ] },
-            { effects: [
-                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +10%" },
-            ] },
-            { effects: [
-                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +15%" },
-            ] }
-        ]
-    },
-    {
-        ref: "perenniality",
-        name: "Perenniality",
-        description: "Like the forest itself, the warriors of Athel Loren ebb and flow and regenerate with the passing of time.",
-        icon: "campaign-replenishment",
-        ranks: [{ effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +10%", ps: "Lord's army" }] }]
-    },
-    {
-        ref: "homeAmongstTheBoughs",
-        name: "Home Amongst the Boughs",
-        description: "The forest-dwellers draw from the strength of Kurnous to fight ever harder, and be ever stronger.",
-        icon: "campaign-experience",
-        ranks: [
-            { effects: [{ icon: "experience", description: "Recruit rank: +1 for all units" }] },
-            { effects: [{ icon: "experience", description: "Recruit rank: +2 for all units" }] },
-            { effects: [{ icon: "experience", description: "Recruit rank: +3 for all units" }] }
         ]
     },
     {
@@ -822,6 +658,30 @@ exports.skills = [
             }
         }
     },
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
+    // already in db
+
     // already in db
 
     // already in db
@@ -1648,9 +1508,6 @@ exports.skills = [
             }
         }
     },
-    // above already in db
-
-    // below already in db from other db
     {
         ref: "awakeningOfTheWood",
         name: "Awakening of the Wood",
@@ -1932,6 +1789,297 @@ exports.skills = [
             }
         }
     },
+    {
+        ref: "melkothsMystifyingMiasma",
+        name: "Melkoth's Mystifying Miasma",
+        description: "The caster weaves a confounding fog that numbs and deludes enemies, causing them to stumble and stagger.",
+        icon: "spell-melkoths-mystifying-miasma",
+        ranks: [
+            { effects: [
+                { icon: "spell-melkoths-mystifying-miasma", description: "Overcast spell: \"Melkoth's Mystifying Miasma Upgraded\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Cooldown: -30% to \"Melkoth's Mystifying Miasma\"" }
+            ] },
+            { effects: [
+                { icon: "spell-melkoths-mystifying-miasma", description: "Overcast spell: \"Melkoth's Mystifying Miasma Upgraded\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Cooldown: -50% to \"Melkoth's Mystifying Miasma\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -1 for \"Melkoth's Mystifying Miasma\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -2 for \"Melkoth's Mystifying Miasma Upgraded\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Miscast base chance: -15% for \"Melkoth's Mystifying Miasma Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "common",
+            cost: [8, 6],
+            cooldown: "29",
+            attributes: {
+                type: "Direct Damage",
+                duration: "14 seconds",
+                target: [
+                    { text: "Enemy" },
+                    { text: "300m", uptick: "range" }
+                ],
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended cast range", uptick: "up-blue", color: "blue" },
+                    { text: "Causes damage to combatants", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple combatants", uptick: "up-green", color: "green" },
+                    { text: "Weak vs. a single comatant", uptick: "down-red", color: "red" },
+                    { text: "-24%", icon: "movement-character", postText: "Speed", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "thePenumbralPendulum",
+        name: "The Penumbral Pendulum",
+        description: "A spectral pendulum is summoned by the Wizard. On command, it swings, razor sharp and with lethal speed, through the foe",
+        icon: "spell-the-penumbral-pendulum",
+        ranks: [
+            { effects: [
+                { icon: "spell-the-penumbral-pendulum", description: "Spell: \"The Penumbral Pendulum Upgraded\"" },
+                { icon: "spell-the-penumbral-pendulum", description: "Overcast spell: \"The Penumbral Pendulum Upgraded\"" },
+                { icon: "spell-the-penumbral-pendulum", description: "Cooldown: -30% to \"The Penumbral Pendulum\"" }
+            ] },
+            { effects: [
+                { icon: "spell-the-penumbral-pendulum", description: "Overcast spell: \"The Penumbral Pendulum Upgraded\"" },
+                { icon: "spell-the-penumbral-pendulum", description: "Cooldown: -50% to \"The Penumbral Pendulum\"" },
+                { icon: "spell-the-penumbral-pendulum", description: "Winds of Magic cost: -2 for \"The Penumbral Pendulum\"" },
+                { icon: "spell-the-penumbral-pendulum", description: "Winds of Magic cost: -3 for \"The Penumbral Pendulum Upgraded\"" },
+                { icon: "spell-the-penumbral-pendulum", description: "Miscast base chance: -15% for \"The Penumbral Pendulum Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "common",
+            cost: [18, 15],
+            cooldown: "40",
+            attributes: {
+                type: "Wind",
+                duration: "3 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "200m", uptick: "range" }
+                ],
+                cannotTargetIf: "Flying, On a wall",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Increased", icon: "icon-armor-piercing", postText: "armor-piercing damage", uptick: "up-blue", color: "blue" },
+                    { text: "Causes massive", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Small, forward-moving area of effect", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Weak vs. a single combatant", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "smokeMirrors",
+        name: "Smoke & Mirrors",
+        description: "A conjured shadow is just as obfuscating as a real one - the Shadow Wizard is master or mistress of the \"concealing\" arts.",
+        icon: "spell-smoke-mirrors",
+        ranks: [
+            { effects: [{ icon: "spell-smoke-mirrors", description: "Passive ability: \"Smoke & Mirrors\"" }] }
+        ],
+        spell: {
+            description: "Lore attribute",
+            rarity: "common",
+            attributes: {
+                type: "Augment (Area)",
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                activeIf: "Casting",
+                effectRange: "Map-wide",
+                effects: [
+                    { text: "Smoke & Mirrors (24 seconds)", color: "green" },
+                    { text: "+12%", icon: "movement-character", postText: "Speed", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theEnfeeblingFoe",
+        name: "The Enfeebling Foe",
+        description: "When cast this spell enfeebles enemy minds; they feel the crushing weight of reality bearing down upon them.",
+        icon: "spell-the-enfeebling-foe",
+        ranks: [
+            { effects: [
+                { icon: "spell-the-enfeebling-foe", description: "Spell: \"The Enfeebling Foe Upgraded\"" },
+                { icon: "spell-the-enfeebling-foe", description: "Overcast spell: \"The Enfeebling Foe Upgraded\"" },
+                { icon: "spell-the-enfeebling-foe", description: "Cooldown: -30% to \"The Enfeebling Foe\"" }
+            ] },
+            { effects: [
+                { icon: "spell-the-enfeebling-foe", description: "Overcast spell: \"The Enfeebling Foe Upgraded\"" },
+                { icon: "spell-the-enfeebling-foe", description: "Cooldown: -50% to \"The Enfeebling Foe\"" },
+                { icon: "spell-the-enfeebling-foe", description: "Winds of Magic cost: -1 for \"The Enfeebling Foe\"" },
+                { icon: "spell-the-enfeebling-foe", description: "Winds of Magic cost: -2 for \"The Enfeebling Foe Upgraded\"" },
+                { icon: "spell-the-enfeebling-foe", description: "Miscast base chance: -15% for \"The Enfeebling Foe Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "common",
+            cost: [10, 8],
+            cooldown: "30",
+            attributes: {
+                type: "Hex",
+                duration: "44 seconds",
+                target: [
+                    { text: "Enemy" },
+                    { text: "200m", uptick: "range" }
+                ],
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Extended effect duration", uptick: "up-blue", color: "blue" },
+                    { text: "-24", icon: "defense-character", postText: "Melee Defense", uptick: "down-red", color: "red" },
+                    { text: "-24", icon: "melee-character", postText: "Melee Attack", uptick: "down-red", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theWithering",
+        name: "The Withering",
+        description: "The Wizard destroys their enemies form within, corroding foes' minds with doubt and crisis.",
+        icon: "spell-the-withering",
+        ranks: [
+            { effects: [
+                { icon: "spell-the-withering", description: "Spell: \"The Withering Upgraded\"" },
+                { icon: "spell-the-withering", description: "Overcast spell: \"The Withering Upgraded\"" },
+                { icon: "spell-the-withering", description: "Cooldown: -30% to \"The Withering\"" }
+            ] },
+            { effects: [
+                { icon: "spell-the-withering", description: "Overcast spell: \"The Withering Upgraded\"" },
+                { icon: "spell-the-withering", description: "Cooldown: -50% to \"The Withering\"" },
+                { icon: "spell-the-withering", description: "Winds of Magic cost: -1 for \"The Withering\"" },
+                { icon: "spell-the-withering", description: "Winds of Magic cost: -2 for \"The Withering Upgraded\"" },
+                { icon: "spell-the-withering", description: "Miscast base chance: -15% for \"The Withering Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "uncommon",
+            cost: [14, 12],
+            cooldown: "43",
+            attributes: {
+                type: [
+                    { text: "Hex (Area)"},
+                    { text: "Only acts on target when in area"}
+                ],
+                target: [
+                    { text: "Ground, Enemy" },
+                    { text: "Affects enemies in range" },
+                    { text: "200m", uptick: "range" }
+                ],
+                effectRange: "40m",
+                miscastChance:  {"0": "50", "1": "35"},
+                effects: [
+                    { text: "Added effect area", uptick: "up-blue", color: "blue" },
+                    { text: "-30", icon: "armor-character", postText: "Armor", color: "red" },
+                    { text: "-8", icon: "morale-mallus", postText: "Leadership", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "pitOfShades",
+        name: "Pit of Shades",
+        description: "The spellcaster opens a vortex leading into the Pit. Anything caught within it will be lost forever.",
+        icon: "spell-pit-of-shades",
+        ranks: [
+            { effects: [
+                { icon: "spell-pit-of-shades", description: "Spell: \"Pit of Shades Upgraded\"" },
+                { icon: "spell-pit-of-shades", description: "Overcast spell: \"Pit of Shades Upgraded\"" },
+                { icon: "spell-pit-of-shades", description: "Cooldown: -30% to \"Pit of Shades\"" }
+            ] },
+            { effects: [
+                { icon: "spell-pit-of-shades", description: "Overcast spell: \"Pit of Shades Upgraded\"" },
+                { icon: "spell-pit-of-shades", description: "Cooldown: -50% to \"Pit of Shades\"" },
+                { icon: "spell-pit-of-shades", description: "Winds of Magic cost: -3 for \"Pit of Shades\"" },
+                { icon: "spell-pit-of-shades", description: "Winds of Magic cost: -3 for \"Pit of Shades Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "common",
+            cost: [20, 17],
+            cooldown: "49",
+            attributes: {
+                type: "Vortex",
+                duration: "13 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "200m", uptick: "range" }
+                ],
+                miscastChance: "50%",
+                effects: [
+                    { text: "Increased", icon: "icon-armor-piercing", postText: "armor-piercing damage", uptick: "up-blue", color: "blue" },
+                    { text: "Causes moderate", icon: "icon-magic", postText: "magical damage", uptick: "up-green", color: "green" },
+                    { text: "Can disrupt unit formation", uptick: "up-green", color: "green" },
+                    { text: "Huge, stationary area of effect", uptick: "up-green", color: "green" },
+                    { text: "Strong vs. multiple units", uptick: "up-green", color: "green" },
+                    { text: "Good against armor", uptick: "up-green", color: "green" }                ]
+            }
+        }
+    },
+    {
+        ref: "okkamsMindrazor",
+        name: "Okkam's Mindrazor",
+        description: "The supernatural solution is often the best; weapons materialise before the caster's allies, allowing them to slice through flesh, soul, and consciousness.",
+        icon: "spell-okkams-mindrazor",
+        ranks: [
+            { effects: [
+                { icon: "spell-okkams-mindrazor", description: "Spell: \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Overcast spell: \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Cooldown: -30% to \"Okkam's Mindrazor\"" }
+            ] },
+            { effects: [
+                { icon: "spell-okkams-mindrazor", description: "Overcast spell: \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Cooldown: -50% to \"Okkam's Mindrazor\"" },
+                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -2 for \"Okkam's Mindrazor\"" },
+                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -3 for \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "spell-okkams-mindrazor", description: "Miscast base chance: -15% for \"Okkam's Mindrazor Upgraded\"" }
+            ] }
+        ],
+        spell: {
+            description: "Spell",
+            rarity: "common",
+            cost: [16, 13],
+            cooldown: "46",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)"},
+                    { text: "Only acts on target when in area"}
+                ],
+                target: [
+                    { text: "Self, Ground, Ally" },
+                    { text: "Affects allies in range" },
+                    { text: "200m", uptick: "range" }
+                ],
+                effectRange: "40m",
+                miscastChance:  {"0": "50", "1": "35"},
+                imbues: [{ postText: "Magical Damage", icon: "icon-magic" }],
+                effects: [
+                    { text: "Added effect area", uptick: "up-blue", color: "blue" },
+                    { text: "+50%", icon: "icon-damage-base", postText: "Base Damage", color: "green" },
+                    { text: "+50%", icon: "icon-armor-piercing", postText: "Armor-Piercing Weapon Damage", color: "green" }
+                ]
+            }
+        }
+    },
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+    
     // add new skills from twilight dlc below
 
     // add new skills from twilight dlc below
@@ -1942,4 +2090,1003 @@ exports.skills = [
 
     // add new skills from twilight dlc below
 
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+
+    // add new skills from twilight dlc below
+    {
+        ref: "fangOfTaalroth",
+        name: "Fang of Taalroth",
+        description: "Many in the realms of men believe this powerful dampener of magic was once carried by their God of Nature, Taal himself.",
+        icon: "item-enchanted",
+        quest: true,
+        ranks: [
+            { effects: [
+                { icon: "resistance-magic", description: "Attacks cause the \"Dampened\" effect, reducing Magic Resistance" },
+                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -1 for \"Okkam's Mindrazor\"" },
+                { icon: "spell-okkams-mindrazor", description: "Winds of Magic cost: -2 for \"Okkam's Mindrazor Upgraded\"" },
+                { icon: "ability-fang-of-taalroth", description: "Passive ability: \"Fang of Taalroth\"" },
+                { icon: "character", description: "Enables completion of the quest chain to free the imprisoned Legendary Hero Coeddil", ps: "Lord's army" }
+            ] }
+        ],
+        spell: {
+            description: "Item",
+            rarity: "legendary",
+            cooldown: "120",
+            attributes: {
+                type: "Hex of the Winds",
+                duration: "Constant",
+                target: [
+                    { text: "Around self" },
+                    { text: "Affects enemies in range" }
+                ],
+                activeIf: "Casting",
+                effectRange: "Map-wide",
+                effects: [
+                    { text: "Fang of Taalroth (15 seconds)", color: "red" },
+                    { text: "+15", icon: "icon-cooldown-2", postText: "Ability Recharge (seconds)", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "ceithinHar",
+        name: "Ceithin-Har",
+        description: "Forest Dragons are not known for their recklessness, but the venturesome Ceithin-Har is a true reflection of the Sisters' combative aspect.",
+        icon: "forest-dragon",
+        quest: true,
+        ranks: [
+            { effects: [] }
+        ]
+    },
+    {
+        ref: "danceOfLoec",
+        name: "Dance of Loec",
+        description: "This ritualistic war dance requires neither rhythm nor order, enabling evasion of the enemy's clumsy attacks, and lethal counterattacks.",
+        icon: "ability-dance-of-loec",
+        ranks: [
+            { effects: [
+                { icon: "ability-dance-of-loec", description: "Passive ability: \"Possessed by the Trickster God\"" }
+            ] }
+        ],
+        spell: {
+            description: "Hero ability",
+            rarity: "common",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                effectRange: "30m",
+                effects: [
+                    { text: "+5", icon: "character-defense", postText: "Melee Defense", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "possessedByTheTricksterGod",
+        name: "Possessed by the Trickster God",
+        description: "Once consumed by Loec's aspect, one can instinctively evade attack through trickery, mimicking his deception of the Dark Gods.",
+        icon: "ability-possessed-by-the-trickster-god",
+        ranks: [
+            { effects: [
+                { icon: "ability-possessed-by-the-trickster-god", description: "Passive ability: \"Possessed by the Trickster God\"" }
+            ] }
+        ],
+        spell: {
+            description: "Hero ability",
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Self" },
+                    { text: "Affects allies in range" }
+                ],
+                effectRange: "40m",
+                effects: [
+                    { text: "+10", icon: "character-defense", postText: "Melee Defense", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "greatStag",
+        name: "Great Stag",
+        description: "With its magnificent frame and the great plumes of steam of its snorting breath, the Great Stag instils unflinching valour into those who ride it.",
+        icon: "great-stag",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Great Stag" }] }
+        ]
+    },
+    {
+        ref: "asuryansCommand",
+        name: "Asuryan's Command",
+        description: "The Creator blesses the Master of the Hunt, ensuring his shots always fly far and true.",
+        icon: "character-ranged-damage",
+        ranks: [{ effects: [
+            { icon: "ammo-character", description: "\"Hunter's Javelins\" ammunition (anti-large)" },
+            { icon: "ranged-damage-character", description: "Missile strength: +15%" }
+        ] }]
+    },
+    {
+        ref: "bountyOfKurnous",
+        name: "Bounty of Kurnous",
+        description: "Orion is never left wanting when he reaches for his quiver.",
+        icon: "character-ammo",
+        ranks: [{ effects: [
+            { icon: "ammo-character", description: "Ammunition: +100%" },
+            { icon: "ability-hawks-talon", description: "Ability number of uses: +2 for \"Hawk's Talon\"" }
+        ] }]
+    },
+    {
+        ref: "theHuntersGather",
+        name: "The Hunters Gather",
+        description: "All Asrai heed Orion's horn - even before it is sounded, it exists as a portent that the Wild Hunt is imminent.",
+        icon: "character-construction",
+        ranks: [{ effects: [
+            { icon: "construction", description: "Construction cost: -33% for Military Recruitment buildings", ps: "all provinces" },
+            { icon: "construction", description: "Construction time: -33% for Military Recruitment buildings", ps: "all provinces" },
+            { icon: "army", description: "Local recruitment capacity: +2", ps: "local province" }
+        ] }]
+    },
+    {
+        ref: "eyesOfTheForest",
+        name: "Eyes of the Forest",
+        description: "Those unfortunate enough to find themselves in the hunter's sights will not escape their attentions, for it is already too late.",
+        icon: "character-ambush",
+        ranks: [{ effects: [
+            { icon: "stalk", description: "Attribute: Stalk during ambushes", ps: "Lord's army" },
+            { icon: "agent", description: "Campaign line of sight: +25%" },
+            { icon: "ambush", description: "Ambush success chance: +15%", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "partTheBoughs",
+        name: "Part the Boughs",
+        description: "Foliage and shrubbery oft suffice to hide from the mundane, but the King in the Woods is anything but.",
+        icon: "lying-in-wait",
+        ranks: [
+            { effects: [
+                { icon: "tree-spotting", description: "This character becomes able to see enemies hiding in forest regardless of distance" }
+            ] }
+        ],
+        spell: {
+            description: "Lord ability",
+            rarity: "epic",
+            attributes: {
+                type: "Augment",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "+5000 Forest Spotting", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "neverendingHunt",
+        name: "Neverending Hunt",
+        description: "\"The rites of the summer gave you your purpose. Our songs filled you with the blood of Kurnous. He lives, through you. He hunts, through you...\"",
+        icon: "character-cooldown",
+        ranks: [{ effects: [
+            { icon: "magic-cooldown", description: "Cooldown: -50% to \"Hawk's Talon\", \"Prey of Anath Raema\" and \"Hounds of Orion\"" }
+        ] }]
+    },
+    {
+        ref: "strikingBranches",
+        name: "Striking Branches",
+        description: "Let the enemy feel the fury of nature, embodied in these warriors as they crash through their lines.",
+        icon: "battle-speed",
+        ranks: [
+            { effects: [
+                { icon: "movement", description: "Speed: +6% for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "movement", description: "Speed: +9% for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +6 for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "movement", description: "Speed: +12% for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +12 for Glade Riders, Wild Riders, Great Stag Knights, Zoats and Sisters of the Thorn units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "swingingBoughs",
+        name: "Swinging Boughs",
+        description: "The warrior strikes with the strength of a swinging tree limb; few can stand against such strength.",
+        icon: "battle-attack",
+        ranks: [
+            { effects: [
+                { icon: "melee", description: "Melee attack: +4 for Wardancers, Bladesingers and Wildwood Ranger units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "melee", description: "Melee attack: +6 for Wardancers, Bladesingers and Wildwood Ranger units", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +4 for Wardancers, Bladesingers and Wildwood Ranger units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "melee", description: "Melee attack: +8 for Wardancers, Bladesingers and Wildwood Ranger units", ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +8 for Wardancers, Bladesingers and Wildwood Ranger units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "shieldOfTheForest",
+        name: "Shield of the Forest",
+        description: "Armour as hard as the ancient bark of the forest, it repels blows that would rend others asunder.",
+        icon: "battle-defense",
+        ranks: [
+            { effects: [
+                { icon: "resistance-physical", description: "Physical resistance: 15% for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Ranger units", rank: 7, ps: "Lord's army" },
+                { icon: "armor", description: "Armour: +12 for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Ranger units", rank: 7, ps: "Lord's army" },
+                { icon: "defense", description: "Melee defense: +5 for Eternal Guard, Dryads, Wardancers, Bladesingers and Wildwood Ranger units", rank: 7, ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "swiftSturdy",
+        name: "Swift & Sturdy",
+        description: "Moving like the wind, whistling past tree ranches, the riders of the forest hunt any who would do harm to the place they call home.",
+        icon: "battle-ranged-damage",
+        ranks: [
+            { effects: [
+                { icon: "defense", description: "Melee defense: +5 for Wild Riders, Glade Riders, Great Stag Knights, Zoats, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
+                { icon: "weapon-damage", description: "Weapon strength: +12% for Wild Riders, Glade Riders, Great Stag Knights, Zoats, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +12 for Wild Riders, Glade Riders, Great Stag Knights, Zoats, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
+                { icon: "ranged-damage", description: "Missile strength: +12% for Glade Riders, Sisters of the Thorn, and Hawk Riders units", rank: 7, ps: "Lord's army" },
+            ] }
+        ]
+    },
+    {
+        ref: "wondersOfTheForest",
+        name: "Wonders of the Forest",
+        description: "Athel Loren provides for its deserving children, with wondrous boons gifted in recognition of their many endeavours.",
+        icon: "campaign-military-spending",
+        ranks: [
+            { effects: [
+                { icon: "income", description: "Income from razing settlements: +2%" },
+                { icon: "income", description: "Income from raiding: +5%", ps: "Lord's army" },
+                { icon: "income", description: "Income from post-battle loot: +5%" }
+            ] },
+            { effects: [
+                { icon: "income", description: "Income from razing settlements: +5%" },
+                { icon: "income", description: "Income from raiding: +12%", ps: "Lord's army" },
+                { icon: "income", description: "Income from post-battle loot: +12%" }
+            ] },
+            { effects: [
+                { icon: "income", description: "Income from razing settlements: +10%" },
+                { icon: "income", description: "Income from raiding: +20%", ps: "Lord's army" },
+                { icon: "income", description: "Income from post-battle loot: +20%" }
+            ] }            
+        ]
+    },
+    {
+        ref: "obscuringCanopy",
+        name: "Obscuring Canopy",
+        description: "The magics of the woods obscure and connive, able to turn enemy blades away from their targets.",
+        icon: "campaign-agent",
+        ranks: [
+            { effects: [{ icon: "ambush", description: "Ambush success chance: +5%", ps: "Lord's army" }] },
+            { effects: [
+                { icon: "ranged-damage", description: "Missile Strength: +5% during ambushes", ps: "Lord's army" },
+                { icon: "ambush", description: "Ambush success chance: +10%", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "ranged-damage", description: "Missile Strength: +10% during ambushes", ps: "Lord's army" },
+                { icon: "ambush", description: "Ambush success chance: +20%", ps: "Lord's army" }
+            ] }            
+        ]
+    },
+    {
+        ref: "growthOfTheForest",
+        name: "Growth of the Forest",
+        description: "The forest provides for its warriors, rehabilitating and regenerating wounds suffered in its defense.",
+        icon: "campaign-public-order",
+        ranks: [
+            { effects: [
+                { icon: "public-order", description: "Public order: +1", ps: "local province" },
+                { icon: "growth", description: "Growth: +5", ps: "local province" }
+            ] },
+            { effects: [
+                { icon: "public-order", description: "Public order: +1", ps: "local province" },
+                { icon: "growth", description: "Growth: +12", ps: "local province" }
+            ] },
+            { effects: [
+                { icon: "public-order", description: "Public order: +2", ps: "local province" },
+                { icon: "growth", description: "Growth: +20", ps: "local province" }
+            ] }
+        ]
+    },
+    {
+        ref: "openBranches",
+        name: "Open Branches",
+        description: "From all corners of the forest, they come to defend their homes.",
+        icon: "campaign-army",
+        ranks: [{ effects: [
+            { icon: "experience", description: "Recruit rank: +1 for all units" },
+            { icon: "army", description: "Global recruitment capacity: +1" }
+        ] }]
+    },
+    {
+        ref: "swiftfingers",
+        name: "Swiftfingers",
+        description: "The dead do not want for material possessions, yet the living may yet find value in them...",
+        icon: "campaign-magic",
+        ranks: [
+            { effects: [
+                { icon: "item-ability", description: "Magic item drop chance: +5%" },
+                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +5%" }
+            ] },
+            { effects: [
+                { icon: "item-ability", description: "Magic item drop chance: +10%" },
+                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +10%" }
+            ] },
+            { effects: [
+                { icon: "item-ability", description: "Magic item drop chance: +15%" },
+                { icon: "item-ability", description: "Post battle chance of stealing a magic item: +15%" }
+            ] }
+        ]
+    },
+    {
+        ref: "perenniality",
+        name: "Perenniality",
+        description: "Like the forest itself, the warriors of Athel Loren ebb and flow and regenerate with the passing of time.",
+        icon: "campaign-replenishment",
+        ranks: [
+            { effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +3%", ps: "Lord's army" }] },
+            { effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +8%", ps: "Lord's army" }] },
+            { effects: [{ icon: "replenishment", description: "Casualty replenishment rate: +15%", ps: "Lord's army" }] }
+        ]
+    },
+    {
+        ref: "homeAmongstTheBoughs",
+        name: "Home Amongst the Boughs",
+        description: "The forest-dwellers draw from the strength of Kurnous to fight ever harder, and be ever stronger.",
+        icon: "campaign-experience",
+        ranks: [
+            { effects: [
+                { icon: "coin", description: "Upkeep: -8% for all units", ps: "Lord's army" },
+                { icon: "campaign-movement", description: "Campaign movement range: +5%" },
+                { icon: "agent", description: "Hero self-defense: +25% chance of wounding aggressors" },
+                { icon: "agent", description: "Enemy Hero action success chance: -10%" },
+                { icon: "experience", description: "Recruit rank: +1 for all units" }
+            ] }
+        ]
+    },
+    {
+        ref: "ancientEnmity",
+        name: "Ancient Enmity",
+        description: "Any compassion remaining in Durthu's ancient mind has eroded, making him little more than a destroyer.",
+        icon: "character-cooldown",
+        ranks: [
+            { effects: [{ icon: "siege", description: "Enemy siege holdout time: -3 (minimum 1 turn)" }] },
+            { effects: [{ icon: "ability-lamentation-of-despair", description: "Cooldown: -33% to \"Lamentation of Despairs\"" }] }
+        ]
+    },
+    {
+        ref: "boughwarden",
+        name: "Boughwarden",
+        description: "Durthu's connection with the forest is absolute, his mere presence enough to harness the power of the other, long-slumbering Ancients.",
+        icon: "character-magic",
+        ranks: [{ effects: [
+            { icon: "magic", description: "Winds of Magic power reserve: +20" },
+            { icon: "resistance-ward-save", description: "Ward save: +10% during forest battles", ps: "Lord's army" },
+            { icon: "defense", description: "Melee defense: +5 for all units when defending", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "wardbark",
+        name: "Wardbark",
+        description: "No mere fire of the natural world can burn that which is born of Athel Loren.",
+        icon: "character-ward-save",
+        ranks: [{ effects: [
+            { icon: "resistance-fire", description: "Fire resistance: 20% for Dryad, Tree Kin and Treeman units", ps: "Lord's army" },
+            { icon: "armor", description: "Armor: +15 for Dryad, Tree Kin and Treeman units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "rageOfKurnous",
+        name: "Rage of Kurnous",
+        description: "The forest has a great rage, which is manifest in its warriors' violent deeds in Kurnous' name.",
+        icon: "character-damage",
+        ranks: [{ effects: [
+            { icon: "spell-panns-impenetrable-pelt", description: "Windos of Magic cost: -2 for \"Pann's Impenetrable Pelt\"" },
+            { icon: "spell-panns-impenetrable-pelt", description: "Windos of Magic cost: -4 for \"Pann's Impenetrable Pelt Upgraded\"" },
+            { icon: "spell-wyssans-wildform", description: "Windos of Magic cost: -2 for \"Wyssan's Wildform\"" },
+            { icon: "spell-wyssans-wildform", description: "Windos of Magic cost: -4 for \"Wyssan's Wildform\"" }
+        ] }]
+    },
+    {
+        ref: "oakenHearts",
+        name: "Oaken Hearts",
+        description: "Durthu's towering form is as unyielding and implacable as the earth itself.",
+        icon: "character-speed",
+        ranks: [{ effects: [
+            { icon: "morale", description: "Leadership: +5 (when attacking)", ps: "Lord's army" },
+            { icon: "vigour", description: "Vigour loss reduction: -33%", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "awakenTheWoods",
+        name: "Awaken the Woods",
+        description: "The sheer weight of Durthu's hatred is great enough to seep into the very land upon which he treads.",
+        icon: "character-disaster",
+        ranks: [{ effects: [{ icon: "disaster", description: "Enables Awakened Forest attrition", ps: "local enemy armies" }] }]
+    },
+    {
+        ref: "skinOfTheWoods",
+        name: "Skin of the Woods",
+        description: "Hewn from the same forest that surrounds them, Tree Kin withstand attacks like the forest withstands the fury of the seasons.",
+        icon: "character-ward-save",
+        ranks: [{ effects: [{ icon: "resistance-ward-save", description: "Ward save: 10% for Tree Kin units", ps: "Lord's army" }] }]
+    },
+    {
+        ref: "challengeToDaith",
+        name: "Challenge to Daith",
+        description: "Whenever the twins present Lord Daith with a new challenge, he simply gives a small smile and return to the fires of the forge.",
+        icon: "campaign-turns",
+        ranks: [{ effects: [
+            { icon: "turns", description: "Turn time: -2 between each of Daith's gifts received" },
+            { icon: "turns", description: "Forge of Daith items \"Reforged\" duration: +2 turns" }
+        ] }]
+    },
+    {
+        ref: "inseverable",
+        name: "Inseverable",
+        description: "Such is the tiwns' bond that the harms inflicted on one are inconsequential so long as the other yet draws breath.",
+        icon: "character-ward-save",
+        ranks: [{ effects: [
+            { icon: "resistance-ward-save", description: "Ward save: 10%" },
+            { icon: "wound-time", description: "Wound recovery time: -3" }
+        ] }]
+    },
+    {
+        ref: "theQueensEmissaries",
+        name: "The Queen's Emissaries",
+        description: "Regardless of their mysterious origins, all Elves know Naestra and Arahan speak with the authority of their beloved Mage Queen.",
+        icon: "character-diplomacy",
+        ranks: [{ effects: [
+            { icon: "public-order", description: "Public order: +2", ps: "local province" },
+            { icon: "growth", description: "Growth: +20", ps: "local province" },
+            { icon: "diplomacy", description: "Diplomatic relations: +15 with Dark Elves, High Elves and Wood Elves" }
+        ] }]
+    },
+    {
+        ref: "naestrasVigilance",
+        name: "Naestra's Vigilance",
+        description: "A dedicated sentinel of all that the Asrai hold dear, Naestra seeks battle only in pursuit of preventing greater harms.",
+        icon: "character-movement",
+        ranks: [
+            { effects: [
+                { icon: "campaign-movement", description: "Campaign movement range: +10%" },
+                { icon: "agent", description: "Campaign line of sight: +15%" },
+                { icon: "replenishment", description: "Casualty replenishment rate: 10%" },
+                { icon: "ability-guardian", description: "Passive ability: \"Guardian\"" }
+            ] }
+        ],
+        spell: {
+            description: "Unit ability",
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Ward Save (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "Constant",
+                target: [
+                    { text: "Around self" },
+                    { text: "Affects allies in range" }
+                ],
+                targetIf: "Unit is a Lord or Hero",
+                effectRange: "30m",
+                effects: [
+                    { text: "+15%", icon: "resistance-physical", postText: "Physical Resistance", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "arahansReckoning",
+        name: "Arahan's Reckoning",
+        description: "Like an unbridled flame, Arahan lives for destruction, welcoming battle with wanton joy.",
+        icon: "character-military-spending",
+        ranks: [{ effects: [
+            { icon: "forest-health", description: "Gain +1 additional Forest Health for winning battles in Magical Forests or their Heathlands", ps: "Lord's army" },
+            { icon: "ambush", description: "Ambush success chance: 10%", ps: "Lord's army" },
+            { icon: "income", description: "Income from razing settlements: +15%" },
+            { icon: "income", description: "Income from post-battle loot: +15%" }
+        ] }]
+    },
+    {
+        ref: "mastersOfTheAeries",
+        name: "Masters of the Aeries",
+        description: "The sky's fauna adore Naestra, doing as she wills out of love, while fearing Arahan and doing as she wills out of respect.",
+        icon: "guerrilla-deploy",
+        ranks: [{ effects: [
+            { icon: "resistance-physical", description: "Physical resistance: 10% for flying units", ps: "Lord's army" },
+            { icon: "coin", description: "Upkeep: -10% for flying units", ps: "Lord's army" },
+            { icon: "vanguard", description: "Attribute: Vanguard Deployment for Great Eagle and Forest Dragon Units", ps: "Lord's army" },
+            { icon: "vanguard", description: "Attribute: Vanguard Deployment" }
+        ] }]
+    },
+    {
+        ref: "otherworldlyOfSpirit",
+        name: "Otherworldly of Spirit",
+        description: "The sisters walk paths that even Waywatchers dread, treading the Dreaming Wood as if it were the eternally sunlit groves of Arranoc.",
+        icon: "character-movement",
+        ranks: [{ effects: [
+            { icon: "resistance-ward-save", description: "Ward save: 5%", ps: "Lord's army" },
+            { icon: "ability-arrow-of-kurnous", description: "Ability number of uses: +1 for \"Volley of Kurnous\"", ps: "all armies" },
+            { icon: "character", description: "Ability number of uses: +1 for all Dragon Breath attacks", ps: "all armies" }
+        ] }]
+    },
+    {
+        ref: "bowAndBlade",
+        name: "Bow and Blade",
+        description: "Naestra possesses lethality in her precision, and Arahan exuberance in her bladework, both fighting zealously in the forest's name.",
+        icon: "character-ranged-damage",
+        ranks: [{ effects: [
+            { icon: "ranged-damage", description: "Missile strength: +5%" },
+            { icon: "weapon-damage", description: "Weapon strength: +5%" }
+        ] }]
+    },
+    {
+        ref: "resilient",
+        name: "Resilient",
+        description: "Armour is just a formality when you're as hard as nails and as tough as old boots.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [{ icon: "resistance-physical", description: "Physical resistance: 5%" }] },
+            { effects: [{ icon: "resistance-physical", description: "Physical resistance: 10%" }] }
+        ]
+    },
+    {
+        ref: "alwaysReady",
+        name: "Always Ready",
+        description: "Death is always just a shot away.",
+        icon: "character-ammo",
+        ranks: [
+            { effects: [
+                { icon: "ammo-character", description: "Ammunition: +10%" },
+                { icon: "reload-time-character", description: "Reload time reduction: +5%" }
+            ] },
+            { effects: [
+                { icon: "ammo-character", description: "Ammunition: +20%" },
+                { icon: "reload-time-character", description: "Reload time reduction: +10%" }
+            ] }
+        ]
+    },
+    {
+        ref: "swiftAndLethal",
+        name: "Swift and Lethal",
+        description: "Naestra and Arahan do not shirk the bitter press of melee, moving swiftly to the fray should the situation require it.",
+        icon: "character-speed",
+        ranks: [
+            { effects: [
+                { icon: "movement-character", description: "Speed: +5%" },
+                { icon: "charge-character", description: "Charge bonus: +10%" }
+            ] },
+            { effects: [
+                { icon: "movement-character", description: "Speed: +10%" },
+                { icon: "charge-character", description: "Charge bonus: +20%" }
+            ] }
+        ]
+    },
+    {
+        ref: "darkHeart",
+        name: "Dark Heart",
+        description: "The wild beasts of the forest always sense the emotions of the Treemen, empathising with their pain over eons of loss.",
+        icon: "character-attack",
+        ranks: [
+            { effects: [
+                { icon: "armor-piercing", description: "Armour-piercing weapon damage: +3 for Cave Bats, Feral Manticore, Giant Spiders, Great Hawks and Giant Wolves units", ps: "Lord's army" },
+                { icon: "movement", description: "Speed: +5% for Cave Bats, Feral Manticore, Giant Spiders, Great Hawks and Giant Wolves units", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +6 for Cave Bats, Feral Manticore, Giant Spiders, Great Hawks and Giant Wolves units", ps: "Lord's army" }
+            ] },
+            { effects: [
+                { icon: "armor-piercing", description: "Armour-piercing weapon damage: +6 for Cave Bats, Feral Manticore, Giant Spiders, Great Hawks and Giant Wolves units", ps: "Lord's army" },
+                { icon: "movement", description: "Speed: +10% for Cave Bats, Feral Manticore, Giant Spiders, Great Hawks and Giant Wolves units", ps: "Lord's army" },
+                { icon: "charge", description: "Charge bonus: +12 for Cave Bats, Feral Manticore, Giant Spiders, Great Hawks and Giant Wolves units", ps: "Lord's army" }
+            ] }
+        ]
+    },
+    {
+        ref: "scentOfBlood",
+        name: "Scent of Blood",
+        description: "The promise of spilt blood rouses the forest's predators from their lairs, salivating in anticipation of the slaughter.",
+        icon: "ability-call-of-the-woods",
+        ranks: [
+            { effects: [
+                { icon: "ability-frenzy", description: "Passive ability: \"Frenzy\" for Cave Bats, Feral Manticore, Giant Spiders, Great Hawks and Giant Wolves units", ps: "Lord's army" },
+                { icon: "treasury", description: "Recruitment cost: -25% for units recruited from the Wild Spirits panel" }
+            ] }
+        ],
+        spell: {
+            description: "Unit ability",
+            rarity: "uncommon",
+            attributes: {
+                type: "Augment",
+                duration: "Constant",
+                target: "Self",
+                disabledIf: "Leadership is lower than 50%",
+                effects: [
+                    { text: "+8", postText: "Melee Attack", icon: "melee-character", color: "green" },
+                    { text: "+8%", postText: "Charge Bonus", icon: "charge-character", color: "green" },
+                    { text: "+15%", postText: "Base Weapon Damage", icon: "icon-damage-base", color: "green" },
+                    { postText: "Immune to Psychology", icon: "attribute-psychology", uptick: "up-green", color: "green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "naturesVengeance",
+        name: "Nature's Vengeance",
+        description: "Those at forest fringes where the Wargrove is known to dwell gather anything but deadwood at their peril!",
+        icon: "character-charge",
+        ranks: [
+            { effects: [
+                { icon: "charge", description: "Charge bonus: +10 for Dryad, Tree Kin and Treeman units", ps: "Lord's army" },
+                { icon: "character", description: "\"Roused to Wrath\" ability gains increased range, and the summoned Dryads no longer degrade" }
+            ] }
+        ],
+        spell: {
+            name: "Roused to Wrath",
+            description: "Unit ability",
+            rarity: "rare",
+            uses: 2,
+            cooldown: "90",
+            attributes: {
+                type: "Augment",
+                target: [ 
+                    { text: "Ground" },
+                    { text: "120m", uptick: "range" }
+                ],
+                cannotTargetIf: "Climbing or manning equipment or on a platform",
+                effects: [
+                    { text: "Summons a unit of Dryads", color: "green", uptick: "up-green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "rootsOfWoe",
+        name: "Roots of Woe",
+        description: "Many believe Drycha lost her mind when Morghur's blood was spilt amongst the roots of the once-glorious creature known as the Tree of Woe.",
+        icon: "character-damage",
+        ranks: [
+            { effects: [
+                { icon: "charge-character", description: "Charge bonus: +20" },
+                { icon: "damage", description: "Weapon strength: +12%" },
+                { icon: "ability-pageant-of-shrikes", description: "Ability: \"Pageant of Shrikes\"" }
+            ] }
+        ],
+        spell: {
+            description: "Character ability",
+            rarity: "uncommon",
+            uses: 3,
+            cooldown: "90",
+            attributes: {
+                type: "Hex",
+                duration: "20 seconds",
+                target: [ 
+                    { text: "Enemy" },
+                    { text: "75m", uptick: "range" }
+                ],
+                effects: [
+                    { text: "Greatly depletes", icon: "ammo-character", postText: "ammunition", color: "red", uptick: "down-red" },
+                    { text: "-20", icon: "reload-time-stat", postText: "Reload Skill", color: "red" },
+                    { text: "-20%", icon: "accuracy-character", postText: "Range", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "indoctrinator",
+        name: "Indoctrinator",
+        description: "After years examining the Elves' every action, the Briarmaven knows how to exploit their strengths as well as their weaknesses.",
+        icon: "character-magic",
+        ranks: [
+            { effects: [
+                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -1 for \"Melkoth's Mystifying Miasma\"" },
+                { icon: "spell-melkoths-mystifying-miasma", description: "Winds of Magic cost: -2 for \"Melkoth's Mystifying Miasma Upgraded\"" },
+                { icon: "ability-glamour", description: "Replaces the \"Glamoured\" passive ability with \"Insidious Glamour\" for all Elf units", ps: "Lord's army" }
+            ] }
+        ],
+        spell: {
+            name: "Insidious Glamour",
+            description: "Unit ability",
+            rarity: "common",
+            attributes: {
+                type: "Hex",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "+8", icon: "morale-character", postText: "Leadership" },
+                    { text: "Expendable", color: "red", uptick: "down-red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "shiftingWoods",
+        name: "Shifting Woods",
+        description: "The verdant labyrinth of the forest unsettles even the most courageous soul.",
+        icon: "character-ambush",
+        ranks: [
+            { effects: [
+                { icon: "ambush", description: "Ambush success chance: +15%", ps: "Lord's army" },
+                { icon: "attribute-terror", description: "Attribute: Causes Fear and Terror when ambushing in forests", ps: "Lord's army" },
+                { icon: "ability-befuddlement-of-mischiefs", description: "Ability: \"Befuddlement of Mischiefs\"" }
+            ] }
+        ],
+        spell: {
+            name: "Befuddlement of Mischiefs",
+            description: "Character ability",
+            rarity: "uncommon",
+            attributes: {
+                type: [
+                    { text: "Hex (Area)" },
+                    { text: "Only acts on targets when in area" }
+                ],
+                duration: "11 seconds",
+                target: [
+                    { text: "Ground, Enemy" },
+                    { text: "Affects enemies in range" },
+                    { text: "100m", uptick: "range" }
+                ],
+                effectRange: "30m",
+                effects: [
+                    { text: "Cannot move", color: "red", uptick: "down-red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "theNaturalOrder",
+        name: "The Natural Order",
+        description: "The Ancients' former handmaidens were once the forest's overseers, taming the Winds to bring sustenance to bough and branch - that time will come again.",
+        icon: "character-movement",
+        ranks: [{ effects: [
+            { icon: "branchwraith", description: "Unlocks Hero recruitment: Branchwraith", ps: "all provinces" },
+            { icon: "treasury", description: "Hero action cost: -25% for Branchwraiths" },
+            { icon: "experience", description: "Hero recruit rank: +3 for Branchwraiths" }
+        ] }]
+    },
+    {
+        ref: "mantraOfTheFallen",
+        name: "Mantra of the Fallen",
+        description: "Many are the spirits Drycha believes have been failed by the Asrai, their names remembered by the enchantments of her unending mantra.",
+        icon: "ability-roused-to-wrath",
+        ranks: [
+            { effects: [
+                { icon: "morale", description: "Ambush success chance: +15%", ps: "Lord's army" },
+                { icon: "morale", description: "Attribute: Causes Fear and Terror when ambushing in forests", ps: "Lord's army" },
+                { icon: "ability-roused-to-wrath", description: "\"Roused to Wrath\" ability gains an additional charge and infinite range" }
+            ] }
+        ],
+        spell: {
+            name: "Roused to Wrath",
+            description: "Army ability",
+            rarity: "legendary",
+            cooldown: "90",
+            uses: 3,
+            attributes: {
+                type: "Augment",
+                target: "Ground",
+                cannotTargetIf: "Climbing or manning equipment or on a platform",
+                effects: [
+                    { text: "Summons a unit of Dryads", color: "green", uptick: "up-green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "wardOfIshaWoodElf",
+        name: "Ward of Isha",
+        description: "Isha's protection can protect the faithful Asrai through the darkest of days.",
+        icon: "character-ward-save",
+        ranks: [
+            { effects: [{ icon: "resistance-ward-save", description: "Ward save: 10%" }] }
+        ]
+    },
+    {
+        ref: "unicorn",
+        name: "Unicorn",
+        description: "Its forehead adorned with a spiral horn, this noble mount carries the Spellsinger where their magical gifts are needed most.",
+        icon: "unicorn",
+        ranks: [
+            { effects: [{ icon: "mount", description: "Mount: Unicorn" }] }
+        ]
+    },
+    {
+        ref: "weaverOfTheWinds",
+        name: "Weaver of the Winds",
+        description: "All Elves are intrinsically magical beings, but Asrai Spellweavers practice spellcraft free of Ulthuan's stiff-necked morality and Naggaroth's heedless sadism.",
+        icon: "character-magic",
+        ranks: [{ effects: [
+            { icon: "magic", description: "Winds of Magic power reserve: +15" },
+            { icon: "magic-cooldown", description: "Cooldown: -15% to all spells" }
+        ] }]
+    },
+    {
+        ref: "loecsBlessing",
+        name: "Loec's Blessing",
+        description: "Using rhythmic incantations endowed and employed by Loec himself to avoid Slaanesh's gaze, one can stay unseen and uncaught.",
+        icon: "ability-loecs-blessing",
+        ranks: [
+            { effects: [
+                { icon: "ability-loecs-blessing", description: "Ability: \"Loec's Blessing\"" }
+            ] }
+        ],
+        spell: {
+            description: "Lord ability",
+            rarity: "uncommon",
+            cooldown: "90",
+            attributes: {
+                type: [
+                    { text: "Augment (Area)" },
+                    { text: "Instantly affects targets in area" }
+                ],
+                duration: "24 seconds",              
+                target: [
+                    { text: "Self, Ground, Ally" },
+                    { text: "Affects allies in range" },
+                    { text: "100m", uptick: "range" }
+                ],
+                effectRange: "30m",
+                effects: [
+                    { text: "+24%", icon: "movement-character", postText: "Speed", color: "green" },
+                    { icon: "stalk", postText: "Stalk", color: "green", uptick: "up-green" },
+                    { icon: "unspottable", postText: "Unspottable", color: "green", uptick: "up-green" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "forestsFury",
+        name: "Forest's Fury",
+        description: "Skilled spellweavers can turn the forest upon their enemies with frightening ease, summoning grasping, twisted roots and branches to smother their foes.",
+        icon: "spell-the-dwellers-below",
+        ranks: [
+            { effects: [
+                { icon: "spell-the-dwellers-below", description: "Bound spell: \"The Dwellers Below\"" }
+            ] }
+        ],
+        spell: {
+            name: "The Dwellers Below",
+            description: "Bound spell",
+            rarity: "rare",
+            cooldown: "45",
+            uses: 2,
+            attributes: {
+                type: [
+                    { text: "Direct Damage" },
+                    { text: "Instantly affects targets in area" }
+                ],
+                duration: "15 seconds",
+                target: [
+                    { text: "Ground" },
+                    { text: "Affects enemies in range" },
+                    { text: "200m", uptick: "range" }
+                ],
+                effectRange: "30m",
+                effects: [
+                    { text: "Strong vs. 15 men unit or above", uptick: "up-green", color: "green" },
+                    { text: "Causes severe damage to combatants", uptick: "up-green", color: "green" },
+                    { text: "Large explosion area", uptick: "up-green", color: "green" }
+                ],
+                contact: [
+                    { text: "Dwellers Below (2 seconds)", color: "red" },
+                    { text: "-24%", icon: "character-movement", postText: "Speed", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "insidiousGlamour",
+        name: "Insidious Glamour",
+        description: "Though the wargrove's Elves remain under the enchanted delusion that they fight for their queen, the spell's debilitations have been overcome.",
+        icon: "character-morale",
+        ranks: [
+            { effects: [
+                { icon: "coin", description: "Upkeep: -25% for all Elf units", ps: "Lord's army" },
+                { icon: "ability-glamour", description: "Replaces the \"Glamoured\" passive ability with \"Insidious Glamour\" for all Elf units", ps: "Lord's army" }
+            ] }
+        ],
+        spell: {
+            name: "Insidious Glamour",
+            description: "Unit ability",
+            rarity: "common",
+            attributes: {
+                type: "Hex",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "+8", icon: "morale-character", postText: "Leadership" },
+                    { text: "Expendable", color: "red", uptick: "down-red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "verdantGrowth",
+        name: "Verdant Growth",
+        description: "Whether roused for war or retreated into the dreaming lands of sleep, the Treemen's innate magic nurtures the forest and its lesser spirits.",
+        icon: "character-replenishment",
+        ranks: [
+            { effects: [
+                { icon: "replenishment", description: "Casualty replenishment rate: +15% for Dryad, Tree Kin and Treeman units", ps: "Lord's army" },
+                { icon: "ability-regeneration", description: "Passive ability: \"Regeneration\"" }
+            ] }
+        ],
+        spell: {
+            name: "Regeneration",
+            description: "Unit ability",
+            rarity: "common",
+            attributes: {
+                type: "Regeneration",
+                duration: "Constant",
+                target: "Self",
+                effects: [
+                    { text: "Restores", icon: "hp", postText: "4 Hit Points per second", uptick: "up-green", color: "green" },
+                    { text: "+25% Weakness to", icon: "icon-fire", postText: "Fire Damage", color: "red" }
+                ]
+            }
+        }
+    },
+    {
+        ref: "greaterAspectOfTheOak",
+        name: "Greater Aspect of the Oak",
+        description: "Those who adopt the oak's warlike aspect typically stand on the front line, such is the sheer structural strength of tis genus.",
+        icon: "character-armor",
+        ranks: [{ effects: [
+            { icon: "armor", description: "Armour: +10 for Dryad, Tree Kin and Treeman units", ps: "Lord's army" },
+            { icon: "armor-character", description: "Armour: +35" }
+        ] }]
+    },
+    {
+        ref: "greaterAspectOfTheBirch",
+        name: "Greater Aspect of the Birch",
+        description: "Wherever winter retreats, the birch is amongst the first to sprout forth, for its vibrance is its greatest strength.",
+        icon: "character-damage",
+        ranks: [{ effects: [
+            { icon: "sunder", description: "Enables sundering attacks" },
+            { icon: "charge", description: "Charge bonus: +15 for Dryads, Tree Kin and Treeman units", ps: "Lord's army" }
+        ] }]
+    },
+    {
+        ref: "greaterAspectOfTheWillow",
+        name: "Greater Aspect of the Willow",
+        description: "Once the willow's warlike aspect is adopted, branches and leaves droop and overlap, absorbing anything that may cuase harm.",
+        icon: "character-defense",
+        ranks: [{ effects: [
+            { icon: "resistance-missile", description: "Missile resistance: 10% for Dryad, Tree Kin and Treeman units", ps: "Lord's army" },
+            { icon: "resistance-physical", description: "Physical resistance: 15%" }
+        ] }]
+    },
 ]

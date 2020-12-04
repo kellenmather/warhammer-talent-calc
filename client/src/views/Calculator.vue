@@ -5,7 +5,7 @@
                 <div class="left-nav action-items">
                     <a @click="$router.push('/' + race + legendary )" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
                     <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
-                    <a @click="getURL()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
+                    <!-- <a @click="getURL()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'save')"></a> -->
                     <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
                 <div class="middle-nav lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
@@ -207,14 +207,15 @@ export default {
             // combine legendary and lord array into one
             let races = LordKey.legendary[this.race].concat(LordKey.lords[this.race]);
             for (let i = 0; i < races.length; i++) {
-                if (this.lord === races[i].type) {
-                    (races[i].legendary) ? this.legendary = '/legend' : this.legendary = '/';
-                    return races[i].name
-                } else if (this.lord === races[i].type && races[i].school && races[i].school.includes(this.type)) {
+                if (this.lord === races[i].type && races[i].school && races[i].school.includes(this.type)) {
                     (races[i].legendary) ? this.legendary = '/legend' : this.legendary = '/';
                     let magicType = this.type
                     magicType = magicType.charAt(0).toUpperCase() + magicType.slice(1).split(/(?=[A-Z])/).join(' ');
                     return races[i].name + ' (' + magicType + ')'
+                }
+                else if (this.lord === races[i].type) {
+                    (races[i].legendary) ? this.legendary = '/legend' : this.legendary = '/';
+                    return races[i].name
                 }
             }
         },
@@ -255,8 +256,7 @@ export default {
     },
     created() {
         this.secretMethod();
-        let query = this.race + '/' + this.lord
-        if (this.type && this.type !== 'legendary') query = query + '/' + this.type
+        let query = this.race + '/' + this.lord + '/' + this.type;
         ApiService.get("talent/getRows", query)
             .then(({data}) => {
                 this.setCalcState(data.rows);

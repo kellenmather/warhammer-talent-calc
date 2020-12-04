@@ -94,7 +94,9 @@ export default {
             return (this.specificRank > 0 ) ? this.specificRank -1 : (this.specificRank > 0 ) ? this.specificRank -1 : (this.currentRank === 2) ? this.currentRank -1 : this.currentRank;
         },
         getName(name) {
-            return (!this.spell.attributes.miscastChance) ? name : name + ' Upgraded'
+            let newName = name;
+            if (this.spell.name) newName = this.spell.name; 
+            return (!this.spell.attributes.miscastChance) ? newName : newName + ' Upgraded'
         }
     }
 };

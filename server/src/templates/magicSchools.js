@@ -63,6 +63,30 @@ exports.magic = {
             },
             {
                 restrictionChoice: "evasion",
+                blockContent: ["theCurseOfAnraheir", "transformationOfKadonEagle", "earthing", "magicalReserves"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["arcaneConduit"]
+            },
+        ]
+    },
+    beastsManticore: {
+        row: 3,
+        content: [
+            {
+                blockContent: ["wyssansWildform"]
+            },
+            {
+                restrictionChoice: "wyssansWildform",
+                blockContent: ["theAmberSpear", "wildHeart", "flockOfDoom", "pannsImpenetrablePelt"]
+            },
+            {
+                restrictionCount: 4,
+                blockContent: ["evasion"]
+            },
+            {
+                restrictionChoice: "evasion",
                 blockContent: ["theCurseOfAnraheir", "transformationOfKadon", "earthing", "magicalReserves"]
             },
             {

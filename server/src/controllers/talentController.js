@@ -18,6 +18,7 @@ exports.getRows = (req, res) => {
     
     switch (params.race) {
         case 'darkelves':
+            if (params.type === 'beasts') params.type = 'beastsManticore';
             response.rows = DarkElvesKeys.getLord(params.lord, params.type);
             break;
         case 'highelves':
@@ -54,7 +55,7 @@ exports.getRows = (req, res) => {
     }
 
     // get all skills from mongoDB that are listed in skillArray
-    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen' || params.race === 'skaven' || params.race === 'norsca') {
+    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen' || params.race === 'skaven' || params.race === 'woodelves' || params.race === 'norsca') {
         Skill.find({ ref: { $in: skillArray } }, function(err, test) {
             if (test) {
                 response.skills = test
