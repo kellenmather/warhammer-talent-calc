@@ -163,19 +163,18 @@ export default {
                 }
             }
             if (triDigit !== '') {
-                console.log('tri didgit here: ', triDigit)
                 if (triDigit.length === 1) {
                     triDigit += 0;
                     triDigit += 0;
                 }
                 if (triDigit.length === 2) triDigit += 0
-                console.log('tri didget here after chagne: ', triDigit)
                 urlString += UrlKey.keys[triDigit];
                 triDigit = '';
             }
-            console.log('www.warhammercalc.com/calc/' + this.race + '/' + this.lord + '/' + this.type + '/' + urlString);
-            // // need to get this to copy to computer for pasting
-            // // or popup that has text you copy
+            let encodedUrl = 'www.warhammercalc.com/calc/' + this.race + '/' + this.lord + '/' + this.type + '/' + urlString;
+            this.$copyText(encodedUrl).then(function (e) {
+                alert('URL has been copied, paste it to link to this build')
+            })
         },
         changeStyle() {
             this.styleGuide = (this.styleGuide === 'wh2') ? 'wh1' : 'wh2';
