@@ -2,11 +2,11 @@
     <div v-cloak id="calculator" v-if="skills.length > 0" :class="styleGuide" class="container-fluid calc-border calc unselectable" :style="getBackground(this.styleGuide)">
         <div class="header-padding">
             <div class="row navbar navbar-expand-lg navbar-light fixed-top top-bar" :style="getHeaderBackground(this.styleGuide, 'panel-tile')">
-                <div class="left-nav action-items">
-                    <a @click="$router.push('/' + race + legendary )" type="button" :style="getAsset(this.styleGuide, 'home')">Back</a>
-                    <a @click="resetPoints()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'reset')"></a>
-                    <a @click="getURL()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'save')"></a>
-                    <a @click="changeStyle()" type="button" style="marginLeft:20px;" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
+                <div ondragstart="return false" class="left-nav action-items">
+                    <a @click="$router.push('/' + race + legendary )" type="button" class="button-effects" :style="getAsset(this.styleGuide, 'home')">Back</a>
+                    <a @click="resetPoints()" type="button" style="marginLeft:20px;" class="button-effects" :style="getAsset(this.styleGuide, 'reset')"></a>
+                    <a @click="getURL()" type="button" style="marginLeft:20px;" class="button-effects" :style="getAsset(this.styleGuide, 'save')"></a>
+                    <a @click="changeStyle()" type="button" style="marginLeft:20px;" class="button-effects" :style="getAsset(this.styleGuide, 'icon-wh')"></a>
                 </div>
                 <div class="middle-nav lord-name" :style="getHeaderBackground(this.styleGuide, 'title-large')">
                     <p>{{getProperName()}}</p>
@@ -285,6 +285,12 @@ export default {
 </script>
 
 <style>
+img{  
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
 .inline {
     display: inline-block;
 }
@@ -368,5 +374,14 @@ export default {
     text-align: center;
     vertical-align: middle;
     width: 45px;
+}
+.button-effects {
+    filter: brightness(1);
+}
+.button-effects:hover {
+    filter: brightness(1.2);
+}
+.button-effects:active {
+    filter: brightness(.75);
 }
 </style>

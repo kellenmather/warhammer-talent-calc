@@ -1,16 +1,16 @@
 <template>
-    <div class="race-selector offset-race-selector unselectable col-12 col-lg-6" :style="getAssets('plaque-banner2')">
+    <div class="race-selector offset-race-selector unselectable col-12 col-lg-6" ondragstart="return false" :style="getAssets('plaque-banner2')">
         <div class="offset-right">
             <ul>
                 <li class="race-header">
-                    <a @click="changeLords()" :style="getHeader()" type="button"></a>
+                    <a @click="changeLords()" :style="getHeader()" type="button" class="button-effects"></a>
                 </li>
             </ul>
             <ul v-if="wh2">
-                <li><a type="button" class="home-button" @click="selectRace('darkelves')" :style="getAssets('button-home', 'darkelves')">Dark Elves</a></li>
-                <li><a type="button" class="home-button" @click="selectRace('highelves')" :style="getAssets('button-home', 'highelves')">High Elves</a></li>
-                <li><a type="button" class="home-button" @click="selectRace('lizardmen')" :style="getAssets('button-home', 'lizardmen')">Lizardmen</a></li>
-                <li><a type="button" class="home-button" @click="selectRace('skaven')" :style="getAssets('button-home', 'skaven')">Skaven</a></li>
+                <li><a type="button" class="home-button button-effects" @click="selectRace('darkelves')" :style="getAssets('button-home', 'darkelves')">Dark Elves</a></li>
+                <li><a type="button" class="home-button button-effects" @click="selectRace('highelves')" :style="getAssets('button-home', 'highelves')">High Elves</a></li>
+                <li><a type="button" class="home-button button-effects" @click="selectRace('lizardmen')" :style="getAssets('button-home', 'lizardmen')">Lizardmen</a></li>
+                <li><a type="button" class="home-button button-effects" @click="selectRace('skaven')" :style="getAssets('button-home', 'skaven')">Skaven</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('tombkings', 'disabled')" :style="getAssets('button-home', 'tombkings')">Tomb Kings</a></li>
                 <li><a type="button" class="home-button disabled-button" @click="selectRace('vampirecoast', 'disabled')" :style="getAssets('button-home', 'vampirecoast')">Vampire Coast</a></li>
             </ul>

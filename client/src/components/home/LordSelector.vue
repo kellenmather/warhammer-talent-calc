@@ -1,9 +1,9 @@
 <template>
-    <div class="lord-selector offset-lord-selector unselectable col-12 col-lg-6" :style="getAssets('plaque-banner')">
+    <div class="lord-selector offset-lord-selector unselectable col-12 col-lg-6" ondragstart="return false" :style="getAssets('plaque-banner')">
         <div class="offset-left">
             <ul v-if="selection">
                 <li class="lord-header">
-                    <a @click="changeLords()" :style="getHeader()" type="button" :disabled="!selection"></a>
+                    <a @click="changeLords()" :style="getHeader()" type="button" class="button-effects" :disabled="!selection"></a>
                 </li>
             </ul>
             <ul v-if="showLords">
@@ -13,11 +13,11 @@
                             {{lord.name}}
                         </a>
                         <div class="spell-schools">
-                            <a v-for="(magic, index) in lord.school" :key="index" @click="selectLord(lord, magic)" type="button" :style="getImages('spellSchools/' + magic)" />
+                            <a v-for="(magic, index) in lord.school" :key="index" @click="selectLord(lord, magic)" class="button-effects" type="button" :style="getImages('spellSchools/' + magic)" />
                         </div>
                     </div>
                     <div v-else>
-                        <a @click="selectLord(lord)" :style="getAssets('button-home')" type="button" class="home-button" :disabled="!selection">
+                        <a @click="selectLord(lord)" :style="getAssets('button-home')" type="button" class="home-button button-effects" :disabled="!selection">
                             {{lord.name}}
                         </a>
                     </div>
@@ -25,7 +25,7 @@
             </ul>
             <ul v-else> 
                 <li v-for="(lord, index) in legendaryLords" :key="index">
-                    <a @click="selectLord(lord)" :style="getAssets('button-ll')" type="button" class="home-button" :disabled="!selection">
+                    <a @click="selectLord(lord)" :style="getAssets('button-ll')" type="button" class="home-button button-effects" :disabled="!selection">
                         {{lord.name}}
                     </a>
                 </li>
