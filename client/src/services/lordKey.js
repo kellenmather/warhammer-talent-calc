@@ -70,7 +70,8 @@ exports.legendary = {
         { name: 'Lord Skrolk', type: 'skrolk', legendary: true },
         { name: 'Tretch Craventail', type: 'tretch', legendary: true },
         { name: 'Ikit Claw', type: 'ikit', legendary: true },
-        { name: "Deathmaster Snikch", type: "snikch", legendary: true }
+        { name: "Deathmaster Snikch", type: "snikch", legendary: true },
+        { name: "Throt the Unclean", type: "throt", legendary: true }
     ],
     'tombkings': [
         { name: 'Settra the Imperishable', type: 'settra', legendary: true },

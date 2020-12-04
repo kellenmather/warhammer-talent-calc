@@ -238,6 +238,35 @@ exports.rows = {
                     blockContent: ['fromTheShadows']
                 }
             ]
+        },
+        throt: {
+            row: 1,
+            content: [
+                {
+                    quest: 3,
+                    blockContent: ['creatureKiller']
+                },
+                {
+                    quest: 5,
+                    blockContent: ['whipOfDomination']
+                },
+                {
+                    restrictionLevel: 14,
+                    blockContent: ['broodHorror']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['sneaky']
+                },
+                {
+                    restrictionLevel: 8,
+                    blockContent: ['tricksy']
+                },
+                {
+                    restrictionLevel: 13,
+                    blockContent: ['warpstoneWeapon']
+                }
+            ]
         }
     },
     row2: {
@@ -405,7 +434,24 @@ exports.rows = {
                     blockContent: ['sabotageUnrest']
                 }
             ]
-        }
+        },
+        throt: {
+            row: 2,
+            content: [
+                {
+                    restrictionLevel: 12,
+                    blockContent: ['remouldered']
+                },
+                {
+                    restrictionChoice: 'remouldered',
+                    blockContent: ['monsterThrottler', 'specimenCollectorThrot', 'raveningHunger', 'masterOfTheMutated']
+                },
+                {
+                    restrictionCount: 2,
+                    blockContent: ['theUncleanOne']
+                }
+            ]
+        },
     },
     row3: {
         warlord: {
@@ -615,6 +661,30 @@ exports.rows = {
                 {
                     restrictionCount: 2,
                     blockContent: [ 'adrenalineRush','secondWindSerum', { name: 'adrenalineRush', restrictionLimited: ['secondWindSerum'] }, { name: 'secondWindSerum', restrictionLimited: ['adrenalineRush'] } ]
+                }
+            ]
+        },
+        throt: {
+            row: 4,
+            content: [
+                {
+                    blockContent: ['tailWeapon'],
+                },
+                {
+                    restrictionChoice: 'tailWeapon',
+                    blockContent: ['ruinDecay', 'thickSkinned', 'bladeMaster', 'indomitable'],
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['verminousValour']
+                },
+                {
+                    restrictionChoice: 'verminousValour',
+                    blockContent: ['woundMaker', 'scarredVeteran', 'bladeShield', 'expeditiousEndeavour']
+                },
+                {
+                    restrictionCount: 4,
+                    blockContent: ['deadlyOnslaught']
                 }
             ]
         },

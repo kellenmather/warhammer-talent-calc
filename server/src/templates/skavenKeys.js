@@ -69,6 +69,13 @@ let skaven = {
         { ...Skaven.rows.row3.snikch },
         { ...Skaven.rows.row6.skaven },
         { ...Skaven.rows.row9.skaven }
+    ],
+    throt: [
+        { ...Skaven.rows.row1.throt },
+        { ...Skaven.rows.row2.throt },
+        { ...Skaven.rows.row4.throt },
+        { ...Skaven.rows.row6.skaven },
+        { ...Skaven.rows.row9.skaven }
     ]
 }
 
