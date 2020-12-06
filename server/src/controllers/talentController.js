@@ -13,8 +13,6 @@ exports.getRows = (req, res) => {
 
     let params = req.params;
     let response = { rows: null, skills: null };
-
-    console.log(params);
     
     switch (params.race) {
         case 'darkelves':

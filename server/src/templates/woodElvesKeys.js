@@ -67,7 +67,6 @@ let woodElves = {
 }
 
 exports.getLord = (lord, type) => {
-    console.log(lord, type)
     let data = JSON.parse(JSON.stringify(woodElves[lord]));
     if (Schools.magic[type]) data.push(Schools.magic[type]);
     if (lord === "malevolent") data.push(WoodElves.rows.row1[lord + type]);
