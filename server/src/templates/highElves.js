@@ -502,7 +502,7 @@ exports.rows = {
             row: 2,
             content: [
                 {
-                    restrictionLeve: 10,
+                    restrictionLevel: 10,
                     blockContent: ['revenant'],
                 },
                 {

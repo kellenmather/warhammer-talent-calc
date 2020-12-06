@@ -26,7 +26,7 @@ let norsca = {
 }
 
 exports.getLord = (lord, type) => {
-    let data = norsca[lord][type] ? norsca[lord][type] : norsca[lord];
+    let data = JSON.parse(JSON.stringify(norsca[lord]));
     if (Schools.magic[type]) data.push(Schools.magic[type])
     return data
 }

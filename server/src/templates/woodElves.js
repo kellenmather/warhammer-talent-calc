@@ -25,14 +25,17 @@ exports.rows = {
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['possessedByTheTricksterGod', 'sightBeyondSight'],
                     blockContent: ['howlOfTheForest']
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['possessedByTheTricksterGod', 'howlOfTheForest'],
                     blockContent: ['sightBeyondSight']
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['howlOfTheForest', 'sightBeyondSight'],
                     blockContent: ['possessedByTheTricksterGod']
                 }
             ]
@@ -62,14 +65,17 @@ exports.rows = {
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['possessedByTheTricksterGod', 'sightBeyondSight'],
                     blockContent: ['howlOfTheForest']
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['howlOfTheForest', 'possessedByTheTricksterGod'],
                     blockContent: ['sightBeyondSight']
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['howlOfTheForest', 'sightBeyondSight'],
                     blockContent: ['possessedByTheTricksterGod']
                 }
             ]
@@ -95,14 +101,17 @@ exports.rows = {
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['possessedByTheTricksterGod', 'sightBeyondSight'],
                     blockContent: ['howlOfTheForest']
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['possessedByTheTricksterGod', 'howlOfTheForest'],
                     blockContent: ['sightBeyondSight']
                 },
                 {
                     restrictionLevel: 6,
+                    restrictionLimited: ['howlOfTheForest', 'sightBeyondSight'],
                     blockContent: ['possessedByTheTricksterGod']
                 }
             ]
@@ -478,14 +487,17 @@ exports.rows = {
                     blockContent: ['howlOfTheForest']
                 },
                 {
+                    restrictionLimited: ['greaterAspectOfTheBirch', 'greaterAspectOfTheWillow'],
                     restrictionLevel: 7,
                     blockContent: ['greaterAspectOfTheOak']
                 },
                 {
+                    restrictionLimited: ['greaterAspectOfTheWillow', 'greaterAspectOfTheOak'],
                     restrictionLevel: 7,
                     blockContent: ['greaterAspectOfTheBirch']
                 },
                 {
+                    restrictionLimited: ['greaterAspectOfTheBirch', 'greaterAspectOfTheOak'],
                     restrictionLevel: 7,
                     blockContent: ['greaterAspectOfTheWillow']
                 }

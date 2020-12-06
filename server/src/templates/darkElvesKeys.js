@@ -79,7 +79,7 @@ let darkelves = {
 }
 
 exports.getLord = (lord, type) => {
-    let data = darkelves[lord][type] ? darkelves[lord][type] : darkelves[lord];
+    let data = JSON.parse(JSON.stringify(darkelves[lord]));
     if (Schools.magic[type]) data.push(Schools.magic[type])
-    return data
+    return data;
 }

@@ -77,7 +77,7 @@ let highelves = {
 }
 
 exports.getLord = (lord, type) => {
-    let data = highelves[lord][type] ? highelves[lord][type] : highelves[lord];
+    let data = JSON.parse(JSON.stringify(highelves[lord]));
     if (Schools.magic[type]) {
         // High Elves are the only race to have a mage lord that does not have Evasion and Arcane Conduit we work around that below
         let holder = JSON.parse(JSON.stringify(Schools.magic[type])) // prevent unintended manipulation of Schools

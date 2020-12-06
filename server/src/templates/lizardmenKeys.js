@@ -80,7 +80,7 @@ let lizardmen = {
 }
 
 exports.getLord = (lord, type) => {
-    let data = lizardmen[lord][type] ? lizardmen[lord][type] : lizardmen[lord];
+    let data = JSON.parse(JSON.stringify(lizardmen[lord]));
     if (Schools.magic[type]) {
         let holder = JSON.parse(JSON.stringify(Schools.magic[type])) // prevent unintended manipulation of Schools
         holder.content[4].blockContent = ["greaterArcaneConduit"]; // replace Arcane Conduit with Greater Arcane Conduit

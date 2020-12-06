@@ -80,7 +80,7 @@ let skaven = {
 }
 
 exports.getLord = (lord, type) => {
-    let data = skaven[lord][type] ? skaven[lord][type] : skaven[lord];
+    let data = JSON.parse(JSON.stringify(skaven[lord]));
     if (Schools.magic[type]) data.push(Schools.magic[type])
     return data
 }
