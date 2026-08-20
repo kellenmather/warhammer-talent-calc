@@ -51,19 +51,22 @@ exports.getRows = (req, res) => {
             // skillArray = skillArray.concat(response.rows[i].content[j].blockContent);
         }
     }
+    // TEMPORARY: force hardcoded data while testing
+    response.skills = db.skills;
+    res.send(response);
 
-    // get all skills from mongoDB that are listed in skillArray
-    if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen' || params.race === 'skaven' || params.race === 'woodelves' || params.race === 'norsca') {
-        Skill.find({ ref: { $in: skillArray } }, function(err, test) {
-            if (test) {
-                response.skills = test
-                res.send(response);
-            } else {
-                console.error('skills not received: ', err);
-            }
-        })
-    } else {
-        response.skills = db.skills;
-        res.send(response)
-    }
+    // Original MongoDB path (kept for interview reference)
+    // if (params.race === 'darkelves' || params.race === 'highelves' || params.race === 'lizardmen' || params.race === 'skaven' || params.race === 'woodelves' || params.race === 'norsca') {
+    //     Skill.find({ ref: { $in: skillArray } }, function(err, test) {
+    //         if (test) {
+    //             response.skills = test
+    //             res.send(response);
+    //         } else {
+    //             console.error('skills not received: ', err);
+    //         }
+    //     })
+    // } else {
+    //     response.skills = db.skills;
+    //     res.send(response)
+    // }
 };

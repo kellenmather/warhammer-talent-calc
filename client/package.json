@@ -1,31 +1,33 @@
 {
-  "name": "client",
+  "name": "warhammer-talent-calc-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "bootstrap": "^4.4.1",
-    "core-js": "^3.6.4",
-    "jquery": "^3.5.0",
-    "node-sass": "^4.13.1",
+    "axios": "^1.7.7",
+    "bootstrap": "^4.6.2",
+    "core-js": "^3.38.1",
+    "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
-    "sass-loader": "^8.0.2",
-    "vue": "^2.6.11",
-    "vue-clipboard2": "^0.3.1",
-    "vue-router": "^3.1.5"
+    "vue": "^2.7.16",
+    "vue-clipboard2": "^0.3.3",
+    "vue-router": "^3.6.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.0",
-    "@vue/cli-plugin-router": "^4.2.0",
-    "@vue/cli-service": "^4.2.0",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-router": "~5.0.8",
+    "@vue/cli-service": "~5.0.8",
+    "cross-env": "^10.1.0",
+    "sass": "^1.79.4",
+    "sass-loader": "^10.5.2",
+    "vue-template-compiler": "^2.7.16"
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not dead"
   ]
 }

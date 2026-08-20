@@ -1,0 +1,14 @@
+{
+  "name": "warhammer-talent-calc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "start": "concurrently -n server,client -c blue,green \"npm start --prefix server\" \"npm run serve --prefix client\"",
+    "server": "npm start --prefix server",
+    "client": "npm run serve --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

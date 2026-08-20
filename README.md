@@ -9,23 +9,18 @@ You'll need:
 - [Git Bash](https://gitforwindows.org/) I recommend this if using a Windows system
 
 1. Clone the repository to your desired location
-2. Use npm to download the dependencies in both the client and server folders
+2. Use npm to download the dependencies
 ```
-cd project/location/client
-npm i
-cd project/location/server
-npm i
+cd project/location/
+npm install
+npm run install:all
 ```
 
-3. Start the client and the server (you must be in the corrosponding folder):
+3. Start the client and the server from the project root:
 
 ```
-#client
-npm run serve
-
-#server
 npm start
 ```
 
 Now you can view the current state of the website by going to http://localhost:8080
-Switched to MongoDB, without a database connection no talent trees will be viewable
+~~Switched to MongoDB, without a database connection no talent trees will be viewable~~
